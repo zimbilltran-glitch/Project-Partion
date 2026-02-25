@@ -1,0 +1,49 @@
+:root {
+  /* Simply Wall St Dark Theme Color Palette */
+  --s-bg-main: #1A1A1A;
+  --s-bg-sidebar: #262626;
+  --s-border: rgba(255, 255, 255, 0.1);
+
+  /* Text */
+  --s-text-primary: #FFFFFF;
+  --s-text-muted: #A0AEC0;
+  /* light gray for secondary info */
+  --s-text-softer: rgba(255, 255, 255, 0.6);
+
+  /* Indicators */
+  --s-success: #26AE50;
+  /* Standard Checkmark Green */
+  --s-valuation-lime: #9ACA27;
+  /* Snowflake/Valuation Highlighting */
+  --s-danger: #E53935;
+  /* Red for Failure/Overvalued */
+
+  /* Typography */
+  --s-font-family-sans: "BureauSans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --s-font-family-serif: "BureauSerif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --s-font-size-xs: 12px;
+  --s-font-size-sm: 14px;
+  --s-font-size-base: 16px;
+}
+
+/* Snowflake/Radar Chart Styles */
+.snowflake-chart {
+  fill: rgba(34, 197, 94, 0.1);
+  stroke: var(--s-success);
+  stroke-width: 2;
+}
+
+/* Checklist Card Styles */
+.checklist-card {
+  border: 1px solid var(--s-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: var(--s-bg-main);
+  transition: all 0.2s ease-in-out;
+}
+
+.checklist-card:hover {
+  border-color: var(--s-text-softer);
+  background: var(--s-bg-sidebar);
+}

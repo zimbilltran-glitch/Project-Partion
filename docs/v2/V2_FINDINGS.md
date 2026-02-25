@@ -118,6 +118,10 @@ Tài Chính (Financial)
 - ✅ **Excel fallback still available** via the export endpoint (same URL, just triggers file download)
 - ✅ **Complexity budget stays low** — `requests.get()` only, no headless browser for API path
 
+**API Row Mapping Logic (Phase A Lesson):**
+- **CRITICAL**: The keys (`bsa1`, `bsa2`, etc.) map EXACTLY to the comprehensive accounting rows of Vietcap's backend. The `golden_schema.json`'s `row_number` property maintains this absolute mapping.
+- **NEVER** use relative iteration (like `enumerate()`) to construct these keys, as omitted fields in the schema will cause index drifting, leading to catastrophic mis-mapping of values across all subsequent fields. Custom logic **MUST** systematically extract `field.get("row_number")`.
+
 ### Golden Schema (`VHC_BCTC.xlsx`)
 - **Source:** User-provided ground truth
 - **Sheets:** CDKT (122), KQKD (25), LCTT (41), NOTE (157) = **345 total fields**

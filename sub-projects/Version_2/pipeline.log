@@ -1,0 +1,13 @@
+2026-02-25T22:29:03+07:00 | VHC | Phase-T | pipeline.py | CDKT | 40 periods | SUCCESS | Normalized 4880 rows, mapped 79.5%
+2026-02-25T22:29:49+07:00 | VHC | Phase-T | pipeline.py | CDKT | 40 periods | SUCCESS | Normalized 4880 rows, mapped 79.5%
+2026-02-25T22:29:51+07:00 | VHC | Phase-T | pipeline.py | KQKD | 40 periods | SUCCESS | Normalized 1000 rows, mapped 96.0%
+2026-02-25T22:29:52+07:00 | VHC | Phase-T | pipeline.py | LCTT | 40 periods | SUCCESS | Normalized 1640 rows, mapped 100.0%
+2026-02-25T22:29:54+07:00 | VHC | Phase-T | pipeline.py | NOTE | 40 periods | SUCCESS | Normalized 6280 rows, mapped 0.0%
+2026-02-25T22:30:16+07:00 | FPT | Phase-T | pipeline.py | CDKT | 40 periods | SUCCESS | Normalized 4880 rows, mapped 79.5%
+2026-02-25T22:30:18+07:00 | FPT | Phase-T | pipeline.py | KQKD | 40 periods | SUCCESS | Normalized 1000 rows, mapped 96.0%
+2026-02-25T22:30:21+07:00 | FPT | Phase-T | pipeline.py | LCTT | 40 periods | SUCCESS | Normalized 1640 rows, mapped 100.0%
+2026-02-25T22:30:24+07:00 | FPT | Phase-T | pipeline.py | NOTE | 40 periods | SUCCESS | Normalized 6280 rows, mapped 0.0%
+2026-02-25T23:21:53+07:00 | FPT | Phase-T | pipeline.py | CDKT | 40 periods | SUCCESS | Normalized 4880 rows, mapped 71.3%
+2026-02-25T23:21:57+07:00 | FPT | Phase-T | pipeline.py | KQKD | 40 periods | SUCCESS | Normalized 1000 rows, mapped 60.0%
+2026-02-25T23:21:58+07:00 | FPT | Phase-T | pipeline.py | LCTT | 40 periods | SUCCESS | Normalized 1640 rows, mapped 85.4%
+2026-02-25T23:22:00+07:00 | FPT | Phase-T | pipeline.py | NOTE | 40 periods | SUCCESS | Normalized 6280 rows, mapped 0.0%

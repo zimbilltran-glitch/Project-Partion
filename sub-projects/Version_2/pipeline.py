@@ -126,12 +126,17 @@ def normalize(payload: dict, section: str, sheet_id: str,
 
             ticker = api_row.get("ticker", api_row.get("organCode", "?"))
 
-            # ── Critical fix: enumerate gives 1-indexed sheet position ──────────
-            # sheet_row_idx=1 → first field in this sheet → API key e.g. bsa1 / isa1
-            # sheet_row_idx=5 → fifth field → bsa5 / isa5 (= Lợi nhuận gộp for IS)
-            for sheet_row_idx, field in enumerate(schema_fields, start=1):
+            for field in schema_fields:
                 field_id = field.get("field_id", "")
-                val = provider.get_api_value(api_row, section, sheet_row_idx, field_id)
+                
+                # Retrieve the exact absolute index mapped in golden_schema.json
+                # This ensures if there are gaps (e.g., 122 items but max row is 130),
+                # we don't shift all subsequent bsa keys incorrectly.
+                exact_row_idx = field.get("row_number")
+                if exact_row_idx is None:
+                    continue
+                    
+                val = provider.get_api_value(api_row, section, int(exact_row_idx), field_id)
                 records.append({
                     "ticker":         ticker,
                     "period_type":    pt_tag,
@@ -142,7 +147,7 @@ def normalize(payload: dict, section: str, sheet_id: str,
                     "value":          val,
                     "unit":           field["unit"],
                     "level":          field["level"],
-                    "sheet_row_idx":  sheet_row_idx,  # stored for debug/audit
+                    "sheet_row_idx":  exact_row_idx,  # stored for debug/audit
                     "vietcap_mapped": val is not None,
                 })
 

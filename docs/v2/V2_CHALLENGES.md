@@ -177,6 +177,25 @@ The CFO Audit badge renders perfectly in the top right corner of the terminal he
 
 ---
 
+### 7. Enumerate Index Shift causing static values (Phase V)
+
+**Triệu chứng (Symptom):**
+Chỉ tiêu "Phải trả khác" của FPT (và một số mã khác) luôn trả về cùng một giá trị tĩnh (VD: 192.10M) qua mọi quý. Các chỉ tiêu lân cận cũng có số liệu bị lệch.
+
+**Nguyên nhân gốc rễ (Root Cause):**
+`pipeline.py` sử dụng hàm `enumerate(schema_fields, start=1)` để tìm index và map thành API key (e.g., `bsa76`, `bsa77`). Tuy nhiên, do `golden_schema.json` đôi khi lược bỏ một số field rỗng (số lượng field không khớp tuyệt đối với số row thực tế trên Vietcap), sự chênh lệch này khiến toàn bộ các key phía sau bị lệch index. Kết quả là "Phải trả khác" bị map nhầm vào `bsa77` (một trường có giá trị tĩnh) thay vì `bsa87`.
+
+**Giải pháp (Solution):**
+Hủy bỏ `enumerate()`. Thay vào đó, truy xuất trực tiếp `exact_row_idx = field.get("row_number")` từ schema để gọi `get_api_value()`. Đảm bảo mapping 1-1 chính xác tuyệt đối bất kể schema bị khuyết dòng.
+
+**Kết quả (Result):**
+Dữ liệu của "Phải trả khác", "Vay ngắn hạn" và các trường lân cận đã lấy chính xác số liệu từ Vietcap API (Vay ngắn hạn ~ 43,751.5 tỷ đồng cho Q4/2025).
+
+**CTO Note:** ✅ Tuyệt đối không bao giờ tin tưởng vào thứ tự tương đối (relative index) khi mapping dữ liệu tài chính. Luôn dùng định danh tuyệt đối (absolute index) đã được đối soát.
+**Timestamp:** 2026-02-25T23:35:00+07:00
+
+---
+
 *— Last updated by `@cto-mentor-supervisor` | 2026-02-25T00:23:00+07:00*
 
 ---
