@@ -28,16 +28,16 @@ const PERIOD_FILTERS = [
 
 // ─── Helpers ──────────────────────────────────────────────────────────────
 
-// Format: Raw VND (đồng) → Tỷ VND (÷ 1,000,000,000)
-function formatNumber(num) {
+// Format: Raw VND (đồng) → Tỷ VND (÷ 1,000,000,000) or keep absolute for ratios
+function formatNumber(num, isRatio = false) {
   if (num === null || num === undefined) return ''
   if (typeof num !== 'number') return '' // Handle entirely empty cells
   if (num === 0) return '–'
-  const inBillions = num / 1000000000
+  const displayNum = isRatio ? num : num / 1000000000
   return new Intl.NumberFormat('en-US', {
-    maximumFractionDigits: 1,
-    minimumFractionDigits: 1,
-  }).format(inBillions)
+    maximumFractionDigits: isRatio ? 2 : 1,
+    minimumFractionDigits: isRatio ? 2 : 1,
+  }).format(displayNum)
 }
 
 // Format period for header: "Q4/2024" or "2024" displayed as-is
@@ -201,7 +201,7 @@ export default function App() {
         {values.map((v, i) => {
           const scale = Math.min(1, Math.max(0.04, Math.abs(v) / maxVal))
           return (
-            <div key={i} className="bar-col" title={formatNumber(v)}>
+            <div key={i} className="bar-col" title={formatNumber(v, currentTab.id === 'CSTC')}>
               <div className="bar-pos-area">
                 {v >= 0 && <div className="bar-fill pos" style={{ transform: `scaleY(${scale})` }} />}
               </div>
@@ -383,7 +383,7 @@ export default function App() {
                       const v = row.periods_data?.[p]
                       return (
                         <td key={p} className={`td-val ${v < 0 ? 'neg' : ''}`}>
-                          {formatNumber(v)}
+                          {formatNumber(v, currentTab.id === 'CSTC')}
                         </td>
                       )
                     })}
