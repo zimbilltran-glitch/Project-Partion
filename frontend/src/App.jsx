@@ -28,14 +28,16 @@ const PERIOD_FILTERS = [
 
 // ─── Helpers ──────────────────────────────────────────────────────────────
 
-// Format: Raw VND (đồng) → Triệu VND (÷ 1,000,000)
+// Format: Raw VND (đồng) → Tỷ VND (÷ 1,000,000,000)
 function formatNumber(num) {
-  if (num === null || num === undefined || num === 0) return '–'
-  const inMillions = num / 1000000
+  if (num === null || num === undefined) return ''
+  if (typeof num !== 'number') return '' // Handle entirely empty cells
+  if (num === 0) return '–'
+  const inBillions = num / 1000000000
   return new Intl.NumberFormat('en-US', {
-    maximumFractionDigits: 0,
-    minimumFractionDigits: 0,
-  }).format(inMillions)
+    maximumFractionDigits: 1,
+    minimumFractionDigits: 1,
+  }).format(inBillions)
 }
 
 // Format period for header: "Q4/2024" or "2024" displayed as-is
@@ -86,17 +88,52 @@ export default function App() {
         setData([]); setPeriods([]); setLoading(false); return
       }
 
-      // Build parent tree for expand/collapse
-      const processed = reports.map((row, i) => {
-        let parent_id = null
-        if (row.levels > 0) {
+      // Build parent tree and fallback heuristic if levels are missing
+      let seenL1 = new Set();
+      const needsHeuristic = reports.every(r => r.levels === 0 || r.levels == null);
+
+      const processedLevels = reports.map((row) => {
+        let level = row.levels || 0;
+        if (needsHeuristic) {
+          const str = (row.item || '').trim();
+          const lower = str.toLowerCase();
+          if (str === str.toUpperCase() && /[A-ZÀ-Ỹ]/.test(str)) {
+            level = 0;
+          } else if (currentTab.id === 'CDKT') {
+            const l1_keywords = [
+              'tiền và tương đương tiền', 'đầu tư ngắn hạn', 'đầu tư tài chính ngắn hạn',
+              'các khoản phải thu ngắn hạn', 'các khoản phải thu', 'hàng tồn kho',
+              'tài sản ngắn hạn khác', 'tài sản lưu động khác', 'các khoản phải thu dài hạn',
+              'phải thu dài hạn', 'tài sản cố định', 'bất động sản đầu tư', 'tài sản dở dang dài hạn',
+              'đầu tư dài hạn', 'đầu tư tài chính dài hạn', 'tài sản dài hạn khác',
+              'nợ ngắn hạn', 'nợ dài hạn', 'vốn chủ sở hữu', 'nguồn kinh phí'
+            ];
+            // Assign L1 only on first occurrence to allow L2s with same name (e.g. "Hàng tồn kho")
+            if (l1_keywords.some(kw => lower === kw) && !seenL1.has(lower)) {
+              level = 1;
+              seenL1.add(lower);
+            } else {
+              level = 2;
+            }
+          } else {
+            // For non-balance sheet tabs, default everything that isn't L0 to L1
+            level = 1;
+          }
+        }
+        return { ...row, computed_level: level };
+      });
+
+      const processed = processedLevels.map((row, i) => {
+        let parent_id = null;
+        if (row.computed_level > 0) {
           for (let j = i - 1; j >= 0; j--) {
-            if (reports[j].levels === row.levels - 1) {
-              parent_id = reports[j].item_id; break
+            if (processedLevels[j].computed_level === row.computed_level - 1) {
+              parent_id = processedLevels[j].item_id;
+              break;
             }
           }
         }
-        return { ...row, parent_id }
+        return { ...row, parent_id, levels: row.computed_level }
       })
 
       setData(processed)
@@ -110,12 +147,23 @@ export default function App() {
       let filteredPeriods = Array.from(allPeriods)
       if (periodFilter === 'year') {
         filteredPeriods = filteredPeriods.filter(p => /^\d{4}$/.test(p))
+        // Sort years: 2025, 2024, 2023...
+        filteredPeriods.sort((a, b) => b.localeCompare(a))
       } else {
         filteredPeriods = filteredPeriods.filter(p => /^Q\d\/\d{4}$/.test(p))
+        // Sort quarters chronologically descending: Q4/2025, Q3/2025, Q2/2025...
+        filteredPeriods.sort((a, b) => {
+          // p is like "Q1/2025"
+          const [, qA, yA] = a.match(/Q(\d)\/(\d{4})/) || []
+          const [, qB, yB] = b.match(/Q(\d)\/(\d{4})/) || []
+          if (!yA || !yB) return b.localeCompare(a)
+          if (yA !== yB) return parseInt(yB) - parseInt(yA) // Year desc
+          return parseInt(qB) - parseInt(qA) // Quarter desc within same year
+        })
       }
 
-      // Sort newest → oldest
-      const cols = filteredPeriods.sort((a, b) => b.localeCompare(a)).slice(0, 8)
+      // Take latest 8 periods
+      const cols = filteredPeriods.slice(0, 8)
       setPeriods(cols)
 
       // Auto-expand L0 + L1
@@ -151,14 +199,14 @@ export default function App() {
     return (
       <div className={`mini-bar-container${hasNeg ? ' mixed' : ''}`}>
         {values.map((v, i) => {
-          const pct = Math.min(90, Math.max(4, (Math.abs(v) / maxVal) * 90))
+          const scale = Math.min(1, Math.max(0.04, Math.abs(v) / maxVal))
           return (
             <div key={i} className="bar-col" title={formatNumber(v)}>
               <div className="bar-pos-area">
-                {v >= 0 && <div className="bar-fill pos" style={{ height: `${pct}%` }} />}
+                {v >= 0 && <div className="bar-fill pos" style={{ transform: `scaleY(${scale})` }} />}
               </div>
               <div className="bar-neg-area">
-                {v < 0 && <div className="bar-fill neg" style={{ height: `${pct}%` }} />}
+                {v < 0 && <div className="bar-fill neg" style={{ transform: `scaleY(${scale})` }} />}
               </div>
             </div>
           )
@@ -198,7 +246,7 @@ export default function App() {
       <div className="company-bar">
         <div className="company-info">
           <span className="company-name">{currentTicker.name}</span>
-          <span className="company-sub">Báo cáo tài chính · Đơn vị: Triệu VND</span>
+          <span className="company-sub">Báo cáo tài chính · Đơn vị: Tỷ VND</span>
         </div>
         <select
           id="ticker-select"
@@ -293,25 +341,39 @@ export default function App() {
                 const major = isMajorHeading(row)
                 const displayLabel = major ? (row.item || '').toUpperCase() : (row.item || '')
 
+                const isL0 = row.levels === 0;
+                const isL1 = row.levels === 1;
+                const showToggleSpace = isL1 || (row.levels > 0 && hasChildren);
+
+                // Base padding per level
+                // L0: 12px
+                // L1: 12px + 16px = 28px. If it has toggle (width 14px + 5px gap = 19px), text is at 47px.
+                // L2: If we want text to align with L1 text (47px), padding = 47px.
+                // L3: 47px + 16px = 63px.
+                let padLeft = 12;
+                if (row.levels === 1) padLeft = 28;
+                if (row.levels >= 2) padLeft = 47 + (row.levels - 2) * 16;
+
                 return (
                   <tr
                     key={row.item_id || idx}
-                    className={`fin-row${major ? ' row-major' : ' row-child'} lv${Math.min(row.levels, 4)}`}
+                    className={`fin-row${major ? ' row-major' : ' row-child'} lv${Math.min(row.levels || 0, 4)}`}
                   >
                     <td className="td-item">
-                      <div className="item-cell" style={{ paddingLeft: `${6 + row.levels * 16}px` }}>
-                        {hasChildren
-                          ? <button className="tog" onClick={() => toggle(row.item_id)} aria-label="Toggle expand">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-                              {isOpen
-                                ? <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                                : <path d="M4 2L8 6L4 10" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                              }
-                            </svg>
-                          </button>
-                          : <span className="tog-ph" />
-                        }
-                        <span className={`label${major ? ' label-major' : ''}`}>{displayLabel}</span>
+                      <div className="item-cell" style={{ paddingLeft: `${padLeft}px` }}>
+                        {showToggleSpace && (
+                          hasChildren
+                            ? <button
+                              className="tog"
+                              onClick={() => toggle(row.item_id)}
+                              aria-label={isOpen ? "Thu gọn" : "Mở rộng"}
+                              aria-expanded={isOpen}
+                            >
+                              {isOpen ? '–' : '+'}
+                            </button>
+                            : <span className="tog-ph" />
+                        )}
+                        <span className={`label${isL0 ? ' label-major' : ''}`}>{isL0 ? displayLabel.toUpperCase() : displayLabel}</span>
                       </div>
                     </td>
                     <td className="td-chart">
@@ -320,7 +382,7 @@ export default function App() {
                     {periods.map(p => {
                       const v = row.periods_data?.[p]
                       return (
-                        <td key={p} className={`td-val${v < 0 ? ' neg' : ''}`}>
+                        <td key={p} className={`td-val ${v < 0 ? 'neg' : ''}`}>
                           {formatNumber(v)}
                         </td>
                       )
