@@ -14,9 +14,9 @@
 | **Phase 1** | 🔧 Critical Fixes | Sửa bugs chặn luồng, bảo mật | F-001, F-002, F-005 | ✅ DONE |
 | **Phase 2** | 🏦 Sector Intelligence | Dynamic sector routing + Supabase metadata | F-004 | ✅ DONE |
 | **Phase 3** | 🖥️ Frontend Sector-Aware | UI thay đổi đầu mục theo nhóm ngành | F-003, F-007 | ✅ DONE |
-| **Phase 4** | 📊 Chỉ số Tài chính Ngành | Metrics tính toán + hiển thị theo sector | F-007 | ✅ DONE |
-| **Phase 5** | 🔍 Data Validation | Đối chiếu dữ liệu Vietcap web vs DB | F-006 | ⏳ TODO |
-| **Phase 6** | 🚀 Polish & Deployment | UI/UX, Performance, Deploy | F-009, F-010 | ⏳ TODO |
+| **Phase 4** | 📊 Chỉ số Tài chính Ngành | Metrics tính toán + hiển thị theo sector | F-007, F-011 | 🟡 PARTIAL |
+| **Phase 5** | 🔍 Data Validation | Đối chiếu dữ liệu Vietcap web vs DB | F-006 | ✅ DONE |
+| **Phase 6** | 🚀 Polish & Deployment | UI/UX, Security, Deploy | F-009, F-010, F-012 | ⏳ TODO |
 
 ---
 
@@ -134,7 +134,7 @@
 - [x] VHC (normal) vẫn hiển thị 97 items phi tài chính: "Hàng tồn kho", "Tài sản cố định"...
 - [x] Sector badge hiển thị chính xác (NGÂN HÀNG/PHI TÀI CHÍNH/CHỨNG KHOÁN)
 - [x] `sync_supabase.py` refactored: auto-detect sector và load đúng parquet
-- [ ] **Pending:** Re-run pipeline cho các bank tickers khác (ACB, BID...) để có `cdkt_bank` parquet (hiện fallback về generic)
+- [x] **Done:** Đã chạy `vn30_enrichment.py` fetch và sync đủ data BCTC ngành cho các mã Banks (ACB, BID...) và Securities.
 
 ---
 
@@ -311,4 +311,15 @@ Phase 1 (Critical Fixes)
 
 ---
 
-> **⚠️ HOLD — Start Phase 1 immediately. Phase 2+ awaiting Phase 1 completion.**
+> **⚠️ PHASE 6 IN PROGRESS — Các giai đoạn cốt lõi (1, 2, 3, 5) đã hoàn thiện 100%.**
+
+---
+
+## 📌 Vấn Đề Còn Tồn Đọng (Backlog Hiện Tại)
+Dưới đây là các đầu việc còn tồn tại để dự án chạm mốc Release 100% hoàn hảo:
+
+1. **[Bảo Mật] Missing Timeouts F-012 (Phase 6 - Task 6.4):** Chèn tham số `timeout=10` vào các file `requests.get` trong thư mục `tools/` để fix cảnh báo lỗ hổng Medium từ CTO Audit Bandit report. Tránh treo (hang) hệ thống Crawling.
+2. **[Tính Năng] Metrics Ngân Hàng Nâng Cao (Phase 4 - Task 4.2 LDR, NPL, CASA, CIR):** Cần trích xuất báo cáo thuyết minh chi tiết hoặc tìm endpoint phụ để lấy data tính chính xác các chỉ số này. Hiện tại đã có các metrics cơ bản của nhóm Ngân Hàng.
+3. **[Tính Năng] Metrics Chứng Khoán Nâng Cao (Phase 4 - Task 4.3 Margin/Equity, Core Profit):** Tương tự Bank, phải bóc tách sâu mảng tự doanh/môi giới. Giữ nguyên ưu tiên P1 nhưng đòi hỏi Research kỹ API Vietcap hơn.
+4. **[Hệ thống] Quy trình cập nhật hàng Quý (Phase 6 - Task 6.2):** Sẽ viết Document hoàn chỉnh để chuyển giao việc Run pipeline data mỗi quý mới.
+5. **[Vận Hành] Production Deployment (Phase 6 - Task 6.3):** Đóng gói và đẩy Frontend đã có design Theme V3 lên Vercel/Netlify. Thiết lập Domain + Cloud Env.
