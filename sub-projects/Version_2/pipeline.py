@@ -52,12 +52,28 @@ LOG_FILE   = Path(__file__).parent / "pipeline.log"
 
 # ─── API Providers ──────────────────────────────────────────────────────────────
 
-# ─── Section → Sheet mapping ──────────────────────────────────────────────────
 SECTION_MAP = {
     "BALANCE_SHEET":    "CDKT",
     "INCOME_STATEMENT": "KQKD",
     "CASH_FLOW":        "LCTT",
     "NOTE":             "NOTE",
+}
+
+# Phase 2: Sector routing via centralized sector.py (replaces hardcoded lists)
+from sector import get_sheets_for_ticker, get_sector
+
+# When processing, we need to know which section a sheet maps TO (e.g. CDKT_BANK -> BALANCE_SHEET)
+SHEET_TO_SECTION = {
+    "CDKT": "BALANCE_SHEET",
+    "KQKD": "INCOME_STATEMENT",
+    "LCTT": "CASH_FLOW",
+    "NOTE": "NOTE",
+    "CDKT_BANK": "BALANCE_SHEET",
+    "KQKD_BANK": "INCOME_STATEMENT",
+    "LCTT_BANK": "CASH_FLOW",
+    "CDKT_SEC": "BALANCE_SHEET",
+    "KQKD_SEC": "INCOME_STATEMENT",
+    "LCTT_SEC": "CASH_FLOW"
 }
 
 # ─── Load Golden Schema ───────────────────────────────────────────────────────
@@ -129,11 +145,14 @@ def normalize(payload: dict, section: str, sheet_id: str,
             for idx, field in enumerate(schema_fields, start=1):
                 field_id = field.get("field_id", "")
                 
-                # The Vietcap API keys (bsa{N}) correspond to the 1-indexed position
-                # within the extracted fields list, NOT the Excel row number.
-                vietcap_idx = idx
                 
-                val = provider.get_api_value(api_row, section, vietcap_idx, field_id)
+                vietcap_key = field.get("vietcap_key")
+                if vietcap_key:
+                    val = provider.get_api_value_by_key(api_row, vietcap_key)
+                else:
+                    vietcap_idx = idx
+                    val = provider.get_api_value(api_row, section, vietcap_idx, field_id)
+                    
                 records.append({
                     "ticker":         ticker,
                     "period_type":    pt_tag,
@@ -246,7 +265,9 @@ def run_pipeline(ticker: str, provider: BaseProvider = None):
 
     parquet_ok = []
 
-    for section, sheet_id in SECTION_MAP.items():
+    target_sheets = get_sheets_for_ticker(ticker.upper())
+
+    for section, sheet_id in target_sheets:
         print(f"  RUN: {section} ({sheet_id})")
         sheet_fields = schema.get(sheet_id, [])
         if not sheet_fields:
@@ -312,10 +333,16 @@ def run_pipeline(ticker: str, provider: BaseProvider = None):
 
 # ─── Tab loader utility ───────────────────────────────────────────────────────
 SHEET_TO_TABLE = {
-    "cdkt": "balance_sheet",
-    "kqkd": "income_statement",
-    "lctt": "cash_flow",
-    "cstc": "financial_ratios",
+    "cdkt":       "balance_sheet",
+    "cdkt_bank":  "balance_sheet",
+    "cdkt_sec":   "balance_sheet",
+    "kqkd":       "income_statement",
+    "kqkd_bank":  "income_statement",
+    "kqkd_sec":   "income_statement",
+    "lctt":       "cash_flow",
+    "lctt_bank":  "cash_flow",
+    "lctt_sec":   "cash_flow",
+    "cstc":       "financial_ratios",
 }
 
 def load_tab_from_supabase(ticker: str, period_type: str, sheet: str) -> pd.DataFrame:
@@ -340,8 +367,15 @@ def load_tab_from_supabase(ticker: str, period_type: str, sheet: str) -> pd.Data
 
     print(f"[{ticker}] Fetching {period_type} {table_name} from Supabase...")
     try:
-        response = sb.table(table_name).select("*").eq("stock_name", ticker).limit(10000).execute()
-        data = response.data
+        data = []
+        page_size = 1000
+        for page in range(10):  # max 10k rows
+            start = page * page_size
+            end = start + page_size - 1
+            response = sb.table(table_name).select("*").eq("stock_name", ticker).range(start, end).execute()
+            data.extend(response.data)
+            if len(response.data) < page_size:
+                break
     except Exception as e:
         print(f"Supabase fetch failed (non-fatal): {e}")
         data = [] # Assign empty list on error to allow pd.DataFrame([])
@@ -376,8 +410,9 @@ def load_tab_from_supabase(ticker: str, period_type: str, sheet: str) -> pd.Data
     item_col = "ratio_name" if table_name == "financial_ratios" else "item"
     id_col = "id" if table_name == "financial_ratios" else "item_id"
 
-    # For standard statements, use Golden Schema order
-    if table_name != "financial_ratios":
+    # For standard statements with golden schema match, use schema order
+    # For sector-specific sheets (cdkt_bank, etc.), use row_number order from Supabase
+    if table_name != "financial_ratios" and ordered_fields:
         for field in ordered_fields:
             fid = field["field_id"]
             sub = df_long[df_long["item_id"] == fid]
@@ -388,6 +423,22 @@ def load_tab_from_supabase(ticker: str, period_type: str, sheet: str) -> pd.Data
                 "vn_name":  field["vn_name"],
                 "unit":     field["unit"],
                 "level":    field["level"],
+            }
+            for p in all_periods:
+                p_row = sub[sub["period"] == p]
+                row_dict[p] = p_row["value"].values[0] if not p_row.empty else None
+            rows.append(row_dict)
+    elif table_name != "financial_ratios":
+        # Sector-specific sheets: no golden schema match, use row_number order
+        unique_items = df_long.drop_duplicates(subset=["item_id"]).sort_values("row_number")
+        for _, item_row in unique_items.iterrows():
+            fid = item_row["item_id"]
+            sub = df_long[df_long["item_id"] == fid]
+            row_dict = {
+                "field_id": fid,
+                "vn_name":  item_row.get("item", fid),
+                "unit":     item_row.get("unit", "tỷ đồng"),
+                "level":    int(item_row.get("levels", 0)),
             }
             for p in all_periods:
                 p_row = sub[sub["period"] == p]

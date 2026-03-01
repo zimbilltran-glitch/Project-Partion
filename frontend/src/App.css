@@ -143,6 +143,16 @@ body {
   font-family: 'IBM Plex Mono', monospace;
 }
 
+.sector-badge {
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
 /* ── Company Info Bar ───────────────────────────────────── */
 .company-bar {
   padding: 14px 24px 12px;
@@ -424,6 +434,13 @@ body {
   letter-spacing: 0.1px;
 }
 
+.unit-label {
+  font-size: 11px;
+  color: var(--txt-muted);
+  font-weight: 400;
+  font-style: italic;
+}
+
 .lv0 {
   background: #111111;
 }
@@ -679,4 +696,446 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--txt-dim);
+}
+
+/* ══════════════════════════════════════════════════════════
+   V3 — 360 Overview Tab Styles (Simply Wall St theme)
+   ══════════════════════════════════════════════════════════ */
+
+/* SWS design tokens (merge with existing palette) */
+:root {
+  --sws-bg-main: #111111;
+  --sws-bg-card: #1a1a1a;
+  --sws-bg-section: #1e1e1e;
+  --sws-border: rgba(255, 255, 255, 0.08);
+  --sws-success: #26AE50;
+  --sws-lime: #9ACA27;
+  --sws-danger: #E53935;
+  --sws-warn: #F59E0B;
+  --sws-muted: #A0AEC0;
+}
+
+/* ── Tab accent: 360 Overview tab gets green ─────────────── */
+.tab[id="tab-360"].active::after {
+  background: var(--sws-success);
+  box-shadow: 0 0 6px rgba(38, 174, 80, 0.5);
+}
+
+/* ── Overview root container ────────────────────────────── */
+.overview-tab {
+  padding: 20px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overview-loading,
+.overview-error {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--sws-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.overview-updated {
+  font-size: 11px;
+  color: var(--sws-muted);
+  text-align: right;
+  opacity: 0.7;
+}
+
+/* ── Company Hero ────────────────────────────────────────── */
+.company-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
+  border: 1px solid var(--sws-border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-name-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-ticker {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.hero-exchange {
+  font-size: 14px;
+  color: var(--sws-muted);
+  font-weight: 500;
+}
+
+.hero-sector-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: #000;
+  padding: 2px 9px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero-company-name {
+  font-size: 14px;
+  color: var(--sws-muted);
+  font-weight: 400;
+}
+
+.hero-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -1px;
+}
+
+.hero-change {
+  font-size: 15px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.hero-marketcap {
+  font-size: 13px;
+  color: var(--sws-muted);
+}
+
+/* ── Mid-row: Snowflake + Quick Stats ────────────────────── */
+.overview-mid-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .overview-mid-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--sws-muted);
+  margin-bottom: 12px;
+}
+
+.snowflake-panel,
+.stats-panel {
+  background: var(--sws-bg-card);
+  border: 1px solid var(--sws-border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.snowflake-container {
+  display: flex;
+  justify-content: center;
+}
+
+.data-note {
+  font-size: 11px;
+  color: var(--sws-muted);
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+.data-note code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.5px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* ── Quick Stats Grid ────────────────────────────────────── */
+.quick-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.stat-card {
+  background: var(--sws-bg-section);
+  border: 1px solid var(--sws-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color 150ms ease;
+}
+
+.stat-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.stat-card-label {
+  font-size: 10.5px;
+  color: var(--sws-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-card-highlight {
+  color: var(--sws-success);
+}
+
+/* ── Generic overview section card ──────────────────────── */
+.overview-section {
+  background: var(--sws-bg-card);
+  border: 1px solid var(--sws-border);
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+/* ── Valuation Gauge ─────────────────────────────────────── */
+.valuation-gauge-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gauge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gauge-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.gauge-zone-badge {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.gauge-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gauge-bar {
+  height: 14px;
+  border-radius: 7px;
+  position: relative;
+  overflow: visible;
+}
+
+.gauge-needle {
+  position: absolute;
+  top: -5px;
+  width: 3px;
+  height: 24px;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px currentColor;
+  transition: left 0.4s ease;
+}
+
+.gauge-labels {
+  display: flex;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.gauge-labels span {
+  text-align: center;
+}
+
+.gauge-detail {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.gauge-detail-item {
+  color: var(--sws-muted);
+}
+
+.gauge-detail-item strong {
+  font-weight: 600;
+}
+
+/* ── Checklist Cards ─────────────────────────────────────── */
+.checklist-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checklist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checklist-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.checklist-score {
+  font-size: 12px;
+  color: var(--sws-success);
+  font-weight: 600;
+}
+
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--sws-bg-section);
+  border: 1px solid var(--sws-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  transition: border-color 150ms, transform 150ms;
+}
+
+.check-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.check-pass {
+  border-left: 3px solid var(--sws-success);
+}
+
+.check-fail {
+  border-left: 3px solid var(--sws-danger);
+}
+
+.check-neutral {
+  border-left: 3px solid var(--sws-muted);
+}
+
+.check-loading {
+  opacity: 0.5;
+}
+
+.check-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.check-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.check-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.check-detail {
+  font-size: 11px;
+  color: var(--sws-muted);
+}
+
+/* ── Price Chart ─────────────────────────────────────────── */
+.price-chart-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chart-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chart-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.chart-latest {
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.chart-empty {
+  color: var(--sws-muted);
+  font-size: 12px;
+  text-align: center;
+  padding: 20px 0;
+  font-style: italic;
+}
+
+/* ── Ticker search dropdown polish ───────────────────────── */
+.ticker-search-wrapper {
+  position: relative;
 }

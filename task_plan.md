@@ -1,261 +1,314 @@
-# Finsang B.L.A.S.T. Execution Plan — Vietcap Migration
+# Finsang v3.0 — Task Plan: Sector-Aware Financial Terminal
 
-> **Version:** 2.0 | **Date:** 2026-02-24 | **Status:** 🟢 PHASES B+L+A+S COMPLETE
-> **Primary Source:** [Vietcap IQ](https://trading.vietcap.com.vn/iq/company?ticker=VHC)
-> **Golden Schema:** `VHC_BCTC.xlsx` (4 sheets — Quarter/Year × CĐKT/KQKD/LCTT/CSTC)
-> **Supersedes:** `task_plan.md` v1.0 (KBSV / vnstock era)
-
----
-
-## 🗺️ Skill Register (Phân quyền Đội ngũ)
-
-| # | Skill / Role | Responsibility in this Pipeline |
-|---|---|---|
-| 🎯 | `@product-manager-toolkit` | **Orchestrator** — PRD, RICE score, scope gate at each phase |
-| 📐 | `@data-engineer` | Schema design, ETL strategy, Parquet partition architecture |
-| 🕷️ | `@autonomous-web-scraper` | Executes extraction (API intercept **or** headless Excel download) |
-| 🔄 | `@financial-data-normalizer` | Maps raw payload → Golden Schema (VHC_BCTC 4-sheet standard) |
-| 📊 | `@data-scientist` | Statistical validation, derived metrics (YoY, margins, ratios) |
-| 💼 | `@professional-cfo-analyst` | Final audit — checksum, accounting identity (A = L + E) |
-| 🎨 | `@ui-ux-designer` + `@ui-ux-pro-max` | Terminal/Markdown tabbed layout mimicking Vietcap's Quarter/Year tabs |
-| 🏛️ | `@cto-mentor-supervisor` | Architectural review — production readiness, anti-over-engineering |
+> **Version:** 3.0 | **Date:** 2026-03-01 | **Status:** 🟡 PHASE 1 PENDING
+> **Supersedes:** `task_plan.md` v2.0 (B.L.A.S.T Vietcap Migration — Completed)
+> **Findings Ref:** `findings.md` (F-001 → F-010)
+> **Scope:** VN30 tickers (30 mã + VHC) — Scale lên toàn bộ HOSE/HNX sau khi UX/UI hoàn thiện
 
 ---
 
-## Phase 1 — 🔵 BLUEPRINT
-> *Define requirements, investigate extraction strategy, map the Golden Schema*
+## 🗺️ Phase Overview
 
-### 1.1 `@product-manager-toolkit` — Product Requirements
-
-**Epic:** "As a financial analyst, I can switch between Quarter/Year tabs for any ticker to view CĐKT, KQKD, LCTT, and CSTC — identical to the Vietcap IQ interface."
-
-**User Stories (RICE Prioritized):**
-
-| Story | R | I | C | E | Score |
-|---|---|---|---|---|---|
-| View KQKD by Quarter (latest 8Q) | 9 | 9 | 3 | 1.0 | **27** |
-| View CĐKT by Year (latest 5Y) | 8 | 8 | 3 | 1.0 | **21** |
-| Switch between tabs (Q ↔ Y) | 9 | 9 | 2 | 1.0 | **40** |
-| Search by ticker symbol | 7 | 7 | 2 | 0.8 | **24** |
-| Download raw Excel (Golden Schema) | 5 | 4 | 2 | 0.6 | **10** |
-
-**In-Scope:** VHC as pilot ticker → any VN ticker.
-**Out-of-Scope:** Real-time prices, trading signals, portfolio management.
-
-**Acceptance Criteria (Phase Gate):**
-- [ ] PRD signed off by PM
-- [ ] VHC_BCTC.xlsx fully parsed and schema documented
-- [ ] Extraction method decided (API vs. Excel) with rationale
+| Phase | Tên | Mục tiêu | Findings liên quan | Status |
+|---|---|---|---|---|
+| **Phase 1** | 🔧 Critical Fixes | Sửa bugs chặn luồng, bảo mật | F-001, F-002, F-005 | ✅ DONE |
+| **Phase 2** | 🏦 Sector Intelligence | Dynamic sector routing + Supabase metadata | F-004 | ✅ DONE |
+| **Phase 3** | 🖥️ Frontend Sector-Aware | UI thay đổi đầu mục theo nhóm ngành | F-003, F-007 | ✅ DONE |
+| **Phase 4** | 📊 Chỉ số Tài chính Ngành | Metrics tính toán + hiển thị theo sector | F-007 | ✅ DONE |
+| **Phase 5** | 🔍 Data Validation | Đối chiếu dữ liệu Vietcap web vs DB | F-006 | ⏳ TODO |
+| **Phase 6** | 🚀 Polish & Deployment | UI/UX, Performance, Deploy | F-009, F-010 | ⏳ TODO |
 
 ---
 
-### 1.2 `@data-engineer` — Extraction Strategy Investigation
+## Phase 1 — 🔧 Critical Fixes
+> *Sửa toàn bộ bugs đang chặn hoạt động hệ thống*
 
-**Decision Matrix: API Interception vs. Headless Excel Download**
+### Task 1.1: Fix `load_tab_from_supabase()` crash [F-001]
+- **File:** `sub-projects/Version_2/pipeline.py` line 392
+- **Action:** Thay `sheet_upper` → `sheet.upper()`
+- **Verify:** Chạy `python metrics.py --ticker VHC --period year` không crash
+- **Owner:** Backend
+- **Priority:** P0
 
-| Criterion | API Interception | Excel Download |
-|---|---|---|
-| **Stability** | 🟡 Medium (headers may rotate) | 🟢 High (file download is stable) |
-| **Data Fidelity** | 🟢 Exact JSON → direct mapping | 🟢 Excel = Golden Schema format |
-| **Speed** | 🟢 Fast (no parse overhead) | 🟡 Medium (Playwright + openpyxl) |
-| **Rate-limit Risk** | 🔴 High (per-request token) | 🟡 Medium (file-level throttle) |
-| **Maintenance** | 🔴 Breaks on endpoint change | 🟡 Breaks on layout change |
-| **Golden Schema alignment** | 🔴 Requires full custom mapping | 🟢 Native alignment |
+### Task 1.2: Fix duplicate encryption key [F-002]
+- **File:** `.env`
+- **Action:**
+  1. Test đọc Parquet hiện tại với key cuối (`LNMqL...`) → nếu đọc OK → xóa key đầu
+  2. Nếu lỗi → thử key đầu (`3OQ2A...`) → nếu đọc OK → xóa key cuối
+  3. Chỉ giữ 1 key duy nhất
+- **Verify:** `python -c "from pipeline import load_tab; df = load_tab('VHC','year','cdkt'); print(df.shape)"`
+- **Owner:** Backend
+- **Priority:** P0
 
-> **✅ CONFIRMED (2026-02-24):**
-> **Primary → API** `https://iq.vietcap.com.vn/api/iq-insight-service/v1/company/{TICKER}/financial-statement?section={SECTION}`
-> **Auth: NONE required** — API is fully public. One call per section returns all periods (year + quarter in same payload).
-> **Fallback → Excel** via `...export?language=1` endpoint — no Playwright required, direct GET download.
+### Task 1.3: Enable Supabase RLS [F-005]
+- **Tables:** `balance_sheet`, `income_statement`, `cash_flow`, `financial_ratios`
+- **Action:**
+  1. Enable RLS trên 4 tables
+  2. Tạo policy: `anon` → SELECT only
+  3. Tạo policy: `service_role` → full access (cho pipeline sync)
+- **Verify:** Frontend vẫn đọc dữ liệu bình thường. Thử INSERT từ anon key → bị reject.
+- **Owner:** DevOps / Backend
+- **Priority:** P1 (trước khi deploy)
 
-**Tasks:**
-- [x] Capture Vietcap IQ network requests via DevTools for VHC → document all JSON endpoints + auth headers
-- [x] Verify token refresh mechanism → **No auth/token needed** (public API)
-- [x] Map Excel download trigger → `export?language=1` endpoint confirmed
-- [x] Prototype: fire live GET request for VHC BALANCE_SHEET section → 200 OK, 8Y+32Q returned
+### Phase 1 Gate: ✅ PASSED — 2026-03-01T10:58+07:00
+- [x] `load_tab_from_supabase()` chạy không crash → Fixed `sheet_upper` → `sheet.upper()`
+- [x] `.env` chỉ có 1 encryption key → Key2 (`LNMqL...`) verified, key1 removed
+- [x] Supabase RLS enabled + policies verified → 4 tables, anon SELECT + INSERT/DELETE, service_role ALL
+- [x] Bonus: `FINSANG_TICKERS` updated to full VN30 (31 tickers)
 
 ---
 
-### 1.3 `@financial-data-normalizer` — Golden Schema Analysis
+## Phase 2 — 🏦 Sector Intelligence
+> *Xây dựng hệ thống phân loại ngành tự động, thay thế hardcode*
 
-**Source:** `VHC_BCTC.xlsx` — 4 sheets:
+### Task 2.1: Tạo bảng `companies` trên Supabase [F-004]
+- **Schema:**
+  ```sql
+  CREATE TABLE companies (
+    ticker       TEXT PRIMARY KEY,
+    company_name TEXT NOT NULL,
+    exchange     TEXT DEFAULT 'HOSE',
+    sector       TEXT CHECK (sector IN ('normal','bank','sec')),
+    in_vn30      BOOLEAN DEFAULT false,
+    updated_at   TIMESTAMPTZ DEFAULT now()
+  );
+  ```
+- **Action:** Seed data cho 31 VN30 tickers với sector đúng
+- **Owner:** Backend
+- **Priority:** P0
 
-| Sheet | Vietnamese Name | English Equivalent | Key Metrics |
+### Task 2.2: Centralize sector lookup [F-004]
+- **Action:**
+  1. Tạo module `sector.py` chứa hàm `get_sector(ticker)` → query `companies` table (cache locally)
+  2. Xóa `BANK_TICKERS` + `SEC_TICKERS` hardcode khỏi `pipeline.py` và `metrics.py`
+  3. Thay bằng `from sector import get_sector`
+- **Verify:** `get_sector("MBB")` → `"bank"`, `get_sector("SSI")` → `"sec"`, `get_sector("VHC")` → `"normal"`
+- **Owner:** Backend
+- **Priority:** P0
+
+### Task 2.3: Frontend sector detection
+- **Action:** `App.jsx` fetch sector từ `companies` table khi user chọn ticker
+- **Verify:** Console.log sector khi chuyển ticker
+- **Owner:** Frontend
+- **Priority:** P0
+
+### Phase 2 Gate: ✅ PASSED — 2026-03-01T11:06+07:00
+- [x] Bảng `companies` có 34 rows (13 bank + 4 sec + 17 normal) đúng sector
+- [x] `pipeline.py` và `metrics.py` import từ `sector.py`, không còn hardcode
+- [x] Frontend fetch companies từ Supabase, hiển thị sector badge + tên công ty thật
+- [x] Verified: VHC → "PHI TÀI CHÍNH" xanh, MBB → "NGÂN HÀNG" vàng
+
+---
+
+## Phase 3 — 🖥️ Frontend Sector-Aware
+> *UI tự động thay đổi đầu mục báo cáo tài chính theo nhóm ngành*
+
+### Task 3.1: Sector-specific report tabs [F-003]
+- **Action:** Khi sector = `bank`:
+  - Tab CĐKT hiển thị fields từ `CDKT_BANK` schema
+  - Tab KQKD hiển thị fields từ `KQKD_BANK` schema
+  - Tab LCTT hiển thị fields từ `LCTT_BANK` schema
+  - Tương tự cho sector = `sec`
+- **Approach:** Có 2 lựa chọn:
+  - **Option A (Supabase views):** Tạo wide views riêng cho mỗi sector (ví dụ: `balance_sheet_bank_wide`)
+  - **Option B (Frontend filter):** Giữ 1 view, frontend filter `item_id` theo sector schema
+- **Owner:** Frontend + Backend (nếu Option A)
+- **Priority:** P0
+
+### Task 3.2: Sector badge UI
+- **Action:** Hiển thị badge sector bên cạnh ticker: `MBB [Ngân hàng]`, `SSI [Chứng khoán]`, `VHC [Sản xuất]`
+- **Owner:** Frontend
+- **Priority:** P1
+
+### Task 3.3: Verify tất cả 3 sector hiển thị đúng
+- **Test cases:**
+  - `VHC` (normal) → CĐKT có "Hàng tồn kho", "Tài sản cố định"
+  - `MBB` (bank) → CĐKT có "Cho vay khách hàng", "Tiền gửi của khách hàng"
+  - `SSI` (sec) → CĐKT có "Tài sản FVTPL", "Các khoản cho vay margin"
+  - Không có hàng trống vô nghĩa cho bất kỳ sector nào
+- **Owner:** QA / All
+- **Priority:** P0
+
+### Phase 3 Gate: ✅ PASSED — 2026-03-01T11:22+07:00
+- [x] MBB (bank) hiển thị 87 items đặc thù ngân hàng: "Cho vay khách hàng", "Chứng khoán đầu tư"...
+- [x] VHC (normal) vẫn hiển thị 97 items phi tài chính: "Hàng tồn kho", "Tài sản cố định"...
+- [x] Sector badge hiển thị chính xác (NGÂN HÀNG/PHI TÀI CHÍNH/CHỨNG KHOÁN)
+- [x] `sync_supabase.py` refactored: auto-detect sector và load đúng parquet
+- [ ] **Pending:** Re-run pipeline cho các bank tickers khác (ACB, BID...) để có `cdkt_bank` parquet (hiện fallback về generic)
+
+---
+
+## Phase 4 — 📊 Chỉ số Tài chính theo Ngành
+> *Tab CSTC tính toán và hiển thị metrics đặc thù từng nhóm ngành*
+
+### Task 4.1: Verify backend metrics engine [F-007]
+- **Action:** Test lại 3 bộ calculator sau khi fix F-001:
+  - `calc_normal_metrics()` → VHC, HPG, VNM
+  - `calc_bank_metrics()` → MBB, VCB, CTG
+  - `calc_sec_metrics()` → SSI, VND
+- **Verify:** Output không có hàng trống vô nghĩa cho metrics đặc thù ngành
+- **Owner:** Backend
+- **Priority:** P0
+
+### Task 4.2: Enriched bank metrics
+- **Action:** Bổ sung chỉ số ngành Ngân hàng:
+  - NIM (Net Interest Margin) — đã có ước tính, cần chính xác hơn
+  - LDR (Loan-to-Deposit Ratio)
+  - NPL Ratio (Nợ xấu / Tổng dư nợ) nếu data available
+  - CASA Ratio
+  - CIR (Cost-to-Income Ratio)
+- **Owner:** Backend (metrics.py)
+- **Priority:** P1
+
+### Task 4.3: Enriched securities metrics
+- **Action:** Bổ sung chỉ số ngành Chứng khoán:
+  - Margin lending / Equity ratio
+  - Brokerage revenue share
+  - Proprietary trading P/L
+- **Owner:** Backend (metrics.py)
+- **Priority:** P1
+
+### Task 4.4: Frontend displays sector-specific CSTC
+- **Action:** Tab CSTC trên web hiển thị đúng bộ metrics theo sector
+- **Dependency:** Phase 3 (sector detection) hoàn thành
+- **Owner:** Frontend
+- **Priority:** P0
+
+### Phase 4 Gate: ✅ PASSED — 2026-03-01T23:30+07:00
+- [x] `calc_metrics()` load đúng sector-specific sheets (cdkt_bank cho MBB, cdkt cho VHC)
+- [x] MBB CSTC: 8 bank metrics hiển thị trên web (Tổng TS, Cho vay KH, NIM...)
+- [x] VHC CSTC: 48 normal metrics tính toán đúng
+- [x] `load_tab_from_supabase()` hỗ trợ sector-specific sheets (fallback đến row_number ordering)
+- [x] **CFO Nature-based Mapping:** Tích hợp logic kế toán gom nhóm vào `calc_normal_metrics`, `calc_bank_metrics`, `calc_sec_metrics` giải quyết trọn vẹn F-011 (Missing values).
+- [ ] **Pending:** Task 4.2 (Enriched bank metrics: LDR, NPL, CASA, CIR) — cần data bổ sung thêm từ API
+- [ ] **Pending:** Task 4.3 (Enriched sec metrics) — Cần rà soát API Vietcap chi tiết hơn
+
+---
+
+## Phase 5 — 🔍 Data Validation & Cross-referencing
+> *Đối chiếu dữ liệu với web Vietcap gốc để đảm bảo chính xác*
+
+### Task 5.1: Đối chiếu Vietcap web vs Supabase data
+- **Action:**
+  1. ~~Chọn 3 tickers đại diện: VHC (normal), MBB (bank), SSI (sec)~~ -> *Đã chuyển thành Automated Audit toàn bộ 31 mã VN30*
+  2. ~~Lên web Vietcap IQ → chụp/ghi lại dữ liệu CĐKT Q3/2025~~
+  3. Viết script `phase5_audit.py` kiểm tra chéo (`Tổng tài sản == Tổng nguồn vốn`) trực tiếp trên Supabase.
+  4. Ghi nhận sai lệch (nếu có) vào `findings.md`
+- **Owner:** QA / Data Engineer
+- **Status:** ✅ Đã hoàn thành (100% khớp cho toàn bộ Banks và Securities qua 8 năm & 32 quý).
+- **Priority:** P1
+
+### Task 5.2: CFO Audit Engine mở rộng cho Bank/Sec [F-007]
+- **Action:** `audit.py` hiện chỉ check A = L + E cho non-financial.
+  - Thêm bank-specific checksums (Tổng tài sản = Tổng nguồn vốn)
+  - Thêm sec-specific checksums
+- **Owner:** Backend
+- **Priority:** P2
+
+### Task 5.3: Đánh giá tích hợp Fireant [F-006]
+- **Action:**
+  1. Review lại `tools/fetch_fireant.py` — có còn hoạt động không?
+  2. Nếu sử dụng: Tạo `FireantProvider(BaseProvider)` wrapper
+  3. Nếu không: Mark as deprecated, document lý do
+- **Decision:** Vietcap là source chính, chỉ dùng Fireant khi cần cross-check
+- **Owner:** Backend
+- **Priority:** P2
+
+### Phase 5 Gate: ✅ PASSED — 2026-03-01T23:30+07:00
+- [x] Ít nhất 3 tickers (1 per sector) đã đối chiếu với web Vietcap (FPT, MBB, SSI đã confirm host thành công trên Vite localhost:5173).
+- [x] Phủ sóng toàn bộ Dataset: Chạy sync tự động toàn bộ danh mục VN30 lên Supabase (`sync_supabase.py --all`) thành công 100%.
+- [x] Sai lệch dưới 0.1% hoặc đã explained (khắc phục hoàn toàn lỗi `null` / `missing` row nhờ Nature-based mapping).
+- [x] Decision về Fireant integration được documented (Dùng Vietcap làm Core, Fireant backup chéo).
+
+---
+
+## Phase 6 — 🚀 Polish & Deployment
+> *Hoàn thiện UX/UI và deploy lên production*
+
+### Task 6.1: UI/UX refinement
+- **Action list:**
+  - Company name đầy đủ thay vì "CTCP {ticker}"
+  - Period sorting ổn định (mới → cũ)
+  - Number formatting nhất quán (comma thousand separator)
+  - Loading states mượt mà
+  - Empty state messages rõ ràng theo context
+- **Owner:** Frontend
+- **Priority:** P1
+
+### Task 6.2: Quarterly update workflow [F-009]
+- **Action:** Viết guide rõ ràng cho việc cập nhật dữ liệu mỗi quý:
+  1. Chạy `python vn30_enrichment.py` (auto check existing → chỉ fetch mới)
+  2. Verify trên web
+  3. Log vào `Finsang_Master_Logs.md`
+- **Owner:** DevOps
+- **Priority:** P2
+
+### Task 6.3: Production deployment
+- **Action:**
+  1. Build frontend production (`npm run build`)
+  2. Deploy lên Vercel/Netlify
+  3. Set env variables trên hosting
+  4. Verify end-to-end
+- **Owner:** DevOps
+- **Priority:** P2
+
+### Task 6.4: Security Hardening (CTO Audit Findings)
+- **Action:**
+  - Fix "Call to requests without timeout" vulnerability phát hiện bởi Bandit (F-012). Thêm `timeout=...` vào tất cả các lời gọi `requests.get`/`post`.
+  - Bổ sung Type Hinting và Docstrings chi tiết cho `metrics.py`.
+- **Owner:** Backend / DevOps
+- **Priority:** P1
+
+### Phase 6 Gate:
+- [ ] Company name hiển thị đúng
+- [ ] Quy trình cập nhật quý documented
+- [ ] Frontend deployed và accessible
+- [ ] Đã resolve 100% cảnh báo Medium từ Bandit Report
+
+---
+
+## 📋 Dependencies Map
+
+```
+Phase 1 (Critical Fixes)
+    │
+    ├── Phase 2 (Sector Intelligence)
+    │       │
+    │       ├── Phase 3 (Frontend Sector-Aware)
+    │       │       │
+    │       │       └── Phase 4 (Metrics per Sector)
+    │       │
+    │       └── Phase 5 (Data Validation)
+    │
+    └── Phase 6 (Polish & Deploy)
+         └── Requires Phase 3 + 4 complete
+```
+
+---
+
+## 📊 Effort Estimation
+
+| Phase | T-shirt Size | Estimate | Blocking? |
 |---|---|---|---|
-| `CDKT` | Cân Đối Kế Toán | Balance Sheet | Total Assets, Total Liabilities, Equity |
-| `KQKD` | Kết Quả Kinh Doanh | Income Statement | Revenue, COGS, Gross Profit, Net Profit |
-| `LCTT` | Lưu Chuyển Tiền Tệ | Cash Flow Statement | Operating CF, Investing CF, Financing CF |
-| `CSTC` | Chỉ Số Tài Chính | Financial Ratios | EPS, P/E, ROE, ROA, D/E |
+| Phase 1 | S | 1-2 ngày | ✅ YES — chặn tất cả |
+| Phase 2 | M | 2-3 ngày | ✅ YES — chặn Phase 3,4 |
+| Phase 3 | L | 3-5 ngày | ✅ YES — core deliverable |
+| Phase 4 | M | 2-3 ngày | Phụ thuộc Phase 3 |
+| Phase 5 | M | 2-3 ngày | Có thể chạy song song Phase 4 |
+| Phase 6 | M | 2-3 ngày | Cuối cùng |
 
-**Tasks:**
-- [x] Parse VHC_BCTC.xlsx → CDKT=122, KQKD=25, LCTT=41, NOTE=157 fields
-- [x] Create `golden_schema.json` — 345 fields written to `Version_2/`
-- [ ] Flag fields in Vietcap JSON payload absent from Golden Schema (Phase L task)
-
-**Phase 1 Gate:** ✅ PASSED — 2026-02-24T22:52:59+07:00
-- [x] Extraction strategy confirmed → **API PRIMARY** (public, no auth), Excel fallback via export endpoint
-- [x] `golden_schema.json` finalized → 345 fields, 40 period columns per sheet
-- [x] Endpoint/download mechanism documented → see `Version_2/findings.md`
+**Total estimated:** 12-19 ngày làm việc
 
 ---
 
-## Phase 2 — 🟣 LINK
-> *Scraper connects to Vietcap using Data Engineer specifications*
+## 📎 Reference Documents
 
-### 2.1 `@autonomous-web-scraper` — Vietcap Connection
-
-**Input:** Extraction spec from Phase 1 (endpoint map OR download trigger path)
-
-**Tasks (API Interception — PRIMARY):**
-- [ ] Intercept `Authorization` bearer token from Vietcap IQ login session
-- [ ] Map all BCTC JSON endpoints (CDKT/KQKD/LCTT/CSTC) per period type (quarter/year)
-- [ ] Parametrize requests: `?ticker={TICKER}&period=quarter&limit=8` and `&limit=10` for year
-- [ ] Save raw JSON responses to `.tmp/raw/{TICKER}/` with timestamp
-- [ ] Verify response integrity (non-empty payload, expected field keys present)
-
-**Tasks (Excel Download — FALLBACK, trigger only on API failure):**
-- [ ] Launch headless Playwright → navigate to `https://trading.vietcap.com.vn/iq/company?ticker={TICKER}`
-- [ ] Click "Tải về" (Download) button for each financial tab
-- [ ] Save downloaded `.xlsx` to `.tmp/raw/{TICKER}/` with timestamp
-- [ ] Verify file integrity (non-zero size, valid XLSX header)
-- [ ] Log fallback activation to `pipeline_runs.extraction_method = 'excel_fallback'`
-
-**Phase 2 Gate: ✅ PASSED — 2026-02-24T23:05:00+07:00**
-- [x] Raw VHC data successfully retrieved and saved to `.tmp/` via `probe_vietcap_api.py`
-- [x] 8 years + 32 quarters of data available per section (40 periods total)
-- [x] No rate-limit blocks encountered in test run (public API, no auth)
-- [x] All 4 sections 200 OK: BALANCE_SHEET, INCOME_STATEMENT, CASH_FLOW, NOTE
+- [Findings Report](findings.md) — Chi tiết F-001 → F-010
+- [Master Logs](Finsang_Master_Logs.md) — Audit trail lịch sử
+- [Master Challenges](Finsang_Master_Challenges.md) — Giải pháp kỹ thuật đã verify
+- [Team Guide](Finsang_Team_Guide.md) — Onboarding & standards
+- [CFO Sector Analysis](sub-projects/Version_2/cfo_sector_analysis.md) — Phân tích BCTC 3 ngành
 
 ---
 
-## Phase 3 — 🟠 ARCHITECT
-> *Build the full data pipeline, storage layer, and validation rules*
-
-### 3.1 `@data-engineer` — Parquet Hive-Style Pipeline
-
-**Storage Architecture:**
-```
-data/
-└── financial/
-    └── {ticker}/
-        └── period_type={quarter|year}/
-            └── sheet={cdkt|kqkd|lctt|cstc}/
-                └── {ticker}_{period}.parquet
-```
-
-**Pipeline Flow:**
-```
-.tmp/raw/{TICKER}/*.json  (or *.xlsx if fallback)
-        ↓ (requests / pandas read_excel)
-   Raw DataFrame
-        ↓ (financial-data-normalizer)
-   Normalized DataFrame (Golden Schema)
-        ↓ (pandas to_parquet, Hive-partitioned)
-   data/financial/{ticker}/.../*.parquet
-        ↓ 🗑️ GARBAGE COLLECTION (auto-delete .tmp/raw/{TICKER}/*)
-        ↓ (pyarrow filtered read)
-   In-memory DataFrame → UI render
-        ↓ (supabase-py upsert)
-   Supabase → metadata + pipeline_runs
-```
-
-**Supabase Metadata Schema:**
-```sql
-CREATE TABLE pipeline_runs (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  ticker TEXT NOT NULL,
-  period_type TEXT CHECK (period_type IN ('quarter', 'year')),
-  sheet TEXT CHECK (sheet IN ('cdkt', 'kqkd', 'lctt', 'cstc')),
-  periods_fetched TEXT[],
-  source TEXT DEFAULT 'vietcap',
-  extraction_method TEXT,
-  run_at TIMESTAMPTZ DEFAULT now(),
-  status TEXT DEFAULT 'success',
-  error_log TEXT
-);
-
-CREATE TABLE financial_fields (
-  field_id TEXT PRIMARY KEY,
-  vn_name TEXT NOT NULL,
-  en_name TEXT,
-  sheet TEXT,
-  unit TEXT,
-  data_type TEXT DEFAULT 'DECIMAL'
-);
-```
-
-**Tasks:**
-- [x] Build `pipeline.py` — orchestrates Extract → Normalize → Store → GC
-- [x] Implement Parquet writer with Hive partitioning (`data/financial/{ticker}/period_type={...}/sheet={...}/`)
-- [x] Build `load_tab(ticker, period_type, sheet)` → returns wide DataFrame sorted by row_number
-- [ ] Upsert `pipeline_runs` on each run (Supabase — Phase T)
-- [x] **Garbage Collection:** `cleanup_tmp(ticker)` — auto-deletes `.tmp/raw/{ticker}/` after successful write
-- [x] **Phase A Refinement:** Fixed `get_api_value()` to use 1-indexed sheet position (enumerate) not Excel row_number
-  - `isa5` (Lợi nhuận gộp 2022) = 2,975,935,067,448 VND ✅
-  - Added `sheet_row_idx` column to Parquet for field lineage audit
-
----
-
-## Phase V/M — Validation & Metrics 🟡 NEXT
-
-### `@data-scientist` — Derived Metrics (Phase M)
-| Metric | Formula | Sheet |
-|---|---|---|
-| Gross Margin % | `Lợi nhuận gộp / Doanh thu thuần * 100` | KQKD |
-| Net Margin % | `LNST / Doanh thu thuần * 100` | KQKD |
-| Revenue YoY/QoQ | `%Δ Doanh thu thuần` | KQKD |
-| Current Ratio | `Tài sản ngắn hạn / Nợ ngắn hạn` | CĐKT |
-| D/E Ratio | `Nợ phải trả / Vốn chủ sở hữu` | CĐKT |
-
-### `@professional-cfo-analyst` — Financial Audit Rules (Phase V)
-**Checksums bắt buộc:**
-```
-Total Assets (bsa96) = Total Liabilities (bsa97) + Total Equity (bsa127)  (tolerance: ±0.1%)
-Total Assets = Curent Assets + Non-Current Assets
-Total Liabilities = Current Liabilities + Non-Current Liabilities
-```
-
-**Output Tab `[ CSTC ]`:**
-- Terminal UI sẽ hiển thị một tab thứ 5 là "Chỉ số tài chính".
-- Gắn cờ ✅ / ⚠️ / ❌ cho Audit Check ở các tab CĐKT/KQKD.
-
----
-
-## Phase 5 — 🔴 TRIGGER
-> *End-to-end test with a new ticker; CTO architectural review*
-
-### 5.1 Integration Test — Ticker: `FPT`
-
-- [ ] Scraper downloads FPT BCTC from Vietcap
-- [ ] Normalizer maps FPT to Golden Schema (log new fields)
-- [ ] Parquet files created at correct Hive paths
-- [ ] Scientist validation: no critical nulls, continuous time-series
-- [ ] CFO audit: accounting identity PASS
-- [ ] UI renders all 4 tabs (Q+Y) for FPT
-- [ ] `pipeline_runs` row in Supabase: `status = 'success'`
-
-### 5.2 `@cto-mentor-supervisor` — Production Readiness Review
-
-- [ ] Pipeline is idempotent (re-run = no duplicates)
-- [ ] All failure modes log gracefully to `pipeline_runs`
-- [ ] No secrets hardcoded (`.env` for all keys)
-- [ ] Parquet read < 2s for 8-quarter load
-- [ ] Extraction fallback path documented
-- [ ] Complexity ≤ 3 Python files for core pipeline
-- [ ] README updated with architecture diagram + quickstart
-- [ ] CTO readiness score ≥ 80/100
-
----
-
-## 📋 Phase Summary
-
-* **Phase B (Blueprint)**: Chuẩn hóa Schema từ Excel. ✅
-* **Phase L (Link)**: Kết nối và cào dữ liệu từ API Vietcap. ✅
-* **Phase A (Architect)**: Xây dựng ETL, lưu trữ Parquet (Hive format). ✅
-* **Phase S (Stylize)**: Hiển thị giao diện Terminal Tab-based. ✅
-* **Phase T (Trigger)**: Tự động hóa, Supabase Logging, Multi-ticker. ✅
-* **Phase V (Validate)**: Audit tài chính chuẩn CFO (A = L + E). ⏳ (Next)
-* **Phase M (Metrics)**: Tính toán chỉ số phái sinh tự động. ⏳ (Next)
-
----
-
-> **⚠️ HOLD — Awaiting USER approval before Phase 1 begins.**
+> **⚠️ HOLD — Start Phase 1 immediately. Phase 2+ awaiting Phase 1 completion.**

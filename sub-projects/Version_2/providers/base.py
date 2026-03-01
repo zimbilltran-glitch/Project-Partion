@@ -9,3 +9,7 @@ class BaseProvider(ABC):
     @abstractmethod
     def get_api_value(self, row: dict, section: str, sheet_row_idx: int, field_id: str = "") -> Optional[float]:
         pass
+
+    @abstractmethod
+    def get_api_value_by_key(self, row: dict, key: str) -> Optional[float]:
+        pass

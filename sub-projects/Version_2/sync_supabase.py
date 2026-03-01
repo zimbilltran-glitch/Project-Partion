@@ -21,7 +21,7 @@ Usage:
   python Version_2/sync_supabase.py --all          # all FINSANG_TICKERS
 """
 
-import argparse, os, sys, json, warnings
+import argparse, os, sys, json, warnings, pandas as pd
 warnings.filterwarnings("ignore")
 from pathlib import Path
 from datetime import datetime
@@ -38,14 +38,28 @@ except ImportError:
 import math
 from pipeline import load_tab, DATA_DIR
 from metrics import calc_metrics
+from sector import get_sector
 
 # ─── Config ───────────────────────────────────────────────────────────────────
-# Supabase long-format table mapping
+# Supabase long-format table mapping (all sector variants → same tables)
 SHEET_TO_TABLE = {
-    "cdkt":  "balance_sheet",
-    "kqkd":  "income_statement",
-    "lctt":  "cash_flow",
-    "cstc":  "financial_ratios",
+    "cdkt":       "balance_sheet",
+    "cdkt_bank":  "balance_sheet",
+    "cdkt_sec":   "balance_sheet",
+    "kqkd":       "income_statement",
+    "kqkd_bank":  "income_statement",
+    "kqkd_sec":   "income_statement",
+    "lctt":       "cash_flow",
+    "lctt_bank":  "cash_flow",
+    "lctt_sec":   "cash_flow",
+    "cstc":       "financial_ratios",
+}
+
+# Sector → sheets to sync
+SECTOR_SHEETS = {
+    "bank":   ["cdkt_bank", "kqkd_bank", "lctt_bank"],
+    "sec":    ["cdkt_sec",  "kqkd_sec",  "lctt_sec"],
+    "normal": ["cdkt",      "kqkd",      "lctt"],
 }
 
 SOURCE_TAG = "vietcap"
@@ -114,13 +128,19 @@ def build_rows_for_sheet(df, ticker: str, sheet_id: str, period_type: str) -> li
 def build_ratio_rows(df, ticker: str, period_type: str) -> list[dict]:
     """Transform metrics DataFrame into financial_ratios rows."""
     rows = []
-    period_cols = [c for c in df.columns if c not in ("field_id", "vn_name", "unit", "level")]
+    meta_cols = ("item_id", "vn_name", "unit", "level", "row_number")
+    period_cols = [c for c in df.columns if c not in meta_cols]
 
     for _, row in df.iterrows():
         ratio_name = str(row.get("vn_name", ""))
+        item_id = str(row.get("item_id", ""))
+        unit = str(row.get("unit", ""))
+        level = int(row.get("level", 0))
+        row_num = int(row.get("row_number", 0))
+
         for period_col in period_cols:
             val = row.get(period_col)
-            if val is None:
+            if val is None or pd.isna(val):
                 continue
             try:
                 numeric_val = float(val)
@@ -136,6 +156,10 @@ def build_ratio_rows(df, ticker: str, period_type: str) -> list[dict]:
                 "period":     period_col,
                 "value":      numeric_val,
                 "source":     "CFO_CALC_V2",
+                "item_id":    item_id,
+                "levels":     level,
+                "row_number": row_num,
+                "unit":       unit,
             })
     return rows
 
@@ -176,13 +200,22 @@ def sync_ticker(ticker: str, period_types: list[str] = ("year", "quarter")):
     print(f"  ▶ Step 1: Purging existing data for {ticker}...")
     purge_ticker(sb, ticker)
 
-    # Step 2: For each sheet × period, load Parquet and upload
-    sheets = ["cdkt", "kqkd", "lctt"]
+    # Step 2: Determine sector-specific sheets for this ticker
+    sector = get_sector(ticker)
+    sheets = SECTOR_SHEETS.get(sector, SECTOR_SHEETS["normal"])
+    print(f"  ▶ Sector: {sector} → sheets: {sheets}")
+
     for period_type in period_types:
         for sheet in sheets:
             if not parquet_exists(ticker, period_type, sheet):
-                print(f"    ⚠️  No Parquet found: {ticker}/{period_type}/{sheet} — run pipeline first")
-                continue
+                # Fallback: try generic sheet if sector-specific not found
+                generic = sheet.split('_')[0]  # cdkt_bank → cdkt
+                if generic != sheet and parquet_exists(ticker, period_type, generic):
+                    print(f"    ⚠️  No {sheet} Parquet, falling back to {generic}")
+                    sheet = generic
+                else:
+                    print(f"    ⚠️  No Parquet found: {ticker}/{period_type}/{sheet} — run pipeline first")
+                    continue
 
             print(f"  ▶ Loading {ticker} / {sheet.upper()} / {period_type} ...")
             try:
@@ -199,7 +232,6 @@ def sync_ticker(ticker: str, period_types: list[str] = ("year", "quarter")):
             tbl  = SHEET_TO_TABLE[sheet]
             count = upsert_rows(sb, tbl, rows)
             print(f"    ✅ Uploaded {count:>5} rows → {tbl} ({period_type})")
-
     # Step 3: Financial ratios (derived metrics from metrics.py)
     print(f"\n  ▶ Step 3: Syncing derived metrics (CSTC) ...")
     for period_type in period_types:

@@ -84,3 +84,33 @@ This document serves as the centralized source of truth for the Finsang project'
 - **Streamlit UI:** Sửa lỗi hiển thị mốc thời gian ngược chiều. Viết thuật toán Parsing Custom `sort_p` để luôn luôn sắp xếp cột mốc từ MỚI NHẤT -> CŨ NHẤT (Ví dụ: Q1/2025 -> Q4/2024 -> 2023).
 - **React Frontend:** Loại bỏ cột Component `<MiniBarChart />` lỗi thời để tập trung không gian hiển thị rộng rãi hơn cho Bảng CĐKT tại UI chính. Trang bị khung Search Autocomplete thông minh lấy source từ List `TICKERS`.
 
+### [v2.3.0-audit] - 2026-03-01 (Full Project Audit & Task Restructuring)
+- **Full Audit:** Rà soát toàn bộ codebase, phát hiện 10 findings (F-001 → F-010). Chi tiết tại `findings.md`.
+- **Critical Bugs Found:**
+  - F-001: `load_tab_from_supabase()` crash do biến `sheet_upper` chưa định nghĩa.
+  - F-002: Duplicate `FINSANG_ENCRYPTION_KEY` trong `.env` (Fernet key, không phải Supabase).
+- **Architecture Gaps:**
+  - F-003: Frontend hoàn toàn không nhận biết nhóm ngành (sector-blind) → MBB/VCB hiển thị sai.
+  - F-004: Sector classification hardcode tại 2 file riêng biệt.
+  - F-007: Tab CSTC chưa tính đúng metrics theo nhóm ngành trên web.
+- **Security:** F-005: RLS disabled trên 4 tables chính. Cần enable trước deploy.
+- **Data Confirmation:** F-008: Xác nhận Supabase đã có đầy đủ 31 VN30 tickers (119K+ rows balance_sheet).
+- **Design Decisions:** F-009: BCTC cập nhật theo quý, không cần scheduler hằng ngày. F-010: Mobile responsive ngoài scope hiện tại.
+- **Task Restructuring:** Viết lại `task_plan.md` v3.0 với 6 phases mới thay thế B.L.A.S.T framework đã hoàn thành.
+- **Fireant:** F-006: Pipeline Fireant tồn tại đầy đủ trong `tools/` nhưng chưa tích hợp V2 Provider pattern.
+
+### [v3.0.0] - 2026-03-01 (Simply Wall St Theme & 360 Overview Integration)
+- **Feature Overview:** Tích hợp giao diện "360 Overview" theo phong cách Simply Wall St, bao gồm Snowflake Radar Chart, Valuation Gauge, và Checklist Cards.
+- **Data Enhancement:**
+  - Viết script `fetch_ohlcv_vn30.py` dùng `vnstock` để nạp dữ liệu lịch sử giá OHLCV của rổ VN30 vào Supabase (`stock_ohlcv`).
+  - Viết script `fetch_company_overview.py` để kéo hơn 30 chỉ số tài chính (P/E, P/B, ROE, Market Cap, Dividend, v.v.) vào bảng `company_overview`.
+  - Viết script `calc_snowflake.py` để tính toán tự động điểm số 5 chiều (Value, Future, Past, Health, Dividend) dựa trên benchmark ngành.
+- **Frontend Refactoring:**
+  - Tách `App.jsx` khổng lồ thành cấu trúc component module: `CompanyHero`, `SnowflakeChart`, `QuickStats`, `ValuationGauge`, `ChecklistCards`, và `PriceChart`.
+  - Áp dụng các rules CSS từ `theme.css` để biến GUI thành dạng Dark Mode cao cấp.
+  - Fix lỗi rate limit và Unicode (1252 charmap trên Windows).
+  - Tích hợp SVG thuần cho Snowflake và Price chart để tối ưu tốc độ render, không dùng third-party libraries.
+- **Security & DB:**
+  - Thêm migrations để bổ sung các cột mới vào `company_overview`.
+  - Configure lại RLS policy cho phép `anon` roles có quyền `INSERT/UPDATE` thông qua pipeline script chạy nội bộ.
+- **Documentation:** Chuyển đổi toàn bộ tài liệu V3 vào `sub-projects/V3_SimplyWallSt/` với `v3_changelog.md` để tách bạch rõ context.

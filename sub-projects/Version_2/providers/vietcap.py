@@ -34,6 +34,12 @@ class VietcapProvider(BaseProvider):
             print(f"    ❌ Vietcap fetch error for {section}: {e}")
             return None
 
+    def get_api_value_by_key(self, row: dict, key: str) -> Optional[float]:
+        val = row.get(key)
+        if val is None and isinstance(row.get("values"), dict):
+            val = row["values"].get(key)
+        return float(val) if val is not None else None
+
     def get_api_value(self, row: dict, section: str, sheet_row_idx: int, field_id: str = "") -> Optional[float]:
         # Override specific essential metric fields for accurate mapping
         field_mapping = {

@@ -1,24 +1,32 @@
-import { useEffect, useState, useMemo } from 'react'
+import { useEffect, useState, useMemo, Suspense, lazy } from 'react'
 import { supabase } from './supabaseClient'
 import './App.css'
+
+// V3: 360 Overview tab (lazy-loaded to keep bundle lean)
+const OverviewTab = lazy(() => import('./components/OverviewTab'))
 
 // ─── V2 Data Source ────────────────────────────────────────────────────────
 // Data synced from Version 2 Parquet pipeline (Vietcap API → Parquet → Supabase).
 // Wide views pivot rows via jsonb_object_agg(period, value) = periods_data JSONB.
 // Values stored in Tỷ VND. Display in Triệu VND (×1000).
+// Phase 2: Ticker list + sector fetched dynamically from Supabase `companies` table.
 // ────────────────────────────────────────────────────────────────────────────
 
-const VN30_SYMBOLS = ["ACB", "BCM", "BID", "BVH", "CTG", "FPT", "GAS", "GVR", "HDB", "HPG",
-  "MBB", "MSN", "MWG", "PLX", "POW", "SAB", "SHB", "SSB", "SSI", "STB",
-  "TCB", "TPB", "VCB", "VHC", "VHM", "VIB", "VIC", "VJC", "VNM", "VPB", "VRE"]
+// Sector labels for display
+const SECTOR_LABELS = {
+  bank: 'Ngân hàng',
+  sec: 'Chứng khoán',
+  normal: 'Phi tài chính',
+}
 
-const TICKERS = VN30_SYMBOLS.map(sym => ({
-  code: sym,
-  name: `CTCP ${sym}`, // Fallback quick name
-  exchange: 'HOSE'
-}))
+const SECTOR_COLORS = {
+  bank: '#f59e0b',
+  sec: '#8b5cf6',
+  normal: '#10b981',
+}
 
 const REPORT_TABS = [
+  { id: '360', label: '🔭 360 Overview', table: null },  // V3: Custom overview, no Supabase table
   { id: 'CDKT', label: 'Cân đối kế toán', table: 'balance_sheet_wide' },
   { id: 'KQKD', label: 'Kết quả kinh doanh', table: 'income_statement_wide' },
   { id: 'LCTT', label: 'Lưu chuyển tiền tệ', table: 'cash_flow_wide' },
@@ -33,14 +41,19 @@ const PERIOD_FILTERS = [
 // ─── Helpers ──────────────────────────────────────────────────────────────
 
 // Format: Raw VND (đồng) → Tỷ VND (÷ 1,000,000,000) or keep absolute for ratios
-function formatNumber(num, isRatio = false) {
+// unit param: row-level unit string for CSTC tab (e.g. 'tỷ đồng', '%', 'lần', 'đồng/cp')
+function formatNumber(num, isRatio = false, unit = '') {
   if (num === null || num === undefined) return ''
   if (typeof num !== 'number') return '' // Handle entirely empty cells
   if (num === 0) return '–'
-  const displayNum = isRatio ? num : num / 1000000000
+  // For CSTC tab: monetary items (tỷ đồng) still need division, ratios don't
+  const isMonetary = unit === 'tỷ đồng' || unit === 'tỷ VND'
+  const needsDivision = !isRatio || isMonetary
+  const displayNum = needsDivision ? num / 1000000000 : num
+  const fractionDigits = (isRatio && !isMonetary) ? 2 : 1
   return new Intl.NumberFormat('en-US', {
-    maximumFractionDigits: isRatio ? 2 : 1,
-    minimumFractionDigits: isRatio ? 2 : 1,
+    maximumFractionDigits: fractionDigits,
+    minimumFractionDigits: fractionDigits,
   }).format(displayNum)
 }
 
@@ -71,10 +84,46 @@ export default function App() {
   const [periods, setPeriods] = useState([])
   const [expandedRows, setExpandedRows] = useState({})
 
-  const currentTicker = TICKERS.find(t => t.code === ticker) || TICKERS[0]
+  // Phase 2: Dynamic company list + sector from Supabase
+  const [companies, setCompanies] = useState([])
+  const [sector, setSector] = useState('normal')
+
+  // Load companies on mount
+  useEffect(() => {
+    async function loadCompanies() {
+      const { data: rows, error } = await supabase
+        .from('companies')
+        .select('*')
+        .order('ticker', { ascending: true })
+      if (!error && rows) {
+        setCompanies(rows)
+      }
+    }
+    loadCompanies()
+  }, [])
+
+  // Update sector when ticker changes
+  useEffect(() => {
+    const company = companies.find(c => c.ticker === ticker)
+    setSector(company?.sector || 'normal')
+  }, [ticker, companies])
+
+  const currentTicker = useMemo(() => {
+    const company = companies.find(c => c.ticker === ticker)
+    return company
+      ? { code: company.ticker, name: company.company_name, exchange: company.exchange }
+      : { code: ticker, name: `CTCP ${ticker}`, exchange: 'HOSE' }
+  }, [ticker, companies])
+
   const currentTab = REPORT_TABS.find(t => t.id === reportType) || REPORT_TABS[0]
 
+  // V3: Skip Supabase fetch entirely when on 360 Overview tab
   useEffect(() => {
+    if (reportType === '360') {
+      setLoading(false)
+      return
+    }
+
     async function fetchData() {
       setLoading(true)
 
@@ -83,6 +132,7 @@ export default function App() {
         .select('*')
         .eq('stock_name', ticker)
         .order('row_number', { ascending: true })
+        .limit(10000)
 
       if (error) {
         console.error('Supabase error:', error)
@@ -218,6 +268,7 @@ export default function App() {
         </div>
         <div className="header-right">
           <span className="data-source">Vietcap Data</span>
+          <span className="sector-badge" style={{ backgroundColor: SECTOR_COLORS[sector] || '#10b981' }}>{SECTOR_LABELS[sector] || sector}</span>
           <span className="ticker-badge">{ticker}:{currentTicker.exchange}</span>
         </div>
       </header>
@@ -239,8 +290,8 @@ export default function App() {
             autoComplete="off"
           />
           <datalist id="ticker-list">
-            {TICKERS.map(t => (
-              <option key={t.code} value={t.code}>{t.name}</option>
+            {companies.map(c => (
+              <option key={c.ticker} value={c.ticker}>{c.company_name}</option>
             ))}
           </datalist>
         </div>
@@ -298,86 +349,107 @@ export default function App() {
         </div>
       )}
 
-      {/* ═══ Data Table ═══ */}
-      <div className="table-wrap">
-        {loading ? (
-          <div className="state-msg">
-            <div className="loader" />
-            <span>Đang tải dữ liệu...</span>
-          </div>
-        ) : data.length === 0 ? (
-          <div className="state-msg">
-            <span>Không có dữ liệu {currentTab.label} cho {ticker}</span>
-          </div>
-        ) : (
-          <table className="fin-table">
-            <thead>
-              <tr>
-                <th className="th-item">Chỉ tiêu</th>
+      {/* ═══ 360 Overview Tab ═══ */}
+      {reportType === '360' ? (
+        <Suspense fallback={<div className="state-msg"><div className="loader" /><span>Đang tải 360 Overview...</span></div>}>
+          <OverviewTab ticker={ticker} sector={sector} companies={companies} />
+        </Suspense>
+      ) : (
+        /* ═══ Data Table ═══ */
+        <div className="table-wrap">
+          {loading ? (
+            <div className="state-msg">
+              <div className="loader" />
+              <span>Đang tải dữ liệu...</span>
+            </div>
+          ) : data.length === 0 ? (
+            <div className="state-msg">
+              <span>Không có dữ liệu {currentTab.label} cho {ticker}</span>
+            </div>
+          ) : (
+            <table className="fin-table">
+              <thead>
+                <tr>
+                  <th className="th-item">Chỉ tiêu</th>
 
-                {periods.map(p => <th key={p} className="th-val">{formatPeriodLabel(p)}</th>)}
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((row, idx) => {
-                if (!isVisible(row)) return null
-                const hasChildren = idx < data.length - 1 && data[idx + 1].levels > row.levels
-                const isOpen = !!expandedRows[row.item_id]
-                const chartVals = periods.map(p => row.periods_data?.[p] || 0)
-                const major = isMajorHeading(row)
-                const displayLabel = major ? (row.item || '').toUpperCase() : (row.item || '')
+                  {periods.map(p => <th key={p} className="th-val">{formatPeriodLabel(p)}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                {data.map((row, idx) => {
+                  if (!isVisible(row)) return null
+                  const hasChildren = idx < data.length - 1 && data[idx + 1].levels > row.levels
+                  const isOpen = !!expandedRows[row.item_id]
+                  const chartVals = periods.map(p => row.periods_data?.[p] || 0)
+                  const major = isMajorHeading(row)
+                  const displayLabel = major ? (row.item || '').toUpperCase() : (row.item || '')
 
-                const isL0 = row.levels === 0;
-                const isL1 = row.levels === 1;
-                const showToggleSpace = isL1 || (row.levels > 0 && hasChildren);
+                  const isL0 = row.levels === 0;
+                  const isL1 = row.levels === 1;
+                  const showToggleSpace = isL1 || (row.levels > 0 && hasChildren);
 
-                // Base padding per level
-                // L0: 12px
-                // L1: 12px + 16px = 28px. If it has toggle (width 14px + 5px gap = 19px), text is at 47px.
-                // L2: If we want text to align with L1 text (47px), padding = 47px.
-                // L3: 47px + 16px = 63px.
-                let padLeft = 12;
-                if (row.levels === 1) padLeft = 28;
-                if (row.levels >= 2) padLeft = 47 + (row.levels - 2) * 16;
+                  // Base padding per level
+                  // L0: 12px
+                  // L1: 12px + 16px = 28px. If it has toggle (width 14px + 5px gap = 19px), text is at 47px.
+                  // L2: If we want text to align with L1 text (47px), padding = 47px.
+                  // L3: 47px + 16px = 63px.
+                  let padLeft = 12;
+                  if (row.levels === 1) padLeft = 28;
+                  if (row.levels >= 2) padLeft = 47 + (row.levels - 2) * 16;
 
-                return (
-                  <tr
-                    key={row.item_id || idx}
-                    className={`fin-row${major ? ' row-major' : ' row-child'} lv${Math.min(row.levels || 0, 4)}`}
-                  >
-                    <td className="td-item">
-                      <div className="item-cell" style={{ paddingLeft: `${padLeft}px` }}>
-                        {showToggleSpace && (
-                          hasChildren
-                            ? <button
-                              className="tog"
-                              onClick={() => toggle(row.item_id)}
-                              aria-label={isOpen ? "Thu gọn" : "Mở rộng"}
-                              aria-expanded={isOpen}
-                            >
-                              {isOpen ? '–' : '+'}
-                            </button>
-                            : <span className="tog-ph" />
-                        )}
-                        <span className={`label${isL0 ? ' label-major' : ''}`}>{isL0 ? displayLabel.toUpperCase() : displayLabel}</span>
-                      </div>
-                    </td>
+                  return (
+                    <tr
+                      key={row.item_id || idx}
+                      className={`fin-row${major ? ' row-major' : ' row-child'} lv${Math.min(row.levels || 0, 4)}`}
+                    >
+                      <td className="td-item">
+                        <div className="item-cell" style={{ paddingLeft: `${padLeft}px` }}>
+                          {showToggleSpace && (
+                            hasChildren
+                              ? <button
+                                className="tog"
+                                onClick={() => toggle(row.item_id)}
+                                aria-label={isOpen ? "Thu gọn" : "Mở rộng"}
+                                aria-expanded={isOpen}
+                              >
+                                {isOpen ? '–' : '+'}
+                              </button>
+                              : <span className="tog-ph" />
+                          )}
+                          <span className={`label${isL0 ? ' label-major' : ''}`}>{isL0 ? displayLabel.toUpperCase() : displayLabel}</span>
 
-                    {periods.map(p => {
-                      const v = row.periods_data?.[p]
-                      return (
-                        <td key={p} className={`td-val ${v < 0 ? 'neg' : ''}`}>
-                          {formatNumber(v, currentTab.id === 'CSTC')}
-                        </td>
-                      )
-                    })}
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
-        )}
-      </div>
+                        </div>
+                      </td>
+
+                      {periods.map(p => {
+                        const v = row.periods_data?.[p]
+                        return (
+                          <td key={p} className={`td-val ${v < 0 ? 'neg' : ''}`}>
+                            {formatNumber(v, currentTab.id === 'CSTC', row.unit || '')}
+                          </td>
+                        )
+                      })}
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          )}
+        </div>
+      )}{/* end 360/table conditional */}
+
+      {currentTab.id === 'CSTC' && (
+        <div className="cstc-glossary" style={{ margin: '20px', padding: '15px', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '8px', fontSize: '13px', color: '#aaa' }}>
+          <strong>💡 Chú giải thuật ngữ:</strong>
+          <ul style={{ margin: '8px 0 0 15px', padding: 0, lineHeight: '1.6' }}>
+            <li><strong>FVTPL</strong> (Fair Value Through Profit or Loss): Các tài sản tài chính ghi nhận thông qua Lãi/Lỗ.</li>
+            <li><strong>AFS</strong> (Available For Sale): Các tài sản tài chính sẵn sàng để bán.</li>
+            <li><strong>NIM</strong> (Net Interest Margin): Biên lãi ròng.</li>
+            <li><strong>TOI</strong> (Total Operating Income): Tổng thu nhập hoạt động.</li>
+            <li><strong>NII</strong> (Net Interest Income): Thu nhập lãi thuần.</li>
+          </ul>
+        </div>
+      )}
 
       {/* ═══ Footer ═══ */}
       <footer className="app-footer">
