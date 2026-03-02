@@ -1,0 +1,1614 @@
+{
+  "CDKT_BANK": [
+    {
+      "id": "cdkt_bank_tong_tai_san",
+      "name": "TỔNG TÀI SẢN"
+    },
+    {
+      "id": "cdkt_bank_tien_mat_vang_bac_da_quy",
+      "name": "Tiền mặt, vàng bạc, đá quý"
+    },
+    {
+      "id": "cdkt_bank_tien_gui_tai_ngan_hang_nha_nuoc_viet_nam",
+      "name": "Tiền gửi tại Ngân hàng nhà nước Việt Nam"
+    },
+    {
+      "id": "cdkt_bank_tien_gui_tai_cac_tctd_khac_va_cho_vay_cac_tctd_khac",
+      "name": "Tiền gửi tại các TCTD khác và cho vay các TCTD khác"
+    },
+    {
+      "id": "cdkt_bank_tien_gui_tai_cac_tctd_khac",
+      "name": "Tiền gửi tại các TCTD khác"
+    },
+    {
+      "id": "cdkt_bank_cho_vay_cac_tctd_khac",
+      "name": "Cho vay các TCTD khác"
+    },
+    {
+      "id": "cdkt_bank_du_phong_rui_ro",
+      "name": "Dự phòng rủi ro"
+    },
+    {
+      "id": "cdkt_bank_chung_khoan_kinh_doanh",
+      "name": "Chứng khoán kinh doanh"
+    },
+    {
+      "id": "cdkt_bank_chung_khoan_kinh_doanh_1",
+      "name": "Chứng khoán kinh doanh"
+    },
+    {
+      "id": "cdkt_bank_du_phong_giam_gia_chung_khoan_kinh_doanh",
+      "name": "Dự phòng giảm giá chứng khoán kinh doanh"
+    },
+    {
+      "id": "cdkt_bank_cac_cong_cu_tai_chinh_phai_sinh_va_cac_tai_san_tai_chin",
+      "name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác"
+    },
+    {
+      "id": "cdkt_bank_cho_vay_khach_hang",
+      "name": "Cho vay khách hàng"
+    },
+    {
+      "id": "cdkt_bank_cho_vay_khach_hang_1",
+      "name": "Cho vay khách hàng"
+    },
+    {
+      "id": "cdkt_bank_du_phong_rui_ro_cho_vay_khach_hang",
+      "name": "Dự phòng rủi ro cho vay khách hàng"
+    },
+    {
+      "id": "cdkt_bank_hoat_dong_mua_no",
+      "name": "Hoạt động mua nợ"
+    },
+    {
+      "id": "cdkt_bank_mua_no",
+      "name": "Mua nợ"
+    },
+    {
+      "id": "cdkt_bank_du_phong_rui_ro_hoat_dong_mua_no",
+      "name": "Dự phòng rủi ro hoạt động mua nợ"
+    },
+    {
+      "id": "cdkt_bank_chung_khoan_dau_tu",
+      "name": "Chứng khoán đầu tư"
+    },
+    {
+      "id": "cdkt_bank_chung_khoan_dau_tu_san_sang_de_ban",
+      "name": "Chứng khoán đầu tư sẵn sàng để bán"
+    },
+    {
+      "id": "cdkt_bank_chung_khoan_dau_tu_giu_den_ngay_dao_han",
+      "name": "Chứng khoán đầu tư giữ đến ngày đáo hạn"
+    },
+    {
+      "id": "cdkt_bank_du_phong_giam_gia_chung_khoan_dau_tu",
+      "name": "Dự phòng giảm giá chứng khoán đầu tư"
+    },
+    {
+      "id": "cdkt_bank_gop_von_dau_tu_dai_han",
+      "name": "Góp vốn, đầu tư dài hạn"
+    },
+    {
+      "id": "cdkt_bank_dau_tu_vao_cong_ty_con",
+      "name": "Đầu tư vào công ty con"
+    },
+    {
+      "id": "cdkt_bank_dau_tu_vao_cong_ty_lien_doanh",
+      "name": "Đầu tư vào công ty liên doanh"
+    },
+    {
+      "id": "cdkt_bank_von_gop_lien_doanh",
+      "name": "Vốn Góp liên doanh"
+    },
+    {
+      "id": "cdkt_bank_dau_tu_vao_cong_ty_lien_ket",
+      "name": "Đầu tư vào công ty liên kết"
+    },
+    {
+      "id": "cdkt_bank_dau_tu_dai_han_khac",
+      "name": "Đầu tư dài hạn khác"
+    },
+    {
+      "id": "cdkt_bank_du_phong_giam_gia_dau_tu_dai_han",
+      "name": "Dự phòng giảm giá đầu tư dài hạn"
+    },
+    {
+      "id": "cdkt_bank_tai_san_co_dinh",
+      "name": "Tài sản cố định"
+    },
+    {
+      "id": "cdkt_bank_tai_san_co_dinh_huu_hinh",
+      "name": "Tài sản cố định hữu hình"
+    },
+    {
+      "id": "cdkt_bank_nguyen_gia_tscd_huu_hinh",
+      "name": "Nguyên giá TSCĐ hữu hình"
+    },
+    {
+      "id": "cdkt_bank_hao_mon_tscd_huu_hinh",
+      "name": "Hao mòn TSCĐ hữu hình"
+    },
+    {
+      "id": "cdkt_bank_tai_san_co_dinh_thue_tai_chinh",
+      "name": "Tài sản cố định thuê tài chính"
+    },
+    {
+      "id": "cdkt_bank_nguyen_gia_tscd_thue_tai_chinh",
+      "name": "Nguyên giá TSCĐ thuê tài chính"
+    },
+    {
+      "id": "cdkt_bank_hao_mon_tscd_thue_tai_chinh",
+      "name": "Hao mòn TSCĐ thuê tài chính"
+    },
+    {
+      "id": "cdkt_bank_tai_san_co_dinh_vo_hinh",
+      "name": "Tài sản cố định vô hình"
+    },
+    {
+      "id": "cdkt_bank_nguyen_gia_tscd_vo_hinh",
+      "name": "Nguyên giá TSCĐ vô hình"
+    },
+    {
+      "id": "cdkt_bank_hao_mon_tscd_vo_hinh",
+      "name": "Hao mòn TSCĐ vô hình"
+    },
+    {
+      "id": "cdkt_bank_bat_dong_san_dau_tu",
+      "name": "Bất động sản đầu tư"
+    },
+    {
+      "id": "cdkt_bank_nguyen_gia_bat_dong_san_dau_tu",
+      "name": "Nguyên giá bất động sản đầu tư"
+    },
+    {
+      "id": "cdkt_bank_hao_mon_bat_dong_san_dau_tu",
+      "name": "Hao mòn bất động sản đầu tư"
+    },
+    {
+      "id": "cdkt_bank_tai_san_co_khac",
+      "name": "Tài sản Có khác"
+    },
+    {
+      "id": "cdkt_bank_cac_khoan_phai_thu",
+      "name": "Các khoản phải thu"
+    },
+    {
+      "id": "cdkt_bank_cac_khoan_lai_va_phi_phai_thu",
+      "name": "Các khoản lãi và phí phải thu"
+    },
+    {
+      "id": "cdkt_bank_tai_san_thue_tndn_hoan_lai",
+      "name": "Tài sản thuế TNDN hoãn lại"
+    },
+    {
+      "id": "cdkt_bank_tai_san_co_khac_1",
+      "name": "Tài sản Có khác"
+    },
+    {
+      "id": "cdkt_bank_trong_do_loi_the_thuong_mai",
+      "name": "Trong đó: Lợi thế thương mại"
+    },
+    {
+      "id": "cdkt_bank_cac_khoan_du_phong_rui_ro_cho_cac_tai_san_co_noi_bang_k",
+      "name": "Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác"
+    },
+    {
+      "id": "cdkt_bank_no_phai_tra_va_von_chu_so_huu",
+      "name": "NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU"
+    },
+    {
+      "id": "cdkt_bank_tong_no_phai_tra",
+      "name": "TỔNG NỢ PHẢI TRẢ"
+    },
+    {
+      "id": "cdkt_bank_cac_khoan_no_chinh_phu_va_nhnn_viet_nam",
+      "name": "Các khoản nợ chính phủ và NHNN Việt Nam"
+    },
+    {
+      "id": "cdkt_bank_tien_gui_va_vay_cac_to_chuc_tin_dung_khac",
+      "name": "Tiền gửi và vay các Tổ chức tín dụng khác"
+    },
+    {
+      "id": "cdkt_bank_tien_gui_cua_cac_to_chuc_tin_dung_khac",
+      "name": "Tiền gửi của các tổ chức tín dụng khác"
+    },
+    {
+      "id": "cdkt_bank_vay_cac_to_chuc_tin_dung_khac",
+      "name": "Vay các tổ chức tín dụng khác"
+    },
+    {
+      "id": "cdkt_bank_tien_gui_cua_khach_hang",
+      "name": "Tiền gửi của khách hàng"
+    },
+    {
+      "id": "cdkt_bank_cac_cong_cu_tai_chinh_phai_sinh_va_cac_khoan_no_tai_chi",
+      "name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác"
+    },
+    {
+      "id": "cdkt_bank_von_tai_tro_uy_thac_dau_tu_cua_chinh_phu_va_cac_to_chuc",
+      "name": "Vốn tài trợ, uỷ thác đầu tư của Chính phủ và các tổ chức tín dụng khác"
+    },
+    {
+      "id": "cdkt_bank_phat_hanh_giay_to_co_gia",
+      "name": "Phát hành giấy tờ có giá"
+    },
+    {
+      "id": "cdkt_bank_cac_khoan_no_khac",
+      "name": "Các khoản nợ khác"
+    },
+    {
+      "id": "cdkt_bank_cac_khoan_lai_phi_phai_tra",
+      "name": "Các khoản lãi, phí phải trả"
+    },
+    {
+      "id": "cdkt_bank_thue_tndn_hoan_lai_phai_tra",
+      "name": "Thuế TNDN hoãn lại phải trả"
+    },
+    {
+      "id": "cdkt_bank_cac_khoan_phai_tra_va_cong_no_khac",
+      "name": "Các khoản phải trả và công nợ khác"
+    },
+    {
+      "id": "cdkt_bank_du_phong_rui_ro_khac",
+      "name": "Dự phòng rủi ro khác"
+    },
+    {
+      "id": "cdkt_bank_von_chu_so_huu",
+      "name": "VỐN CHỦ SỞ HỮU"
+    },
+    {
+      "id": "cdkt_bank_von_cua_to_chuc_tin_dung",
+      "name": "Vốn của tổ chức tín dụng"
+    },
+    {
+      "id": "cdkt_bank_von_dieu_le",
+      "name": "Vốn điều lệ"
+    },
+    {
+      "id": "cdkt_bank_von_dau_tu_xdcb",
+      "name": "Vốn đầu tư XDCB"
+    },
+    {
+      "id": "cdkt_bank_thang_du_von_co_phan",
+      "name": "Thặng dư vốn cổ phần"
+    },
+    {
+      "id": "cdkt_bank_co_phieu_quy",
+      "name": "Cổ phiếu Quỹ"
+    },
+    {
+      "id": "cdkt_bank_co_phieu_uu_dai",
+      "name": "Cổ phiếu ưu đãi"
+    },
+    {
+      "id": "cdkt_bank_von_khac",
+      "name": "Vốn khác"
+    },
+    {
+      "id": "cdkt_bank_quy_cua_to_chuc_tin_dung",
+      "name": "Quỹ của tổ chức tín dụng"
+    },
+    {
+      "id": "cdkt_bank_chenh_lech_ty_gia_hoi_doai",
+      "name": "Chênh lệch tỷ giá hối đoái"
+    },
+    {
+      "id": "cdkt_bank_chenh_lech_danh_gia_lai_tai_san",
+      "name": "Chênh lệch đánh giá lại tài sản"
+    },
+    {
+      "id": "cdkt_bank_loi_nhuan_chua_phan_phoi",
+      "name": "Lợi nhuận chưa phân phối"
+    },
+    {
+      "id": "cdkt_bank_loi_ich_cua_co_dong_thieu_so",
+      "name": "Lợi ích của cổ đông thiểu số"
+    },
+    {
+      "id": "cdkt_bank_loi_ich_cua_co_dong_thieu_so_1",
+      "name": "Lợi ích của cổ đông thiểu số (trước 2015)"
+    },
+    {
+      "id": "cdkt_bank_bao_lanh_vay_von",
+      "name": "Bảo lãnh vay vốn"
+    },
+    {
+      "id": "cdkt_bank_cam_ket_giao_dich_hoi_doai",
+      "name": "Cam kết giao dịch hối đoái"
+    },
+    {
+      "id": "cdkt_bank_cam_ket_mua_ngoai_te",
+      "name": "Cam kết mua ngoại tệ"
+    },
+    {
+      "id": "cdkt_bank_cam_ket_ban_ngoai_te",
+      "name": "Cam kết bán ngoại tệ"
+    },
+    {
+      "id": "cdkt_bank_cam_ket_giao_dich_hoan_doi",
+      "name": "Cam kết giao dịch hoán đổi"
+    },
+    {
+      "id": "cdkt_bank_cam_ket_giao_dich_tuong_lai",
+      "name": "Cam kết giao dịch tương lai"
+    },
+    {
+      "id": "cdkt_bank_cam_ket_cho_vay_khong_huy_ngang",
+      "name": "Cam kết cho vay không hủy ngang"
+    },
+    {
+      "id": "cdkt_bank_cam_ket_trong_nghiep_vu_lc",
+      "name": "Cam kết trong nghiệp vụ L/C"
+    },
+    {
+      "id": "cdkt_bank_bao_lanh_khac",
+      "name": "Bảo lãnh khác"
+    },
+    {
+      "id": "cdkt_bank_cam_ket_khac",
+      "name": "Cam kết khác"
+    }
+  ],
+  "KQKD_BANK": [
+    {
+      "id": "kqkd_bank_thu_nhap_lai_thuan",
+      "name": "Thu nhập lãi thuần"
+    },
+    {
+      "id": "kqkd_bank_thu_nhap_lai_va_cac_khoan_thu_nhap_tuong_tu",
+      "name": "Thu nhập lãi và các khoản thu nhập tương tự"
+    },
+    {
+      "id": "kqkd_bank_chi_phi_lai_va_cac_chi_phi_tuong_tu",
+      "name": "Chi phí lãi và các chi phí tương tự"
+    },
+    {
+      "id": "kqkd_bank_lailo_thuan_tu_hoat_dong_dich_vu",
+      "name": "Lãi/Lỗ thuần từ hoạt động dịch vụ"
+    },
+    {
+      "id": "kqkd_bank_thu_nhap_tu_dich_vu",
+      "name": "Thu nhập từ dịch vụ"
+    },
+    {
+      "id": "kqkd_bank_chi_phi_dich_vu",
+      "name": "Chi phí dịch vụ"
+    },
+    {
+      "id": "kqkd_bank_lai_thuan_tu_hoat_dong_kinh_doanh_ngoai_hoi_va_vang",
+      "name": "Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối và vàng"
+    },
+    {
+      "id": "kqkd_bank_lai_thuan_tu_mua_ban_chung_khoan_kinh_doanh",
+      "name": "Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh"
+    },
+    {
+      "id": "kqkd_bank_lai_thuan_tu_mua_ban_chung_khoan_dau_tu",
+      "name": "Lãi/(lỗ) thuần từ mua bán chứng khoán đầu tư"
+    },
+    {
+      "id": "kqkd_bank_lai_thuan_tu_hoat_dong_khac",
+      "name": "Lãi/(lỗ) thuần từ hoạt động khác"
+    },
+    {
+      "id": "kqkd_bank_thu_nhap_khac",
+      "name": "Thu nhập khác"
+    },
+    {
+      "id": "kqkd_bank_chi_phi_khac",
+      "name": "Chi phí khác"
+    },
+    {
+      "id": "kqkd_bank_thu_nhap_tu_co_tuc",
+      "name": "Thu nhập từ cổ tức"
+    },
+    {
+      "id": "kqkd_bank_tong_thu_nhap_hoat_dong",
+      "name": "Tổng thu nhập hoạt động"
+    },
+    {
+      "id": "kqkd_bank_chi_phi_quan_ly_doanh_nghiep",
+      "name": "Chi phí quản lý doanh nghiệp"
+    },
+    {
+      "id": "kqkd_bank_loi_nhuan_thuan_hoat_dong_truoc_khi_trich_lap_du_phong_",
+      "name": "Lợi nhuận thuần hoạt động trước khi trích lập dự phòng tổn thất tín dụng"
+    },
+    {
+      "id": "kqkd_bank_trich_lap_du_phong_ton_that_tin_dung",
+      "name": "Trích lập dự phòng tổn thất tín dụng"
+    },
+    {
+      "id": "kqkd_bank_tong_loi_nhuanlo_truoc_thue",
+      "name": "Tổng lợi nhuận/lỗ trước thuế"
+    },
+    {
+      "id": "kqkd_bank_chi_phi_thue_thu_nhap_doanh_nghiep",
+      "name": "Chi phí thuế thu nhập doanh nghiệp"
+    },
+    {
+      "id": "kqkd_bank_chi_phi_thue_tndn_hien_hanh",
+      "name": "Chi phí thuế TNDN hiện hành"
+    },
+    {
+      "id": "kqkd_bank_chi_phi_thue_tndn_hoan_lai",
+      "name": "Chi phí thuế TNDN hoãn lại"
+    },
+    {
+      "id": "kqkd_bank_loi_nhuan_sau_thue",
+      "name": "Lợi nhuận sau thuế"
+    },
+    {
+      "id": "kqkd_bank_loi_ich_cua_co_dong_thieu_so",
+      "name": "Lợi ích của cổ đông thiểu số"
+    },
+    {
+      "id": "kqkd_bank_co_dong_cua_cong_ty_me",
+      "name": "Cổ đông của Công ty mẹ"
+    },
+    {
+      "id": "kqkd_bank_lai_co_ban_tren_co_phieu",
+      "name": "Lãi cơ bản trên cổ phiếu (VND)"
+    },
+    {
+      "id": "kqkd_bank_lai_tren_co_phieu_pha_loang",
+      "name": "Lãi trên cổ phiếu pha loãng (VND)"
+    }
+  ],
+  "CDKT_SEC": [
+    {
+      "id": "cdkt_sec_tai_san_ngan_han",
+      "name": "TÀI SẢN NGẮN HẠN"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_ngan_han",
+      "name": "Tài sản tài chính ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_tien_va_tuong_duong_tien",
+      "name": "Tiền và tương đương tiền"
+    },
+    {
+      "id": "cdkt_sec_tien",
+      "name": "Tiền"
+    },
+    {
+      "id": "cdkt_sec_cac_khoan_tuong_duong_tien",
+      "name": "Các khoản tương đương tiền"
+    },
+    {
+      "id": "cdkt_sec_cac_tai_san_tai_chinh_ghi_nhan_thong_qua_lai_lo",
+      "name": "Các tài sản tài chính ghi nhận thông qua lãi lỗ (FVTPL)"
+    },
+    {
+      "id": "cdkt_sec_cac_khoan_dau_tu_nam_giu_den_ngay_dao_han",
+      "name": "Các khoản đầu tư nắm giữ đến ngày đáo hạn (HTM)"
+    },
+    {
+      "id": "cdkt_sec_cac_khoan_cho_vay",
+      "name": "Các khoản cho vay"
+    },
+    {
+      "id": "cdkt_sec_cac_khoan_tai_chinh_san_sang_de_ban",
+      "name": "Các khoản tài chính sẵn sàng để bán (AFS)"
+    },
+    {
+      "id": "cdkt_sec_du_phong_suy_giam_gia_tri_tai_san_tai_chinh_va_tai_san_",
+      "name": "Dự phòng suy giảm giá trị tài sản tài chính và tài sản thế chấp"
+    },
+    {
+      "id": "cdkt_sec_tong_cac_khoan_phai_thu",
+      "name": "Tổng các khoản phải thu"
+    },
+    {
+      "id": "cdkt_sec_cac_khoan_phai_thu",
+      "name": "Các khoản phải thu (từ 2016)"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_ban_cac_tai_san_tai_chinh",
+      "name": "Phải thu bán các tài sản tài chính"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_va_du_thu_co_tuc_tien_lai_cac_tai_san_tai_chin",
+      "name": "Phải thu và dự thu cổ tức, tiền lãi các tài sản tài chính"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_co_tuc_tien_lai_den_ngay_nhan",
+      "name": "Phải thu cổ tức, tiền lãi đến ngày nhận"
+    },
+    {
+      "id": "cdkt_sec_trong_do_phai_thu_kho_doi_ve_co_tuc_tien_lai_den_ngay_n",
+      "name": "Trong đó : phải thu khó đòi về cổ tức , tiền lãi đến ngày nhận nhưng chưa nhận được"
+    },
+    {
+      "id": "cdkt_sec_du_thu_co_tuc_tien_lai_chua_den_ngay_nhan",
+      "name": "Dự thu cổ tức , tiền lãi chưa đến ngày nhận"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_khach_hang",
+      "name": "Phải thu khách hàng (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_thue_gia_tri_gia_tang_duoc_khau_tru",
+      "name": "Thuế giá trị gia tăng được khấu trừ (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_tra_truoc_nguoi_ban",
+      "name": "Trả trước người bán"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_cac_dich_vu_ctck_cung_cap",
+      "name": "Phải thu các dịch vụ CTCK cung cấp"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_noi_bo",
+      "name": "Phải thu nội bộ"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_ve_loi_giao_dich_ck",
+      "name": "Phải thu về lỗi giao dịch CK"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_ve_hoat_dong_giao_dich_chung_khoan",
+      "name": "Phải thu về hoạt động giao dịch chứng khoán (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_ve_xdcb",
+      "name": "Phải thu về XDCB (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_ve_cho_vay_ngan_han",
+      "name": "Phải thu về cho vay ngắn hạn (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_khac",
+      "name": "Phải thu khác"
+    },
+    {
+      "id": "cdkt_sec_du_phong_suy_giam_gia_tri_cac_khoan_phai_thu",
+      "name": "Dự phòng suy giảm giá trị các khoản phải thu"
+    },
+    {
+      "id": "cdkt_sec_du_phong_no_kho_doi",
+      "name": "Dự phòng nợ khó đòi (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_tai_san_thieu_cho_xu_ly",
+      "name": "Tài sản thiếu chờ xử lý (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_hang_ton_kho_rong",
+      "name": "Hàng tồn kho, ròng (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_hang_ton_kho",
+      "name": "Hàng tồn kho (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_du_phong_giam_gia_htk",
+      "name": "Dự phòng giảm giá HTK (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_tai_san_ngan_han_khac",
+      "name": "Tài sản ngắn hạn khác"
+    },
+    {
+      "id": "cdkt_sec_tam_ung",
+      "name": "Tạm ứng"
+    },
+    {
+      "id": "cdkt_sec_vat_tu_van_phong_cong_cu_dung_cu",
+      "name": "Vật tư văn phòng, công cụ, dụng cụ"
+    },
+    {
+      "id": "cdkt_sec_chi_phi_tra_truoc_ngan_han",
+      "name": "Chi phí trả trước ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_cam_co_the_chap_ky_quy_ky_cuoc_ngan_han",
+      "name": "Cầm cố, thế chấp, ký quý , ký cược ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_thue_gia_tri_gia_tang_duoc_khau_tru_1",
+      "name": "Thuế giá trị gia tăng được khấu trừ"
+    },
+    {
+      "id": "cdkt_sec_thue_va_cac_khoan_khac_phai_thu_nha_nuoc",
+      "name": "Thuế và các khoản khác phải thu Nhà nước"
+    },
+    {
+      "id": "cdkt_sec_tai_san_ngan_han_khac_1",
+      "name": "Tài sản ngắn hạn khác"
+    },
+    {
+      "id": "cdkt_sec_giao_dich_mua_ban_lai_trai_phieu_chinh_phu",
+      "name": "Giao dịch mua bán lại trái phiếu chính phủ"
+    },
+    {
+      "id": "cdkt_sec_du_phong_suy_giam_gia_tri_tsnh_khac",
+      "name": "Dự phòng suy giảm giá trị TSNH khác"
+    },
+    {
+      "id": "cdkt_sec_tai_san_dai_han",
+      "name": "TÀI SẢN DÀI HẠN"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_dai_han",
+      "name": "Tài sản tài chính dài hạn"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_dai_han",
+      "name": "Phải thu dài hạn"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_khach_hang_dai_han",
+      "name": "Phải thu khách hàng dài hạn"
+    },
+    {
+      "id": "cdkt_sec_tra_truoc_nguoi_ban_dai_han",
+      "name": "Trả trước người bán dài hạn (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_von_kinh_doanh_o_cac_don_vi_truc_thuoc",
+      "name": "Vốn kinh doanh ở các đơn vị trực thuộc (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_noi_bo_dai_han",
+      "name": "Phải thu nội bộ dài hạn (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_ve_cho_vay_dai_han",
+      "name": "Phải thu về cho vay dài hạn (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_dai_han_khac",
+      "name": "Phải thu dài hạn khác (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_du_phong_phai_thu_dai_han",
+      "name": "Dự phòng phải thu dài hạn (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_dau_tu_dai_han",
+      "name": "Đầu tư dài hạn"
+    },
+    {
+      "id": "cdkt_sec_dau_tu_vao_cac_cong_ty_con",
+      "name": "Đầu tư vào các công ty con"
+    },
+    {
+      "id": "cdkt_sec_dau_tu_vao_cac_cong_ty_lien_ket",
+      "name": "Đầu tư vào các công ty liên kết"
+    },
+    {
+      "id": "cdkt_sec_dau_tu_dai_han_khac",
+      "name": "Đầu tư dài hạn khác"
+    },
+    {
+      "id": "cdkt_sec_du_phong_giam_gia_dau_tu_dai_han",
+      "name": "Dự phòng giảm giá đầu tư dài hạn"
+    },
+    {
+      "id": "cdkt_sec_tai_san_co_dinh",
+      "name": "Tài sản cố định"
+    },
+    {
+      "id": "cdkt_sec_gtcl_tscd_huu_hinh",
+      "name": "GTCL TSCĐ hữu hình"
+    },
+    {
+      "id": "cdkt_sec_nguyen_gia_tscd_huu_hinh",
+      "name": "Nguyên giá TSCĐ hữu hình"
+    },
+    {
+      "id": "cdkt_sec_khau_hao_luy_ke_tscd_huu_hinh",
+      "name": "Khấu hao lũy kế TSCĐ hữu hình"
+    },
+    {
+      "id": "cdkt_sec_danh_gia_tscdhh_theo_gia_tri_hop_ly",
+      "name": "Đánh giá TSCĐHH theo giá trị hợp lý"
+    },
+    {
+      "id": "cdkt_sec_gtcl_tai_san_thue_tai_chinh",
+      "name": "GTCL Tài sản thuê tài chính"
+    },
+    {
+      "id": "cdkt_sec_nguyen_gia_tai_san_thue_tai_chinh",
+      "name": "Nguyên giá tài sản thuê tài chính"
+    },
+    {
+      "id": "cdkt_sec_khau_hao_luy_ke_tai_san_thue_tai_chinh",
+      "name": "Khấu hao lũy kế tài sản thuê tài chính"
+    },
+    {
+      "id": "cdkt_sec_danh_gia_tscdttc_theo_gia_tri_hop_ly",
+      "name": "Đánh giá TSCĐTTC theo giá trị hợp lý"
+    },
+    {
+      "id": "cdkt_sec_gtcl_tai_san_co_dinh_vo_hinh",
+      "name": "GTCL tài sản cố định vô hình"
+    },
+    {
+      "id": "cdkt_sec_nguyen_gia_tscd_vo_hinh",
+      "name": "Nguyên giá TSCĐ vô hình"
+    },
+    {
+      "id": "cdkt_sec_khau_khao_luy_ke_tscd_vo_hinh",
+      "name": "Khấu khao lũy kế TSCĐ vô hình"
+    },
+    {
+      "id": "cdkt_sec_danh_gia_tscdvh_theo_gia_tri_hop_ly",
+      "name": "Đánh giá TSCĐVH theo giá trị hợp lý"
+    },
+    {
+      "id": "cdkt_sec_xay_dung_co_ban_do_dang",
+      "name": "Xây dựng cơ bản dở dang (trước 2015)"
+    },
+    {
+      "id": "cdkt_sec_bat_dong_san_dau_tu",
+      "name": "Bất động sản đầu tư"
+    },
+    {
+      "id": "cdkt_sec_nguyen_gia_tai_san_dau_tu",
+      "name": "Nguyên giá tài sản đầu tư"
+    },
+    {
+      "id": "cdkt_sec_khau_hao_luy_ke_tai_san_dau_tu",
+      "name": "Khấu hao lũy kế tài sản đầu tư"
+    },
+    {
+      "id": "cdkt_sec_danh_gia_bdsdt_theo_gia_tri_hop_ly",
+      "name": "Đánh giá BĐSĐT theo giá trị hợp lý"
+    },
+    {
+      "id": "cdkt_sec_tai_san_do_dang_dai_han",
+      "name": "Tài sản dở dang dài hạn"
+    },
+    {
+      "id": "cdkt_sec_chi_phi_san_xuat_kinh_doanh_do_dang_dai_han",
+      "name": "Chi phí sản xuất, kinh doanh dở dang dài hạn"
+    },
+    {
+      "id": "cdkt_sec_chi_phi_xay_dung_co_ban_do_dang",
+      "name": "Chi phí xây dựng cơ bản dở dang"
+    },
+    {
+      "id": "cdkt_sec_tai_san_dai_han_khac",
+      "name": "Tài sản dài hạn khác"
+    },
+    {
+      "id": "cdkt_sec_cam_co_the_chap_ky_quy_ky_cuoc_dai_han",
+      "name": "Cầm cố, thế chấp, kỹ quỹ, Ký cược dài hạn"
+    },
+    {
+      "id": "cdkt_sec_chi_phi_tra_truoc_dai_han",
+      "name": "Chi phí trả trước dài hạn"
+    },
+    {
+      "id": "cdkt_sec_tai_san_thue_thu_nhap_hoan_lai",
+      "name": "Tài sản thuế thu nhập hoãn lại"
+    },
+    {
+      "id": "cdkt_sec_thiet_bi_vat_tu_phu_tung_thay_the_dai_han",
+      "name": "Thiết bị, vật tư, phụ tùng thay thế dài hạn"
+    },
+    {
+      "id": "cdkt_sec_tien_chi_nop_quy_ho_tro_thanh_toan",
+      "name": "Tiền chi nộp Quỹ Hỗ trợ thanh toán"
+    },
+    {
+      "id": "cdkt_sec_cac_tai_san_dai_han_khac",
+      "name": "Các tài sản dài hạn khác"
+    },
+    {
+      "id": "cdkt_sec_loi_the_thuong_mai",
+      "name": "Lợi thế thương mại"
+    },
+    {
+      "id": "cdkt_sec_du_phong_suy_giam_gia_tri_tai_san_dai_han",
+      "name": "Dự phòng suy giảm giá trị tài sản dài hạn"
+    },
+    {
+      "id": "cdkt_sec_tong_cong_tai_san",
+      "name": "TỔNG CỘNG TÀI SẢN"
+    },
+    {
+      "id": "cdkt_sec_no_phai_tra",
+      "name": "NỢ PHẢI TRẢ"
+    },
+    {
+      "id": "cdkt_sec_no_phai_tra_ngan_han",
+      "name": "Nợ phải trả ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_vay_va_no_thue_tai_san_tai_chinh_ngan_han",
+      "name": "Vay và nợ thuê tài sản tài chính ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_vay_ngan_han",
+      "name": "Vay ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_no_thue_tai_san_tai_chinh_ngan_han",
+      "name": "Nợ thuê tài sản tài chính ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_vay_tai_san_tai_chinh_ngan_han",
+      "name": "Vay tài sản tài chính ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_trai_phieu_chuyen_doi_ngan_han_cau_phan_no",
+      "name": "Trái phiếu chuyển đổi ngắn hạn - Cấu phần nợ"
+    },
+    {
+      "id": "cdkt_sec_trai_phieu_phat_hanh_ngan_han",
+      "name": "Trái phiếu phát hành ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_vay_quy_ho_tro_thanh_toan",
+      "name": "Vay Quỹ Hỗ trợ thanh toán"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_hoat_dong_giao_dich_chung_khoan",
+      "name": "Phải trả hoạt động giao dịch chứng khoán"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_ve_loi_giao_dich_cac_tai_san_tai_chinh",
+      "name": "Phải trả về lỗi giao dịch các tài sản tài chính"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_nguoi_ban_ngan_han",
+      "name": "Phải trả người bán ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_nguoi_mua_tra_tien_truoc_ngan_han",
+      "name": "Người mua trả tiền trước ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_thue_va_cac_khoan_phai_nop_nha_nuoc",
+      "name": "Thuế và các khoản phải nộp nhà nước"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_nguoi_lao_dong",
+      "name": "Phải trả người lao động"
+    },
+    {
+      "id": "cdkt_sec_cac_khoan_trich_nop_phuc_loi_nhan_vien",
+      "name": "Các khoản trích nộp phúc lợi nhân viên"
+    },
+    {
+      "id": "cdkt_sec_chi_phi_phai_tra_ngan_han",
+      "name": "Chi phí phải trả ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_noi_bo_ngan_han",
+      "name": "Phải trả nội bộ ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_doanh_thu_chua_thuc_hien_ngan_han",
+      "name": "Doanh thu chưa thực hiện ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_nhan_ky_quy_ky_cuoc_ngan_han",
+      "name": "Nhận ký quỹ, ký cược ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_ve_xay_dung_co_ban",
+      "name": "Phải trả về xây dựng cơ bản (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_co_tuc_goc_va_lai_trai_phieu",
+      "name": "Phải trả cổ tức, gốc và lãi trái phiếu (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_to_chuc_phat_hanh_chung_khoan",
+      "name": "Phải trả tổ chức phát hành chứng khoán (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_cac_khoan_phai_tra_phai_nop_khac_ngan_han",
+      "name": "Các khoản phải trả, phải nộp khác ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_du_phong_phai_tra_ngan_han",
+      "name": "Dự phòng phải trả ngắn hạn"
+    },
+    {
+      "id": "cdkt_sec_quy_khen_thuong_phuc_loi",
+      "name": "Quỹ khen thưởng phúc lợi"
+    },
+    {
+      "id": "cdkt_sec_quy_binh_on_gia",
+      "name": "Quỹ bình ổn giá (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_giao_dich_mua_ban_lai_trai_phieu_chinh_phu_1",
+      "name": "Giao dịch mua bán lại trái phiếu Chính phủ"
+    },
+    {
+      "id": "cdkt_sec_no_phai_tra_dai_han",
+      "name": "Nợ phải trả dài hạn"
+    },
+    {
+      "id": "cdkt_sec_vay_va_no_thue_tai_san_tai_chinh_dai_han",
+      "name": "Vay và nợ thuê tài sản tài chính dài hạn"
+    },
+    {
+      "id": "cdkt_sec_vay_dai_han",
+      "name": "Vay dài hạn"
+    },
+    {
+      "id": "cdkt_sec_no_thue_tai_chinh_dai_han",
+      "name": "Nợ thuê tài chính dài hạn"
+    },
+    {
+      "id": "cdkt_sec_vay_tai_san_tai_chinh_dai_han",
+      "name": "Vay tài sản tài chính dài hạn"
+    },
+    {
+      "id": "cdkt_sec_trai_phieu_chuyen_doi_dai_han_cau_phan_no",
+      "name": "Trái phiếu chuyển đổi dài hạn - Cấu phần nợ"
+    },
+    {
+      "id": "cdkt_sec_trai_phieu_phat_hanh_dai_han",
+      "name": "Trái phiếu phát hành dài hạn"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_nguoi_ban_dai_han",
+      "name": "Phải trả người bán dài hạn"
+    },
+    {
+      "id": "cdkt_sec_nguoi_mua_tra_tien_truoc_dai_han",
+      "name": "Người mua trả tiền trước dài hạn"
+    },
+    {
+      "id": "cdkt_sec_chi_phi_phai_tra_dai_han",
+      "name": "Chi phí phải trả dài hạn"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_noi_bo_dai_han",
+      "name": "Phải trả nội bộ dài hạn"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_noi_bo_ve_von_kinh_doanh",
+      "name": "Phải trả nội bộ về vốn kinh doanh (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_doanh_thu_chua_thuc_hien_dai_han",
+      "name": "Doanh thu chưa thực hiên dài hạn"
+    },
+    {
+      "id": "cdkt_sec_nhan_ky_quy_ky_cuoc_dai_han",
+      "name": "Nhận ký quỹ, ký cược dài hạn"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_dai_han_khac",
+      "name": "Phải trả dài hạn khác"
+    },
+    {
+      "id": "cdkt_sec_co_phieu_uu_dai",
+      "name": "Cổ phiếu ưu đãi (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_du_phong_tro_cap_thoi_viec",
+      "name": "Dự phòng trợ cấp thôi việc (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_du_phong_phai_tra_dai_han",
+      "name": "Dự phòng phải trả dài hạn"
+    },
+    {
+      "id": "cdkt_sec_quy_bao_ve_nha_dau_tu",
+      "name": "Quỹ bảo vệ Nhà đầu tư"
+    },
+    {
+      "id": "cdkt_sec_thue_thu_nhap_hoan_lai_phai_tra",
+      "name": "Thuế thu nhập hoãn lại phải trả"
+    },
+    {
+      "id": "cdkt_sec_quy_phat_trien_khoa_hoc_cong_nghe",
+      "name": "Quỹ phát triển khoa học công nghệ"
+    },
+    {
+      "id": "cdkt_sec_von_chu_so_huu",
+      "name": "Vốn chủ sở hữu"
+    },
+    {
+      "id": "cdkt_sec_von_dau_tu_cua_chu_so_huu",
+      "name": "Vốn đầu tư của chủ sở hữu"
+    },
+    {
+      "id": "cdkt_sec_von_gop_cua_chu_so_huu",
+      "name": "Vốn góp của chủ sở hữu"
+    },
+    {
+      "id": "cdkt_sec_co_phieu_pho_thong_co_quyen_bieu_quyet",
+      "name": "Cổ phiếu phổ thông có quyền biểu quyết"
+    },
+    {
+      "id": "cdkt_sec_co_phieu_uu_dai_1",
+      "name": "Cổ phiếu ưu đãi"
+    },
+    {
+      "id": "cdkt_sec_thang_du_von_co_phan",
+      "name": "Thặng dư vốn cổ phần"
+    },
+    {
+      "id": "cdkt_sec_quyen_chon_chuyen_doi_trai_phieu_cau_phan_von",
+      "name": "Quyền chọn chuyển đổi trái phiếu - Cấu phần vốn"
+    },
+    {
+      "id": "cdkt_sec_von_khac_cua_chu_so_huu",
+      "name": "Vốn khác của chủ sở hữu"
+    },
+    {
+      "id": "cdkt_sec_co_phieu_quy",
+      "name": "Cổ phiếu quỹ"
+    },
+    {
+      "id": "cdkt_sec_chenh_lech_danh_gia_lai_tai_san_theo_gia_tri_hop_ly",
+      "name": "Chênh lệch đánh giá lại tài sản theo giá trị hợp lý"
+    },
+    {
+      "id": "cdkt_sec_chenh_lech_ty_gia_hoi_doai",
+      "name": "Chênh lệch tỷ giá hổi đoái"
+    },
+    {
+      "id": "cdkt_sec_quy_du_tru_bo_sung_von_dieu_le",
+      "name": "Quỹ dự trữ bổ sung vốn điều lệ"
+    },
+    {
+      "id": "cdkt_sec_quy_dau_tu_va_phat_trien",
+      "name": "Quỹ đầu tư và phát triển (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_quy_du_phong_tai_chinh_va_rui_ro_nghiep_vu",
+      "name": "Quỹ dự phòng tài chính và rủi ro nghiệp vụ"
+    },
+    {
+      "id": "cdkt_sec_quy_khac_thuoc_von_chu_so_huu",
+      "name": "Quỹ khác thuộc vốn chủ sỡ hữu"
+    },
+    {
+      "id": "cdkt_sec_loi_nhuan_chua_phan_phoi",
+      "name": "Lợi nhuận chưa phân phối"
+    },
+    {
+      "id": "cdkt_sec_loi_nhuan_da_thuc_hien",
+      "name": "Lợi nhuận đã thực hiện"
+    },
+    {
+      "id": "cdkt_sec_lnst_chua_phan_phoi_luy_ke_den_cuoi_ky_truoc",
+      "name": "LNST chưa phân phối lũy kế đến cuối kỳ trước"
+    },
+    {
+      "id": "cdkt_sec_lnst_chua_phan_phoi_ky_nay",
+      "name": "LNST chưa phân phối kỳ này"
+    },
+    {
+      "id": "cdkt_sec_loi_nhuan_chua_thuc_hien",
+      "name": "Lợi nhuận chưa thực hiện"
+    },
+    {
+      "id": "cdkt_sec_loi_ich_co_dong_khong_kiem_soat",
+      "name": "Lợi ích cổ đông không kiểm soát"
+    },
+    {
+      "id": "cdkt_sec_loi_ich_cua_co_dong_khong_kiem_soat",
+      "name": "LỢI ÍCH CỦA CỔ ĐÔNG KHÔNG KIỂM SOÁT (trước 2015)"
+    },
+    {
+      "id": "cdkt_sec_nguon_kinh_phi_va_quy_khac",
+      "name": "Nguồn kinh phí và quỹ khác"
+    },
+    {
+      "id": "cdkt_sec_quy_khen_thuong_phuc_loi_1",
+      "name": "Quỹ khen thưởng, phúc lợi (trước 2010)"
+    },
+    {
+      "id": "cdkt_sec_von_ngan_sach_nha_nuoc",
+      "name": "Vốn ngân sách nhà nước"
+    },
+    {
+      "id": "cdkt_sec_nguon_kinh_phi_da_hinh_thanh_tscd",
+      "name": "Nguồn kinh phí đã hình thành TSCĐ"
+    },
+    {
+      "id": "cdkt_sec_tong_cong_nguon_von",
+      "name": "TỔNG CỘNG NGUỒN VỐN"
+    },
+    {
+      "id": "cdkt_sec_tai_san_co_dinh_thue_ngoai",
+      "name": "Tài sản cố định thuê ngoài"
+    },
+    {
+      "id": "cdkt_sec_chung_chi_co_gia_nhan_giu_ho",
+      "name": "Chứng chỉ có giá nhận giữ hộ"
+    },
+    {
+      "id": "cdkt_sec_tai_san_nhan_the_chap",
+      "name": "Tài sản nhận thế chấp"
+    },
+    {
+      "id": "cdkt_sec_no_kho_doi_da_xu_ly",
+      "name": "Nợ khó đòi đã xử lý"
+    },
+    {
+      "id": "cdkt_sec_ngoai_te_cac_loai",
+      "name": "Ngoại tệ các loại"
+    },
+    {
+      "id": "cdkt_sec_co_phieu_dang_luu_hanh",
+      "name": "Cổ phiếu đang lưu hành (Số lượng)"
+    },
+    {
+      "id": "cdkt_sec_co_phieu_quy_1",
+      "name": "Cổ phiếu quỹ (Số lượng)"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_niem_yetdang_ky_giao_dich_tai_vsd_cua",
+      "name": "Tài sản tài chính niêm yết/đăng ký giao dịch tại VSD của CTCK"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_da_luu_ky_tai_vsd_va_chua_giao_dich_c",
+      "name": "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch của CTCK"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_cho_ve_cua_ctck",
+      "name": "Tài sản tài chính chờ về của CTCK"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_sua_loi_giao_dich_cua_ctck",
+      "name": "Tài sản tài chính sửa lỗi giao dịch của CTCK"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_chua_luu_ky_tai_vsd_cua_ctck",
+      "name": "Tài sản tài chính chưa lưu ký tại VSD của CTCK"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_duoc_huong_quyen_cua_ctck",
+      "name": "Tài sản tài chính được hưởng quyền của CTCK"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_niem_yetdang_ky_giao_dich_tai_vsd_cua_1",
+      "name": "Tài sản tài chính niêm yết/đăng ký giao dịch tại VSD của NĐT"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_giao_dich_tu_do_chuyen_nhuong",
+      "name": "Tài sản tài chính giao dịch tự do chuyển nhượng"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_han_che_chuyen_nhuong",
+      "name": "Tài sản tài chính hạn chế chuyển nhượng"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_giao_dich_cam_co",
+      "name": "Tài sản tài chính giao dịch cầm cố"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_phong_toa_tam_giu",
+      "name": "Tài sản tài chính phong tỏa, tạm giữ"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_cho_thanh_toan",
+      "name": "Tài sản tài chính chờ thanh toán"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_cho_cho_vay",
+      "name": "Tài sản tài chính chờ cho vay"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_da_luu_ky_tai_vsd_va_chua_giao_dich_c_1",
+      "name": "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch của NĐT"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_da_luu_ky_tai_vsd_va_chua_giao_dich_t",
+      "name": "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, tự do chuyển nhượng"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_da_luu_ky_tai_vsd_va_chua_giao_dich_h",
+      "name": "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, hạn chế chuyển nhượng"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_da_luu_ky_tai_vsd_va_chua_giao_dich_c_2",
+      "name": "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, cầm cố"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_da_luu_ky_tai_vsd_va_chua_giao_dich_p",
+      "name": "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, phong tỏa, tạm giữ"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_cho_ve_cua_ndt",
+      "name": "Tài sản tài chính chờ về của NĐT"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_sua_loi_giao_dich_cua_ndt",
+      "name": "Tài sản tài chính sửa lỗi giao dịch của NĐT"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_chua_luu_ky_tai_vsd_cua_ndt",
+      "name": "Tài sản tài chính chưa lưu ký tại VSD của NĐT"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_duoc_huong_quyen_cua_nha_dau_tu",
+      "name": "Tài sản tài chính được hưởng quyền của Nhà đầu tư"
+    },
+    {
+      "id": "cdkt_sec_tien_gui_cua_khach_hang",
+      "name": "Tiền gửi của khách hàng"
+    },
+    {
+      "id": "cdkt_sec_tien_gui_cua_nha_dau_tu_ve_giao_dich_chung_khoan",
+      "name": "Tiền gửi của Nhà đầu tư về giao dịch chứng khoán"
+    },
+    {
+      "id": "cdkt_sec_tien_gui_tong_hop_giao_dich_chung_khoan_cho_khach_hang",
+      "name": "Tiền gửi tổng hợp giao dịch chứng khoán cho khách hàng"
+    },
+    {
+      "id": "cdkt_sec_tien_gui_bu_tru_va_thanh_toan_giao_dich_chung_khoan",
+      "name": "Tiền gửi bù trừ và thanh toán giao dịch chứng khoán"
+    },
+    {
+      "id": "cdkt_sec_tien_gui_bu_tru_va_thanh_toan_giao_dich_chung_khoan_nha",
+      "name": "Tiền gửi bù trừ và thanh toán giao dịch chứng khoán Nhà đầu tư trong nước"
+    },
+    {
+      "id": "cdkt_sec_tien_gui_bu_tru_va_thanh_toan_giao_dich_chung_khoan_nha_1",
+      "name": "Tiền gửi bù trừ và thanh toán giao dịch chứng khoán Nhà đầu tư nước ngoài"
+    },
+    {
+      "id": "cdkt_sec_tien_gui_cua_to_chuc_phat_hanh_chung_khoan",
+      "name": "Tiền gửi của Tổ chức phát hành chứng khoán"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_nha_dau_tu_ve_tien_gui_giao_dich_chung_khoan_t",
+      "name": "Phải trả Nhà đầu tư về tiền gửi giao dịch chứng khoán theo phương thức CTCK quản lý"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_nha_dau_tu_trong_nuoc_ve_tien_gui_giao_dich_ch",
+      "name": "Phải trả Nhà đầu tư trong nước về tiền gửi giao dịch chứng khoán theo phương thức CTCK quản lý"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_nha_dau_tu_nuoc_ngoai_ve_tien_gui_giao_dich_ch",
+      "name": "Phải trả Nhà đầu tư nước ngoài về tiền gửi giao dịch chứng khoán theo phương thức CTCK quản lý"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_to_chuc_phat_hanh_chung_khoan_1",
+      "name": "Phải trả Tổ chức phát hành chứng khoán"
+    },
+    {
+      "id": "cdkt_sec_phai_thuphai_tra_cua_khach_hang_ve_loi_giao_dich_cac_ta",
+      "name": "Phải thu/phải trả của khách hàng về lỗi giao dịch các tài sản tài chính"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_vay_ctck",
+      "name": "Phải trả vay CTCK"
+    },
+    {
+      "id": "cdkt_sec_phai_tra_co_tuc_goc_va_lai_trai_phieu_1",
+      "name": "Phải trả cổ tức, gốc và lãi trái phiếu"
+    }
+  ],
+  "KQKD_SEC": [
+    {
+      "id": "kqkd_sec_doanh_thu_hoat_dong",
+      "name": "DOANH THU HOẠT ĐỘNG"
+    },
+    {
+      "id": "kqkd_sec_lai_tu_cac_tai_san_tai_chinh_ghi_nhan_thong_qua_lailo",
+      "name": "Lãi từ các tài sản tài chính ghi nhận thông qua lãi/lỗ ( FVTPL)"
+    },
+    {
+      "id": "kqkd_sec_lai_ban_cac_tai_san_tai_chinh_fvtpl",
+      "name": "Lãi bán các tài sản tài chính FVTPL"
+    },
+    {
+      "id": "kqkd_sec_chenh_lech_tang_danh_gia_lai_cac_tstc_thong_qua_lailo",
+      "name": "Chênh lệch tăng đánh giá lại các TSTC thông qua lãi/lỗ"
+    },
+    {
+      "id": "kqkd_sec_co_tuc_tien_lai_phat_sinh_tu_tai_san_tai_chinh_fvtpl",
+      "name": "Cổ tức, tiền lãi phát sinh từ tài sản tài chính FVTPL"
+    },
+    {
+      "id": "kqkd_sec_lai_tu_cac_khoan_dau_tu_nam_giu_den_ngay_dao_han",
+      "name": "Lãi từ các khoản đầu tư nắm giữ đến ngày đáo hạn"
+    },
+    {
+      "id": "kqkd_sec_lai_tu_cac_khoan_cho_vay_va_phai_thu",
+      "name": "Lãi từ các khoản cho vay và phải thu"
+    },
+    {
+      "id": "kqkd_sec_lai_tu_cac_tai_san_tai_chinh_san_sang_de_ban",
+      "name": "Lãi từ các tài sản tài chính sẵn sàng để bán"
+    },
+    {
+      "id": "kqkd_sec_lai_tu_cac_cong_cu_phat_sinh_phong_ngua_rui_ro",
+      "name": "Lãi từ các công cụ phát sinh phòng ngừa rủi ro"
+    },
+    {
+      "id": "kqkd_sec_doanh_thu_nghiep_vu_moi_gioi_chung_khoan",
+      "name": "Doanh thu nghiệp vụ môi giới chứng khoán"
+    },
+    {
+      "id": "kqkd_sec_doanh_thu_nghiep_vu_bao_lanh_phat_hanh_chung_khoan",
+      "name": "Doanh thu nghiệp vụ bảo lãnh phát hành chứng khoán"
+    },
+    {
+      "id": "kqkd_sec_doanh_thu_nghiep_vu_tu_van_dau_tu_chung_khoan",
+      "name": "Doanh thu nghiệp vụ tư vấn đầu tư chứng khoán"
+    },
+    {
+      "id": "kqkd_sec_doanh_thu_hoat_dong_uy_thac_dau_gia",
+      "name": "Doanh thu hoạt động ủy thác, đấu giá (Trước năm 2016)"
+    },
+    {
+      "id": "kqkd_sec_doanh_thu_luu_ky_chung_khoan",
+      "name": "Doanh thu lưu ký chứng khoán"
+    },
+    {
+      "id": "kqkd_sec_doanh_thu_hoat_dong_dau_tu_chung_khoan_gop_von",
+      "name": "Doanh thu hoạt động đầu tư chứng khoán, góp vốn (Trước năm 2016)"
+    },
+    {
+      "id": "kqkd_sec_thu_cho_thue_su_dung_tai_san",
+      "name": "Thu cho thuê sử dụng tài sản (Trước năm 2016)"
+    },
+    {
+      "id": "kqkd_sec_doanh_thu_hoat_dong_tu_van_tai_chinh",
+      "name": "Doanh thu hoạt động tư vấn tài chính"
+    },
+    {
+      "id": "kqkd_sec_doanh_thu_khac",
+      "name": "Doanh thu khác"
+    },
+    {
+      "id": "kqkd_sec_cac_khoan_giam_tru_doanh_thu",
+      "name": "Các khoản giảm trừ doanh thu"
+    },
+    {
+      "id": "kqkd_sec_doanh_thu_thuan_ve_hoat_dong_kinh_doanh",
+      "name": "Doanh thu thuần về hoạt động kinh doanh"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_hoat_dong",
+      "name": "CHI PHÍ HOẠT ĐỘNG"
+    },
+    {
+      "id": "kqkd_sec_lo_cac_tai_san_tai_chinh_ghi_nhan_thong_qua_lai_lo",
+      "name": "Lỗ các tài sản tài chính ghi nhận thông qua lãi lỗ (FVTPL)"
+    },
+    {
+      "id": "kqkd_sec_lo_ban_cac_tai_san_tai_chinh",
+      "name": "Lỗ bán các tài sản tài chính"
+    },
+    {
+      "id": "kqkd_sec_chenh_lech_giam_danh_gia_lai_cac_tstc_thong_qua_lailo",
+      "name": "Chênh lệch giảm đánh giá lại các TSTC thông qua lãi/lỗ"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_giao_dich_mua_cac_tai_san_tai_chinh_fvtpl",
+      "name": "Chi phí giao dịch mua các tài sản tài chính FVTPL"
+    },
+    {
+      "id": "kqkd_sec_lo_cac_khoan_dau_tu_nam_giu_den_ngay_dao_han",
+      "name": "Lỗ các khoản đầu tư nắm giữ đến ngày đáo hạn (HTM)"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_lai_vay_lo_tu_cac_khoan_cho_vay_va_phai_thu",
+      "name": "Chi phí lãi vay, lỗ từ các khoản cho vay và phải thu (Trước năm 2016)"
+    },
+    {
+      "id": "kqkd_sec_lo_va_ghi_nhan_chenh_lech_danh_gia_theo_gia_tri_hop_ly_",
+      "name": "Lỗ và ghi nhận chênh lệch đánh giá theo giá trị hợp lý tài sản tài chính sẵn sàng để bán (AFS) khi phân loại lại"
+    },
+    {
+      "id": "kqkd_sec_cp_du_phong_tstc_xu_ly_ton_that_cac_khoan_phai_thu_kho_",
+      "name": "CP dự phòng TSTC, xử lý tổn thất các khoản phải thu khó đòi là lỗ suy giảm TSTC và CP đi vay"
+    },
+    {
+      "id": "kqkd_sec_lo_tu_cac_tai_san_tai_chinh_phai_sinh_phong_ngua_rui_ro",
+      "name": "Lỗ từ các tài sản tài chính phái sinh phòng ngừa rủi ro"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_hoat_dong_tu_doanh",
+      "name": "Chi phí hoạt động tự doanh"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_nghiep_vu_moi_gioi_chung_khoan",
+      "name": "Chi phí nghiệp vụ môi giới chứng khoán"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_nghiep_vu_bao_lanh_dai_ly_phat_hanh_chung_khoan",
+      "name": "Chi phí nghiệp vụ bảo lãnh, đại lý phát hành chứng khoán"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_nghiep_vu_tu_van_dau_tu_chung_khoan",
+      "name": "Chi phí nghiệp vụ tư vấn đầu tư chứng khoán"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_hoat_dong_dau_gia_uy_thac",
+      "name": "Chí phí hoạt động đấu giá, ủy thác"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_nghiep_vu_luu_ky_chung_khoan",
+      "name": "Chi phí nghiệp vụ lưu ký chứng khoán"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_hoat_dong_tu_van_tai_chinh",
+      "name": "Chi phí hoạt động tư vấn tài chính"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_cac_dich_vu_khac",
+      "name": "Chi phí các dịch vụ khác"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_sua_loi_giao_dich_chung_khoan_loi_khac",
+      "name": "Chi phí sửa lỗi giao dịch chứng khoán, lỗi khác"
+    },
+    {
+      "id": "kqkd_sec_loi_nhuan_gop",
+      "name": "LỢI NHUẬN GỘP"
+    },
+    {
+      "id": "kqkd_sec_doanh_thu_hoat_dong_tai_chinh",
+      "name": "DOANH THU HOẠT ĐỘNG TÀI CHÍNH"
+    },
+    {
+      "id": "kqkd_sec_chenh_lech_lai_ty_gia_hoi_doai_da_va_chua_thuc_hien",
+      "name": "Chênh lệch lãi tỷ giá hối đoái đã và chưa thực hiện"
+    },
+    {
+      "id": "kqkd_sec_doanh_thu_du_thu_co_tuc_lai_tien_gui_khong_co_dinh_phat",
+      "name": "Doanh thu, dự thu cổ tức, lãi tiền gửi không cố định phát sinh trong kỳ"
+    },
+    {
+      "id": "kqkd_sec_lai_ban_thanh_ly_cac_khoan_dau_tu_vao_cong_ty_con_lien_",
+      "name": "Lãi bán, thanh lý các khoản đầu tư vào công ty con, liên kết, liên doanh"
+    },
+    {
+      "id": "kqkd_sec_doanh_thu_khac_ve_dau_tu",
+      "name": "Doanh thu khác về đầu tư"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_tai_chinh",
+      "name": "CHI PHÍ TÀI CHÍNH"
+    },
+    {
+      "id": "kqkd_sec_chenh_lech_lo_ty_gia_hoi_doai_da_va_chua_thuc_hien",
+      "name": "Chênh lệch lỗ tỷ giá hối đoái đã và chưa thực hiện"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_lai_vay",
+      "name": "Chi phí lãi vay"
+    },
+    {
+      "id": "kqkd_sec_lo_ban_thanh_ly_cac_khoan_dau_tu_vao_cong_ty_con_lien_k",
+      "name": "Lỗ bán, thanh lý các khoản đầu tư vào công ty con, liên kết, liên doanh"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_du_phong_suy_giam_gia_tri_cac_khoan_dau_tu_tai_",
+      "name": "Chi phí dự phòng suy giảm giá trị các khoản đầu tư tài chính dài hạn"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_dau_tu_khac",
+      "name": "Chi phí đầu tư khác"
+    },
+    {
+      "id": "kqkd_sec_lailo_tu_cong_ty_lien_doanh_lien_ket",
+      "name": "Lãi/lỗ từ công ty liên doanh, liên kết"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_ban_hang",
+      "name": "CHI PHÍ BÁN HÀNG"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_quan_ly_cong_ty_chung_khoan",
+      "name": "CHI PHÍ QUẢN LÝ CÔNG TY CHỨNG KHOÁN"
+    },
+    {
+      "id": "kqkd_sec_ket_qua_hoat_dong",
+      "name": "KẾT QUẢ HOẠT ĐỘNG"
+    },
+    {
+      "id": "kqkd_sec_tong_loi_nhuan_ke_toan_truoc_thue",
+      "name": "TỔNG LỢI NHUẬN KẾ TOÁN TRƯỚC THUẾ"
+    },
+    {
+      "id": "kqkd_sec_loi_nhuan_da_thuc_hien",
+      "name": "Lợi nhuận đã thực hiện"
+    },
+    {
+      "id": "kqkd_sec_loi_nhuan_chua_thuc_hien",
+      "name": "Lợi nhuận chưa thực hiện"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_thue_thu_nhap_doanh_nghiep",
+      "name": "CHI PHÍ THUẾ THU NHẬP DOANH NGHIỆP"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_thue_thu_nhap_hien_hanh",
+      "name": "Chi phí thuế thu nhập hiện hành"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_thue_thu_nhap_hoan_lai",
+      "name": "Chi phí thuế thu nhập hoãn lại"
+    },
+    {
+      "id": "kqkd_sec_loi_nhuan_ke_toan_sau_thue",
+      "name": "LỢI NHUẬN KẾ TOÁN SAU THUẾ"
+    },
+    {
+      "id": "kqkd_sec_loi_nhuan_sau_thue_phan_bo_cho_chu_so_huu",
+      "name": "Lợi nhuận sau thuế phân bổ cho chủ sở hữu"
+    },
+    {
+      "id": "kqkd_sec_lnst_trich_cac_quy_du_tru_dieu_le_quy_du_phong_tai_chin",
+      "name": "LNST trích các Quỹ dự trữ điều lệ, Quỹ Dự phòng tài chính và rủi ro nghề nghiệp"
+    },
+    {
+      "id": "kqkd_sec_loi_nhuan_thuan_phan_bo_cho_loi_ich_cua_co_dong_khong_k",
+      "name": "Lợi nhuận thuần phân bổ cho lợi ích của cổ đông không kiểm soát"
+    },
+    {
+      "id": "kqkd_sec_thu_nhap_toan_dien_khac_sau_thue",
+      "name": "THU NHẬP (LỖ) TOÀN DIỆN KHÁC SAU THUẾ"
+    },
+    {
+      "id": "kqkd_sec_lai_tu_danh_gia_lai_cac_cac_khoan_dau_tu_giu_den_ngay_d",
+      "name": "Lãi/(lỗ) từ đánh giá lại các các khoản đầu tư giữ đến ngày đáo hạn"
+    },
+    {
+      "id": "kqkd_sec_lai_tu_danh_gia_lai_cac_tai_san_tai_chinh_san_sang_de_b",
+      "name": "Lãi/(lỗ) từ đánh giá lại các tài sản tài chính sẵn sàng để bán"
+    },
+    {
+      "id": "kqkd_sec_lai_toan_dien_khac_duoc_chia_tu_hoat_dong_dau_tu_vao_co",
+      "name": "Lãi/(lỗ) toàn diện khác được chia từ hoạt động đầu tư vào công ty con, đầu tư liên kết, liên doanh"
+    },
+    {
+      "id": "kqkd_sec_lai_tu_danh_gia_lai_cac_cong_cu_tai_chinh_phai_sinh",
+      "name": "Lãi/(lỗ) từ đánh giá lại các công cụ tài chính phái sinh"
+    },
+    {
+      "id": "kqkd_sec_lai_chenh_lech_ty_gia_cua_hoat_dong_tai_nuoc_ngoai",
+      "name": "Lãi/(lỗ) chênh lệch tỷ giá của hoạt động tại nước ngoài"
+    },
+    {
+      "id": "kqkd_sec_lai_tu_cac_khoan_dau_tu_vao_cong_ty_con_cong_ty_lien_ke",
+      "name": "Lãi/(lỗ) từ các khoản đầu tư vào công ty con. Công ty liên kết, liên doanh chưa chia"
+    },
+    {
+      "id": "kqkd_sec_lai_danh_gia_cong_cu_phai_sinh",
+      "name": "Lãi/(lỗ) đánh giá công cụ phái sinh"
+    },
+    {
+      "id": "kqkd_sec_lai_danh_gia_lai_tai_san_co_dinh_theo_mo_hinh_gia_tri_h",
+      "name": "Lãi/(lỗ) đánh giá lại tài sản cố định theo mô hình giá trị hợp lý"
+    },
+    {
+      "id": "kqkd_sec_tong_thu_nhap_toan_dien",
+      "name": "Tổng thu nhập toàn diện"
+    },
+    {
+      "id": "kqkd_sec_thu_nhap_toan_dien_phan_bo_cho_co_dong_khong_nam_quyen_",
+      "name": "Thu nhập toàn diện phân bổ cho cổ đông không nắm quyền kiểm soát"
+    },
+    {
+      "id": "kqkd_sec_thu_nhap_toan_dien_phan_bo_cho_chu_so_huu",
+      "name": "Thu nhập toàn diện phân bổ cho chủ sở hữu"
+    },
+    {
+      "id": "kqkd_sec_thu_nhap_thuan_tren_co_phieu_pho_thong",
+      "name": "THU NHẬP THUẦN TRÊN CỔ PHIẾU PHỔ THÔNG"
+    },
+    {
+      "id": "kqkd_sec_lai_co_ban_tren_co_phieu",
+      "name": "Lãi cơ bản trên cổ phiếu (VND)"
+    },
+    {
+      "id": "kqkd_sec_lai_tren_co_phieu_pha_loang",
+      "name": "Lãi trên cổ phiếu pha loãng (VND)"
+    }
+  ]
+}

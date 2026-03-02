@@ -206,6 +206,17 @@ CREATE TABLE financial_fields (
 | D/E Ratio | `total_debt / total_equity` | CĐKT |
 | Free Cash Flow | `operating_cf - capex` | LCTT |
 
+**Sector-Specific Advanced Metrics (Phase 4 Additions):**
+
+| Sector | Metric | Formula / Source | Sheet | Status / Source |
+|---|---|---|---|---|
+| Bank | LDR (Loan-to-Deposit) | `cho_vay_khach_hang` / `tien_gui_cua_khach_hang` | CĐKT | ✅ API (`bsb103`/`bsb113`) |
+| Bank | CIR (Cost-to-Income) | `chi_phi_quan_ly` / `tong_thu_nhap_hoat_dong` | KQKD | ✅ API (`isb39`/`isb38`) |
+| Bank | NPL (Bad Debt Ratio) | `nợ nhóm 3+4+5` / `tổng dư nợ` | NOTE | ⏳ Requires Excel Crawl |
+| Bank | CASA Ratio | `tiền gửi không kỳ hạn` / `tổng tiền gửi` | NOTE | ⏳ Requires Excel Crawl |
+| Securities | Margin/Equity | `cac_khoan_cho_vay` / `von_chu_so_huu` | CĐKT | ✅ API (`bsa48`/`bsa78`) |
+| Securities | Brokerage Share | `doanh_thu_moi_gioi` / `tong_doanh_thu_hoat_dong` | KQKD | ✅ API (`iss42`/`isa24`) |
+
 **Validation Rules:**
 - [ ] No null values in core fields for fetched periods
 - [ ] Revenue > 0 for operating companies

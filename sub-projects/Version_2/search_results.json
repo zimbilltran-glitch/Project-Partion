@@ -1,0 +1,50 @@
+{
+  "không kỳ hạn": [],
+  "nợ xấu": [],
+  "nợ nhóm": [],
+  "quá hạn": [],
+  "chi phí hoạt động": [
+    {
+      "id": "kqkd_sec_chi_phi_hoat_dong",
+      "name": "CHI PHÍ HOẠT ĐỘNG",
+      "sheet": "KQKD_SEC"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_hoat_dong_tu_doanh",
+      "name": "Chi phí hoạt động tự doanh",
+      "sheet": "KQKD_SEC"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_hoat_dong_tu_van_tai_chinh",
+      "name": "Chi phí hoạt động tư vấn tài chính",
+      "sheet": "KQKD_SEC"
+    }
+  ],
+  "môi giới": [
+    {
+      "id": "kqkd_sec_doanh_thu_nghiep_vu_moi_gioi_chung_khoan",
+      "name": "Doanh thu nghiệp vụ môi giới chứng khoán",
+      "sheet": "KQKD_SEC"
+    },
+    {
+      "id": "kqkd_sec_chi_phi_nghiep_vu_moi_gioi_chung_khoan",
+      "name": "Chi phí nghiệp vụ môi giới chứng khoán",
+      "sheet": "KQKD_SEC"
+    },
+    {
+      "id": "lctt_sec_tien_thu_ban_chung_khoan_moi_gioi_cho_khach_hang",
+      "name": "Tiền thu bán chứng khoán môi giới cho khách hàng",
+      "sheet": "LCTT_SEC"
+    },
+    {
+      "id": "lctt_sec_tien_chi_mua_chung_khoan_moi_gioi_cho_khach_hang",
+      "name": "Tiền chi mua chứng khoán môi giới cho khách hàng",
+      "sheet": "LCTT_SEC"
+    },
+    {
+      "id": "lctt_sec_luu_chuyen_tien_hoat_dong_moi_gioi_uy_thac_cua_khach_ha",
+      "name": "Lưu chuyển tiền hoạt động môi giới, ủy thác của khách hàng",
+      "sheet": "LCTT_SEC"
+    }
+  ]
+}

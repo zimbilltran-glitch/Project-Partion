@@ -1,0 +1,21 @@
+CDKT | cdkt_von_chu_so_huu | N/A | Vốn chủ sở hữu
+KQKD | kqkd_chi_phi_quan_ly_doanh_nghiep | N/A | Chi phí quản lý doanh nghiệp
+NOTE | note_von_chu_so_huu | N/A | Vốn chủ sở hữu
+CDKT_BANK | cdkt_bank_cho_vay_khach_hang | bsb103 | Cho vay khách hàng
+CDKT_BANK | cdkt_bank_cho_vay_khach_hang_1 | bsb104 | Cho vay khách hàng
+CDKT_BANK | cdkt_bank_du_phong_rui_ro_cho_vay_khach_hang | bsb105 | Dự phòng rủi ro cho vay khách hàng
+CDKT_BANK | cdkt_bank_no_phai_tra_va_von_chu_so_huu | bsa96 | NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU
+CDKT_BANK | cdkt_bank_tien_gui_cua_khach_hang | bsb113 | Tiền gửi của khách hàng
+CDKT_BANK | cdkt_bank_von_chu_so_huu | bsa78 | VỐN CHỦ SỞ HỮU
+KQKD_BANK | kqkd_bank_tong_thu_nhap_hoat_dong | isb38 | Tổng thu nhập hoạt động
+KQKD_BANK | kqkd_bank_chi_phi_quan_ly_doanh_nghiep | isb39 | Chi phí quản lý doanh nghiệp
+LCTT_BANK | lctt_bank_tanggiam_cac_khoan_cho_vay_khach_hang | cfb52 | Tăng/giảm các khoản cho vay khách hàng
+LCTT_BANK | lctt_bank_tang_tien_gui_cua_khach_hang | cfb58 | Tăng/(Giảm) tiền gửi của khách hàng
+CDKT_SEC | cdkt_sec_von_chu_so_huu | bsa78 | Vốn chủ sở hữu
+CDKT_SEC | cdkt_sec_tien_gui_cua_khach_hang | nos395 | Tiền gửi của khách hàng
+KQKD_SEC | kqkd_sec_doanh_thu_nghiep_vu_moi_gioi_chung_khoan | iss42 | Doanh thu nghiệp vụ môi giới chứng khoán
+KQKD_SEC | kqkd_sec_chi_phi_nghiep_vu_moi_gioi_chung_khoan | iss133 | Chi phí nghiệp vụ môi giới chứng khoán
+KQKD_SEC | kqkd_sec_chi_phi_quan_ly_cong_ty_chung_khoan | isa10 | CHI PHÍ QUẢN LÝ CÔNG TY CHỨNG KHOÁN
+LCTT_SEC | lctt_sec_tien_thu_ban_chung_khoan_moi_gioi_cho_khach_hang | cfs125 | Tiền thu bán chứng khoán môi giới cho khách hàng
+LCTT_SEC | lctt_sec_tien_chi_mua_chung_khoan_moi_gioi_cho_khach_hang | cfs126 | Tiền chi mua chứng khoán môi giới cho khách hàng
+LCTT_SEC | lctt_sec_luu_chuyen_tien_hoat_dong_moi_gioi_uy_thac_cua_khach_ha | cfs140 | Lưu chuyển tiền hoạt động môi giới, ủy thác của khách hàng

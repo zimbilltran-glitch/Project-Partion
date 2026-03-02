@@ -1,0 +1,946 @@
+CDKT | cdkt_tai_san_ngan_han | N/A | TÀI SẢN NGẮN HẠN
+CDKT | cdkt_tien_va_tuong_duong_tien | N/A | Tiền và tương đương tiền
+CDKT | cdkt_tien | N/A | Tiền
+CDKT | cdkt_cac_khoan_tuong_duong_tien | N/A | Các khoản tương đương tiền
+CDKT | cdkt_dau_tu_ngan_han | N/A | Đầu tư ngắn hạn
+CDKT | cdkt_dau_tu_ngan_han_1 | N/A | Đầu tư ngắn hạn
+CDKT | cdkt_du_phong_giam_gia | N/A | Dự phòng giảm giá
+CDKT | cdkt_dau_tu_nam_giu_den_ngay_dao_han | N/A | Đầu tư nắm giữ đến ngày đáo hạn
+CDKT | cdkt_cac_khoan_phai_thu | N/A | Các khoản phải thu
+CDKT | cdkt_phai_thu_khach_hang | N/A | Phải thu khách hàng
+CDKT | cdkt_tra_truoc_nguoi_ban | N/A | Trả trước người bán
+CDKT | cdkt_phai_thu_noi_bo | N/A | Phải thu nội bộ
+CDKT | cdkt_phai_thu_hop_dong_xay_dung_dang_thuc_hien | N/A | Phải thu hợp đồng xây dựng đang thực hiện
+CDKT | cdkt_phai_thu_cho_vay_ngan_han | N/A | Phải thu cho vay ngắn hạn
+CDKT | cdkt_phai_thu_khac | N/A | Phải thu khác
+CDKT | cdkt_du_phong_no_kho_doi | N/A | Dự phòng nợ khó đòi
+CDKT | cdkt_tai_san_thieu_can_xu_ly | N/A | Tài sản thiếu cần xử lý
+CDKT | cdkt_hang_ton_kho_rong | N/A | Hàng tồn kho, ròng
+CDKT | cdkt_hang_ton_kho | N/A | Hàng tồn kho
+CDKT | cdkt_du_phong_giam_gia_hang_ton_kho | N/A | Dự phòng giảm giá hàng tồn kho
+CDKT | cdkt_tai_san_luu_dong_khac | N/A | Tài sản lưu động khác
+CDKT | cdkt_chi_phi_tra_truoc_ngan_han | N/A | Chi phí trả trước ngắn hạn
+CDKT | cdkt_thue_gtgt_duoc_khau_tru | N/A | Thuế GTGT được khấu trừ
+CDKT | cdkt_phai_thu_thue_khac | N/A | Phải thu thuế khác
+CDKT | cdkt_giao_dich_mua_ban_lai_trai_phieu_chinh_phu | N/A | Giao dịch mua bán lại trái phiếu Chính phủ
+CDKT | cdkt_tai_san_luu_dong_khac_1 | N/A | Tài sản lưu động khác
+CDKT | cdkt_tai_san_dai_han | N/A | TÀI SẢN DÀI HẠN
+CDKT | cdkt_phai_thu_dai_han | N/A | Phải thu dài hạn
+CDKT | cdkt_phai_thu_khach_hang_dai_han | N/A | Phải thu khách hàng dài hạn
+CDKT | cdkt_tra_truoc_nguoi_ban_dai_han | N/A | Trả trước người bán dài hạn
+CDKT | cdkt_von_kinh_doanh_o_cac_don_vi_truc_thuoc | N/A | Vốn kinh doanh ở các đơn vị trực thuộc
+CDKT | cdkt_phai_thu_noi_bo_dai_han | N/A | Phải thu nội bộ dài hạn
+CDKT | cdkt_phai_thu_cho_vay_dai_han | N/A | Phải thu cho vay dài hạn
+CDKT | cdkt_phai_thu_dai_han_khac | N/A | Phải thu dài hạn khác
+CDKT | cdkt_du_phong_phai_thu_dai_han | N/A | Dự phòng phải thu dài hạn
+CDKT | cdkt_tai_san_co_dinh | N/A | Tài sản cố định
+CDKT | cdkt_gtcl_tscd_huu_hinh | N/A | GTCL TSCĐ hữu hình
+CDKT | cdkt_nguyen_gia_tscd_huu_hinh | N/A | Nguyên giá TSCĐ hữu hình
+CDKT | cdkt_khau_hao_luy_ke_tscd_huu_hinh | N/A | Khấu hao lũy kế TSCĐ hữu hình
+CDKT | cdkt_gtcl_tai_san_thue_tai_chinh | N/A | GTCL tài sản thuê tài chính
+CDKT | cdkt_nguyen_gia_tai_san_thue_tai_chinh | N/A | Nguyên giá tài sản thuê tài chính
+CDKT | cdkt_khau_hao_luy_ke_tai_san_thue_tai_chinh | N/A | Khấu hao lũy kế tài sản thuê tài chính
+CDKT | cdkt_gtcl_tai_san_co_dinh_vo_hinh | N/A | GTCL tài sản cố định vô hình
+CDKT | cdkt_nguyen_gia_tscd_vo_hinh | N/A | Nguyên giá TSCĐ vô hình
+CDKT | cdkt_khau_hao_luy_ke_tscd_vo_hinh | N/A | Khấu hao lũy kế TSCĐ vô hình
+CDKT | cdkt_xay_dung_co_ban_dang_dang_do | N/A | Xây dựng cơ bản đang dang dở (trước 2015)
+CDKT | cdkt_gia_tri_rong_tai_san_dau_tu | N/A | Giá trị ròng tài sản đầu tư
+CDKT | cdkt_nguyen_gia_tai_san_dau_tu | N/A | Nguyên giá tài sản đầu tư
+CDKT | cdkt_khau_hao_luy_ke_tai_san_dau_tu | N/A | Khấu hao lũy kế tài sản đầu tư
+CDKT | cdkt_tai_san_do_dang_dai_han | N/A | Tài sản dở dang dài hạn
+CDKT | cdkt_chi_phi_san_xuat_kinh_doanh_do_dang_dai_han | N/A | Chi phí sản xuất, kinh doanh dở dang dài hạn
+CDKT | cdkt_xay_dung_co_ban_dang_do_dang | N/A | Xây dựng cơ bản đang dở dang
+CDKT | cdkt_dau_tu_dai_han | N/A | Đầu tư dài hạn
+CDKT | cdkt_dau_tu_vao_cac_cong_ty_con | N/A | Đầu tư vào các công ty con
+CDKT | cdkt_dau_tu_vao_cac_cong_ty_lien_ket | N/A | Đầu tư vào các công ty liên kết
+CDKT | cdkt_dau_tu_dai_han_khac | N/A | Đầu tư dài hạn khác
+CDKT | cdkt_du_phong_giam_gia_dau_tu_dai_han | N/A | Dự phòng giảm giá đầu tư dài hạn
+CDKT | cdkt_dau_tu_nam_giu_den_ngay_dao_han_1 | N/A | Đầu tư nắm giữ đến ngày đáo hạn
+CDKT | cdkt_loi_the_thuong_mai | N/A | Lợi thế thương mại (trước 2015)
+CDKT | cdkt_tai_san_dai_han_khac | N/A | Tài sản dài hạn khác
+CDKT | cdkt_tra_truoc_dai_han | N/A | Trả trước dài hạn
+CDKT | cdkt_thue_thu_nhap_hoan_lai | N/A | Thuế thu nhập hoãn lại
+CDKT | cdkt_thiet_bi_vat_tu_phu_tung_thay_the_dai_han | N/A | Thiết bị, vật tư, phụ tùng thay thế dài hạn
+CDKT | cdkt_cac_tai_san_dai_han_khac | N/A | Các tài sản dài hạn khác
+CDKT | cdkt_loi_the_thuong_mai_1 | N/A | Lợi thế thương mại
+CDKT | cdkt_tong_cong_tai_san | N/A | TỔNG CỘNG TÀI SẢN
+CDKT | cdkt_no_phai_tra | N/A | NỢ PHẢI TRẢ
+CDKT | cdkt_no_ngan_han | N/A | Nợ ngắn hạn
+CDKT | cdkt_phai_tra_nguoi_ban | N/A | Phải trả người bán
+CDKT | cdkt_nguoi_mua_tra_tien_truoc | N/A | Người mua trả tiền trước
+CDKT | cdkt_thue_va_cac_khoan_phai_tra_nha_nuoc | N/A | Thuế và các khoản phải trả Nhà nước
+CDKT | cdkt_phai_tra_nguoi_lao_dong | N/A | Phải trả người lao động
+CDKT | cdkt_chi_phi_phai_tra | N/A | Chi phí phải trả
+CDKT | cdkt_phai_tra_noi_bo | N/A | Phải trả nội bộ
+CDKT | cdkt_phai_tra_ve_xay_dung_co_ban | N/A | Phải trả về xây dựng cơ bản
+CDKT | cdkt_doanh_thu_chua_thuc_hien_ngan_han | N/A | Doanh thu chưa thực hiện ngắn hạn
+CDKT | cdkt_phai_tra_khac | N/A | Phải trả khác
+CDKT | cdkt_vay_ngan_han | N/A | Vay ngắn hạn
+CDKT | cdkt_du_phong_cac_khoan_phai_tra_ngan_han | N/A | Dự phòng các khoản phải trả ngắn hạn
+CDKT | cdkt_quy_khen_thuong_phuc_loi | N/A | Quỹ khen thưởng, phúc lợi
+CDKT | cdkt_quy_binh_on_gia | N/A | Quỹ bình ổn giá
+CDKT | cdkt_giao_dich_mua_ban_lai_trai_phieu_chinh_phu_1 | N/A | Giao dịch mua bán lại trái phiếu chính phủ
+CDKT | cdkt_no_dai_han | N/A | Nợ dài hạn
+CDKT | cdkt_phai_tra_nha_cung_cap_dai_han | N/A | Phải trả nhà cung cấp dài hạn
+CDKT | cdkt_nguoi_mua_tra_tien_truoc_dai_han | N/A | Người mua trả tiền trước dài hạn
+CDKT | cdkt_chi_phi_phai_tra_dai_han | N/A | Chi phí phải trả dài hạn
+CDKT | cdkt_phai_tra_noi_bo_ve_von_kinh_doanh | N/A | Phải trả nội bộ về vốn kinh doanh
+CDKT | cdkt_phai_tra_noi_bo_dai_han | N/A | Phải trả nội bộ dài hạn
+CDKT | cdkt_doanh_thu_chua_thuc_hien | N/A | Doanh thu chưa thực hiện
+CDKT | cdkt_phai_tra_dai_han_khac | N/A | Phải trả dài hạn khác
+CDKT | cdkt_vay_dai_han | N/A | Vay dài hạn
+CDKT | cdkt_trai_phieu_chuyen_doi | N/A | Trái phiếu chuyển đổi
+CDKT | cdkt_co_phieu_uu_dai | N/A | Cổ phiếu ưu đãi
+CDKT | cdkt_thue_thu_nhap_hoan_lai_1 | N/A | Thuế thu nhập hoãn lại
+CDKT | cdkt_du_phong_tro_cap_thoi_viec | N/A | Dự phòng trợ cấp thôi việc
+CDKT | cdkt_du_phong_cac_khoan_no_dai_han | N/A | Dự phòng các khoản nợ dài hạn
+CDKT | cdkt_quy_phat_trien_khoa_hoc_cong_nghe | N/A | Quỹ phát triển khoa học công nghệ
+CDKT | cdkt_von_chu_so_huu | N/A | Vốn chủ sở hữu
+CDKT | cdkt_von_va_cac_quy | N/A | Vốn và các quỹ
+CDKT | cdkt_von_gop | N/A | Vốn góp
+CDKT | cdkt_co_phieu_pho_thong | N/A | Cổ phiếu phổ thông
+CDKT | cdkt_co_phieu_uu_dai_1 | N/A | Cổ phiếu ưu đãi
+CDKT | cdkt_thang_du_von_co_phan | N/A | Thặng dư vốn cổ phần
+CDKT | cdkt_quyen_chon_chuyen_doi_trai_phieu | N/A | Quyền chọn chuyển đổi trái phiếu
+CDKT | cdkt_von_khac | N/A | Vốn khác
+CDKT | cdkt_co_phieu_quy | N/A | Cổ phiếu quỹ
+CDKT | cdkt_chenh_lech_danh_gia_lai_tai_san | N/A | Chênh lệch đánh giá lại tài sản
+CDKT | cdkt_chenh_lech_ty_gia | N/A | Chênh lệch tỷ giá
+CDKT | cdkt_quy_dau_tu_va_phat_trien | N/A | Quỹ đầu tư và phát triển
+CDKT | cdkt_quy_ho_tro_sap_xep_doanh_nghiep | N/A | Quỹ hỗ trợ sắp xếp doanh nghiệp
+CDKT | cdkt_quy_du_phong_tai_chinh | N/A | Quỹ dự phòng tài chính
+CDKT | cdkt_quy_khac | N/A | Quỹ khác
+CDKT | cdkt_lai_chua_phan_phoi | N/A | Lãi chưa phân phối
+CDKT | cdkt_lnst_chua_phan_phoi_luy_ke_den_cuoi_ky_truoc | N/A | LNST chưa phân phối lũy kế đến cuối kỳ trước
+CDKT | cdkt_lnst_chua_phan_phoi_ky_nay | N/A | LNST chưa phân phối kỳ này
+CDKT | cdkt_loi_ich_co_dong_khong_kiem_soat | N/A | Lợi ích cổ đông không kiểm soát
+CDKT | cdkt_von_ngan_sach_nha_nuoc_va_quy_khac | N/A | Vốn Ngân sách nhà nước và quỹ khác
+CDKT | cdkt_quy_khen_thuong_phuc_loi_1 | N/A | Quỹ khen thưởng, phúc lợi (trước 2010)
+CDKT | cdkt_von_ngan_sach_nha_nuoc_va_quy_khac_1 | N/A | Vốn ngân sách nhà nước và quỹ khác
+CDKT | cdkt_nguon_kinh_phi_da_hinh_thanh_tscd | N/A | Nguồn kinh phí đã hình thành TSCĐ
+CDKT | cdkt_loi_ich_cua_co_dong_thieu_so | N/A | Lợi ích của cổ đông thiểu số
+CDKT | cdkt_tong_cong_nguon_von | N/A | Tổng cộng nguồn vốn
+KQKD | kqkd_doanh_thu_ban_hang_va_cung_cap_dich_vu | N/A | Doanh thu bán hàng và cung cấp dịch vụ
+KQKD | kqkd_cac_khoan_giam_tru_doanh_thu | N/A | Các khoản giảm trừ doanh thu
+KQKD | kqkd_doanh_thu_thuan | N/A | Doanh thu thuần
+KQKD | kqkd_gia_von_hang_ban | N/A | Giá vốn hàng bán
+KQKD | kqkd_loi_nhuan_gop | N/A | Lợi nhuận gộp
+KQKD | kqkd_doanh_thu_hoat_dong_tai_chinh | N/A | Doanh thu hoạt động tài chính
+KQKD | kqkd_chi_phi_tai_chinh | N/A | Chi phí tài chính
+KQKD | kqkd_chi_phi_lai_vay | N/A | Chi phí lãi vay
+KQKD | kqkd_lai_tu_cong_ty_lien_doanh | N/A | Lãi/(lỗ) từ công ty liên doanh (từ năm 2015)
+KQKD | kqkd_chi_phi_ban_hang | N/A | Chi phí bán hàng
+KQKD | kqkd_chi_phi_quan_ly_doanh_nghiep | N/A | Chi phí quản lý doanh nghiệp
+KQKD | kqkd_lai_tu_hoat_dong_kinh_doanh | N/A | Lãi/(lỗ) từ hoạt động kinh doanh
+KQKD | kqkd_thu_nhap_khac_rong | N/A | Thu nhập khác, ròng
+KQKD | kqkd_thu_nhap_khac | N/A | Thu nhập khác
+KQKD | kqkd_chi_phi_khac | N/A | Chi phí khác
+KQKD | kqkd_lai_tu_cong_ty_lien_doanh_1 | N/A | Lãi/(lỗ) từ công ty liên doanh
+KQKD | kqkd_lai_truoc_thue | N/A | Lãi/(lỗ) trước thuế
+KQKD | kqkd_chi_phi_thue_thu_nhap_doanh_nghiep | N/A | Chi phí thuế thu nhập doanh nghiệp
+KQKD | kqkd_thue_thu_nhap_doanh_nghiep_hien_thoi | N/A | Thuế thu nhập doanh nghiệp - hiện thời
+KQKD | kqkd_thue_thu_nhap_doanh_nghiep_hoan_lai | N/A | Thuế thu nhập doanh nghiệp - hoãn lại
+KQKD | kqkd_lai_thuan_sau_thue | N/A | Lãi/(lỗ) thuần sau thuế
+KQKD | kqkd_loi_ich_cua_co_dong_thieu_so | N/A | Lợi ích của cổ đông thiểu số
+KQKD | kqkd_loi_nhuan_cua_co_dong_cua_cong_ty_me | N/A | Lợi nhuận của Cổ đông của Công ty mẹ
+KQKD | kqkd_lai_co_ban_tren_co_phieu | N/A | Lãi cơ bản trên cổ phiếu (VND)
+KQKD | kqkd_lai_tren_co_phieu_pha_loang | N/A | Lãi trên cổ phiếu pha loãng (VND)
+LCTT | lctt_loi_nhuan_truoc_thue | N/A | Lợi nhuận/(lỗ) trước thuế
+LCTT | lctt_khau_hao_tscd_va_bdsdt | N/A | Khấu hao TSCĐ và BĐSĐT
+LCTT | lctt_phan_bo_loi_the_thuong_mai | N/A | Phân bổ lợi thế thương mại
+LCTT | lctt_chi_phi_du_phong | N/A | Chi phí dự phòng
+LCTT | lctt_lailo_chenh_lech_ty_gia_hoi_doai_do_danh_gia_lai_cac_kh | N/A | Lãi/lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ
+LCTT | lctt_lai_tu_thanh_ly_tai_san_co_dinh | N/A | Lãi/(lỗ) từ thanh lý tài sản cố định
+LCTT | lctt_lo_tu_hoat_dong_dau_tu | N/A | (Lãi)/lỗ từ hoạt động đầu tư
+LCTT | lctt_chi_phi_lai_vay | N/A | Chi phí lãi vay
+LCTT | lctt_thu_lai_va_co_tuc | N/A | Thu lãi và cổ tức
+LCTT | lctt_cac_khoan_dieu_chinh_khac | N/A | Các khoản điều chỉnh khác
+LCTT | lctt_luu_chuyen_tien_te_rong_tu_cac_hoat_dong_san_xuat_kinh_ | N/A | Lưu chuyển tiền tệ ròng từ các hoạt động sản xuất kinh doanh
+LCTT | lctt_loi_nhuan_tu_hoat_dong_kinh_doanh_truoc_nhung_thay_doi_ | N/A | Lợi nhuận/(lỗ) từ hoạt động kinh doanh trước những thay đổi vốn lưu động
+LCTT | lctt_giam_cac_khoan_phai_thu | N/A | (Tăng)/giảm các khoản phải thu
+LCTT | lctt_giam_hang_ton_kho | N/A | (Tăng)/giảm hàng tồn kho
+LCTT | lctt_tang_cac_khoan_phai_tra | N/A | Tăng/(giảm) các khoản phải trả
+LCTT | lctt_giam_chi_phi_tra_truoc | N/A | (Tăng)/giảm chi phí trả trước
+LCTT | lctt_giam_chung_khoan_kinh_doanh | N/A | (Tăng)/giảm chứng khoán kinh doanh
+LCTT | lctt_tien_lai_vay_da_tra | N/A | Tiền lãi vay đã trả
+LCTT | lctt_thue_thu_nhap_doanh_nghiep_da_nop | N/A | Thuế thu nhập doanh nghiệp đã nộp
+LCTT | lctt_tien_thu_khac_tu_hoat_dong_kinh_doanh | N/A | Tiền thu khác từ hoạt động kinh doanh
+LCTT | lctt_tien_chi_khac_cho_hoat_dong_kinh_doanh | N/A | Tiền chi khác cho hoạt động kinh doanh
+LCTT | lctt_luu_chuyen_tien_thuan_tu_hoat_dong_dau_tu | N/A | Lưu chuyển tiền thuần từ hoạt động đầu tư
+LCTT | lctt_tien_chi_de_mua_sam_xay_dung_tscd_va_cac_tai_san_dai_ha | N/A | Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác
+LCTT | lctt_tien_thu_tu_thanh_ly_nhuong_ban_tscd_va_cac_tai_san_dai | N/A | Tiền thu từ thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác
+LCTT | lctt_tien_chi_cho_vay_mua_cac_cong_cu_no_cua_don_vi_khac | N/A | Tiền chi cho vay, mua các công cụ nợ của đơn vị khác
+LCTT | lctt_tien_thu_hoi_cho_vay_ban_lai_cac_cong_cu_no_cua_don_vi_ | N/A | Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác
+LCTT | lctt_tien_chi_dau_tu_gop_von_vao_don_vi_khac | N/A | Tiền chi đầu tư góp vốn vào đơn vị khác
+LCTT | lctt_tien_thu_hoi_dau_tu_gop_von_vao_don_vi_khac | N/A | Tiền thu hồi đầu tư góp vốn vào đơn vị khác
+LCTT | lctt_tien_thu_lai_cho_vay_co_tuc_va_loi_nhuan_duoc_chia | N/A | Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia
+LCTT | lctt_luu_chuyen_tien_thuan_tu_hoat_dong_tai_chinh | N/A | Lưu chuyển tiền thuần từ hoạt động tài chính
+LCTT | lctt_tien_thu_tu_phat_hanh_co_phieu_nhan_von_gop_cua_chu_so_ | N/A | Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu
+LCTT | lctt_tien_chi_tra_von_gop_cho_cac_chu_so_huu_mua_lai_co_phie | N/A | Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành
+LCTT | lctt_tien_thu_duoc_cac_khoan_di_vay | N/A | Tiền thu được các khoản đi vay
+LCTT | lctt_tien_tra_no_goc_vay | N/A | Tiền trả nợ gốc vay
+LCTT | lctt_tien_tra_no_goc_thue_tai_chinh | N/A | Tiền trả nợ gốc thuê tài chính
+LCTT | lctt_co_tuc_loi_nhuan_da_tra_cho_chu_so_huu | N/A | Cổ tức, lợi nhuận đã trả cho chủ sở hữu
+LCTT | lctt_tien_lai_da_nhan | N/A | Tiền lãi đã nhận
+LCTT | lctt_luu_chuyen_tien_thuan_trong_ky | N/A | Lưu chuyển tiền thuần trong kỳ
+LCTT | lctt_tien_va_tuong_duong_tien_dau_ky | N/A | Tiền và tương đương tiền đầu kỳ
+LCTT | lctt_anh_huong_cua_thay_doi_ty_gia_hoi_doai_quy_doi_ngoai_te | N/A | Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ
+LCTT | lctt_tien_va_tuong_duong_tien_cuoi_ky | N/A | Tiền và tương đương tiền cuối kỳ
+NOTE | note_tien_va_tuong_duong_tien | N/A | Tiền và tương đương tiền
+NOTE | note_tien_mat | N/A | Tiền mặt
+NOTE | note_tien_gui_ngan_hang | N/A | Tiền gửi Ngân hàng
+NOTE | note_tien_dang_chuyen | N/A | Tiền đang chuyển
+NOTE | note_tien_va_tuong_duong_tien_1 | N/A | Tiền và tương đương tiền
+NOTE | note_dau_tu_tai_chinh_nh | N/A | Đầu tư tài chính NH
+NOTE | note_chung_khoan_dau_tu_ngan_han | N/A | Chứng khoán đầu tư ngắn hạn
+NOTE | note_dau_tu_nam_giu_den_ngay_dao_han | N/A | Đầu tư nắm giữ đến ngày đáo hạn
+NOTE | note_dau_tu_ngan_han | N/A | Đầu tư ngắn hạn
+NOTE | note_dau_tu_dai_han | N/A | Đầu tư dài hạn
+NOTE | note_dau_tu_nh_khac | N/A | Đầu tư NH khác
+NOTE | note_du_phong_giam_gia_dtnh | N/A | Dự phòng giảm giá ĐTNH
+NOTE | note_phai_thu_ngan_han_khac | N/A | Phải thu ngắn hạn khác
+NOTE | note_phai_thu_ve_co_phan_hoa | N/A | Phải thu về cổ phần hóa
+NOTE | note_phai_thu_ve_co_tuc_va_loi_nhuan_duoc_chia | N/A | Phải thu về cổ tức và lợi nhuận được chia
+NOTE | note_phai_thu_nguoi_lao_dong | N/A | Phải thu người lao động
+NOTE | note_phai_thu_khac | N/A | Phải thu khác
+NOTE | note_hang_ton_kho | N/A | Hàng tồn kho
+NOTE | note_hang_mua_dang_di_duong | N/A | Hàng mua đang đi đường
+NOTE | note_nguyen_lieu_vat_lieu | N/A | Nguyên liệu, vật liệu
+NOTE | note_cong_cu_dung_cu | N/A | Công cụ, dụng cụ
+NOTE | note_chi_phi_sx_kd_do_dang | N/A | Chi phí SX, KD dở dang
+NOTE | note_thanh_pham | N/A | Thành phẩm
+NOTE | note_hang_hoa | N/A | Hàng hóa
+NOTE | note_hang_gui_di_ban | N/A | Hàng gửi đi bán
+NOTE | note_hang_hoa_kho_bao_thue | N/A | Hàng hoá kho bảo thuế
+NOTE | note_hang_hoa_bat_dong_san | N/A | Hàng hoá bất động sản
+NOTE | note_tai_san_ngan_han_khac | N/A | Tài sản ngắn hạn khác
+NOTE | note_tam_ung | N/A | Tạm ứng
+NOTE | note_tai_san_thieu_cho_xu_ly | N/A | Tài sản thiếu chờ xử lý
+NOTE | note_cam_co_ky_quy_ky_cuoc_nh | N/A | Cầm cố, ký quỹ, ký cược NH
+NOTE | note_khac | N/A | Khác
+NOTE | note_phai_thu_dai_han_khac | N/A | Phải thu dài hạn khác
+NOTE | note_ky_quy_ky_cuoc_dai_han | N/A | Ký quỹ, ký cược dài hạn
+NOTE | note_cac_khoan_tien_nhan_uy_thac | N/A | Các khoản tiền nhận ủy thác
+NOTE | note_cho_vay_khong_co_lai | N/A | Cho vay không có lãi
+NOTE | note_phai_thu_dai_han_khac_1 | N/A | Phải thu dài hạn khác
+NOTE | note_nguyen_gia_tscdhh | N/A | Nguyên giá TSCĐHH
+NOTE | note_nguyen_gia_dau_ky | N/A | Nguyên giá đầu kỳ
+NOTE | note_tang_trong_ky | N/A | Tăng trong kỳ
+NOTE | note_giam_trong_ky | N/A | Giảm trong kỳ
+NOTE | note_hao_mon_tscdhh | N/A | Hao mòn TSCĐHH
+NOTE | note_dau_ky | N/A | Đầu kỳ
+NOTE | note_tang_trong_ky_1 | N/A | Tăng trong kỳ
+NOTE | note_giam_trong_ky_1 | N/A | Giảm trong kỳ
+NOTE | note_nguyen_gia_tscd_ttc | N/A | Nguyên giá TSCĐ TTC
+NOTE | note_nguyen_gia_dau_ky_1 | N/A | Nguyên giá đầu kỳ
+NOTE | note_tang_trong_ky_2 | N/A | Tăng trong kỳ
+NOTE | note_giam_trong_ky_2 | N/A | Giảm trong kỳ
+NOTE | note_hao_mon_tscd_ttc | N/A | Hao mòn TSCĐ TTC
+NOTE | note_dau_ky_1 | N/A | Đầu kỳ
+NOTE | note_tang_trong_ky_3 | N/A | Tăng trong kỳ
+NOTE | note_giam_trong_ky_3 | N/A | Giảm trong kỳ
+NOTE | note_nguyen_gia_tscdvh | N/A | Nguyên giá TSCĐVH
+NOTE | note_nguyen_gia_dau_ky_2 | N/A | Nguyên giá đầu kỳ
+NOTE | note_tang_trong_ky_4 | N/A | Tăng trong kỳ
+NOTE | note_giam_trong_ky_4 | N/A | Giảm trong kỳ
+NOTE | note_hao_mon_tscdvh | N/A | Hao mòn TSCĐVH
+NOTE | note_dau_ky_2 | N/A | Đầu kỳ
+NOTE | note_tang_trong_ky_5 | N/A | Tăng trong kỳ
+NOTE | note_giam_trong_ky_5 | N/A | Giảm trong kỳ
+NOTE | note_dau_tu_dai_han_khac | N/A | Đầu tư dài hạn khác
+NOTE | note_dau_tu_co_phieu | N/A | Đầu tư cổ phiếu
+NOTE | note_dau_tu_trai_phieu | N/A | Đầu tư trái phiếu
+NOTE | note_dau_tu_tin_phieu_ky_phieu | N/A | Đầu tư tín phiếu, kỳ phiếu
+NOTE | note_cho_vay_dai_han | N/A | Cho vay dài hạn
+NOTE | note_dau_tu_dai_han_khac_1 | N/A | Đầu tư dài hạn khác
+NOTE | note_vay_va_no_ngan_han | N/A | Vay và nợ ngắn hạn
+NOTE | note_vay_ngan_han | N/A | Vay ngắn hạn
+NOTE | note_vay_dai_han_den_han_tra | N/A | Vay dài hạn đến hạn trả
+NOTE | note_gia_goc_loi_the_thuong_mai | N/A | Giá gốc Lợi thế thương mại
+NOTE | note_so_du_dau_ky | N/A | Số dư đầu kỳ
+NOTE | note_tang_trong_ky_6 | N/A | Tăng trong kỳ
+NOTE | note_giam_trong_ky_6 | N/A | Giảm trong kỳ
+NOTE | note_phan_bo_luy_ke | N/A | Phân bổ Lũy kế
+NOTE | note_so_du_dau_ky_1 | N/A | Số dư đầu kỳ
+NOTE | note_tang_trong_ky_7 | N/A | Tăng trong kỳ
+NOTE | note_giam_trong_ky_7 | N/A | Giảm trong kỳ
+NOTE | note_cac_khoan_phai_tra_ve_thue | N/A | Các khoản phải trả về Thuế
+NOTE | note_thue_gtgt | N/A | Thuế GTGT
+NOTE | note_thue_ttdb | N/A | Thuế TTĐB
+NOTE | note_thue_xnk | N/A | Thuế XNK
+NOTE | note_thue_tndn | N/A | Thuế TNDN
+NOTE | note_thue_tncn | N/A | Thuế TNCN
+NOTE | note_thue_tai_nguyen | N/A | Thuế Tài nguyên
+NOTE | note_thue_nha_dat_va_tien_thue_dat | N/A | Thuế nhà đất và tiền thuê đất
+NOTE | note_cac_loai_thue_khac | N/A | Các loại thuế khác
+NOTE | note_cac_khoan_phi_le_phi_khac | N/A | Các khoản phí, lệ phí khác
+NOTE | note_chi_phi_phai_tra | N/A | Chi phí phải trả
+NOTE | note_trich_truoc_cp_luong_nghi_phep | N/A | Trích trước CP lương nghỉ phép
+NOTE | note_chi_phi_scl_tscd | N/A | Chi phí SCL TSCĐ
+NOTE | note_chi_phi_trong_thoi_gian_ngung_kd | N/A | Chi phí trong thời gian ngừng KD
+NOTE | note_khac_1 | N/A | Khác
+NOTE | note_phai_tra_phai_nop_khac | N/A | Phải trả phải nộp khác
+NOTE | note_tai_san_thua_cho_xl | N/A | Tài sản thừa chờ XL
+NOTE | note_kinh_phi_cong_doan | N/A | Kinh phí công đoàn
+NOTE | note_bao_hiem_xa_hoi | N/A | Bảo hiểm xã hội
+NOTE | note_bao_hiem_y_te | N/A | Bảo hiểm y tế
+NOTE | note_bao_hiem_that_nghiep | N/A | Bảo hiểm thất nghiệp
+NOTE | note_phai_tra_ve_cph | N/A | Phải trả về CPH
+NOTE | note_nhan_ky_quy_ky_cuoc_nh | N/A | Nhận ký quỹ, ký cược NH
+NOTE | note_doanh_thu_chua_thuc_hien | N/A | Doanh thu chưa thực hiện
+NOTE | note_khac_2 | N/A | Khác
+NOTE | note_vay_dai_han | N/A | Vay Dài hạn
+NOTE | note_vay_ngan_hang | N/A | Vay ngân hàng
+NOTE | note_vay_doi_tuong_khac | N/A | Vay đối tượng khác
+NOTE | note_trai_phieu_phat_hanh | N/A | Trái phiếu phát hành
+NOTE | note_thue_tai_chinh | N/A | Thuê tài chính
+NOTE | note_no_dai_han_khac | N/A | Nợ dài hạn khác
+NOTE | note_von_chu_so_huu | N/A | Vốn chủ sở hữu
+NOTE | note_von_gop_cua_nha_nuoc | N/A | Vốn góp của nhà nước
+NOTE | note_von_dau_tu_cua_doi_tuong_khac | N/A | Vốn đầu tư của đối tượng khác
+NOTE | note_doanh_thu | N/A | Doanh thu
+NOTE | note_doanh_thu_ban_hang | N/A | Doanh thu bán hàng
+NOTE | note_doanh_thu_cung_cap_dich_vu | N/A | Doanh thu cung cấp dịch vụ
+NOTE | note_doanh_thu_hop_dong_xay_dung | N/A | Doanh thu hợp đồng xây dựng
+NOTE | note_giam_tru_doanh_thu | N/A | Giảm trừ doanh thu
+NOTE | note_chiet_khau_thuong_mai | N/A | Chiết khấu thương mại
+NOTE | note_giam_gia_hang_ban | N/A | Giảm giá hàng bán
+NOTE | note_hang_ban_bi_tra_lai | N/A | Hàng bán bị trả lại
+NOTE | note_thue_gtgt_phai_nop | N/A | Thuế GTGT phải nộp
+NOTE | note_thue_tieu_thu_dac_biet | N/A | Thuế tiêu thụ đặc biệt
+NOTE | note_thue_xuat_khau | N/A | Thuế xuất khẩu
+NOTE | note_gia_von | N/A | Giá vốn
+NOTE | note_gia_von_hang_hoa_da_ban | N/A | Giá vốn hàng hóa đã bán
+NOTE | note_gia_von_thanh_pham_da_ban | N/A | Giá vốn thành phẩm đã bán
+NOTE | note_gia_von_cua_dich_vu_cung_cap | N/A | Giá vốn của dịch vụ cung cấp
+NOTE | note_gia_tri_con_lai_chi_phi_nhuong_ban_thanh_ly_bds_dau_tu_ | N/A | Giá trị còn lại, chi phí nhượng bán, Thanh lý BĐS đầu tư đã bán
+NOTE | note_chi_phi_kinh_doanh_bds_dau_tu | N/A | Chi phí kinh doanh BĐS đầu tư
+NOTE | note_hao_hut_mat_mat_hang_ton_kho | N/A | Hao hụt, mất mát hàng tồn kho
+NOTE | note_cac_khoan_chi_phi_vuot_muc_binh_thuong | N/A | Các khoản chi phí vượt mức bình thường
+NOTE | note_du_phong | N/A | Dự phòng
+NOTE | note_doanh_thu_tai_chinh | N/A | Doanh thu tài chính
+NOTE | note_lai_tien_gui_tien_cho_vay | N/A | Lãi tiền gửi, tiền cho vay
+NOTE | note_lai_dau_tu_trai_phieu_ky_phieu_tin_phieu | N/A | Lãi đầu tư trái phiếu, kỳ phiếu, tín phiếu
+NOTE | note_co_tuc_loi_nhuan_duoc_chia | N/A | Cổ tức, lợi nhuận được chia
+NOTE | note_lai_tu_ban_thanh_ly_cac_khoan_dau_tu | N/A | Lãi từ bán, thanh lý các khoản đầu tư
+NOTE | note_lai_ban_ngoai_te | N/A | Lãi bán ngoại tệ
+NOTE | note_lai_chenh_lech_ty_gia_da_thuc_hien | N/A | Lãi chênh lệch tỷ giá đã thực hiện
+NOTE | note_lai_chenh_lech_ty_gia_chua_thuc_hien | N/A | Lãi chênh lệch tỷ giá chưa thực hiện
+NOTE | note_lai_ban_hang_tra_cham | N/A | Lãi bán hàng trả chậm
+NOTE | note_doanh_thu_hoat_dong_tai_chinh_khac | N/A | Doanh thu hoạt động tài chính khác
+NOTE | note_chi_phi_tai_chinh | N/A | Chi phí tài chính
+NOTE | note_lai_tien_vay | N/A | Lãi tiền vay
+NOTE | note_chiet_khau_thanh_toan_lai_ban_hang_tra_cham | N/A | Chiết khấu thanh toán, lãi bán hàng trả chậm
+NOTE | note_lo_do_thanh_ly_cac_khoan_dau_tu_ngan_han_dai_han | N/A | Lỗ do thanh lý các khoản đầu tư ngắn hạn, dài hạn
+NOTE | note_lo_ban_ngoai_te | N/A | Lỗ bán ngoại tệ
+NOTE | note_lo_chenh_lech_ty_gia_da_thuc_hien | N/A | Lỗ chênh lệch tỷ giá đã thực hiện
+NOTE | note_lo_chenh_lech_ty_gia_chua_thuc_hien | N/A | Lỗ chênh lệch tỷ giá chưa thực hiện
+NOTE | note_du_phong_giam_gia_cac_khoan_dau_tu_ngan_han_dai_han | N/A | Dự phòng giảm giá các khoản đầu tư ngắn hạn, dài hạn
+NOTE | note_chi_phi_tai_chinh_khac | N/A | Chi phí tài chính khác
+NOTE | note_chi_phi_san_xuat_theo_yeu_to | N/A | Chi phí sản xuất theo yếu tố
+NOTE | note_chi_phi_nguyen_lieu_vat_lieu | N/A | Chi phí nguyên liệu, vật liệu
+NOTE | note_chi_phi_nhan_cong | N/A | Chi phí nhân công
+NOTE | note_chi_phi_khau_hao_tai_san_co_dinh | N/A | Chi phí khấu hao tài sản cố định
+NOTE | note_chi_phi_dich_vu_mua_ngoai | N/A | Chi phí dịch vụ mua ngoài
+NOTE | note_chi_phi_khac_bang_tien | N/A | Chi phí khác bằng tiền
+CDKT_BANK | cdkt_bank_tong_tai_san | bsa53 | TỔNG TÀI SẢN
+CDKT_BANK | cdkt_bank_tien_mat_vang_bac_da_quy | bsa2 | Tiền mặt, vàng bạc, đá quý
+CDKT_BANK | cdkt_bank_tien_gui_tai_ngan_hang_nha_nuoc_viet_nam | bsb97 | Tiền gửi tại Ngân hàng nhà nước Việt Nam
+CDKT_BANK | cdkt_bank_tien_gui_tai_cac_tctd_khac_va_cho_vay_cac_tctd_khac | bsb98 | Tiền gửi tại các TCTD khác và cho vay các TCTD khác
+CDKT_BANK | cdkt_bank_tien_gui_tai_cac_tctd_khac | bsb258 | Tiền gửi tại các TCTD khác
+CDKT_BANK | cdkt_bank_cho_vay_cac_tctd_khac | bsb259 | Cho vay các TCTD khác
+CDKT_BANK | cdkt_bank_du_phong_rui_ro | bsb260 | Dự phòng rủi ro
+CDKT_BANK | cdkt_bank_chung_khoan_kinh_doanh | bsb99 | Chứng khoán kinh doanh
+CDKT_BANK | cdkt_bank_chung_khoan_kinh_doanh_1 | bsb100 | Chứng khoán kinh doanh
+CDKT_BANK | cdkt_bank_du_phong_giam_gia_chung_khoan_kinh_doanh | bsb101 | Dự phòng giảm giá chứng khoán kinh doanh
+CDKT_BANK | cdkt_bank_cac_cong_cu_tai_chinh_phai_sinh_va_cac_tai_san_tai_chin | bsb102 | Các công cụ tài chính phái sinh và các tài sản tài chính khác
+CDKT_BANK | cdkt_bank_cho_vay_khach_hang | bsb103 | Cho vay khách hàng
+CDKT_BANK | cdkt_bank_cho_vay_khach_hang_1 | bsb104 | Cho vay khách hàng
+CDKT_BANK | cdkt_bank_du_phong_rui_ro_cho_vay_khach_hang | bsb105 | Dự phòng rủi ro cho vay khách hàng
+CDKT_BANK | cdkt_bank_hoat_dong_mua_no | bsb261 | Hoạt động mua nợ
+CDKT_BANK | cdkt_bank_mua_no | bsb262 | Mua nợ
+CDKT_BANK | cdkt_bank_du_phong_rui_ro_hoat_dong_mua_no | bsb263 | Dự phòng rủi ro hoạt động mua nợ
+CDKT_BANK | cdkt_bank_chung_khoan_dau_tu | bsb106 | Chứng khoán đầu tư
+CDKT_BANK | cdkt_bank_chung_khoan_dau_tu_san_sang_de_ban | bsb107 | Chứng khoán đầu tư sẵn sàng để bán
+CDKT_BANK | cdkt_bank_chung_khoan_dau_tu_giu_den_ngay_dao_han | bsb108 | Chứng khoán đầu tư giữ đến ngày đáo hạn
+CDKT_BANK | cdkt_bank_du_phong_giam_gia_chung_khoan_dau_tu | bsb109 | Dự phòng giảm giá chứng khoán đầu tư
+CDKT_BANK | cdkt_bank_gop_von_dau_tu_dai_han | bsa43 | Góp vốn, đầu tư dài hạn
+CDKT_BANK | cdkt_bank_dau_tu_vao_cong_ty_con | bsa44 | Đầu tư vào công ty con
+CDKT_BANK | cdkt_bank_dau_tu_vao_cong_ty_lien_doanh | bsa45 | Đầu tư vào công ty liên doanh
+CDKT_BANK | cdkt_bank_von_gop_lien_doanh | bsa276 | Vốn Góp liên doanh
+CDKT_BANK | cdkt_bank_dau_tu_vao_cong_ty_lien_ket | bsa277 | Đầu tư vào công ty liên kết
+CDKT_BANK | cdkt_bank_dau_tu_dai_han_khac | bsa46 | Đầu tư dài hạn khác
+CDKT_BANK | cdkt_bank_du_phong_giam_gia_dau_tu_dai_han | bsa47 | Dự phòng giảm giá đầu tư dài hạn
+CDKT_BANK | cdkt_bank_tai_san_co_dinh | bsa29 | Tài sản cố định
+CDKT_BANK | cdkt_bank_tai_san_co_dinh_huu_hinh | bsa30 | Tài sản cố định hữu hình
+CDKT_BANK | cdkt_bank_nguyen_gia_tscd_huu_hinh | bsa31 | Nguyên giá TSCĐ hữu hình
+CDKT_BANK | cdkt_bank_hao_mon_tscd_huu_hinh | bsa32 | Hao mòn TSCĐ hữu hình
+CDKT_BANK | cdkt_bank_tai_san_co_dinh_thue_tai_chinh | bsa33 | Tài sản cố định thuê tài chính
+CDKT_BANK | cdkt_bank_nguyen_gia_tscd_thue_tai_chinh | bsa34 | Nguyên giá TSCĐ thuê tài chính
+CDKT_BANK | cdkt_bank_hao_mon_tscd_thue_tai_chinh | bsa35 | Hao mòn TSCĐ thuê tài chính
+CDKT_BANK | cdkt_bank_tai_san_co_dinh_vo_hinh | bsa36 | Tài sản cố định vô hình
+CDKT_BANK | cdkt_bank_nguyen_gia_tscd_vo_hinh | bsa37 | Nguyên giá TSCĐ vô hình
+CDKT_BANK | cdkt_bank_hao_mon_tscd_vo_hinh | bsa38 | Hao mòn TSCĐ vô hình
+CDKT_BANK | cdkt_bank_bat_dong_san_dau_tu | bsa40 | Bất động sản đầu tư
+CDKT_BANK | cdkt_bank_nguyen_gia_bat_dong_san_dau_tu | bsa41 | Nguyên giá bất động sản đầu tư
+CDKT_BANK | cdkt_bank_hao_mon_bat_dong_san_dau_tu | bsa42 | Hao mòn bất động sản đầu tư
+CDKT_BANK | cdkt_bank_tai_san_co_khac | bsb110 | Tài sản Có khác
+CDKT_BANK | cdkt_bank_cac_khoan_phai_thu | bsb264 | Các khoản phải thu
+CDKT_BANK | cdkt_bank_cac_khoan_lai_va_phi_phai_thu | bsb265 | Các khoản lãi và phí phải thu
+CDKT_BANK | cdkt_bank_tai_san_thue_tndn_hoan_lai | bsb266 | Tài sản thuế TNDN hoãn lại
+CDKT_BANK | cdkt_bank_tai_san_co_khac_1 | bsb267 | Tài sản Có khác
+CDKT_BANK | cdkt_bank_trong_do_loi_the_thuong_mai | bsb268 | Trong đó: Lợi thế thương mại
+CDKT_BANK | cdkt_bank_cac_khoan_du_phong_rui_ro_cho_cac_tai_san_co_noi_bang_k | bsb269 | Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác
+CDKT_BANK | cdkt_bank_no_phai_tra_va_von_chu_so_huu | bsa96 | NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU
+CDKT_BANK | cdkt_bank_tong_no_phai_tra | bsa54 | TỔNG NỢ PHẢI TRẢ
+CDKT_BANK | cdkt_bank_cac_khoan_no_chinh_phu_va_nhnn_viet_nam | bsb111 | Các khoản nợ chính phủ và NHNN Việt Nam
+CDKT_BANK | cdkt_bank_tien_gui_va_vay_cac_to_chuc_tin_dung_khac | bsb112 | Tiền gửi và vay các Tổ chức tín dụng khác
+CDKT_BANK | cdkt_bank_tien_gui_cua_cac_to_chuc_tin_dung_khac | bsb270 | Tiền gửi của các tổ chức tín dụng khác
+CDKT_BANK | cdkt_bank_vay_cac_to_chuc_tin_dung_khac | bsb271 | Vay các tổ chức tín dụng khác
+CDKT_BANK | cdkt_bank_tien_gui_cua_khach_hang | bsb113 | Tiền gửi của khách hàng
+CDKT_BANK | cdkt_bank_cac_cong_cu_tai_chinh_phai_sinh_va_cac_khoan_no_tai_chi | bsb114 | Các công cụ tài chính phái sinh và các khoản nợ tài chính khác
+CDKT_BANK | cdkt_bank_von_tai_tro_uy_thac_dau_tu_cua_chinh_phu_va_cac_to_chuc | bsb115 | Vốn tài trợ, uỷ thác đầu tư của Chính phủ và các tổ chức tín dụng khác
+CDKT_BANK | cdkt_bank_phat_hanh_giay_to_co_gia | bsb116 | Phát hành giấy tờ có giá
+CDKT_BANK | cdkt_bank_cac_khoan_no_khac | bsb117 | Các khoản nợ khác
+CDKT_BANK | cdkt_bank_cac_khoan_lai_phi_phai_tra | bsb272 | Các khoản lãi, phí phải trả
+CDKT_BANK | cdkt_bank_thue_tndn_hoan_lai_phai_tra | bsb273 | Thuế TNDN hoãn lại phải trả
+CDKT_BANK | cdkt_bank_cac_khoan_phai_tra_va_cong_no_khac | bsb274 | Các khoản phải trả và công nợ khác
+CDKT_BANK | cdkt_bank_du_phong_rui_ro_khac | bsb275 | Dự phòng rủi ro khác
+CDKT_BANK | cdkt_bank_von_chu_so_huu | bsa78 | VỐN CHỦ SỞ HỮU
+CDKT_BANK | cdkt_bank_von_cua_to_chuc_tin_dung | bsb118 | Vốn của tổ chức tín dụng
+CDKT_BANK | cdkt_bank_von_dieu_le | bsa80 | Vốn điều lệ
+CDKT_BANK | cdkt_bank_von_dau_tu_xdcb | bsb119 | Vốn đầu tư XDCB
+CDKT_BANK | cdkt_bank_thang_du_von_co_phan | bsa81 | Thặng dư vốn cổ phần
+CDKT_BANK | cdkt_bank_co_phieu_quy | bsa83 | Cổ phiếu Quỹ
+CDKT_BANK | cdkt_bank_co_phieu_uu_dai | bsb120 | Cổ phiếu ưu đãi
+CDKT_BANK | cdkt_bank_von_khac | bsa82 | Vốn khác
+CDKT_BANK | cdkt_bank_quy_cua_to_chuc_tin_dung | bsb121 | Quỹ của tổ chức tín dụng
+CDKT_BANK | cdkt_bank_chenh_lech_ty_gia_hoi_doai | bsa85 | Chênh lệch tỷ giá hối đoái
+CDKT_BANK | cdkt_bank_chenh_lech_danh_gia_lai_tai_san | bsa84 | Chênh lệch đánh giá lại tài sản
+CDKT_BANK | cdkt_bank_loi_nhuan_chua_phan_phoi | bsa90 | Lợi nhuận chưa phân phối
+CDKT_BANK | cdkt_bank_loi_ich_cua_co_dong_thieu_so | bsa210 | Lợi ích của cổ đông thiểu số
+CDKT_BANK | cdkt_bank_loi_ich_cua_co_dong_thieu_so_1 | bsa95 | Lợi ích của cổ đông thiểu số (trước 2015)
+CDKT_BANK | cdkt_bank_bao_lanh_vay_von | bsb158 | Bảo lãnh vay vốn
+CDKT_BANK | cdkt_bank_cam_ket_giao_dich_hoi_doai | bsb158 | Cam kết giao dịch hối đoái
+CDKT_BANK | cdkt_bank_cam_ket_mua_ngoai_te | bsb180 | Cam kết mua ngoại tệ
+CDKT_BANK | cdkt_bank_cam_ket_ban_ngoai_te | bsb181 | Cam kết bán ngoại tệ
+CDKT_BANK | cdkt_bank_cam_ket_giao_dich_hoan_doi | bsb182 | Cam kết giao dịch hoán đổi
+CDKT_BANK | cdkt_bank_cam_ket_giao_dich_tuong_lai | bsb183 | Cam kết giao dịch tương lai
+CDKT_BANK | cdkt_bank_cam_ket_cho_vay_khong_huy_ngang | bsb184 | Cam kết cho vay không hủy ngang
+CDKT_BANK | cdkt_bank_cam_ket_trong_nghiep_vu_lc | bsb185 | Cam kết trong nghiệp vụ L/C
+CDKT_BANK | cdkt_bank_bao_lanh_khac | bsb131 | Bảo lãnh khác
+CDKT_BANK | cdkt_bank_cam_ket_khac | bsb186 | Cam kết khác
+KQKD_BANK | kqkd_bank_thu_nhap_lai_thuan | isb27 | Thu nhập lãi thuần
+KQKD_BANK | kqkd_bank_thu_nhap_lai_va_cac_khoan_thu_nhap_tuong_tu | isb25 | Thu nhập lãi và các khoản thu nhập tương tự
+KQKD_BANK | kqkd_bank_chi_phi_lai_va_cac_chi_phi_tuong_tu | isb26 | Chi phí lãi và các chi phí tương tự
+KQKD_BANK | kqkd_bank_lailo_thuan_tu_hoat_dong_dich_vu | isb30 | Lãi/Lỗ thuần từ hoạt động dịch vụ
+KQKD_BANK | kqkd_bank_thu_nhap_tu_dich_vu | isb28 | Thu nhập từ dịch vụ
+KQKD_BANK | kqkd_bank_chi_phi_dich_vu | isb29 | Chi phí dịch vụ
+KQKD_BANK | kqkd_bank_lai_thuan_tu_hoat_dong_kinh_doanh_ngoai_hoi_va_vang | isb31 | Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối và vàng
+KQKD_BANK | kqkd_bank_lai_thuan_tu_mua_ban_chung_khoan_kinh_doanh | isb32 | Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh
+KQKD_BANK | kqkd_bank_lai_thuan_tu_mua_ban_chung_khoan_dau_tu | isb33 | Lãi/(lỗ) thuần từ mua bán chứng khoán đầu tư
+KQKD_BANK | kqkd_bank_lai_thuan_tu_hoat_dong_khac | isb36 | Lãi/(lỗ) thuần từ hoạt động khác
+KQKD_BANK | kqkd_bank_thu_nhap_khac | isb34 | Thu nhập khác
+KQKD_BANK | kqkd_bank_chi_phi_khac | isb35 | Chi phí khác
+KQKD_BANK | kqkd_bank_thu_nhap_tu_co_tuc | isb37 | Thu nhập từ cổ tức
+KQKD_BANK | kqkd_bank_tong_thu_nhap_hoat_dong | isb38 | Tổng thu nhập hoạt động
+KQKD_BANK | kqkd_bank_chi_phi_quan_ly_doanh_nghiep | isb39 | Chi phí quản lý doanh nghiệp
+KQKD_BANK | kqkd_bank_loi_nhuan_thuan_hoat_dong_truoc_khi_trich_lap_du_phong_ | isb40 | Lợi nhuận thuần hoạt động trước khi trích lập dự phòng tổn thất tín dụng
+KQKD_BANK | kqkd_bank_trich_lap_du_phong_ton_that_tin_dung | isb41 | Trích lập dự phòng tổn thất tín dụng
+KQKD_BANK | kqkd_bank_tong_loi_nhuanlo_truoc_thue | isa16 | Tổng lợi nhuận/lỗ trước thuế
+KQKD_BANK | kqkd_bank_chi_phi_thue_thu_nhap_doanh_nghiep | isa19 | Chi phí thuế thu nhập doanh nghiệp
+KQKD_BANK | kqkd_bank_chi_phi_thue_tndn_hien_hanh | isa17 | Chi phí thuế TNDN hiện hành
+KQKD_BANK | kqkd_bank_chi_phi_thue_tndn_hoan_lai | isa18 | Chi phí thuế TNDN hoãn lại
+KQKD_BANK | kqkd_bank_loi_nhuan_sau_thue | isa20 | Lợi nhuận sau thuế
+KQKD_BANK | kqkd_bank_loi_ich_cua_co_dong_thieu_so | isa21 | Lợi ích của cổ đông thiểu số
+KQKD_BANK | kqkd_bank_co_dong_cua_cong_ty_me | isa22 | Cổ đông của Công ty mẹ
+KQKD_BANK | kqkd_bank_lai_co_ban_tren_co_phieu | isa23 | Lãi cơ bản trên cổ phiếu (VND)
+KQKD_BANK | kqkd_bank_lai_tren_co_phieu_pha_loang | isa24 | Lãi trên cổ phiếu pha loãng (VND)
+LCTT_BANK | lctt_bank_thu_nhap_lai_va_cac_khoan_thu_nhap_tuong_tu_nhan_duoc | cfb75 | Thu nhập lãi và các khoản thu nhập tương tự nhận được
+LCTT_BANK | lctt_bank_chi_phi_lai_va_cac_chi_phi_tuong_tu_da_tra | cfb76 | Chi phí lãi và các chi phí tương tự đã trả
+LCTT_BANK | lctt_bank_thu_nhap_tu_hoat_dong_dich_vu_nhan_duoc | cfb77 | Thu nhập từ hoạt động dịch vụ nhận được
+LCTT_BANK | lctt_bank_chenh_lech_so_tien_thuc_thuthuc_chi_tu_hoat_dong_kinh_d | cfb221 | Chênh lệch số tiền thực thu/thực chi từ hoạt động kinh doanh
+LCTT_BANK | lctt_bank_thu_nhap_thuan_tu_hoat_dong_kinh_doanh_ngoai_hoi_va_van | cfb78 | Thu nhập thuần từ hoạt động kinh doanh ngoại hối và vàng
+LCTT_BANK | lctt_bank_thu_nhap_tu_hoat_dong_kinh_doanh_chung_khoan | cfb79 | Thu nhập từ hoạt động kinh doanh chứng khoán
+LCTT_BANK | lctt_bank_thu_nhap_khac | cfb80 | Thu nhập khác
+LCTT_BANK | lctt_bank_tien_thu_cac_khoan_no_da_duoc_xu_ly_xoa_bu_dap_bang_ngu | cfb106 | Tiền thu các khoản nợ đã được xử lý, xóa, bù đắp bằng nguồn rủi ro
+LCTT_BANK | lctt_bank_tien_chi_tra_cho_nhan_vien_va_hoat_dong_quan_ly_cong_cu | cfb81 | Tiền chi trả cho nhân viên và hoạt động quản lý, cộng cụ
+LCTT_BANK | lctt_bank_tien_thue_thu_nhap_thuc_nop_trong_ky | cfa43 | Tiền thuế thu nhập thực nộp trong kỳ
+LCTT_BANK | lctt_bank_luu_chuyen_tien_thuan_tu_hoat_dong_kinh_doanh_truoc_nhu | cfa9 | Lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động
+LCTT_BANK | lctt_bank_tien_gui_tai_nhnn | cfb48 | Tiền gửi tại NHNN
+LCTT_BANK | lctt_bank_tanggiam_cac_khoan_tien_gui_va_cho_vay_cac_to_chuc_tin_ | cfb49 | Tăng/giảm các khoản tiền gửi và cho vay các tổ chức tín dụng khác
+LCTT_BANK | lctt_bank_tanggiam_cac_khoan_ve_kinh_doanh_chung_khoan | cfb50 | Tăng/giảm các khoản về kinh doanh chứng khoán
+LCTT_BANK | lctt_bank_tanggiam_cac_cong_cu_tai_chinh_phai_sinh_va_cac_tai_san | cfb51 | Tăng/giảm các công cụ tài chính phái sinh và các tài sản tài chính khác
+LCTT_BANK | lctt_bank_tanggiam_cac_khoan_cho_vay_khach_hang | cfb52 | Tăng/giảm các khoản cho vay khách hàng
+LCTT_BANK | lctt_bank_giam_lai_phi_phai_thu | cfb53 | (Tăng)/Giảm lãi, phí phải thu
+LCTT_BANK | lctt_bank_tanggiam_nguon_du_phong_de_bu_dap_ton_that_cac_khoan | cfb54 | Tăng/giảm nguồn dự phòng để bù đắp tổn thất các khoản
+LCTT_BANK | lctt_bank_tanggiam_khac_ve_tai_san_hoat_dong | cfb55 | Tăng/giảm khác về tài sản hoạt động
+LCTT_BANK | lctt_bank_tang_cac_khoan_no_chinh_phu_va_nhnn | cfb56 | Tăng/(Giảm) các khoản nợ chính phủ và NHNN
+LCTT_BANK | lctt_bank_tang_cac_khoan_tien_gui_va_vay_cac_tctd_khac | cfb57 | Tăng/(Giảm) các khoản tiền gửi và vay các TCTD khác
+LCTT_BANK | lctt_bank_tang_tien_gui_cua_khach_hang | cfb58 | Tăng/(Giảm) tiền gửi của khách hàng
+LCTT_BANK | lctt_bank_tang_phat_hanh_giay_to_co_gia | cfb61 | Tăng/(Giảm) phát hành giấy tờ có giá
+LCTT_BANK | lctt_bank_tang_von_tai_tro_uy_thac_dau_tu_cua_chinh_phu_va_cac_tc | cfb60 | Tăng/(Giảm) vốn tài trợ, uỷ thác đầu tư của chính phủ và các TCTD khác
+LCTT_BANK | lctt_bank_tang_cac_cong_cu_tai_chinh_phai_sinh_va_cac_khoan_no_ta | cfb59 | Tăng/(Giảm) các công cụ tài chính phái sinh và các khoản nợ tài chính khác
+LCTT_BANK | lctt_bank_tang_lai_phi_phai_tra | cfb62 | Tăng/(Giảm) lãi, phí phải trả
+LCTT_BANK | lctt_bank_tang_khac_ve_cong_no_hoat_dong | cfb63 | Tăng/(Giảm) khác về công nợ hoạt động
+LCTT_BANK | lctt_bank_luu_chuyen_tien_thuan_tu_hoat_dong_kinh_doanh_truoc_thu | cfb64 | Lưu chuyển tiền thuần từ hoạt động kinh doanh trước thuế thu nhập DN
+LCTT_BANK | lctt_bank_thue_thu_nhap_doanh_nghiep_da_tra | cfa15 | Thuế thu nhập doanh nghiệp đã trả
+LCTT_BANK | lctt_bank_chi_tu_cac_quy_cua_tctd | cfb65 | Chi từ các quỹ của TCTD
+LCTT_BANK | lctt_bank_thu_duoc_tu_no_kho_doi | cfb66 | Thu được từ nợ khó đòi
+LCTT_BANK | lctt_bank_luu_chuyen_tien_thuan_tu_cac_hoat_dong_san_xuat_kinh_do | cfa18 | Lưu chuyển tiền thuần từ các hoạt động sản xuất kinh doanh
+LCTT_BANK | lctt_bank_mua_sam_tscd | cfa19 | Mua sắm TSCĐ
+LCTT_BANK | lctt_bank_tien_thu_duoc_tu_thanh_ly_nhuong_ban_tai_san_co_dinh | cfa20 | Tiền thu được từ thanh lý, nhượng bán tài sản cố định
+LCTT_BANK | lctt_bank_tien_chi_tu_thanh_ly_nhuong_ban_tscd | cfb67 | Tiền chi từ thanh lý, nhượng bán TSCĐ
+LCTT_BANK | lctt_bank_mua_sam_bat_dong_san_dau_tu | cfb68 | Mua sắm Bất động sản đầu tư
+LCTT_BANK | lctt_bank_tien_thu_tu_ban_thanh_ly_bat_dong_san_dau_tu | cfb69 | Tiền thu từ bán, thanh lý bất động sản đầu tư
+LCTT_BANK | lctt_bank_tien_chi_ra_do_ban_thanh_ly_bat_dong_san_dau_tu | cfb70 | Tiền chi ra do bán, thanh lý bất động sản đầu tư
+LCTT_BANK | lctt_bank_tien_chi_dau_tu_gop_von_vao_cac_don_vi_khac | cfa23 | Tiền chi đầu tư, góp vốn vào các đơn vị khác
+LCTT_BANK | lctt_bank_tien_thu_tu_dau_tu_gop_von_vao_cac_don_vi_khac | cfa24 | Tiền thu từ đầu tư, góp vốn vào các đơn vị khác
+LCTT_BANK | lctt_bank_tien_thu_co_tuc_va_loi_nhuan_duoc_chia_tu_cac_khoan_dau | cfa25 | Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư góp vốn dài hạn
+LCTT_BANK | lctt_bank_luu_chuyen_tien_thuan_tu_hoat_dong_dau_tu | cfa26 | Lưu chuyển tiền thuần từ hoạt động đầu tư
+LCTT_BANK | lctt_bank_tang_von_co_phan_tu_gop_von_vahoac_phat_hanh_co_phieu | cfa27 | Tăng vốn cổ phần từ góp vốn và/hoặc phát hành cổ phiếu
+LCTT_BANK | lctt_bank_tien_thu_tu_phat_hanh_giay_to_co_gia_dai_han_du_dieu_ki | cfb71 | Tiền thu từ phát hành giấy tờ có giá dài hạn đủ điều kiện tính vào vốn tự có và các khoản vốn vay dài hạn khác
+LCTT_BANK | lctt_bank_tien_chi_thanh_toan_giay_to_co_gia_dai_han_du_dieu_kien | cfb72 | Tiền chi thanh toán giấy tờ có giá dài hạn đủ điều kiện tính vào vốn tự có và các khoản vốn vay dài hạn khác
+LCTT_BANK | lctt_bank_co_tuc_tra_cho_co_dong_loi_nhuan_da_chia | cfa32 | Cổ tức trả cho cổ đông, lợi nhuận đã chia
+LCTT_BANK | lctt_bank_tien_chi_ra_mua_co_phieu_quy | cfb73 | Tiền chi ra mua cổ phiếu quỹ
+LCTT_BANK | lctt_bank_tien_thu_duoc_do_ban_co_phieu_quy | cfb74 | Tiền thu được do bán cổ phiếu quỹ
+LCTT_BANK | lctt_bank_luu_chuyen_tien_thuan_trong_ky | cfa34 | Lưu chuyển tiền thuần trong kỳ
+LCTT_BANK | lctt_bank_tien_va_cac_khoan_tuong_duong_tien_tai_thoi_diem_dau_ky | cfa36 | Tiền và các khoản tương đương tiền tài thời điểm đầu kỳ
+LCTT_BANK | lctt_bank_dieu_chinh_anh_huong_cua_thay_doi_ty_gia | cfa37 | Điều chỉnh ảnh hưởng của thay đổi tỷ giá
+LCTT_BANK | lctt_bank_tien_va_cac_khoan_tuong_duong_tien_tai_thoi_diem_cuoi_k | cfa38 | Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ
+CDKT_SEC | cdkt_sec_tai_san_ngan_han | bsa1 | TÀI SẢN NGẮN HẠN
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_ngan_han | bss214 | Tài sản tài chính ngắn hạn
+CDKT_SEC | cdkt_sec_tien_va_tuong_duong_tien | bsa2 | Tiền và tương đương tiền
+CDKT_SEC | cdkt_sec_tien | bsa3 | Tiền
+CDKT_SEC | cdkt_sec_cac_khoan_tuong_duong_tien | bsa4 | Các khoản tương đương tiền
+CDKT_SEC | cdkt_sec_cac_tai_san_tai_chinh_ghi_nhan_thong_qua_lai_lo | bsa6 | Các tài sản tài chính ghi nhận thông qua lãi lỗ (FVTPL)
+CDKT_SEC | cdkt_sec_cac_khoan_dau_tu_nam_giu_den_ngay_dao_han | bsb108 | Các khoản đầu tư nắm giữ đến ngày đáo hạn (HTM)
+CDKT_SEC | cdkt_sec_cac_khoan_cho_vay | bss215 | Các khoản cho vay
+CDKT_SEC | cdkt_sec_cac_khoan_tai_chinh_san_sang_de_ban | bss216 | Các khoản tài chính sẵn sàng để bán (AFS)
+CDKT_SEC | cdkt_sec_du_phong_suy_giam_gia_tri_tai_san_tai_chinh_va_tai_san_ | bsa7 | Dự phòng suy giảm giá trị tài sản tài chính và tài sản thế chấp
+CDKT_SEC | cdkt_sec_tong_cac_khoan_phai_thu | bsa8 | Tổng các khoản phải thu
+CDKT_SEC | cdkt_sec_cac_khoan_phai_thu | bss217 | Các khoản phải thu (từ 2016)
+CDKT_SEC | cdkt_sec_phai_thu_ban_cac_tai_san_tai_chinh | bss218 | Phải thu bán các tài sản tài chính
+CDKT_SEC | cdkt_sec_phai_thu_va_du_thu_co_tuc_tien_lai_cac_tai_san_tai_chin | bss219 | Phải thu và dự thu cổ tức, tiền lãi các tài sản tài chính
+CDKT_SEC | cdkt_sec_phai_thu_co_tuc_tien_lai_den_ngay_nhan | bss220 | Phải thu cổ tức, tiền lãi đến ngày nhận
+CDKT_SEC | cdkt_sec_trong_do_phai_thu_kho_doi_ve_co_tuc_tien_lai_den_ngay_n | bss221 | Trong đó : phải thu khó đòi về cổ tức , tiền lãi đến ngày nhận nhưng chưa nhận được
+CDKT_SEC | cdkt_sec_du_thu_co_tuc_tien_lai_chua_den_ngay_nhan | bss222 | Dự thu cổ tức , tiền lãi chưa đến ngày nhận
+CDKT_SEC | cdkt_sec_phai_thu_khach_hang | bsa9 | Phải thu khách hàng (Trước năm 2016)
+CDKT_SEC | cdkt_sec_thue_gia_tri_gia_tang_duoc_khau_tru | bss223 | Thuế giá trị gia tăng được khấu trừ (Trước năm 2016)
+CDKT_SEC | cdkt_sec_tra_truoc_nguoi_ban | bsa10 | Trả trước người bán
+CDKT_SEC | cdkt_sec_phai_thu_cac_dich_vu_ctck_cung_cap | bss224 | Phải thu các dịch vụ CTCK cung cấp
+CDKT_SEC | cdkt_sec_phai_thu_noi_bo | bsa11 | Phải thu nội bộ
+CDKT_SEC | cdkt_sec_phai_thu_ve_loi_giao_dich_ck | bss225 | Phải thu về lỗi giao dịch CK
+CDKT_SEC | cdkt_sec_phai_thu_ve_hoat_dong_giao_dich_chung_khoan | bss133 | Phải thu về hoạt động giao dịch chứng khoán (Trước năm 2016)
+CDKT_SEC | cdkt_sec_phai_thu_ve_xdcb | bsa12 | Phải thu về XDCB (Trước năm 2016)
+CDKT_SEC | cdkt_sec_phai_thu_ve_cho_vay_ngan_han | bsa159 | Phải thu về cho vay ngắn hạn (Trước năm 2016)
+CDKT_SEC | cdkt_sec_phai_thu_khac | bsa13 | Phải thu khác
+CDKT_SEC | cdkt_sec_du_phong_suy_giam_gia_tri_cac_khoan_phai_thu | bss226 | Dự phòng suy giảm giá trị các khoản phải thu
+CDKT_SEC | cdkt_sec_du_phong_no_kho_doi | bsa14 | Dự phòng nợ khó đòi (Trước năm 2016)
+CDKT_SEC | cdkt_sec_tai_san_thieu_cho_xu_ly | bsi141 | Tài sản thiếu chờ xử lý (Trước năm 2016)
+CDKT_SEC | cdkt_sec_hang_ton_kho_rong | bsa15 | Hàng tồn kho, ròng (Trước năm 2016)
+CDKT_SEC | cdkt_sec_hang_ton_kho | bsa16 | Hàng tồn kho (Trước năm 2016)
+CDKT_SEC | cdkt_sec_du_phong_giam_gia_htk | bsa17 | Dự phòng giảm giá HTK (Trước năm 2016)
+CDKT_SEC | cdkt_sec_tai_san_ngan_han_khac | bsa18 | Tài sản ngắn hạn khác
+CDKT_SEC | cdkt_sec_tam_ung | bss227 | Tạm ứng
+CDKT_SEC | cdkt_sec_vat_tu_van_phong_cong_cu_dung_cu | bss228 | Vật tư văn phòng, công cụ, dụng cụ
+CDKT_SEC | cdkt_sec_chi_phi_tra_truoc_ngan_han | bsa19 | Chi phí trả trước ngắn hạn
+CDKT_SEC | cdkt_sec_cam_co_the_chap_ky_quy_ky_cuoc_ngan_han | bss229 | Cầm cố, thế chấp, ký quý , ký cược ngắn hạn
+CDKT_SEC | cdkt_sec_thue_gia_tri_gia_tang_duoc_khau_tru_1 | bsa20 | Thuế giá trị gia tăng được khấu trừ
+CDKT_SEC | cdkt_sec_thue_va_cac_khoan_khac_phai_thu_nha_nuoc | bsa21 | Thuế và các khoản khác phải thu Nhà nước
+CDKT_SEC | cdkt_sec_tai_san_ngan_han_khac_1 | bsa22 | Tài sản ngắn hạn khác
+CDKT_SEC | cdkt_sec_giao_dich_mua_ban_lai_trai_phieu_chinh_phu | bsa160 | Giao dịch mua bán lại trái phiếu chính phủ
+CDKT_SEC | cdkt_sec_du_phong_suy_giam_gia_tri_tsnh_khac | bss230 | Dự phòng suy giảm giá trị TSNH khác
+CDKT_SEC | cdkt_sec_tai_san_dai_han | bsa23 | TÀI SẢN DÀI HẠN
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_dai_han | bss231 | Tài sản tài chính dài hạn
+CDKT_SEC | cdkt_sec_phai_thu_dai_han | bsa24 | Phải thu dài hạn
+CDKT_SEC | cdkt_sec_phai_thu_khach_hang_dai_han | bsa25 | Phải thu khách hàng dài hạn
+CDKT_SEC | cdkt_sec_tra_truoc_nguoi_ban_dai_han | bsa161 | Trả trước người bán dài hạn (Trước năm 2016)
+CDKT_SEC | cdkt_sec_von_kinh_doanh_o_cac_don_vi_truc_thuoc | bss134 | Vốn kinh doanh ở các đơn vị trực thuộc (Trước năm 2016)
+CDKT_SEC | cdkt_sec_phai_thu_noi_bo_dai_han | bsa26 | Phải thu nội bộ dài hạn (Trước năm 2016)
+CDKT_SEC | cdkt_sec_phai_thu_ve_cho_vay_dai_han | bsa162 | Phải thu về cho vay dài hạn (Trước năm 2016)
+CDKT_SEC | cdkt_sec_phai_thu_dai_han_khac | bsa27 | Phải thu dài hạn khác (Trước năm 2016)
+CDKT_SEC | cdkt_sec_du_phong_phai_thu_dai_han | bsa28 | Dự phòng phải thu dài hạn (Trước năm 2016)
+CDKT_SEC | cdkt_sec_dau_tu_dai_han | bsa43 | Đầu tư dài hạn
+CDKT_SEC | cdkt_sec_dau_tu_vao_cac_cong_ty_con | bsa44 | Đầu tư vào các công ty con
+CDKT_SEC | cdkt_sec_dau_tu_vao_cac_cong_ty_lien_ket | bsa45 | Đầu tư vào các công ty liên kết
+CDKT_SEC | cdkt_sec_dau_tu_dai_han_khac | bsa46 | Đầu tư dài hạn khác
+CDKT_SEC | cdkt_sec_du_phong_giam_gia_dau_tu_dai_han | bsa47 | Dự phòng giảm giá đầu tư dài hạn
+CDKT_SEC | cdkt_sec_tai_san_co_dinh | bsa29 | Tài sản cố định
+CDKT_SEC | cdkt_sec_gtcl_tscd_huu_hinh | bsa30 | GTCL TSCĐ hữu hình
+CDKT_SEC | cdkt_sec_nguyen_gia_tscd_huu_hinh | bsa31 | Nguyên giá TSCĐ hữu hình
+CDKT_SEC | cdkt_sec_khau_hao_luy_ke_tscd_huu_hinh | bsa32 | Khấu hao lũy kế TSCĐ hữu hình
+CDKT_SEC | cdkt_sec_danh_gia_tscdhh_theo_gia_tri_hop_ly | bss232 | Đánh giá TSCĐHH theo giá trị hợp lý
+CDKT_SEC | cdkt_sec_gtcl_tai_san_thue_tai_chinh | bsa33 | GTCL Tài sản thuê tài chính
+CDKT_SEC | cdkt_sec_nguyen_gia_tai_san_thue_tai_chinh | bsa34 | Nguyên giá tài sản thuê tài chính
+CDKT_SEC | cdkt_sec_khau_hao_luy_ke_tai_san_thue_tai_chinh | bsa35 | Khấu hao lũy kế tài sản thuê tài chính
+CDKT_SEC | cdkt_sec_danh_gia_tscdttc_theo_gia_tri_hop_ly | bss233 | Đánh giá TSCĐTTC theo giá trị hợp lý
+CDKT_SEC | cdkt_sec_gtcl_tai_san_co_dinh_vo_hinh | bsa36 | GTCL tài sản cố định vô hình
+CDKT_SEC | cdkt_sec_nguyen_gia_tscd_vo_hinh | bsa37 | Nguyên giá TSCĐ vô hình
+CDKT_SEC | cdkt_sec_khau_khao_luy_ke_tscd_vo_hinh | bsa38 | Khấu khao lũy kế TSCĐ vô hình
+CDKT_SEC | cdkt_sec_danh_gia_tscdvh_theo_gia_tri_hop_ly | bss234 | Đánh giá TSCĐVH theo giá trị hợp lý
+CDKT_SEC | cdkt_sec_xay_dung_co_ban_do_dang | bsa39 | Xây dựng cơ bản dở dang (trước 2015)
+CDKT_SEC | cdkt_sec_bat_dong_san_dau_tu | bsa40 | Bất động sản đầu tư
+CDKT_SEC | cdkt_sec_nguyen_gia_tai_san_dau_tu | bsa41 | Nguyên giá tài sản đầu tư
+CDKT_SEC | cdkt_sec_khau_hao_luy_ke_tai_san_dau_tu | bsa42 | Khấu hao lũy kế tài sản đầu tư
+CDKT_SEC | cdkt_sec_danh_gia_bdsdt_theo_gia_tri_hop_ly | bss235 | Đánh giá BĐSĐT theo giá trị hợp lý
+CDKT_SEC | cdkt_sec_tai_san_do_dang_dai_han | bsa163 | Tài sản dở dang dài hạn
+CDKT_SEC | cdkt_sec_chi_phi_san_xuat_kinh_doanh_do_dang_dai_han | bsa164 | Chi phí sản xuất, kinh doanh dở dang dài hạn
+CDKT_SEC | cdkt_sec_chi_phi_xay_dung_co_ban_do_dang | bsa188 | Chi phí xây dựng cơ bản dở dang
+CDKT_SEC | cdkt_sec_tai_san_dai_han_khac | bsa49 | Tài sản dài hạn khác
+CDKT_SEC | cdkt_sec_cam_co_the_chap_ky_quy_ky_cuoc_dai_han | bss236 | Cầm cố, thế chấp, kỹ quỹ, Ký cược dài hạn
+CDKT_SEC | cdkt_sec_chi_phi_tra_truoc_dai_han | bsa50 | Chi phí trả trước dài hạn
+CDKT_SEC | cdkt_sec_tai_san_thue_thu_nhap_hoan_lai | bsa51 | Tài sản thuế thu nhập hoãn lại
+CDKT_SEC | cdkt_sec_thiet_bi_vat_tu_phu_tung_thay_the_dai_han | bsa166 | Thiết bị, vật tư, phụ tùng thay thế dài hạn
+CDKT_SEC | cdkt_sec_tien_chi_nop_quy_ho_tro_thanh_toan | bss212 | Tiền chi nộp Quỹ Hỗ trợ thanh toán
+CDKT_SEC | cdkt_sec_cac_tai_san_dai_han_khac | bsa52 | Các tài sản dài hạn khác
+CDKT_SEC | cdkt_sec_loi_the_thuong_mai | bsa209 | Lợi thế thương mại
+CDKT_SEC | cdkt_sec_du_phong_suy_giam_gia_tri_tai_san_dai_han | bss237 | Dự phòng suy giảm giá trị tài sản dài hạn
+CDKT_SEC | cdkt_sec_tong_cong_tai_san | bsa53 | TỔNG CỘNG TÀI SẢN
+CDKT_SEC | cdkt_sec_no_phai_tra | bsa54 | NỢ PHẢI TRẢ
+CDKT_SEC | cdkt_sec_no_phai_tra_ngan_han | bsa55 | Nợ phải trả ngắn hạn
+CDKT_SEC | cdkt_sec_vay_va_no_thue_tai_san_tai_chinh_ngan_han | bsa56 | Vay và nợ thuê tài sản tài chính ngắn hạn
+CDKT_SEC | cdkt_sec_vay_ngan_han | bss238 | Vay ngắn hạn
+CDKT_SEC | cdkt_sec_no_thue_tai_san_tai_chinh_ngan_han | bss239 | Nợ thuê tài sản tài chính ngắn hạn
+CDKT_SEC | cdkt_sec_vay_tai_san_tai_chinh_ngan_han | bss240 | Vay tài sản tài chính ngắn hạn
+CDKT_SEC | cdkt_sec_trai_phieu_chuyen_doi_ngan_han_cau_phan_no | bss241 | Trái phiếu chuyển đổi ngắn hạn - Cấu phần nợ
+CDKT_SEC | cdkt_sec_trai_phieu_phat_hanh_ngan_han | bss242 | Trái phiếu phát hành ngắn hạn
+CDKT_SEC | cdkt_sec_vay_quy_ho_tro_thanh_toan | bss243 | Vay Quỹ Hỗ trợ thanh toán
+CDKT_SEC | cdkt_sec_phai_tra_hoat_dong_giao_dich_chung_khoan | bss135 | Phải trả hoạt động giao dịch chứng khoán
+CDKT_SEC | cdkt_sec_phai_tra_ve_loi_giao_dich_cac_tai_san_tai_chinh | bss244 | Phải trả về lỗi giao dịch các tài sản tài chính
+CDKT_SEC | cdkt_sec_phai_tra_nguoi_ban_ngan_han | bsa57 | Phải trả người bán ngắn hạn
+CDKT_SEC | cdkt_sec_nguoi_mua_tra_tien_truoc_ngan_han | bsa58 | Người mua trả tiền trước ngắn hạn
+CDKT_SEC | cdkt_sec_thue_va_cac_khoan_phai_nop_nha_nuoc | bsa59 | Thuế và các khoản phải nộp nhà nước
+CDKT_SEC | cdkt_sec_phai_tra_nguoi_lao_dong | bsa60 | Phải trả người lao động
+CDKT_SEC | cdkt_sec_cac_khoan_trich_nop_phuc_loi_nhan_vien | bss245 | Các khoản trích nộp phúc lợi nhân viên
+CDKT_SEC | cdkt_sec_chi_phi_phai_tra_ngan_han | bsa61 | Chi phí phải trả ngắn hạn
+CDKT_SEC | cdkt_sec_phai_tra_noi_bo_ngan_han | bsa62 | Phải trả nội bộ ngắn hạn
+CDKT_SEC | cdkt_sec_doanh_thu_chua_thuc_hien_ngan_han | bsa167 | Doanh thu chưa thực hiện ngắn hạn
+CDKT_SEC | cdkt_sec_nhan_ky_quy_ky_cuoc_ngan_han | bss246 | Nhận ký quỹ, ký cược ngắn hạn
+CDKT_SEC | cdkt_sec_phai_tra_ve_xay_dung_co_ban | bsa63 | Phải trả về xây dựng cơ bản (Trước năm 2016)
+CDKT_SEC | cdkt_sec_phai_tra_co_tuc_goc_va_lai_trai_phieu | bss136 | Phải trả cổ tức, gốc và lãi trái phiếu (Trước năm 2016)
+CDKT_SEC | cdkt_sec_phai_tra_to_chuc_phat_hanh_chung_khoan | bss137 | Phải trả tổ chức phát hành chứng khoán (Trước năm 2016)
+CDKT_SEC | cdkt_sec_cac_khoan_phai_tra_phai_nop_khac_ngan_han | bsa64 | Các khoản phải trả, phải nộp khác ngắn hạn
+CDKT_SEC | cdkt_sec_du_phong_phai_tra_ngan_han | bsa65 | Dự phòng phải trả ngắn hạn
+CDKT_SEC | cdkt_sec_quy_khen_thuong_phuc_loi | bsa66 | Quỹ khen thưởng phúc lợi
+CDKT_SEC | cdkt_sec_quy_binh_on_gia | bsa168 | Quỹ bình ổn giá (Trước năm 2016)
+CDKT_SEC | cdkt_sec_giao_dich_mua_ban_lai_trai_phieu_chinh_phu_1 | bsa169 | Giao dịch mua bán lại trái phiếu Chính phủ
+CDKT_SEC | cdkt_sec_no_phai_tra_dai_han | bsa67 | Nợ phải trả dài hạn
+CDKT_SEC | cdkt_sec_vay_va_no_thue_tai_san_tai_chinh_dai_han | bsa71 | Vay và nợ thuê tài sản tài chính dài hạn
+CDKT_SEC | cdkt_sec_vay_dai_han | bss247 | Vay dài hạn
+CDKT_SEC | cdkt_sec_no_thue_tai_chinh_dai_han | bss248 | Nợ thuê tài chính dài hạn
+CDKT_SEC | cdkt_sec_vay_tai_san_tai_chinh_dai_han | bss249 | Vay tài sản tài chính dài hạn
+CDKT_SEC | cdkt_sec_trai_phieu_chuyen_doi_dai_han_cau_phan_no | bsa173 | Trái phiếu chuyển đổi dài hạn - Cấu phần nợ
+CDKT_SEC | cdkt_sec_trai_phieu_phat_hanh_dai_han | bss250 | Trái phiếu phát hành dài hạn
+CDKT_SEC | cdkt_sec_phai_tra_nguoi_ban_dai_han | bsa68 | Phải trả người bán dài hạn
+CDKT_SEC | cdkt_sec_nguoi_mua_tra_tien_truoc_dai_han | bsa170 | Người mua trả tiền trước dài hạn
+CDKT_SEC | cdkt_sec_chi_phi_phai_tra_dai_han | bsa171 | Chi phí phải trả dài hạn
+CDKT_SEC | cdkt_sec_phai_tra_noi_bo_dai_han | bsa69 | Phải trả nội bộ dài hạn
+CDKT_SEC | cdkt_sec_phai_tra_noi_bo_ve_von_kinh_doanh | bsa172 | Phải trả nội bộ về vốn kinh doanh (Trước năm 2016)
+CDKT_SEC | cdkt_sec_doanh_thu_chua_thuc_hien_dai_han | bsa76 | Doanh thu chưa thực hiên dài hạn
+CDKT_SEC | cdkt_sec_nhan_ky_quy_ky_cuoc_dai_han | bss251 | Nhận ký quỹ, ký cược dài hạn
+CDKT_SEC | cdkt_sec_phai_tra_dai_han_khac | bsa70 | Phải trả dài hạn khác
+CDKT_SEC | cdkt_sec_co_phieu_uu_dai | bsa174 | Cổ phiếu ưu đãi (Trước năm 2016)
+CDKT_SEC | cdkt_sec_du_phong_tro_cap_thoi_viec | bsa73 | Dự phòng trợ cấp thôi việc (Trước năm 2016)
+CDKT_SEC | cdkt_sec_du_phong_phai_tra_dai_han | bsa74 | Dự phòng phải trả dài hạn
+CDKT_SEC | cdkt_sec_quy_bao_ve_nha_dau_tu | bss138 | Quỹ bảo vệ Nhà đầu tư
+CDKT_SEC | cdkt_sec_thue_thu_nhap_hoan_lai_phai_tra | bsa72 | Thuế thu nhập hoãn lại phải trả
+CDKT_SEC | cdkt_sec_quy_phat_trien_khoa_hoc_cong_nghe | bsa77 | Quỹ phát triển khoa học công nghệ
+CDKT_SEC | cdkt_sec_von_chu_so_huu | bsa78 | Vốn chủ sở hữu
+CDKT_SEC | cdkt_sec_von_dau_tu_cua_chu_so_huu | bss252 | Vốn đầu tư của chủ sở hữu
+CDKT_SEC | cdkt_sec_von_gop_cua_chu_so_huu | bsa80 | Vốn góp của chủ sở hữu
+CDKT_SEC | cdkt_sec_co_phieu_pho_thong_co_quyen_bieu_quyet | bsa175 | Cổ phiếu phổ thông có quyền biểu quyết
+CDKT_SEC | cdkt_sec_co_phieu_uu_dai_1 | bsa120 | Cổ phiếu ưu đãi
+CDKT_SEC | cdkt_sec_thang_du_von_co_phan | bsa81 | Thặng dư vốn cổ phần
+CDKT_SEC | cdkt_sec_quyen_chon_chuyen_doi_trai_phieu_cau_phan_von | bsa176 | Quyền chọn chuyển đổi trái phiếu - Cấu phần vốn
+CDKT_SEC | cdkt_sec_von_khac_cua_chu_so_huu | bsa82 | Vốn khác của chủ sở hữu
+CDKT_SEC | cdkt_sec_co_phieu_quy | bsa83 | Cổ phiếu quỹ
+CDKT_SEC | cdkt_sec_chenh_lech_danh_gia_lai_tai_san_theo_gia_tri_hop_ly | bsa84 | Chênh lệch đánh giá lại tài sản theo giá trị hợp lý
+CDKT_SEC | cdkt_sec_chenh_lech_ty_gia_hoi_doai | bsa85 | Chênh lệch tỷ giá hổi đoái
+CDKT_SEC | cdkt_sec_quy_du_tru_bo_sung_von_dieu_le | bss253 | Quỹ dự trữ bổ sung vốn điều lệ
+CDKT_SEC | cdkt_sec_quy_dau_tu_va_phat_trien | bsa86 | Quỹ đầu tư và phát triển (Trước năm 2016)
+CDKT_SEC | cdkt_sec_quy_du_phong_tai_chinh_va_rui_ro_nghiep_vu | bsa87 | Quỹ dự phòng tài chính và rủi ro nghiệp vụ
+CDKT_SEC | cdkt_sec_quy_khac_thuoc_von_chu_so_huu | bsa89 | Quỹ khác thuộc vốn chủ sỡ hữu
+CDKT_SEC | cdkt_sec_loi_nhuan_chua_phan_phoi | bsa90 | Lợi nhuận chưa phân phối
+CDKT_SEC | cdkt_sec_loi_nhuan_da_thuc_hien | bss254 | Lợi nhuận đã thực hiện
+CDKT_SEC | cdkt_sec_lnst_chua_phan_phoi_luy_ke_den_cuoi_ky_truoc | bsa177 | LNST chưa phân phối lũy kế đến cuối kỳ trước
+CDKT_SEC | cdkt_sec_lnst_chua_phan_phoi_ky_nay | bsa178 | LNST chưa phân phối kỳ này
+CDKT_SEC | cdkt_sec_loi_nhuan_chua_thuc_hien | bss255 | Lợi nhuận chưa thực hiện
+CDKT_SEC | cdkt_sec_loi_ich_co_dong_khong_kiem_soat | bsa210 | Lợi ích cổ đông không kiểm soát
+CDKT_SEC | cdkt_sec_loi_ich_cua_co_dong_khong_kiem_soat | bsa95 | LỢI ÍCH CỦA CỔ ĐÔNG KHÔNG KIỂM SOÁT (trước 2015)
+CDKT_SEC | cdkt_sec_nguon_kinh_phi_va_quy_khac | bsa92 | Nguồn kinh phí và quỹ khác
+CDKT_SEC | cdkt_sec_quy_khen_thuong_phuc_loi_1 | bsa93 | Quỹ khen thưởng, phúc lợi (trước 2010)
+CDKT_SEC | cdkt_sec_von_ngan_sach_nha_nuoc | bsa94 | Vốn ngân sách nhà nước
+CDKT_SEC | cdkt_sec_nguon_kinh_phi_da_hinh_thanh_tscd | bsa211 | Nguồn kinh phí đã hình thành TSCĐ
+CDKT_SEC | cdkt_sec_tong_cong_nguon_von | bsa96 | TỔNG CỘNG NGUỒN VỐN
+CDKT_SEC | cdkt_sec_tai_san_co_dinh_thue_ngoai | nos355 | Tài sản cố định thuê ngoài
+CDKT_SEC | cdkt_sec_chung_chi_co_gia_nhan_giu_ho | nos356 | Chứng chỉ có giá nhận giữ hộ
+CDKT_SEC | cdkt_sec_tai_san_nhan_the_chap | nos357 | Tài sản nhận thế chấp
+CDKT_SEC | cdkt_sec_no_kho_doi_da_xu_ly | nos358 | Nợ khó đòi đã xử lý
+CDKT_SEC | cdkt_sec_ngoai_te_cac_loai | nos359 | Ngoại tệ các loại
+CDKT_SEC | cdkt_sec_co_phieu_dang_luu_hanh | nos360 | Cổ phiếu đang lưu hành (Số lượng)
+CDKT_SEC | cdkt_sec_co_phieu_quy_1 | nos361 | Cổ phiếu quỹ (Số lượng)
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_niem_yetdang_ky_giao_dich_tai_vsd_cua | nos362 | Tài sản tài chính niêm yết/đăng ký giao dịch tại VSD của CTCK
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_da_luu_ky_tai_vsd_va_chua_giao_dich_c | nos370 | Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch của CTCK
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_cho_ve_cua_ctck | nos375 | Tài sản tài chính chờ về của CTCK
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_sua_loi_giao_dich_cua_ctck | nos376 | Tài sản tài chính sửa lỗi giao dịch của CTCK
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_chua_luu_ky_tai_vsd_cua_ctck | nos377 | Tài sản tài chính chưa lưu ký tại VSD của CTCK
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_duoc_huong_quyen_cua_ctck | nos378 | Tài sản tài chính được hưởng quyền của CTCK
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_niem_yetdang_ky_giao_dich_tai_vsd_cua_1 | nos379 | Tài sản tài chính niêm yết/đăng ký giao dịch tại VSD của NĐT
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_giao_dich_tu_do_chuyen_nhuong | nos380 | Tài sản tài chính giao dịch tự do chuyển nhượng
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_han_che_chuyen_nhuong | nos381 | Tài sản tài chính hạn chế chuyển nhượng
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_giao_dich_cam_co | nos382 | Tài sản tài chính giao dịch cầm cố
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_phong_toa_tam_giu | nos383 | Tài sản tài chính phong tỏa, tạm giữ
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_cho_thanh_toan | nos384 | Tài sản tài chính chờ thanh toán
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_cho_cho_vay | nos385 | Tài sản tài chính chờ cho vay
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_da_luu_ky_tai_vsd_va_chua_giao_dich_c_1 | nos386 | Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch của NĐT
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_da_luu_ky_tai_vsd_va_chua_giao_dich_t | nos387 | Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, tự do chuyển nhượng
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_da_luu_ky_tai_vsd_va_chua_giao_dich_h | nos388 | Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, hạn chế chuyển nhượng
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_da_luu_ky_tai_vsd_va_chua_giao_dich_c_2 | nos389 | Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, cầm cố
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_da_luu_ky_tai_vsd_va_chua_giao_dich_p | nos390 | Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, phong tỏa, tạm giữ
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_cho_ve_cua_ndt | nos391 | Tài sản tài chính chờ về của NĐT
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_sua_loi_giao_dich_cua_ndt | nos392 | Tài sản tài chính sửa lỗi giao dịch của NĐT
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_chua_luu_ky_tai_vsd_cua_ndt | nos393 | Tài sản tài chính chưa lưu ký tại VSD của NĐT
+CDKT_SEC | cdkt_sec_tai_san_tai_chinh_duoc_huong_quyen_cua_nha_dau_tu | nos394 | Tài sản tài chính được hưởng quyền của Nhà đầu tư
+CDKT_SEC | cdkt_sec_tien_gui_cua_khach_hang | nos395 | Tiền gửi của khách hàng
+CDKT_SEC | cdkt_sec_tien_gui_cua_nha_dau_tu_ve_giao_dich_chung_khoan | nos396 | Tiền gửi của Nhà đầu tư về giao dịch chứng khoán
+CDKT_SEC | cdkt_sec_tien_gui_tong_hop_giao_dich_chung_khoan_cho_khach_hang | nos399 | Tiền gửi tổng hợp giao dịch chứng khoán cho khách hàng
+CDKT_SEC | cdkt_sec_tien_gui_bu_tru_va_thanh_toan_giao_dich_chung_khoan | nos607 | Tiền gửi bù trừ và thanh toán giao dịch chứng khoán
+CDKT_SEC | cdkt_sec_tien_gui_bu_tru_va_thanh_toan_giao_dich_chung_khoan_nha | nos608 | Tiền gửi bù trừ và thanh toán giao dịch chứng khoán Nhà đầu tư trong nước
+CDKT_SEC | cdkt_sec_tien_gui_bu_tru_va_thanh_toan_giao_dich_chung_khoan_nha_1 | nos609 | Tiền gửi bù trừ và thanh toán giao dịch chứng khoán Nhà đầu tư nước ngoài
+CDKT_SEC | cdkt_sec_tien_gui_cua_to_chuc_phat_hanh_chung_khoan | nos610 | Tiền gửi của Tổ chức phát hành chứng khoán
+CDKT_SEC | cdkt_sec_phai_tra_nha_dau_tu_ve_tien_gui_giao_dich_chung_khoan_t | nos614 | Phải trả Nhà đầu tư về tiền gửi giao dịch chứng khoán theo phương thức CTCK quản lý
+CDKT_SEC | cdkt_sec_phai_tra_nha_dau_tu_trong_nuoc_ve_tien_gui_giao_dich_ch | nos615 | Phải trả Nhà đầu tư trong nước về tiền gửi giao dịch chứng khoán theo phương thức CTCK quản lý
+CDKT_SEC | cdkt_sec_phai_tra_nha_dau_tu_nuoc_ngoai_ve_tien_gui_giao_dich_ch | nos616 | Phải trả Nhà đầu tư nước ngoài về tiền gửi giao dịch chứng khoán theo phương thức CTCK quản lý
+CDKT_SEC | cdkt_sec_phai_tra_to_chuc_phat_hanh_chung_khoan_1 | nos410 | Phải trả Tổ chức phát hành chứng khoán
+CDKT_SEC | cdkt_sec_phai_thuphai_tra_cua_khach_hang_ve_loi_giao_dich_cac_ta | nos411 | Phải thu/phải trả của khách hàng về lỗi giao dịch các tài sản tài chính
+CDKT_SEC | cdkt_sec_phai_tra_vay_ctck | nos412 | Phải trả vay CTCK
+CDKT_SEC | cdkt_sec_phai_tra_co_tuc_goc_va_lai_trai_phieu_1 | nos413 | Phải trả cổ tức, gốc và lãi trái phiếu
+KQKD_SEC | kqkd_sec_doanh_thu_hoat_dong | isa1 | DOANH THU HOẠT ĐỘNG
+KQKD_SEC | kqkd_sec_lai_tu_cac_tai_san_tai_chinh_ghi_nhan_thong_qua_lailo | iss115 | Lãi từ các tài sản tài chính ghi nhận thông qua lãi/lỗ ( FVTPL)
+KQKD_SEC | kqkd_sec_lai_ban_cac_tai_san_tai_chinh_fvtpl | iss116 | Lãi bán các tài sản tài chính FVTPL
+KQKD_SEC | kqkd_sec_chenh_lech_tang_danh_gia_lai_cac_tstc_thong_qua_lailo | iss117 | Chênh lệch tăng đánh giá lại các TSTC thông qua lãi/lỗ
+KQKD_SEC | kqkd_sec_co_tuc_tien_lai_phat_sinh_tu_tai_san_tai_chinh_fvtpl | iss118 | Cổ tức, tiền lãi phát sinh từ tài sản tài chính FVTPL
+KQKD_SEC | kqkd_sec_lai_tu_cac_khoan_dau_tu_nam_giu_den_ngay_dao_han | iss119 | Lãi từ các khoản đầu tư nắm giữ đến ngày đáo hạn
+KQKD_SEC | kqkd_sec_lai_tu_cac_khoan_cho_vay_va_phai_thu | iss120 | Lãi từ các khoản cho vay và phải thu
+KQKD_SEC | kqkd_sec_lai_tu_cac_tai_san_tai_chinh_san_sang_de_ban | iss121 | Lãi từ các tài sản tài chính sẵn sàng để bán
+KQKD_SEC | kqkd_sec_lai_tu_cac_cong_cu_phat_sinh_phong_ngua_rui_ro | iss122 | Lãi từ các công cụ phát sinh phòng ngừa rủi ro
+KQKD_SEC | kqkd_sec_doanh_thu_nghiep_vu_moi_gioi_chung_khoan | iss42 | Doanh thu nghiệp vụ môi giới chứng khoán
+KQKD_SEC | kqkd_sec_doanh_thu_nghiep_vu_bao_lanh_phat_hanh_chung_khoan | iss44 | Doanh thu nghiệp vụ bảo lãnh phát hành chứng khoán
+KQKD_SEC | kqkd_sec_doanh_thu_nghiep_vu_tu_van_dau_tu_chung_khoan | iss46 | Doanh thu nghiệp vụ tư vấn đầu tư chứng khoán
+KQKD_SEC | kqkd_sec_doanh_thu_hoat_dong_uy_thac_dau_gia | iss48 | Doanh thu hoạt động ủy thác, đấu giá (Trước năm 2016)
+KQKD_SEC | kqkd_sec_doanh_thu_luu_ky_chung_khoan | iss47 | Doanh thu lưu ký chứng khoán
+KQKD_SEC | kqkd_sec_doanh_thu_hoat_dong_dau_tu_chung_khoan_gop_von | iss43 | Doanh thu hoạt động đầu tư chứng khoán, góp vốn (Trước năm 2016)
+KQKD_SEC | kqkd_sec_thu_cho_thue_su_dung_tai_san | iss49 | Thu cho thuê sử dụng tài sản (Trước năm 2016)
+KQKD_SEC | kqkd_sec_doanh_thu_hoat_dong_tu_van_tai_chinh | iss123 | Doanh thu hoạt động tư vấn tài chính
+KQKD_SEC | kqkd_sec_doanh_thu_khac | iss50 | Doanh thu khác
+KQKD_SEC | kqkd_sec_cac_khoan_giam_tru_doanh_thu | isa2 | Các khoản giảm trừ doanh thu
+KQKD_SEC | kqkd_sec_doanh_thu_thuan_ve_hoat_dong_kinh_doanh | isa3 | Doanh thu thuần về hoạt động kinh doanh
+KQKD_SEC | kqkd_sec_chi_phi_hoat_dong | isa4 | CHI PHÍ HOẠT ĐỘNG
+KQKD_SEC | kqkd_sec_lo_cac_tai_san_tai_chinh_ghi_nhan_thong_qua_lai_lo | iss124 | Lỗ các tài sản tài chính ghi nhận thông qua lãi lỗ (FVTPL)
+KQKD_SEC | kqkd_sec_lo_ban_cac_tai_san_tai_chinh | iss125 | Lỗ bán các tài sản tài chính
+KQKD_SEC | kqkd_sec_chenh_lech_giam_danh_gia_lai_cac_tstc_thong_qua_lailo | iss126 | Chênh lệch giảm đánh giá lại các TSTC thông qua lãi/lỗ
+KQKD_SEC | kqkd_sec_chi_phi_giao_dich_mua_cac_tai_san_tai_chinh_fvtpl | iss127 | Chi phí giao dịch mua các tài sản tài chính FVTPL
+KQKD_SEC | kqkd_sec_lo_cac_khoan_dau_tu_nam_giu_den_ngay_dao_han | iss128 | Lỗ các khoản đầu tư nắm giữ đến ngày đáo hạn (HTM)
+KQKD_SEC | kqkd_sec_chi_phi_lai_vay_lo_tu_cac_khoan_cho_vay_va_phai_thu | iss129 | Chi phí lãi vay, lỗ từ các khoản cho vay và phải thu (Trước năm 2016)
+KQKD_SEC | kqkd_sec_lo_va_ghi_nhan_chenh_lech_danh_gia_theo_gia_tri_hop_ly_ | iss130 | Lỗ và ghi nhận chênh lệch đánh giá theo giá trị hợp lý tài sản tài chính sẵn sàng để bán (AFS) khi phân loại lại
+KQKD_SEC | kqkd_sec_cp_du_phong_tstc_xu_ly_ton_that_cac_khoan_phai_thu_kho_ | iss168 | CP dự phòng TSTC, xử lý tổn thất các khoản phải thu khó đòi là lỗ suy giảm TSTC và CP đi vay
+KQKD_SEC | kqkd_sec_lo_tu_cac_tai_san_tai_chinh_phai_sinh_phong_ngua_rui_ro | iss131 | Lỗ từ các tài sản tài chính phái sinh phòng ngừa rủi ro
+KQKD_SEC | kqkd_sec_chi_phi_hoat_dong_tu_doanh | iss132 | Chi phí hoạt động tự doanh
+KQKD_SEC | kqkd_sec_chi_phi_nghiep_vu_moi_gioi_chung_khoan | iss133 | Chi phí nghiệp vụ môi giới chứng khoán
+KQKD_SEC | kqkd_sec_chi_phi_nghiep_vu_bao_lanh_dai_ly_phat_hanh_chung_khoan | iss134 | Chi phí nghiệp vụ bảo lãnh, đại lý phát hành chứng khoán
+KQKD_SEC | kqkd_sec_chi_phi_nghiep_vu_tu_van_dau_tu_chung_khoan | iss135 | Chi phí nghiệp vụ tư vấn đầu tư chứng khoán
+KQKD_SEC | kqkd_sec_chi_phi_hoat_dong_dau_gia_uy_thac | iss136 | Chí phí hoạt động đấu giá, ủy thác
+KQKD_SEC | kqkd_sec_chi_phi_nghiep_vu_luu_ky_chung_khoan | iss137 | Chi phí nghiệp vụ lưu ký chứng khoán
+KQKD_SEC | kqkd_sec_chi_phi_hoat_dong_tu_van_tai_chinh | iss138 | Chi phí hoạt động tư vấn tài chính
+KQKD_SEC | kqkd_sec_chi_phi_cac_dich_vu_khac | iss139 | Chi phí các dịch vụ khác
+KQKD_SEC | kqkd_sec_chi_phi_sua_loi_giao_dich_chung_khoan_loi_khac | iss140 | Chi phí sửa lỗi giao dịch chứng khoán, lỗi khác
+KQKD_SEC | kqkd_sec_loi_nhuan_gop | isa5 | LỢI NHUẬN GỘP
+KQKD_SEC | kqkd_sec_doanh_thu_hoat_dong_tai_chinh | iss141 | DOANH THU HOẠT ĐỘNG TÀI CHÍNH
+KQKD_SEC | kqkd_sec_chenh_lech_lai_ty_gia_hoi_doai_da_va_chua_thuc_hien | iss142 | Chênh lệch lãi tỷ giá hối đoái đã và chưa thực hiện
+KQKD_SEC | kqkd_sec_doanh_thu_du_thu_co_tuc_lai_tien_gui_khong_co_dinh_phat | iss143 | Doanh thu, dự thu cổ tức, lãi tiền gửi không cố định phát sinh trong kỳ
+KQKD_SEC | kqkd_sec_lai_ban_thanh_ly_cac_khoan_dau_tu_vao_cong_ty_con_lien_ | iss144 | Lãi bán, thanh lý các khoản đầu tư vào công ty con, liên kết, liên doanh
+KQKD_SEC | kqkd_sec_doanh_thu_khac_ve_dau_tu | iss145 | Doanh thu khác về đầu tư
+KQKD_SEC | kqkd_sec_chi_phi_tai_chinh | iss146 | CHI PHÍ TÀI CHÍNH
+KQKD_SEC | kqkd_sec_chenh_lech_lo_ty_gia_hoi_doai_da_va_chua_thuc_hien | iss147 | Chênh lệch lỗ tỷ giá hối đoái đã và chưa thực hiện
+KQKD_SEC | kqkd_sec_chi_phi_lai_vay | iss148 | Chi phí lãi vay
+KQKD_SEC | kqkd_sec_lo_ban_thanh_ly_cac_khoan_dau_tu_vao_cong_ty_con_lien_k | iss149 | Lỗ bán, thanh lý các khoản đầu tư vào công ty con, liên kết, liên doanh
+KQKD_SEC | kqkd_sec_chi_phi_du_phong_suy_giam_gia_tri_cac_khoan_dau_tu_tai_ | iss150 | Chi phí dự phòng suy giảm giá trị các khoản đầu tư tài chính dài hạn
+KQKD_SEC | kqkd_sec_chi_phi_dau_tu_khac | iss151 | Chi phí đầu tư khác
+KQKD_SEC | kqkd_sec_lailo_tu_cong_ty_lien_doanh_lien_ket | isa102 | Lãi/lỗ từ công ty liên doanh, liên kết
+KQKD_SEC | kqkd_sec_chi_phi_ban_hang | iss152 | CHI PHÍ BÁN HÀNG
+KQKD_SEC | kqkd_sec_chi_phi_quan_ly_cong_ty_chung_khoan | isa10 | CHI PHÍ QUẢN LÝ CÔNG TY CHỨNG KHOÁN
+KQKD_SEC | kqkd_sec_ket_qua_hoat_dong | isa11 | KẾT QUẢ HOẠT ĐỘNG
+KQKD_SEC | kqkd_sec_tong_loi_nhuan_ke_toan_truoc_thue | isa16 | TỔNG LỢI NHUẬN KẾ TOÁN TRƯỚC THUẾ
+KQKD_SEC | kqkd_sec_loi_nhuan_da_thuc_hien | iss153 | Lợi nhuận đã thực hiện
+KQKD_SEC | kqkd_sec_loi_nhuan_chua_thuc_hien | iss154 | Lợi nhuận chưa thực hiện
+KQKD_SEC | kqkd_sec_chi_phi_thue_thu_nhap_doanh_nghiep | isa16 | CHI PHÍ THUẾ THU NHẬP DOANH NGHIỆP
+KQKD_SEC | kqkd_sec_chi_phi_thue_thu_nhap_hien_hanh | isa17 | Chi phí thuế thu nhập hiện hành
+KQKD_SEC | kqkd_sec_chi_phi_thue_thu_nhap_hoan_lai | isa18 | Chi phí thuế thu nhập hoãn lại
+KQKD_SEC | kqkd_sec_loi_nhuan_ke_toan_sau_thue | isa20 | LỢI NHUẬN KẾ TOÁN SAU THUẾ
+KQKD_SEC | kqkd_sec_loi_nhuan_sau_thue_phan_bo_cho_chu_so_huu | isa22 | Lợi nhuận sau thuế phân bổ cho chủ sở hữu
+KQKD_SEC | kqkd_sec_lnst_trich_cac_quy_du_tru_dieu_le_quy_du_phong_tai_chin | iss155 | LNST trích các Quỹ dự trữ điều lệ, Quỹ Dự phòng tài chính và rủi ro nghề nghiệp
+KQKD_SEC | kqkd_sec_loi_nhuan_thuan_phan_bo_cho_loi_ich_cua_co_dong_khong_k | isa21 | Lợi nhuận thuần phân bổ cho lợi ích của cổ đông không kiểm soát
+KQKD_SEC | kqkd_sec_thu_nhap_toan_dien_khac_sau_thue | iss174 | THU NHẬP (LỖ) TOÀN DIỆN KHÁC SAU THUẾ
+KQKD_SEC | kqkd_sec_lai_tu_danh_gia_lai_cac_cac_khoan_dau_tu_giu_den_ngay_d | iss156 | Lãi/(lỗ) từ đánh giá lại các các khoản đầu tư giữ đến ngày đáo hạn
+KQKD_SEC | kqkd_sec_lai_tu_danh_gia_lai_cac_tai_san_tai_chinh_san_sang_de_b | iss157 | Lãi/(lỗ) từ đánh giá lại các tài sản tài chính sẵn sàng để bán
+KQKD_SEC | kqkd_sec_lai_toan_dien_khac_duoc_chia_tu_hoat_dong_dau_tu_vao_co | iss158 | Lãi/(lỗ) toàn diện khác được chia từ hoạt động đầu tư vào công ty con, đầu tư liên kết, liên doanh
+KQKD_SEC | kqkd_sec_lai_tu_danh_gia_lai_cac_cong_cu_tai_chinh_phai_sinh | iss159 | Lãi/(lỗ) từ đánh giá lại các công cụ tài chính phái sinh
+KQKD_SEC | kqkd_sec_lai_chenh_lech_ty_gia_cua_hoat_dong_tai_nuoc_ngoai | iss160 | Lãi/(lỗ) chênh lệch tỷ giá của hoạt động tại nước ngoài
+KQKD_SEC | kqkd_sec_lai_tu_cac_khoan_dau_tu_vao_cong_ty_con_cong_ty_lien_ke | iss161 | Lãi/(lỗ) từ các khoản đầu tư vào công ty con. Công ty liên kết, liên doanh chưa chia
+KQKD_SEC | kqkd_sec_lai_danh_gia_cong_cu_phai_sinh | iss162 | Lãi/(lỗ) đánh giá công cụ phái sinh
+KQKD_SEC | kqkd_sec_lai_danh_gia_lai_tai_san_co_dinh_theo_mo_hinh_gia_tri_h | iss163 | Lãi/(lỗ) đánh giá lại tài sản cố định theo mô hình giá trị hợp lý
+KQKD_SEC | kqkd_sec_tong_thu_nhap_toan_dien | iss164 | Tổng thu nhập toàn diện
+KQKD_SEC | kqkd_sec_thu_nhap_toan_dien_phan_bo_cho_co_dong_khong_nam_quyen_ | iss166 | Thu nhập toàn diện phân bổ cho cổ đông không nắm quyền kiểm soát
+KQKD_SEC | kqkd_sec_thu_nhap_toan_dien_phan_bo_cho_chu_so_huu | iss165 | Thu nhập toàn diện phân bổ cho chủ sở hữu
+KQKD_SEC | kqkd_sec_thu_nhap_thuan_tren_co_phieu_pho_thong | iss167 | THU NHẬP THUẦN TRÊN CỔ PHIẾU PHỔ THÔNG
+KQKD_SEC | kqkd_sec_lai_co_ban_tren_co_phieu | isa23 | Lãi cơ bản trên cổ phiếu (VND)
+KQKD_SEC | kqkd_sec_lai_tren_co_phieu_pha_loang | isa24 | Lãi trên cổ phiếu pha loãng (VND)
+LCTT_SEC | lctt_sec_loi_nhuan_truoc_thue | cfa1 | LỢI NHUẬN TRƯỚC THUẾ
+LCTT_SEC | lctt_sec_dieu_chinh_cho_cac_khoan | cfs165 | Điều chỉnh cho các khoản
+LCTT_SEC | lctt_sec_khau_hao_tai_san_co_dinh | cfa2 | Khấu hao tài sản cố định
+LCTT_SEC | lctt_sec_phan_bo_loi_the_thuong_mai | cfa103 | Phân bổ lợi thế thương mại
+LCTT_SEC | lctt_sec_cac_khoan_du_phong | cfa3 | Các khoản dự phòng
+LCTT_SEC | lctt_sec_lai_lo_chenh_lech_ty_gia_hoi_doai_chua_thuc_hien | cfa4 | Lãi, lỗ chênh lệch tỷ giá hối đoái chưa thực hiện
+LCTT_SEC | lctt_sec_chi_phi_phai_tra_chi_phi_tra_truoc | cfs166 | Chi phí phải trả, chi phí trả trước
+LCTT_SEC | lctt_sec_chi_phi_lai_vay | cfa7 | Chi phí lãi vay
+LCTT_SEC | lctt_sec_lai_lo_hoat_dong_dau_tu | cfa6 | Lãi, lỗ hoạt động đầu tư
+LCTT_SEC | lctt_sec_du_thu_lai_va_co_tuc | cfa8 | Dự thu lãi và cổ tức
+LCTT_SEC | lctt_sec_cac_khoan_dieu_chinh_khac | cfa104 | Các khoản điều chỉnh khác
+LCTT_SEC | lctt_sec_tang_cac_chi_phi_phi_tien_te | cfs167 | Tăng các chi phí phi tiền tệ
+LCTT_SEC | lctt_sec_lo_danh_gia_gia_tri_cac_tai_san_tai_chinh_ghi_nhan_thon | cfs168 | Lỗ đánh giá giá trị các tài sản tài chính ghi nhận thông qua lãi/lỗ FVTPL
+LCTT_SEC | lctt_sec_lo_suy_giam_gia_tri_cac_khoan_dau_tu_nam_giu_den_ngay_d | cfs173 | Lỗ suy giảm giá trị các khoản đầu tư nắm giữ đến ngày đáo hạn (HTM)
+LCTT_SEC | lctt_sec_lo_suy_giam_gia_tri_cac_khoan_cho_vay | cfs174 | Lỗ suy giảm giá trị các khoản cho vay
+LCTT_SEC | lctt_sec_lo_ve_ghi_nhan_chenh_lech_danh_gia_theo_gia_tri_hop_ly_ | cfs175 | Lỗ về ghi nhận chênh lệch đánh giá theo giá trị hợp lý tài sản tài chính sẵn sàng để bán AFS khi phân loại lại
+LCTT_SEC | lctt_sec_suy_giam_gia_tri_cua_cac_tai_san_co_dinh_bdsdt | cfs178 | Suy giảm giá trị của các tài sản cố định, BĐSĐT
+LCTT_SEC | lctt_sec_chi_phi_du_phong_suy_giam_gia_tri_cac_khoan_dau_tu_tai_ | cfs179 | Chi phí dự phòng suy giảm giá trị các khoản đầu tư tài chính dài hạn
+LCTT_SEC | lctt_sec_lo_khac | cfs181 | Lỗ khác
+LCTT_SEC | lctt_sec_lo_danh_gia_gia_tri_cac_cong_no_tai_chinh_ghi_nhan_thon | cfs169 | Lỗ đánh giá giá trị các công nợ tài chính ghi nhận thông qua KQKD (Trước năm 2016)
+LCTT_SEC | lctt_sec_lo_danh_gia_gia_tri_cac_cong_cu_tai_chinh_phai_sinh | cfs170 | Lỗ đánh giá giá trị các công cụ tài chính phái sinh (Trước năm 2016)
+LCTT_SEC | lctt_sec_lo_tu_thanh_ly_cac_tai_san_tai_chinh_san_sang_de_ban | cfs171 | Lỗ từ thanh lý các tài sản tài chính sẵn sàng để bán (Trước năm 2016)
+LCTT_SEC | lctt_sec_suy_giam_gia_tri_cua_cac_tai_san_tai_chinh_san_sang_de_ | cfs172 | Suy giảm giá trị của các tài sản tài chính sẵn sàng để bán (Trước năm 2016)
+LCTT_SEC | lctt_sec_lo_danh_gia_gia_cac_cong_cu_tai_chinh_phat_sinh_cho_muc | cfs176 | Lỗ đánh giá giá các công cụ tài chính phát sinh cho mục đích phòng ngừa rủi ro (Trước năm 2016)
+LCTT_SEC | lctt_sec_lo_tu_thanh_ly_tscd | cfs177 | Lỗ từ thanh lý TSCĐ (Trước năm 2016)
+LCTT_SEC | lctt_sec_lo_tu_thanh_ly_cac_khoan_dau_tu_vao_cong_ty_con_va_cong | cfs180 | Lỗ từ thanh lý các khoản đầu tư vào công ty con và công ty liên doanh, liên kết (Trước năm 2016)
+LCTT_SEC | lctt_sec_giam_cac_doanh_thu_phi_tien_te | cfs182 | Giảm các doanh thu phi tiền tệ
+LCTT_SEC | lctt_sec_lai_danh_gia_gia_tri_cac_tai_san_chinh_ghi_nhan_thong_q | cfs183 | Lãi đánh giá giá trị các tài sản chính ghi nhận thông qua lãi/lỗ FVTPL
+LCTT_SEC | lctt_sec_lai_ve_ghi_nhan_chenh_lech_danh_gia_theo_gia_tri_hop_ly | cfs187 | Lãi về ghi nhận chệnh lệch đánh giá theo giá trị hợp lý tài sản tài chính sẵn sàng để bán AFS khi phân loại lại
+LCTT_SEC | lctt_sec_lai_danh_gia_gia_tri_cac_cong_cu_tai_chinh_phai_sinh_ch | cfs188 | Lãi đánh giá giá trị các công cụ tài chính phái sinh cho mục đích phòng ngừa
+LCTT_SEC | lctt_sec_lai_tu_thanh_ly_cac_khoan_cho_vay_va_phai_thu | cfs189 | Lãi từ thanh lý các khoản cho vay và phải thu
+LCTT_SEC | lctt_sec_hoan_nhap_chi_phi_du_phong | cfs190 | Hoàn nhập chi phí dự phòng
+LCTT_SEC | lctt_sec_lai_tu_thanh_ly_tai_san_co_dinh_bdsdt | cfs191 | Lãi từ thanh lý tài sản cố định, BĐSĐT
+LCTT_SEC | lctt_sec_lai_tu_thanh_ly_cac_khoan_dau_tu_vao_cong_ty_con_va_con | cfs192 | Lãi từ thanh lý các khoản đầu tư vào công ty con và công ty liên doanh, liên kết
+LCTT_SEC | lctt_sec_lai_khac | cfs193 | Lãi khác
+LCTT_SEC | lctt_sec_lai_danh_gia_gia_tri_cac_cong_no_tai_chinh_thong_qua_ke | cfs184 | Lãi đánh giá giá trị các công nợ tài chính thông qua kết quả kinh doanh (Trước năm 2016)
+LCTT_SEC | lctt_sec_lai_tu_thanh_ly_cac_tai_san_tai_chinh_san_sang_de_ban | cfs185 | Lãi từ thanh lý các tài sản tài chính sẵn sàng để bán (Trước năm 2016)
+LCTT_SEC | lctt_sec_hoan_nhap_suy_giam_gia_tri_cua_cac_tai_san_tai_chinh_sa | cfs186 | Hoàn nhập suy giảm giá trị của các tài sản tài chính sẵn sàng để bán (Trước năm 2016)
+LCTT_SEC | lctt_sec_loi_nhuan_tu_hoat_dong_kinh_doanh_truoc_thay_doi_von_lu | cfa9 | Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động
+LCTT_SEC | lctt_sec_tang_tai_san_tai_chinh_ghi_nhan_thong_qua_lai_lo | cfs195 | Tăng (giảm) tài sản tài chính ghi nhận thông qua lãi/ lỗ (FVTPL)
+LCTT_SEC | lctt_sec_tang_cac_khoan_dau_tu_giu_den_ngay_dao_han | cfs196 | Tăng (giảm) các khoản đầu tư giữ đến ngày đáo hạn (HTM)
+LCTT_SEC | lctt_sec_tang_cac_khoan_cho_vay | cfs197 | Tăng(giảm) các khoản cho vay
+LCTT_SEC | lctt_sec_tang_tai_san_tai_chinh_san_sang_de_ban_afs | cfs198 | Tăng (giảm) tài sản tài chính sẵn sàng để bán AFS
+LCTT_SEC | lctt_sec_tang_giam_phai_thu_ban_cac_tai_san_tai_chinh | cfs206 | (-) Tăng, (+) giảm phải thu bán các tài sản tài chính
+LCTT_SEC | lctt_sec_tang_giam_phai_thu_va_du_thu_co_tuc_tien_lai_cac_tai_sa | cfs207 | (-) Tăng, (+) giảm phải thu và dự thu cổ tức, tiền lãi các tài sản tài chính
+LCTT_SEC | lctt_sec_tang_giam_cac_khoan_phai_thu_cac_dich_vu_ctck_cung_cap | cfs208 | (-) Tăng, (+) giảm các khoản phải thu các dịch vụ CTCK cung cấp
+LCTT_SEC | lctt_sec_tang_giam_cac_khoan_phai_thu_ve_loi_giao_dich_cac_tstc | cfs209 | (-) Tăng, (+) giảm các khoản phải thu về lỗi giao dịch các TSTC
+LCTT_SEC | lctt_sec_tang_giam_cac_khoan_phai_thu_khac | cfa10 | (-) Tăng, (+) giảm các khoản phải thu khác
+LCTT_SEC | lctt_sec_tanggiam_cac_tai_san_khac | cfs199 | Tăng/giảm các tài sản khác
+LCTT_SEC | lctt_sec_tang_giam_chi_phi_phai_tra | cfs223 | (-) Tăng, (+) giảm chi phí phải trả (không bao gồm chi phí lãi vay)
+LCTT_SEC | lctt_sec_tanggiam_chi_phi_tra_truoc | cfa13 | Tăng/giảm chi phí trả trước
+LCTT_SEC | lctt_sec_thue_tndn_ctck_da_nop | cfa15 | Thuế TNDN CTCK đã nộp
+LCTT_SEC | lctt_sec_tien_lai_vay_da_tra | cfa14 | Tiền lãi vay đã trả
+LCTT_SEC | lctt_sec_tang_giam_phai_tra_cho_nguoi_ban | cfs210 | (+) Tăng, (-) giảm phải trả cho người bán
+LCTT_SEC | lctt_sec_tang_giam_cac_khoan_trich_nop_phuc_loi_nhan_vien | cfs212 | (+) Tăng, (-) giảm các khoản trích nộp phúc lợi nhân viên
+LCTT_SEC | lctt_sec_tang_giam_thue_va_cac_khoan_phai_nop_nha_nuoc | cfs213 | (+) Tăng, (-) giảm thuế và các khoản phải nộp Nhà nước
+LCTT_SEC | lctt_sec_tang_giam_phai_tra_nguoi_lao_dong | cfs214 | (+) Tăng, (-) giảm phải trả người lao động
+LCTT_SEC | lctt_sec_tang_giam_phai_tra_ve_loi_giao_dich_cac_tai_san_tai_chi | cfs215 | (+) Tăng, (-) giảm phải trả về lỗi giao dịch các tài sản tài chính
+LCTT_SEC | lctt_sec_tang_giam_cac_khoan_phai_tra_phai_nop_khac | cfa12 | (+) Tăng, (-) giảm các khoản phải trả, phải nộp khác
+LCTT_SEC | lctt_sec_tien_thu_khac_tu_hoat_dong_kinh_doanh | cfa16 | Tiền thu khác từ hoạt động kinh doanh
+LCTT_SEC | lctt_sec_tien_lai_da_thu | cfs216 | Tiền lãi đã thu
+LCTT_SEC | lctt_sec_tien_thu_khac | cfs217 | Tiền thu khác
+LCTT_SEC | lctt_sec_tien_chi_khac_cho_hoat_dong_kinh_doanh | cfa17 | Tiền chi khác cho hoạt động kinh doanh
+LCTT_SEC | lctt_sec_cac_khoan_chi_khac | cfs220 | Các khoản chi khác
+LCTT_SEC | lctt_sec_thay_doi_tai_san_va_no_phai_tra_hoat_dong | cfs194 | Thay đổi tài sản và nợ phải trả hoạt động (Trước năm 2016)
+LCTT_SEC | lctt_sec_tanggiam_cac_khoan_phai_thu | cfs200 | Tăng/giảm các khoản phải thu (Trước năm 2016)
+LCTT_SEC | lctt_sec_tanggiam_vay_va_no_thue_tai_san_tai_chinh | cfs201 | Tăng/giảm vay và nợ thuê tài sản tài chính (Trước năm 2016)
+LCTT_SEC | lctt_sec_tanggiam_vay_tai_san_tai_chinh | cfs202 | Tăng/giảm vay tài sản tài chính (Trước năm 2016)
+LCTT_SEC | lctt_sec_tanggiam_trai_phieu_chuyen_doicau_phan_no | cfs203 | Tăng/giảm Trái phiếu chuyển đổi-Cấu phần nợ (Trước năm 2016)
+LCTT_SEC | lctt_sec_tanggiam_trai_phieu_phat_hanh | cfs204 | Tăng/giảm Trái phiếu phát hành (Trước năm 2016)
+LCTT_SEC | lctt_sec_tanggiam_vay_quy_ho_tro_thanh_toan | cfs205 | Tăng/giảm vay Quỹ Hỗ trợ thanh toán (Trước năm 2016)
+LCTT_SEC | lctt_sec_tang_giam_phai_tra_to_chuc_phat_hanh_chung_khoan | cfs211 | (+) Tăng, (-) giảm phải trả Tổ chức phát hành chứng khoán (Trước năm 2016)
+LCTT_SEC | lctt_sec_tanggiam_hang_ton_kho | cfa11 | Tăng/giảm hàng tồn kho (Trước năm 2016)
+LCTT_SEC | lctt_sec_tanggiam_chung_khoan_kinh_doanh | cfb50 | Tăng/giảm chứng khoán kinh doanh (Trước năm 2016)
+LCTT_SEC | lctt_sec_luu_chuyen_thuan_tu_hoat_dong_kinh_doanh | cfa18 | Lưu chuyển thuần từ hoạt động kinh doanh
+LCTT_SEC | lctt_sec_tien_chi_de_mua_sam_xay_dung_tscd_bdsdt_va_cac_tai_san_ | cfa19 | Tiền chi để mua sắm, xây dựng TSCĐ, BĐSĐT và các tài sản dài hạn khác
+LCTT_SEC | lctt_sec_tien_thu_tu_thanh_ly_nhuong_ban_tscd_bdsdt_va_cac_tai_s | cfa20 | Tiền thu từ thanh lý, nhượng bán TSCĐ, BĐSĐT và các tài sản dài hạn khác
+LCTT_SEC | lctt_sec_tien_chi_dau_tu_gop_von_vao_cong_ty_con_cong_ty_lien_do | cfa23 | Tiền chi đầu tư góp vốn vào công ty con, công ty liên doanh, liên kết và đầu tư khác
+LCTT_SEC | lctt_sec_tien_thu_hoi_cac_khoan_dau_tu_gop_von_vao_cong_ty_con_c | cfa24 | Tiền thu hồi các khoản đầu tư góp vốn vào công ty con, công ty liên doanh, liên kết và đầu tư khác
+LCTT_SEC | lctt_sec_tien_thu_ve_co_tuc_loi_nhuan_duoc_chia_tu_cac_khoan_dau | cfa25 | Tiền thu về cổ tức lợi nhuận được chia từ các khoản đầu tư tài chính dài hạn
+LCTT_SEC | lctt_sec_tien_chi_cho_vay_mua_cac_cong_cu_no_cua_don_vi_khac | cfa21 | Tiền chi cho vay, mua các công cụ nợ của đơn vị khác (Trước năm 2016)
+LCTT_SEC | lctt_sec_tien_thu_hoi_cho_vay_ban_lai_cac_cong_cu_no_cua_don_vi_ | cfa22 | Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác (Trước năm 2016)
+LCTT_SEC | lctt_sec_luu_chuyen_tien_thuan_tu_hoat_dong_dau_tu | cfa26 | Lưu chuyển tiền thuần từ hoạt động đầu tư
+LCTT_SEC | lctt_sec_tien_thu_tu_phat_hanh_co_phieu_nhan_von_gop_cua_chu_so_ | cfa27 | Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu
+LCTT_SEC | lctt_sec_tien_chi_tra_von_gop_cho_cac_chu_so_huu_mua_lai_co_phie | cfa28 | Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành
+LCTT_SEC | lctt_sec_tien_vay_goc | cfa29 | Tiền vay gốc
+LCTT_SEC | lctt_sec_tien_vay_quy_ho_tro_thanh_toan | cfs113 | Tiền vay Quỹ Hỗ trợ thanh toán
+LCTT_SEC | lctt_sec_tien_vay_khac | cfs114 | Tiền vay khác
+LCTT_SEC | lctt_sec_tien_chi_tra_no_goc_vay | cfa30 | Tiền chi trả nợ gốc vay
+LCTT_SEC | lctt_sec_tien_chi_tra_goc_vay_quy_ho_tro_thanh_toan | cfs115 | Tiền chi trả gốc vay Quỹ Hỗ trợ thanh toán
+LCTT_SEC | lctt_sec_tien_chi_tra_no_goc_vay_tai_san_tai_chinh | cfs116 | Tiền chi trả nợ gốc vay tài sản tài chính
+LCTT_SEC | lctt_sec_tien_chi_tra_goc_no_vay_khac | cfs117 | Tiền chi trả gốc nợ vay khác
+LCTT_SEC | lctt_sec_tien_chi_tra_no_thue_tai_chinh | cfa31 | Tiền chi trả nợ thuê tài chính
+LCTT_SEC | lctt_sec_co_tuc_loi_nhuan_da_tra_cho_chu_so_huu | cfa32 | Cổ tức, lợi nhuận đã trả cho chủ sở hữu
+LCTT_SEC | lctt_sec_luu_chuyen_thuan_tu_hoat_dong_tai_chinh | cfa34 | Lưu chuyển thuần từ hoạt động tài chính
+LCTT_SEC | lctt_sec_luu_chuyen_tien_thuan_trong_ky | cfa35 | LƯU CHUYỂN TIỀN THUẦN TRONG KỲ
+LCTT_SEC | lctt_sec_tien_va_cac_khoan_tuong_duong_tien_dau_ky | cfa36 | TIỀN VÀ CÁC KHOẢN TƯƠNG ĐƯƠNG TIỀN ĐẦU KỲ
+LCTT_SEC | lctt_sec_tien_mat_tien_gui_ngan_hang_dau_ky | cfs118 | Tiền mặt, tiền gửi ngân hàng đầu kỳ
+LCTT_SEC | lctt_sec_tien_gui_ngan_hang_cho_hoat_dong_ctck | cfs119 | Tiền gửi ngân hàng cho hoạt động CTCK
+LCTT_SEC | lctt_sec_cac_khoan_tuong_duong_tien | cfs120 | Các khoản tương đương tiền
+LCTT_SEC | lctt_sec_anh_huong_cua_thay_doi_ty_gia_hoi_doai_quy_doi_ngoai_te | cfa37 | Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ
+LCTT_SEC | lctt_sec_tien_va_cac_khoan_tuong_duong_tien_cuoi_ky | cfa38 | TIỀN VÀ CÁC KHOẢN TƯƠNG ĐƯƠNG TIỀN CUỐI KỲ
+LCTT_SEC | lctt_sec_tien_mat_tien_gui_ngan_hang_ky | cfs121 | Tiền mặt, tiền gửi ngân hàng kỳ
+LCTT_SEC | lctt_sec_tien_gui_ngan_hang_cho_hoat_dong_ctck_1 | cfs122 | Tiền gửi ngân hàng cho hoạt động CTCK
+LCTT_SEC | lctt_sec_cac_khoan_tuong_duong_tien_1 | cfs123 | Các khoản tương đương tiền
+LCTT_SEC | lctt_sec_anh_huong_cua_thay_doi_ty_gia_hoi_doai_quy_doi_ngoai_te_1 | cfs124 | Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ
+LCTT_SEC | lctt_sec_tien_thu_ban_chung_khoan_moi_gioi_cho_khach_hang | cfs125 | Tiền thu bán chứng khoán môi giới cho khách hàng
+LCTT_SEC | lctt_sec_tien_chi_mua_chung_khoan_moi_gioi_cho_khach_hang | cfs126 | Tiền chi mua chứng khoán môi giới cho khách hàng
+LCTT_SEC | lctt_sec_tien_thu_ban_chung_khoan_uy_thac_cua_khach_hang | cfs127 | Tiền thu bán chứng khoán ủy thác của khách hàng
+LCTT_SEC | lctt_sec_tien_chi_ban_chung_khoan_uy_thac_cua_khach_hang | cfs128 | Tiền chi bán chứng khoán ủy thác của khách hàng
+LCTT_SEC | lctt_sec_thu_tien_tu_tai_khoan_vang_lai_cua_khach_hang | cfs129 | Thu tiền từ tài khoản vãng lai của khách hàng (Trước năm 2016)
+LCTT_SEC | lctt_sec_chi_tien_tu_tai_khoan_vang_lai_cua_khach_hang | cfs130 | Chi tiền từ tài khoản vãng lai của khách hàng (Trước năm 2016)
+LCTT_SEC | lctt_sec_thu_vay_quy_ho_tro_thanh_toan | cfs131 | Thu vay Quỹ Hỗ trợ thanh toán
+LCTT_SEC | lctt_sec_chi_tra_vay_quy_ho_tro_thanh_toan | cfs132 | Chi trả vay Quỹ Hỗ trợ thanh toán
+LCTT_SEC | lctt_sec_nhan_tien_gui_de_thanh_toan_giao_dich_chung_khoan_cua_k | cfs133 | Nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng
+LCTT_SEC | lctt_sec_chi_tra_thanh_toan_giao_dich_chung_khoan_cua_khach_hang | cfs224 | Chi trả thanh toán giao dịch chứng khoán của khách hàng
+LCTT_SEC | lctt_sec_nhan_tien_gui_cua_nha_dau_tu_cho_hoat_dong_uy_thac_dau_ | cfs134 | Nhận tiền gửi của Nhà đầu tư cho hoạt động ủy thác đầu tư của khách hàng
+LCTT_SEC | lctt_sec_chi_tra_cho_hoat_dong_uy_thac_dau_tu_cua_khach_hang | cfs225 | Chi trả cho hoạt động ủy thác đầu tư của khách hàng
+LCTT_SEC | lctt_sec_chi_tra_phi_luu_ky_chung_khoan_cua_khach_hang | cfs135 | Chi trả phí lưu ký chứng khoán của khách hàng
+LCTT_SEC | lctt_sec_thu_loi_giao_dich_chung_khoan | cfs136 | Thu lỗi giao dịch chứng khoán
+LCTT_SEC | lctt_sec_chi_loi_giao_dich_chung_khoan | cfs137 | Chi lỗi giao dịch chứng khoán
+LCTT_SEC | lctt_sec_tien_thu_cua_to_chuc_phat_hanh_chung_khoan | cfs138 | Tiền thu của Tổ chức phát hành chứng khoán
+LCTT_SEC | lctt_sec_tien_chi_tra_to_chuc_phat_hanh_chung_khoan | cfs139 | Tiền chi trả Tổ chức phát hành chứng khoán
+LCTT_SEC | lctt_sec_luu_chuyen_tien_hoat_dong_moi_gioi_uy_thac_cua_khach_ha | cfs140 | Lưu chuyển tiền hoạt động môi giới, ủy thác của khách hàng
+LCTT_SEC | lctt_sec_tien_va_cac_khoan_tuong_duong_tien_dau_ky_cua_khach_han | cfs141 | TIỀN VÀ CÁC KHOẢN TƯƠNG ĐƯƠNG TIỀN ĐẦU KỲ CỦA KHÁCH HÀNG
+LCTT_SEC | lctt_sec_tien_gui_ngan_hang_dau_ky | cfs142 | Tiền gửi ngân hàng đầu kỳ
+LCTT_SEC | lctt_sec_tien_gui_cua_ndt_ve_gdck_theo_phuong_thuc_ctck_quan_ly | cfs143 | Tiền gửi của NĐT về GDCK theo phương thức CTCK quản lý
+LCTT_SEC | lctt_sec_trong_do_co_ky_han | cfs144 | Trong đó: có kỳ hạn
+LCTT_SEC | lctt_sec_tien_gui_tong_hop_gdck_cho_khach_hang | cfs145 | Tiền gửi tổng hợp GDCK cho khách hàng
+LCTT_SEC | lctt_sec_tien_gui_bu_tru_va_thanh_toan_gdck | cfs146 | Tiền gửi bù trừ và thanh toán GDCK
+LCTT_SEC | lctt_sec_tien_gui_cua_to_chuc_phat_hanh | cfs147 | Tiền gửi của tổ chức phát hành
+LCTT_SEC | lctt_sec_trong_do_co_ky_han_1 | cfs148 | Trong đó: có kỳ hạn
+LCTT_SEC | lctt_sec_tien_gui_cua_ndt_ve_gdck_theo_phuong_thuc_nhtm_quan_ly | cfs149 | Tiền gửi của NĐT về GDCK theo phương thức NHTM quản lý (Trước năm 2016)
+LCTT_SEC | lctt_sec_trong_do_co_ky_han_2 | cfs150 | Trong đó: có kỳ hạn (Trước năm 2016)
+LCTT_SEC | lctt_sec_cac_khoan_tuong_duong_tien_2 | cfs151 | Các khoản tương đương tiền
+LCTT_SEC | lctt_sec_anh_huong_cua_thay_doi_ty_gia_hoi_doai_quy_doi_ngoai_te_2 | cfs152 | Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ
+LCTT_SEC | lctt_sec_tien_va_cac_khoan_tuong_duong_tien_cuoi_ky_cua_khach_ha | cfs153 | TIỀN VÀ CÁC KHOẢN TƯƠNG ĐƯƠNG TIỀN CUỐI KỲ CỦA KHÁCH HÀNG
+LCTT_SEC | lctt_sec_tien_gui_ngan_hang_cuoi_ky | cfs154 | Tiền gửi ngân hàng cuối kỳ
+LCTT_SEC | lctt_sec_tien_gui_cua_ndt_ve_gdck_theo_phuong_thuc_ctck_quan_ly_1 | cfs155 | Tiền gửi của NĐT về GDCK theo phương thức CTCK quản lý
+LCTT_SEC | lctt_sec_trong_do_co_ky_han_3 | cfs156 | Trong đó: có kỳ hạn
+LCTT_SEC | lctt_sec_tien_gui_tong_hop_gdck_cho_khach_hang_1 | cfs159 | Tiền gửi tổng hợp GDCK cho khách hàng
+LCTT_SEC | lctt_sec_tien_gui_bu_tru_va_thanh_toan_gdck_1 | cfs160 | Tiền gửi bù trừ và thanh toán GDCK
+LCTT_SEC | lctt_sec_tien_gui_cua_to_chuc_phat_hanh_1 | cfs161 | Tiền gửi của tổ chức phát hành
+LCTT_SEC | lctt_sec_trong_do_co_ky_han_4 | cfs162 | Trong đó: có kỳ hạn
+LCTT_SEC | lctt_sec_tien_gui_cua_ndt_ve_gdck_theo_phuong_thuc_nhtm_quan_ly_1 | cfs157 | Tiền gửi của NĐT về GDCK theo phương thức NHTM quản lý (Trước năm 2016)
+LCTT_SEC | lctt_sec_trong_do_co_ky_han_5 | cfs158 | Trong đó: có kỳ hạn (Trước năm 2016)
+LCTT_SEC | lctt_sec_cac_khoan_tuong_duong_tien_3 | cfs163 | Các khoản tương đương tiền
+LCTT_SEC | lctt_sec_anh_huong_cua_thay_doi_ty_gia_hoi_doai_quy_doi_ngoai_te_3 | cfs164 | Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ
