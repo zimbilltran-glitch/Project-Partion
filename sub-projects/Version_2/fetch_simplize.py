@@ -5,7 +5,7 @@ headers = {"User-Agent": "Mozilla/5.0"}
 def fetch_simplize_schema(ticker, output_file):
     # Simplize API endpoint for full financial statements
     url = f"https://api.simplize.vn/api/company/fi/statement/{ticker}?statementDate=2024-12-31&period=Y"
-    r = requests.get(url, headers=headers)
+    r = requests.get(url, headers=headers, timeout=20)
     if r.status_code == 200:
         data = r.json()
         with open(output_file, "w", encoding="utf-8") as f:

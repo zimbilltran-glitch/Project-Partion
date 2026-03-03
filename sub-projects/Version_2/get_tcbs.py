@@ -16,7 +16,7 @@ def get_tcbs(ticker):
     
     res = {}
     for name, url in urls.items():
-        r = requests.get(url, headers=headers)
+        r = requests.get(url, headers=headers, timeout=20)
         if r.status_code == 200:
             res[name] = r.json()
         else:

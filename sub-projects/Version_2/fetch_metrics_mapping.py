@@ -15,7 +15,7 @@ headers = {
 }
 
 for ticker, url in urls.items():
-    r = requests.get(url, headers=headers)
+    r = requests.get(url, headers=headers, timeout=20)
     if r.status_code == 200:
         with open(f".tmp/{ticker}_metrics.json", "w", encoding="utf-8") as f:
             json.dump(r.json(), f, ensure_ascii=False, indent=2)

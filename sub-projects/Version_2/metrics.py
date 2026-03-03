@@ -299,15 +299,74 @@ def calc_bank_metrics(periods, cdkt, kqkd, lctt, get_row, clean_num, add_row):
     add_row("bank_4_3", "Chi phí dự phòng rủi ro tín dụng", "tỷ đồng", 1, lambda p: clean_num(cp_dp.get(p)))
     add_row("bank_4_4", "Tổng lợi nhuận trước thuế", "tỷ đồng", 1, lambda p: clean_num(lntt.get(p)))
     add_row("bank_4_5", "Lợi nhuận Cổ đông Công ty mẹ", "tỷ đồng", 1, lambda p: clean_num(ln_rong.get(p)))
-    
+
     def calc_nim_approx(p):
-        lai = clean_num(nii.get(p)) # Changed dtt to nii
+        lai = clean_num(nii.get(p))
         ts = clean_num(tong_ts.get(p))
         if lai and ts and ts != 0:
             return (lai / ts) * 100 * 4 # Annualized
         return None
-        
+
     add_row("bank_4_6", "Biên lãi ròng (NIM) Ước tính", "%", 1, calc_nim_approx)
+
+    def calc_casa(p):
+        dep = clean_num(tien_gui_kh.get(p))
+        # Need to find demand deposits (CASA components)
+        # Try a few common field IDs for demand deposits
+        demand = get_row(cdkt, "cdkt_bank_tien_gui_khong_ky_han")
+        if all(clean_num(v) is None for v in demand.values):
+             demand = get_row(cdkt, "cdkt_bank_tien_gui_thanh_toan")
+             
+        d_val = clean_num(demand.get(p))
+        if d_val and dep and dep != 0:
+            return (d_val / dep) * 100
+        return None
+
+    add_row("bank_4_7", "Tỷ lệ CASA", "%", 1, calc_casa)
+
+    def calc_cof_approx(p):
+        # Chi phí trả lãi / (Tiền gửi + GTCG)
+        cp_lai = get_row(kqkd, "kqkd_bank_chi_phi_lai_va_cac_chi_phi_tuong_tu")
+        huy_dong = (clean_num(tien_gui_kh.get(p)) or 0) + (clean_num(gtcg.get(p)) or 0)
+        v = clean_num(cp_lai.get(p))
+        if v and huy_dong and huy_dong != 0:
+            return (abs(v) / huy_dong) * 100 * 4 # Annualized
+        return None
+
+    add_row("bank_4_8", "Chi phí vốn (COF) Ước tính", "%", 1, calc_cof_approx)
+
+    def calc_yoea_approx(p):
+        # Thu nhập lãi / Tổng tài sản sinh lời (TS - Tiền mặt - TSCĐ)
+        tn_lai = get_row(kqkd, "kqkd_bank_thu_nhap_lai_va_cac_thu_nhap_tuong_tu")
+        ts_sl = (clean_num(tong_ts.get(p)) or 0) - (clean_num(tien.get(p)) or 0) - (clean_num(tscd.get(p)) or 0)
+        v = clean_num(tn_lai.get(p))
+        if v and ts_sl and ts_sl != 0:
+            return (v / ts_sl) * 100 * 4 # Annualized
+        return None
+
+    add_row("bank_4_9", "Lợi suất TS (YOEA) Ước tính", "%", 1, calc_yoea_approx)
+
+    def calc_npl(p):
+        cv = clean_num(cho_vay.get(p))
+        if not cv or cv == 0: return None
+        n3 = clean_num(get_row(cdkt, "cdkt_bank_no_duoi_tieu_chuan").get(p)) or 0
+        n4 = clean_num(get_row(cdkt, "cdkt_bank_no_nghi_ngo").get(p)) or 0
+        n5 = clean_num(get_row(cdkt, "cdkt_bank_no_co_kha_nang_mat_von").get(p)) or 0
+        if n3 or n4 or n5:
+            return ((n3 + n4 + n5) / cv) * 100
+        return 0.0
+
+    add_row("bank_4_10", "Tỷ lệ nợ xấu (%)", "%", 1, calc_npl)
+
+    def calc_cir(p):
+        t_tn = clean_num(toi.get(p))
+        if not t_tn or t_tn == 0: return None
+        cp_hd = clean_num(get_row(kqkd, "kqkd_bank_chi_phi_hoat_dong").get(p))
+        if cp_hd:
+            return (abs(cp_hd) / t_tn) * 100
+        return None
+
+    add_row("bank_4_11", "Tỷ lệ CIR (%)", "%", 1, calc_cir)
 
 def calc_sec_metrics(periods, cdkt, kqkd, lctt, get_row, clean_num, add_row):
     """
