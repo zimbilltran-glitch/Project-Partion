@@ -45,10 +45,27 @@
   - `TrendLineChart.jsx`: Đường xu hướng (VD: Biên LN, Tăng trưởng, NPL).
   - `StackedAreaChart.jsx`: Cơ cấu (VD: Cơ cấu Tài sản, Cơ cấu Nguồn Vốn).
   - `DualAxisChart.jsx`: Mix Cột & Đường (VD: VCSH & ROE).
-- **P2.3 Dữ liệu & Đề mục cụ thể (Tham chiếu file Excel)**:
-  - **Phi tài chính**: DT/LN, Biên LN, Cơ cấu CĐKT, Tăng trưởng EPS.
-  - **Ngân hàng**: Lãi thuần (NII)/NIM, Tín dụng/Huy động, Tỷ lệ nợ xấu (NPL & LLCR), CIR.
-  - **Chứng khoán**: Cơ cấu tài sản tài chính (FVTPL/AFS/HTM), Dư nợ Margin, Lãi tự doanh/Môi giới.
+- **P2.3 Danh mục Biểu đồ chi tiết (Trích xuất từ Excel)**:
+  - 🏭 **Phi tài chính (Công ty thường)**:
+    - *KQKD*: DT Thuần & Lãi ròng (Cột) vs Biên LN gộp & Biên lãi ròng (Đường).
+    - *Tăng trưởng*: Tăng trưởng DTT (%) vs Tăng trưởng Lãi ròng (%).
+    - *Cơ cấu Lợi nhuận*: LN cốt lõi, LN tài chính, LN công ty LK, LN khác.
+    - *Cơ cấu CĐKT*: Cơ cấu Tài sản (Tiền, Phải thu, HTK, TSCĐ, Phân bổ dở dang) & Cơ cấu Nguồn vốn (Vay ngắn/dài, Nợ chiếm dụng, VCSH).
+    - *Dòng tiền*: LCTT từ Kinh doanh, Đầu tư, Tài chính & Lưu chuyển tiền thuần.
+    - *Hiệu suất & Đầu tư*: ROE, ROA, EPS* & Tăng trưởng EPS*, Doanh thu chưa thực hiện.
+  - 🏦 **Ngân hàng (Bank)**:
+    - *Tăng trưởng*: Tổng thu nhập & Lãi ròng (Cột) vs Biên lãi ròng NIM (Đường).
+    - *Cơ cấu Thu nhập*: TN lãi thuần, Lãi dịch vụ, Lãi ngoại hối, Lãi chứng khoán...
+    - *Tín dụng & Huy động*: Quy mô Tín dụng & Huy động (Cột) vs Tốc độ tăng trưởng - g (Đường).
+    - *Hiệu quả hoạt động*: Tỷ lệ CASA, COF, NIM, YOEA (Đường), CIR (Chi phí hoạt động/Tổng thu nhập).
+    - *Chất lượng Tài sản (Nợ xấu)*: Nợ N3/N4/N5 (Cột) vs Tỷ lệ nợ xấu NPL (Đường). Nợ N2 & Tỷ lệ dự phòng so với Nợ xấu.
+    - *Bộ đệm rủi ro*: Dự phòng rủi ro & Nợ xấu (Quy mô) vs Tỷ lệ bao phủ nợ xấu LLCR (%).
+  - 📈 **Chứng khoán (Sec)**:
+    - *KQKD*: Doanh thu & Lãi ròng vs Biên lãi gộp/ròng. Tăng trưởng DT & LN.
+    - *Cơ cấu Doanh thu*: Môi giới, Cho vay (Margin), Tự doanh (FVTPL, HTM, AFS), Tư vấn DN.
+    - *Cơ cấu Tài sản Tài chính*: Quy mô Tiền & HTM, FVTPL, AFS, Cho vay Margin.
+    - *Cơ cấu Nguồn vốn*: Nợ vay, Nợ chiếm dụng, Vốn góp, LNST chưa phân phối.
+    - *Chỉ số & Thanh khoản*: ROA, ROE, EPS, Tiền gửi của NĐT.
 
 ---
 

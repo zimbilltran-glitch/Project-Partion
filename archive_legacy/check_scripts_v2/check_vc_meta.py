@@ -1,6 +1,6 @@
 import requests
 url = "https://iq.vietcap.com.vn/api/iq-insight-service/v1/company/MBB/financial-statement?section=BALANCE_SHEET"
-r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
+r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=20)
 data = r.json()
 print("Top-level keys:", data.keys())
 
@@ -13,7 +13,7 @@ urls = [
 ]
 for u in urls:
     try:
-        rr = requests.get(u, headers={"User-Agent": "Mozilla/5.0"})
+        rr = requests.get(u, headers={"User-Agent": "Mozilla/5.0"}, timeout=20)
         print(f"{u} => {rr.status_code}")
     except:
         pass

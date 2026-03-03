@@ -1,9 +1,11 @@
 import { useEffect, useState, useMemo, Suspense, lazy } from 'react'
 import { supabase } from './supabaseClient'
 import './App.css'
+import './styles/charts.css'
 
 // V3: 360 Overview tab (lazy-loaded to keep bundle lean)
 const OverviewTab = lazy(() => import('./components/OverviewTab'))
+const AnalysisTab = lazy(() => import('./components/AnalysisTab'))
 
 // ─── V2 Data Source ────────────────────────────────────────────────────────
 // Data synced from Version 2 Parquet pipeline (Vietcap API → Parquet → Supabase).
@@ -31,12 +33,52 @@ const REPORT_TABS = [
   { id: 'KQKD', label: 'Kết quả kinh doanh', table: 'income_statement_wide' },
   { id: 'LCTT', label: 'Lưu chuyển tiền tệ', table: 'cash_flow_wide' },
   { id: 'CSTC', label: 'Chỉ số tài chính', table: 'financial_ratios_wide' },
+  { id: 'ANALYSIS_CHARTS', label: '📊 Biểu đồ phân tích', table: null },
 ]
 
 const PERIOD_FILTERS = [
   { id: 'year', label: 'Năm' },
   { id: 'quarter', label: 'Quý' },
 ]
+
+// ─── CSTC Section Headers ──────────────────────────────────────────
+// Group headers from metrics.py that are NOT synced to Supabase
+// because they have value=NULL for all periods.
+// Maps item_id prefix → Vietnamese section title.
+const CSTC_GROUP_HEADERS = {
+  // Normal sector (g1..g6)
+  'g1': '1) Cấu Trúc Tài Sản',
+  'g2': '2) Cấu Trúc Nguồn Vốn',
+  'g3': '3) Khoản Khách hàng trả trước',
+  'g4': '4) Lưu chuyển tiền tệ',
+  'g5': '5) Hiệu quả kinh doanh',
+  'g6': '6) Cấu trúc Lợi nhuận & Chi phí',
+  // Bank sector (bank_1..bank_4)
+  'bank_1': '1) Cấu Trúc Tài Sản Ngân Hàng',
+  'bank_2': '2) Nguồn Vốn Huy Động',
+  'bank_3': '3) Lưu chuyển tiền tệ',
+  'bank_4': '4) Hiệu quả hoạt động cốt lõi',
+  // Securities sector (sec_1..sec_4)
+  'sec_1': '1) Cấu Trúc Tài Sản CTCK',
+  'sec_2': '2) Nguồn Vốn CTCK',
+  'sec_3': '3) Lưu chuyển tiền tệ',
+  'sec_4': '4) Hiệu quả kinh doanh CTCK',
+  // Common sections (all sectors)
+  'g7': '7) Tăng trưởng Doanh thu & Lãi ròng',
+  'g8': '8) Hiệu quả đầu tư & Cổ phiếu',
+}
+
+/** Extract group prefix from CSTC item_id: bank_1_2 → bank_1, g5_3 → g5 */
+function getCstcGroup(itemId) {
+  if (!itemId) return null
+  const bankMatch = itemId.match(/^(bank_\d+)/)
+  if (bankMatch) return bankMatch[1]
+  const secMatch = itemId.match(/^(sec_\d+)/)
+  if (secMatch) return secMatch[1]
+  const gMatch = itemId.match(/^(g\d+)/)
+  if (gMatch) return gMatch[1]
+  return null
+}
 
 // ─── Helpers ──────────────────────────────────────────────────────────────
 
@@ -150,7 +192,7 @@ export default function App() {
     async function fetchData() {
       setLoading(true)
 
-      const { data: reports, error } = await supabase
+      let { data: reports, error } = await supabase
         .from(currentTab.table)
         .select('*')
         .eq('stock_name', ticker)
@@ -163,6 +205,32 @@ export default function App() {
       }
       if (!reports || reports.length === 0) {
         setData([]); setPeriods([]); setLoading(false); return
+      }
+
+      // ── CSTC: Inject missing group headers ─────────────────────────
+      // metrics.py generates section headers (level 0, value=NULL) that
+      // are NOT stored in Supabase. Re-inject them here based on item_id
+      // prefix grouping so the UI renders organized sections.
+      if (currentTab.id === 'CSTC') {
+        const enriched = []
+        let lastGroup = null
+        for (const row of reports) {
+          const group = getCstcGroup(row.item_id)
+          if (group && group !== lastGroup && CSTC_GROUP_HEADERS[group]) {
+            enriched.push({
+              item_id: `_hdr_${group}`,
+              item: CSTC_GROUP_HEADERS[group],
+              levels: 0,
+              row_number: (row.row_number || 0) - 0.5,
+              unit: '',
+              periods_data: {},
+              _isGroupHeader: true,
+            })
+            lastGroup = group
+          }
+          enriched.push(row)
+        }
+        reports = enriched
       }
 
       // Build parent tree and fallback heuristic if levels are missing
@@ -376,6 +444,10 @@ export default function App() {
       {reportType === '360' ? (
         <Suspense fallback={<div className="state-msg"><div className="loader" /><span>Đang tải 360 Overview...</span></div>}>
           <OverviewTab ticker={ticker} sector={sector} companies={companies} />
+        </Suspense>
+      ) : reportType === 'ANALYSIS_CHARTS' ? (
+        <Suspense fallback={<div className="state-msg"><div className="loader" /><span>Đang tải Biểu đồ phân tích...</span></div>}>
+          <AnalysisTab ticker={ticker} sector={sector} allData={data} periods={periods} />
         </Suspense>
       ) : (
         /* ═══ Data Table ═══ */

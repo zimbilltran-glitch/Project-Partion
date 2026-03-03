@@ -1,0 +1,120 @@
+/* 📊 Finsang V4 — Analysis Chart Styles */
+
+.analysis-tab {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.chart-card:hover {
+  border-color: var(--border-accent);
+}
+
+.chart-title {
+  font-size: 11px;
+  /* Smaller font as requested */
+  font-weight: 700;
+  color: var(--txt-primary);
+  margin-bottom: 16px;
+  /* Tighter spacing */
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chart-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  /* Slimmer indicator */
+  height: 12px;
+  background: var(--blue);
+  border-radius: 2px;
+}
+
+.chart-h-container {
+  width: 100%;
+  height: 260px;
+  /* Slightly shorter for compactness */
+}
+
+/* Custom Tooltip Styling */
+.custom-chart-tooltip {
+  background: rgba(22, 22, 22, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 8px 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.tooltip-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 4px;
+}
+
+.tooltip-items {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.tooltip-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 10px;
+  /* Very small but sharp */
+  font-weight: 500;
+}
+
+.item-key {
+  opacity: 0.8;
+}
+
+.item-val {
+  font-weight: 700;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Recharts Overrides */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(255, 255, 255, 0.05);
+}
+
+.recharts-legend-item-text {
+  color: var(--txt-secondary) !important;
+  font-size: 11px !important;
+}

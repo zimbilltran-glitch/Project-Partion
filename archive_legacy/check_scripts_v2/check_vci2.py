@@ -2,7 +2,7 @@ import requests
 
 for sec in ["BALANCE_SHEET", "INCOME_STATEMENT", "CASH_FLOW"]:
     url = f"https://iq.vietcap.com.vn/api/iq-insight-service/v1/company/MBB/financial-statement?section={sec}"
-    r = requests.get(url, headers={
+    r = requests.get(url, timeout=20, headers={
         "User-Agent": "Mozilla/5.0",
         "Accept": "application/json",
         "Referer": "https://trading.vietcap.com.vn/",

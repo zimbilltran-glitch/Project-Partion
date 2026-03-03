@@ -7,7 +7,7 @@ headers = {
     "Origin": "https://simplize.vn",
     "Referer": "https://simplize.vn/"
 }
-r = requests.get(url, headers=headers)
+r = requests.get(url, headers=headers, timeout=20)
 print(r.status_code)
 if r.status_code == 200:
     print(r.json()[:2])

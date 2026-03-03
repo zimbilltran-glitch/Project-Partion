@@ -22,7 +22,7 @@ def fetch_raw_vndirect(ticker, report_type):
     
     url = f"https://finfo-api.vndirect.com.vn/v4/financial_statements?q=code:{ticker}~reportType:QUARTER~modelType:{type_map[report_type]}&sort=-fiscalDate&size=100"
     try:
-        res = requests.get(url, headers=headers)
+        res = requests.get(url, headers=headers, timeout=20)
         res.raise_for_status()
         data = res.json().get('data', [])
         

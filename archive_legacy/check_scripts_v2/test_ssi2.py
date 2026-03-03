@@ -10,5 +10,5 @@ urls = [
     "https://fiin-fundamental.ssi.com.vn/FinancialStatement/GetCashFlow?language=vi&SecCode=MBB"
 ]
 for u in urls:
-    r = requests.get(u, headers=headers)
+    r = requests.get(u, headers=headers, timeout=20)
     print(r.status_code, len(r.text))

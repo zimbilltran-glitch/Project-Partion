@@ -25,7 +25,7 @@ Usage:
   python Version_2/run_all.py          # runs all FINSANG_TICKERS from .env
 """
 
-import argparse, json, re, os
+import argparse, json, re, os, logging, logging.handlers
 from pathlib import Path
 from datetime import datetime
 
@@ -49,6 +49,32 @@ SCHEMA_F   = Path(__file__).parent / "golden_schema.json"
 DATA_DIR   = ROOT / "data" / "financial"
 TMP_DIR    = ROOT / ".tmp" / "raw"
 LOG_FILE   = Path(__file__).parent / "pipeline.log"
+
+# ─── Logger với Rotating File (max 5MB × 3 backup files) ─────────────────────
+def _build_logger() -> logging.Logger:
+    logger = logging.getLogger("finsang.pipeline")
+    if not logger.handlers:  # Tránh thêm handler trùng khi module được reload
+        logger.setLevel(logging.INFO)
+        handler = logging.handlers.RotatingFileHandler(
+            LOG_FILE, maxBytes=5 * 1024 * 1024, backupCount=3, encoding="utf-8"
+        )
+        handler.setFormatter(logging.Formatter("%(message)s"))
+        logger.addHandler(handler)
+    return logger
+
+_pipeline_logger = _build_logger()
+
+# ─── Module-level Golden Schema Cache ────────────────────────────────────────
+# Đọc golden_schema.json (954KB) đúng MỘT LẦN khi module được import.
+# Tránh parse JSON mỗi lần user đổi tab trên UI.
+_SCHEMA_CACHE: dict | None = None
+
+def _get_schema_raw() -> dict:
+    """Return cached golden_schema.json. Reads from disk only once per process."""
+    global _SCHEMA_CACHE
+    if _SCHEMA_CACHE is None:
+        _SCHEMA_CACHE = json.loads(SCHEMA_F.read_text(encoding="utf-8"))
+    return _SCHEMA_CACHE
 
 # ─── API Providers ──────────────────────────────────────────────────────────────
 
@@ -196,13 +222,12 @@ def cleanup_tmp(ticker: str):
             f.unlink()
         print(f"  GC: cleaned .tmp/raw/{ticker.upper()}/")
 
-# ─── Log to pipeline.log ──────────────────────────────────────────────────────
+# ─── Log to pipeline.log (Rotating — max 5MB × 3 backups) ───────────────────
 def log_run(ticker: str, section: str, sheet_id: str,
             n_periods: int, status: str, note: str = ""):
     ts = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+07:00")
     line = f"{ts} | {ticker} | Phase-T | pipeline.py | {sheet_id} | {n_periods} periods | {status} | {note}"
-    with open(LOG_FILE, "a", encoding="utf-8") as f:
-        f.write(line + "\n")
+    _pipeline_logger.info(line)
     print(f"  Logged: {line}")
 
 # ─── Phase T: Supabase pipeline_runs INSERT ──────────────────────────────────
@@ -391,9 +416,8 @@ def load_tab_from_supabase(ticker: str, period_type: str, sheet: str) -> pd.Data
     if df_long.empty:
         return pd.DataFrame()
 
-    # Load Golden Schema to ensure order
-    schema_f = Path(__file__).parent / "golden_schema.json"
-    schema_raw = json.loads(schema_f.read_text(encoding="utf-8"))
+    # Load Golden Schema to ensure order (cached — reads disk only once)
+    schema_raw = _get_schema_raw()
     ordered_fields = [f for f in schema_raw["fields"] if f["sheet"].upper() == sheet.upper()]
 
     def sort_p(p):
@@ -501,11 +525,8 @@ def load_tab(ticker: str, period_type: str, sheet: str) -> pd.DataFrame:
     # Sort periods newest → oldest
     all_periods = sorted(df["period_label"].unique(), reverse=True)
 
-    # Build wide form while preserving field order from Golden Schema
-    # Group by field_id, preserving insertion order (which matches row_number order)
-    schema_f = Path(__file__).parent / "golden_schema.json"
-    import json as _json
-    schema_raw = _json.loads(schema_f.read_text(encoding="utf-8"))
+    # Build wide form while preserving field order from Golden Schema (cached)
+    schema_raw = _get_schema_raw()
     ordered_fields = [
         f for f in schema_raw["fields"]
         if f["sheet"].upper() == sheet.upper()
