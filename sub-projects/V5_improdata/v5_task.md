@@ -26,6 +26,18 @@
 
 ## 🧪 Phase 4: Test (Validation & Audit)
 - [x] **P4.1**: Viết script `validate_vs_web.py` — so sánh Supabase vs API cho toàn bộ VN30 (Đã thực hiện qua `validate_full.py`).
+    - [x] Run `validate_full.py` on all 30 tickers
+    - [x] Record results in `_validation_full_report.txt`
+    - [x] Achieve 100% accounting identity match (0% Diff)
+    - [x] Commit and push changes to Git (V5 completed)
 - [x] **P4.2**: CFO Audit: Kiểm tra debit/credit rules, accounting identity (30/30 Pass).
 - [x] **P4.3**: CTO Audit: Kiểm tra pipeline idempotent, log integrity.
 - [x] **P4.4**: Release & Update Changelog.
+
+## 🌟 PHASE 5 (TBD): DATA ENRICHMENT & FRONTEND FIX
+- [ ] P5.1: Bổ sung `eps_ttm`, `week52_high`, `week52_low`, và định giá CFO (P/E, P/B) vào `company_overview`.
+- [ ] P5.2A: Tính toán CSTC cho Phi Tài Chính (Biên lãi ròng, Vay ngắn hạn, Phải trả người bán, Mua trả trước, Vốn góp).
+- [ ] P5.2B: Tính toán CSTC cho Bank (CASA, YOEA, Tỷ lệ nợ xấu, ROA, ROE, Vốn CSH).
+- [ ] P5.3: Cập nhật frontend để ánh xạ đúng data chart ("Cấu trúc tài sản", "Lịch sử nợ") cho nhóm Chứng Khoán (SEC).
+- [ ] P5.4: Cập nhật `calc_snowflake.py` để chấm lại điểm 5 chiều chính xác.
+- [ ] P5.5: QA Audit xác nhận 100% biểu đồ không còn 0/null.
