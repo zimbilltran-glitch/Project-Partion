@@ -32,7 +32,7 @@ from datetime import datetime
 # ── Phase T: load .env credentials gracefully ─────────────────────────────────
 try:
     from dotenv import load_dotenv
-    load_dotenv(dotenv_path=Path(__file__).parent.parent / ".env")
+    load_dotenv(dotenv_path=Path(__file__).parent.parent.parent / ".env")
 except ImportError:
     pass  # python-dotenv not installed; secrets from OS environment
 
@@ -131,7 +131,7 @@ def save_raw(ticker: str, section: str, payload: dict) -> Path:
 
 # ─── Normalize: build flat DataFrame from API payload ─────────────────────────
 def normalize(payload: dict, section: str, sheet_id: str,
-              schema_fields: list[dict], provider: BaseProvider) -> pd.DataFrame:
+              schema_fields: list[dict], provider: BaseProvider, sector: str = "normal") -> pd.DataFrame:
     """
     Convert one API section payload into a tidy long-format DataFrame.
 
@@ -173,6 +173,9 @@ def normalize(payload: dict, section: str, sheet_id: str,
                 
                 
                 vietcap_key = field.get("vietcap_key")
+                if isinstance(vietcap_key, dict):
+                    vietcap_key = vietcap_key.get(sector)
+                
                 if vietcap_key:
                     val = provider.get_api_value_by_key(api_row, vietcap_key)
                 else:
@@ -312,7 +315,8 @@ def run_pipeline(ticker: str, provider: BaseProvider = None):
         print(f"    Fetched: {n_years}Y + {n_quarters}Q periods")
 
         # 3. Normalize
-        df = normalize(payload, section, sheet_id, sheet_fields, provider)
+        sector = get_sector(ticker.upper())
+        df = normalize(payload, section, sheet_id, sheet_fields, provider, sector)
         mapped_pct = df["vietcap_mapped"].mean() * 100
         print(f"    Normalized: {len(df)} rows | Mapped: {mapped_pct:.1f}%")
 
@@ -406,6 +410,8 @@ def load_tab_from_supabase(ticker: str, period_type: str, sheet: str) -> pd.Data
         data = [] # Assign empty list on error to allow pd.DataFrame([])
     
     df_long = pd.DataFrame(data)
+    if df_long.empty or "period" not in df_long.columns:
+        return pd.DataFrame()
     
     # Filter by period pattern (V2 convention: "2024" or "Q1/2024")
     if period_type == "year":

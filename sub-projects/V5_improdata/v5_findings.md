@@ -128,7 +128,30 @@ Phát hiện các bug nghiêm trọng sau khi chạy `calculate_cstc.py` cho 30 
 
 ---
 
-## 7. Additional Technical Findings (Phase 5 Restoration)
+## 7. 🚨 CATASTROPHIC DISCOVERY: THE POSITIONAL MAPPING ANTI-PATTERN
+
+> Vấn đề lõi phá vỡ toàn bộ dữ liệu Supabase được phát hiện nhờ sự kết hợp giữa CFO & CTO Audit (Phase 5.3).
+
+### Positional vs Semantic
+Vietcap API trả về các keys dạng `isa1`, `isa2`... `isa24` cho Income Statement. Ở Phase 1-4, `golden_schema.json` gán cứng field "Lợi nhuận cổ đông mẹ" vào `isa23`. 
+Tuy nhiên, `isaX` là **index vị trí (positional)**, không phải định danh danh mục cố định!
+
+- Nếu Cty A có dòng "Lãi công ty liên doanh", dòng đó ở vị trí số 15 → `isa15`.
+- Nếu Cty B không có dòng đó, dòng tiếp theo sẽ bị trượt lên thành `isa15`.
+- **Hệ quả**: Đối với FPT, dòng ở vị trí `isa23` lại mang giá trị của EPS (Lãi trên mỗi cổ phiếu), trong khi ở VHC (công ty dùng làm chuẩn schema), nó lại là Lợi nhuận sau thuế của cổ đông mẹ.
+
+### Hậu quả (Garbage In, Garbage Out)
+Bởi vì mapping sai gốc:
+1. Giá trị `isa21`, `isa22`, `isa23` bị trượt (shift) ngẫu nhiên cho toàn bộ VN30.
+2. Tại Supabase, cột `Lãi thuần sau thuế` lại bị chèn dữ liệu `Thuế TNDN hoãn lại` hoặc `Lợi ích CĐTS`.
+3. Cột `Lợi nhuận cổ đông mẹ` bị chèn dữ liệu `EPS`.
+
+### Giải pháp (Semantic Mapping)
+Bắt buộc phải bỏ các keys `isaX, bsaX, cfaX`. API có trả về nhãn `name` (Ví dụ: `name: "Lãi/(lỗ) thuần sau thuế"`). Tool fetch data phải dùng Match String (K-nearest hoặc exact match) trên thuộc tính `name` để fill vào Supabase thay vì dò theo key `isaX`.
+
+---
+
+## 8. Additional Technical Findings (Phase 5 Restoration)
 
 ### Field Mapping Fixes
 - **YOEA (Yield on Earning Assets)**: Phát hiện lỗi chính tả trong `metrics.py`. Key `kqkd_bank_thu_nhap_lai_va_cac_thu_nhap_tuong_tu` được sửa thành `kqkd_bank_thu_nhap_lai_va_cac_khoan_thu_nhap_tuong_tu`.

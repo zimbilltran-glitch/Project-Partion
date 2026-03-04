@@ -89,3 +89,12 @@ Theo dõi các khó khăn kỹ thuật và hướng giải quyết trong quá tr
 - **Chẩn đoán**: Khi loop qua 30 mã và khởi tạo `supabase.create_client` mỗi lần, resource bị cạn kiệt hoặc pool bị block khiến lệnh `.execute()` treo vô hạn.
 - **Giải pháp**: Triển khai **Singleton Pattern** trong `sb_client.py` để tái sử dụng một instance duy nhất xuyên suốt quá trình chạy batch.
 
+## 13. Positional Mapping Anti-Pattern (Catastrophic) ✅ RESOLVED
+
+- **Tình trạng**: ✅ Đã giải quyết (Phase 5.3)
+- **Chẩn đoán**: Keys API (`isaX`, `bsaX`) là các index chỉ định vị trí dòng, không phải định danh duy nhất. Khi các công ty có cấu trúc BCTC khác nhau (thiếu/thừa dòng), các keys sẽ bị "trượt" (shift), làm sai lệch hoàn toàn ý nghĩa dữ liệu (ví dụ EPS bị map nhầm vào Lợi nhuận ròng).
+- **Giải pháp**: 
+  - Đã từ bỏ phương pháp dò tự động. Chuyển sang dùng **Exact Ground Truth Map**. Cụ thể: đối chiếu trực tiếp dữ liệu thô với BCTC thật mà CFO xác nhận (ảnh Excel user). 
+  - Khóa chặt ~22 các field core (`isa20` cho Lãi ròng, `isb27` cho Thu nhập lãi thuần, v.v.) vào `golden_schema.json`.
+  - Xóa toàn bộ dữ liệu Supabase bị hỏng và chạy `v5_full_resync.py` để làm phẳng lại toàn bộ 31 mã.
+

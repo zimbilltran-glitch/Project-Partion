@@ -1,0 +1,90 @@
+{
+  "CDKT_BANK": [
+    {
+      "id": "cdkt_bank_tong_tai_san",
+      "name": "TỔNG TÀI SẢN"
+    },
+    {
+      "id": "cdkt_bank_tien_mat_vang_bac_da_quy",
+      "name": "Tiền mặt, vàng bạc, đá quý"
+    },
+    {
+      "id": "cdkt_bank_cho_vay_khach_hang",
+      "name": "Cho vay khách hàng"
+    },
+    {
+      "id": "cdkt_bank_cho_vay_khach_hang_1",
+      "name": "Cho vay khách hàng"
+    },
+    {
+      "id": "cdkt_bank_du_phong_rui_ro_cho_vay_khach_hang",
+      "name": "Dự phòng rủi ro cho vay khách hàng"
+    },
+    {
+      "id": "cdkt_bank_no_phai_tra_va_von_chu_so_huu",
+      "name": "NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU"
+    },
+    {
+      "id": "cdkt_bank_tien_gui_cua_khach_hang",
+      "name": "Tiền gửi của khách hàng"
+    },
+    {
+      "id": "cdkt_bank_von_chu_so_huu",
+      "name": "VỐN CHỦ SỞ HỮU"
+    },
+    {
+      "id": "cdkt_bank_loi_ich_cua_co_dong_thieu_so",
+      "name": "Lợi ích của cổ đông thiểu số"
+    },
+    {
+      "id": "cdkt_bank_loi_ich_cua_co_dong_thieu_so_1",
+      "name": "Lợi ích của cổ đông thiểu số (trước 2015)"
+    }
+  ],
+  "KQKD_BANK": [
+    {
+      "id": "kqkd_bank_thu_nhap_lai_thuan",
+      "name": "Thu nhập lãi thuần"
+    },
+    {
+      "id": "kqkd_bank_loi_nhuan_sau_thue",
+      "name": "Lợi nhuận sau thuế"
+    },
+    {
+      "id": "kqkd_bank_co_dong_cua_cong_ty_me",
+      "name": "Cổ đông của Công ty mẹ"
+    }
+  ],
+  "CDKT_SEC": [
+    {
+      "id": "cdkt_sec_cac_khoan_cho_vay",
+      "name": "Các khoản cho vay"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_ve_cho_vay_ngan_han",
+      "name": "Phải thu về cho vay ngắn hạn (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_phai_thu_ve_cho_vay_dai_han",
+      "name": "Phải thu về cho vay dài hạn (Trước năm 2016)"
+    },
+    {
+      "id": "cdkt_sec_von_chu_so_huu",
+      "name": "Vốn chủ sở hữu"
+    },
+    {
+      "id": "cdkt_sec_tai_san_tai_chinh_cho_cho_vay",
+      "name": "Tài sản tài chính chờ cho vay"
+    }
+  ],
+  "KQKD_SEC": [
+    {
+      "id": "kqkd_sec_tong_loi_nhuan_ke_toan_truoc_thue",
+      "name": "TỔNG LỢI NHUẬN KẾ TOÁN TRƯỚC THUẾ"
+    },
+    {
+      "id": "kqkd_sec_loi_nhuan_sau_thue_phan_bo_cho_chu_so_huu",
+      "name": "Lợi nhuận sau thuế phân bổ cho chủ sở hữu"
+    }
+  ]
+}

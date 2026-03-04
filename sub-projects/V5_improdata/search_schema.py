@@ -1,14 +1,32 @@
 import json
 from pathlib import Path
 
-SCHEMA_F = Path(r"d:\Project_partial\Finsang\sub-projects\Version_2\golden_schema.json")
+SCHEMA_PATH = Path("c:/Users/Admin/OneDrive/Learn Anything/Antigravity/2.Project v2/sub-projects/Version_2/golden_schema.json")
 
-with open(SCHEMA_F, "r", encoding="utf-8") as f:
-    data = json.load(f)
+def search_schema():
+    with open(SCHEMA_PATH, "r", encoding="utf-8") as f:
+        schema = json.load(f)
+    
+    keywords = [
+        "Tổng cộng tài sản",
+        "Lợi nhuận sau thuế",
+        "Vốn chủ sở hữu",
+        "Lưu chuyển tiền thuần từ hoạt động kinh doanh",
+        "Lưu chuyển tiền thuần từ hoạt động đầu tư",
+        "Lưu chuyển tiền thuần từ hoạt động tài chính",
+        "Lưu chuyển tiền thuần trong kỳ"
+    ]
+    
+    print(f"Searching for keywords in {SCHEMA_PATH.name}...")
+    for kw in keywords:
+        print(f"\nResults for '{kw}':")
+        found = False
+        for f in schema["fields"]:
+            if kw.lower() in f["vn_name"].lower():
+                print(f"  - {f['field_id']:<60} | {f['sheet']:<10} | {f['vn_name']}")
+                found = True
+        if not found:
+            print("  NO MATCH")
 
-keyword = "kỳ hạn"
-for field in data["fields"]:
-    vn_name = field.get("vn_name", "").lower()
-    if keyword in vn_name:
-         # Only print ID to avoid Unicode
-         print(f"ID: {field['field_id']} | Sheet: {field['sheet']}")
+if __name__ == "__main__":
+    search_schema()

@@ -71,11 +71,11 @@ def calc_normal_metrics(periods, cdkt, kqkd, lctt, get_row, clean_num, add_row):
     ln_ld = get_row(kqkd, "kqkd_phan_loi_nhuan_lo_trong_cong_ty_lien_doanh_lien_ket")
     tn_khac = get_row(kqkd, "kqkd_thu_nhap_khac")
     
-    # Lãi ròng của cổ đông mẹ (PAT-MI)
-    ln_codong_me = get_row(kqkd, "kqkd_loi_nhuan_cua_co_dong_cua_cong_ty_me")
+    # Lãi ròng (PAT) — V5 FIX: isa23 thực ra là EPS, không phải LN cổ đông mẹ.
+    # Dùng kqkd_lai_thuan_sau_thue (isa21) làm LN ròng chuẩn cho normal company.
+    ln_codong_me = get_row(kqkd, "kqkd_lai_thuan_sau_thue")
     if all(clean_num(v) is None for v in ln_codong_me.values):
-        # Fallback to total PAT if minority interest is likely zero or not reported separately
-        ln_codong_me = get_row(kqkd, "kqkd_loi_nhuan_sau_thuy_thu_nhap_doanh_nghiep")
+        ln_codong_me = get_row(kqkd, "kqkd_lai_truoc_thue")
     
     # LCTT
     lctt_kd = get_row(lctt, "lctt_luu_chuyen_tien_thuan_tu_hoat_dong_kinh_doanh")
@@ -157,7 +157,7 @@ def calc_normal_metrics(periods, cdkt, kqkd, lctt, get_row, clean_num, add_row):
 
     add_row("g5", "5) Hiệu quả kinh doanh", "", 0, lambda p: None)
     add_row("g5_1", "Doanh thu thuần", "tỷ đồng", 1, lambda p: clean_num(dt_thuan.get(p)))
-    add_row("g5_2", "Lợi nhuận Cổ đông Công ty mẹ", "tỷ đồng", 1, lambda p: clean_num(ln_codong_me.get(p)))
+    add_row("g5_2", "Lãi/(lỗ) thuần sau thuế (LNST)", "tỷ đồng", 1, lambda p: clean_num(ln_codong_me.get(p)))
     add_row("g5_3", "Lợi nhuận gộp", "tỷ đồng", 1, lambda p: clean_num(ln_gop.get(p)))
     
     def calc_bien_lng(p):
@@ -568,7 +568,10 @@ def calc_metrics(ticker: str, period: str) -> pd.DataFrame:
         dt_thuan = get_row(kqkd, "kqkd_sec_doanh_thu_hoat_dong")
         co_phieu_pt = get_row(cdkt, "cdkt_sec_co_phieu_dang_luu_hanh")
     else:
-        ln_codong_me = get_row(kqkd, "kqkd_loi_nhuan_cua_co_dong_cua_cong_ty_me")
+        # V5 FIX: dùng isa21 (Lãi thuần sau thuế), isa23 thực ra là EPS
+        ln_codong_me = get_row(kqkd, "kqkd_lai_thuan_sau_thue")
+        if all(clean_num(v) is None for v in ln_codong_me.values):
+            ln_codong_me = get_row(kqkd, "kqkd_lai_truoc_thue")
         dt_thuan = get_row(kqkd, "kqkd_doanh_thu_thuan")
         co_phieu_pt = get_row(cdkt, "cdkt_co_phieu_pho_thong")
     

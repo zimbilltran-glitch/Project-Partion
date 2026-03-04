@@ -54,6 +54,15 @@
 
 - [ ] P5.5: Audit UI cuối cùng sau khi data đã fix xong (Check NIM, YOEA fix trên bank charts)
 
+## 🚨 PHASE 5.3: EXACT GROUND TRUTH MAPPING
+> **Chuyển đổi từ trượt dòng vị trí (Positional) sang khớp cứng Ground Truth Map.**
+
+- [x] **P5.3.1**: Truncate/Xóa dữ liệu sai lệch hiện tại trên hệ thống (Supabase DB).
+- [x] **P5.3.2**: Viết `build_groundtruth_schema.py` cập nhật 22+ keys tĩnh đúng nhất vào `vietcap_key`. Xóa các key không xác minh.
+- [x] **P5.3.3**: Cập nhật logic để hỗ trợ chạy batch toàn bộ VN30 tự động (`v5_full_resync.py`).
+- [x] **P5.3.4**: Chạy Resync toàn bộ VN30 từ đầu để nạp dữ liệu sạch.
+- [x] **P5.3.5**: Chạy `sync_supabase.py` sinh các bảng tài chính mở rộng (financial_ratios) trơn tru, verify FPT, MBB.
+
 ## 🚀 PHASE 5.6: NOTE DATA EXTRACTION (Ngân hàng & Chứng khoán)
 - [ ] **P5.6.1**: Dò tìm API Keys cho phần NOTE (Demand Deposits, etc.)
 - [ ] **P5.6.2**: Cập nhật `golden_schema.json` với mapping cho NOTE.

@@ -4,6 +4,15 @@ Mọi thay đổi liên quan đến cấu trúc source code, dữ liệu, hoặc
 
 ## [Released]
 
+### 2026-03-05 — Phase 5.3 Ground Truth Fix & Resync
+#### Fixed
+- **Catastrophic Positional Bug**: Khắc phục dứt điểm tình trạng keys bị trượt lệch vị trí nhờ chiến lược Exact Ground Truth Mapping.
+- **Data Cleanup**: Toàn bộ dữ liệu BCTC rác đã bị purge khỏi Supabase vn30. VN30 giờ chứa dữ liệu sạch với chính xác các chỉ tiêu Doanh thu, Lợi nhuận, TS, LCTT.
+#### Added
+- `build_groundtruth_schema.py` — Ánh xạ ~22 keys tĩnh tuyệt đối thông qua manual verify.
+- `quick_schema_check.py` — Script nhanh kiểm tra số lượng map thành công tránh treo terminal.
+- `v5_full_resync.py` — Automation script thực hiện vòng đời: Purge Supabase → Run Pipeline → Run Sync cho list VN30.
+
 ### 2026-03-04 — Phase 4 Validation & Completion
 #### Verified
 - **100% Validation Pass**: Chạy `validate_full.py` cho 30 mã VN30 trên Supabase Cloud.
