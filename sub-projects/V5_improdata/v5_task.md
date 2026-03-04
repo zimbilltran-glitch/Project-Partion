@@ -2,7 +2,7 @@
 
 > **Thư mục Project**: `sub-projects/V5_improdata`
 > **Kế hoạch**: `v5_implementation_plan.md`
-> **Trạng thái**: 🚀 Bắt đầu
+> **Trạng thái**: 🔄 Phase 3 đang thực hiện (P3.1 ✅, P3.2 ✅, P3.3 pending, P3.4 ✅)
 
 ---
 
@@ -19,8 +19,8 @@
 - [x] **P2.4**: Xóa logic fallback positional `f"bsa{sheet_row_idx}"`.
 
 ## 🔄 Phase 3: Assemble (Re-sync & Verify)
-- [ ] **P3.1**: Chạy `pipeline.py` cho FPT (ticker pilot) với schema mới.
-- [ ] **P3.2**: So sánh kết quả Parquet mới với dữ liệu Vietcap web (spot check 10 field).
+- [x] **P3.1**: Chạy `pipeline.py` cho FPT (ticker pilot) với schema mới.
+- [x] **P3.2**: So sánh kết quả Parquet mới với dữ liệu Vietcap web (spot check 12 field).
 - [ ] **P3.3**: Nếu pass → Chạy `sync_supabase.py` cho toàn bộ VN30.
 - [ ] **P3.4**: Xác nhận accounting identity: `Tổng TS = Nợ PT + Vốn CSH` (tolerance ±0.01%).
 
