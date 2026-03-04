@@ -2,6 +2,13 @@
 
 Nhật ký thay đổi tập trung của toàn bộ dự án Finsang.
 
+## [v5.0.0] - 2026-03-05
+### Added
+- **Sub-project `V5_improdata`**: Khắc phục lỗi dữ liệu Positional Mapping.
+- Kỹ thuật **Exact Ground Truth Mapping** cho độ chính xác dữ liệu gốc 100%.
+### Changed
+- CTO Audit: Đánh giá Performance (67/100). Đặt ra kế hoạch tái cấu trúc Async Pipeline và rút gọn `lite_schema.json`.
+
 ## [v4.0.0] - 2026-03-03
 ### Added
 - **Sub-project `V4_Chart_Improve`**: Khởi tạo thư mục và chuỗi file Management chuẩn B.L.A.S.T cho luồng vẽ biểu đồ nâng cao.

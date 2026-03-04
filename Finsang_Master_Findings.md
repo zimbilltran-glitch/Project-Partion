@@ -263,4 +263,38 @@ Pipeline Fireant đã có khá hoàn chỉnh gồm:
   - `frontend/.env` chỉ chứa biến môi trường an toàn (Vite Supabase Anon Key, thuộc loại Publishable Key).
   - Tệp chứa dữ liệu nhạy cảm cực cao là `keys.txt` (chứa Fireant Bearer Tokens) đã được đưa vào danh sách đen của `.gitignore`, hoàn thành yêu cầu bảo mật mã nguồn trước khi đẩy lên Git.
 
+---
+
+## F-015: Positional Mapping Anti-Pattern gây Garbage Data (V5)
+
+| Field | Value |
+|---|---|
+| **Severity** | 🔴 CATASTROPHIC (Đã xử lý) |
+| **Component** | `providers/vietcap.py` & `golden_schema.json` |
+| **Impact** | Dữ liệu metric bị trượt dòng. EPS bị ghi nhầm thành Lợi Nhuận, v.v. |
+
+**Chi tiết:**
+- Các keys như `isaX`, `bsaX` là index vị trí theo tuần tự động từ API, không phải định danh ngữ nghĩa. Nếu công ty khuyết 1 dòng, toàn bộ index bị dồn lên làm sai lệch ánh xạ.
+- **Hành động & Giải pháp:** Đã tiến hành **Exact Ground Truth Mapping** bằng cách kiểm tra thủ công với BCTC thật và khóa cứng 22 core metrics. Đã xóa dữ liệu sai và resync thành công cho VN30.
+
+---
+
+## F-016: Synchronous Pipeline Performance Bottlenecks (CTO Audit)
+
+| Field | Value |
+|---|---|
+| **Severity** | 🔴 HIGH (Technical Debt) |
+| **Component** | `v5_full_resync.py`, `pipeline.py`, Parquet Storage |
+| **Impact** | Hao phí khổng lồ RAM, CPU, gây treo terminal và mất >45 phút sync 30 mã. |
+
+**Chi tiết CTO Audit:**
+1. **Lạm dụng Subprocess:** Batch script chạy tuần tự 31 lệnh `subprocess.run(python)`, bắt OS tạo/hủy Python Interpreter 31 lần.
+2. **Schema Phình to:** `golden_schema.json` (~1MB) chứa quá nhiều `sample_values` không phục vụ runtime.
+3. **I/O Disk dư thừa:** ETL ghi ra file Parquet sau đó lại đọc Parquet lên lại để sync db.
+
+**Hành động & Giải pháp (Kế hoạch Phase 5.5):**
+- Trích xuất file `lite_schema.json` siêu tinh gọn.
+- Gộp Pipeline & Sync vào chạy bằng `asyncio` hoặc `ThreadPoolExecutor` trên một Python Interpreter duy nhất.
+- Bỏ bước lưu Parquet ổ cứng cho tác vụ daily sync, chạy trực tiếp Pandas → Supabase db.
+
 > **⚠️ Bản ghi cập nhật kết thúc (End of Report)**

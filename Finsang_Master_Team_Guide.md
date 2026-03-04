@@ -15,6 +15,7 @@ The project is strictly organized into functional groups to ensure long-term mai
     - `Version_2/`: The core "Finsang Engine" (API extraction orchestrator `pipeline.py`, AES-128 `security.py`, and CFA-grade `metrics.py`).
     - `V3_SimplyWallSt/`: The 360 Overview feature integration.
     - `V4_Chart_Improve/`: Analysis Charts feature using Recharts library.
+    - `V5_improdata/`: Data Integrity refactoring, Exact Ground Truth Schema builder, and Performance tuning scripts.
 - **`/internal-skills`**: Agent-specific capabilities and automated testing suites.
 - **`/design-themes`**: Curated UI/UX reference systems (Simply Wall St, Fireant styles).
 - **`/docs`**: Granular finding reports and historical challenges.
@@ -52,7 +53,8 @@ Every feature delivery MUST follow these steps:
 ## 📝 Coding & Contribution Standards
 
 ### 🛡️ Data Integrity Rules
-- **Absolute Mapping Only:** Never use relative iteration (`idx`, `enumerate`) for mapping API keys. Always use the `row_number` defined in the canonical schema.
+- **Absolute Mapping Only:** Never use relative iteration (`idx`, `enumerate`) for mapping API keys.
+- **No Positional Guesses:** Vietcap API keys (`isa1, bsa1`) are sequential layout rows, NOT semantic identifiers. Only map keys that have been verified via **Exact Ground Truth Mapping** against audited public statements.
 - **Encryption by Default:** Never use `pd.to_parquet()` directly. Always use the `security.py` wrapper to ensure data is encrypted at rest.
 
 ### 🌿 Git & Workflow

@@ -30,6 +30,18 @@ Centralized log of critical technical hurdles encountered during the development
 - **Solution:** Unified Hive structure: `data/financial/{ticker}/period={type}/sheet={id}/{filename}.parquet`.
 - **Level:** HIGH.
 
+### 5. Positional Mapping Anti-Pattern (V5)
+- **Symptom:** Core metrics (like Net Income) showing EPS values or other unrelated data.
+- **Root Cause:** API keys (`isa1, bsa1`) are strictly positional indexes, not semantic labels. If a company lacks a row, everything shifts.
+- **Solution:** Switched to **Exact Ground Truth Mapping**. Hardcoded canonical keys based on direct visual confirmation from audited statements.
+- **Level:** CATASTROPHIC.
+
+### 6. Synchronous Pipeline & Huge Schema Bottlenecks (V5)
+- **Symptom:** `v5_full_resync.py` taking 45+ minutes to run 30 tickers, terminal hanging, massive RAM usage.
+- **Root Cause:** `subprocess.run` forcing OS to spin up 31 Python interpreters. `golden_schema.json` bloat (1MB) loaded on every cycle. Parquet disk I/O in the critical path.
+- **Solution (Pending Tech Debt):** Needs an Async/ThreadPool refactor, stripping schema to a `lite_schema.json`, and direct `pandas-to-supabase` streaming without Parquet intermediation for daily syncs.
+- **Level:** CRITICAL (Performance).
+
 ---
 
 ## 🛠️ Best Practices for Engineering Team
@@ -44,3 +56,4 @@ Centralized log of critical technical hurdles encountered during the development
 - [V2_CHALLENGES.md](file:///c:/Users/Admin/OneDrive/Learn%20Anything/Antigravity/1.Project%20Source/Version_2/V2_CHALLENGES.md)
 - [V1_CHALLENGES.md](file:///c:/Users/Admin/OneDrive/Learn%20Anything/Antigravity/1.Project%20Source/Version_1/V1_CHALLENGES.md)
 - [v4_challenges.md](file:///d:/Project_partial/Finsang/sub-projects/V4_Chart_Improve/v4_challenges.md)
+- [v5_challenges.md](file:///c:/Users/Admin/OneDrive/Learn%20Anything/Antigravity/2.Project%20v2/sub-projects/V5_improdata/v5_challenges.md)

@@ -120,3 +120,12 @@ This document serves as the centralized source of truth for the Finsang project'
 - **Architecture:** Thiết kế kiến trúc sử dụng thư viện `recharts` (React-native chart library). Quyết định này thay thế Pure SVG để xử lý các biểu đồ phức tạp như Mix Line-Bar, Stacked Area.
 - **Data Layer:** Tái sử dụng dữ liệu từ các view Supabase hiện tại (`_wide`). Build `useAnalysisChartsData.js` hook để xoay trục Data thành mảng Array 1 chiều phù hợp làm input cho `recharts`.
 - **Project Governance:** Khởi tạo không gian dự án V4 độc lập tại `sub-projects/V4_Chart_Improve` kèm theo 5 file B.L.A.S.T Management Files nhằm đảm bảo quy trình dev nghiêm ngặt.
+
+### [v5.0.0] - 2026-03-05 (Data Integrity Enhancement & Performance CTO Audit)
+- **Data Architecture Fix (Phase 5.3):** Khắc phục dứt điểm lỗi nghiêm trọng "Positional Mapping Anti-Pattern" làm sai lệch toàn bộ dữ liệu Supabase (e.g. EPS bị map nhầm vào Lợi nhuận ròng do lệch dòng Excel). Áp dụng chiến lược **Exact Ground Truth Mapping**, khóa cứng các key lõi (e.g. `isa20`, `isb27`) trực tiếp vào `golden_schema.json` dựa vào BCTC thật. Gỡ bỏ toàn bộ dữ liệu hỏng.
+- **CTO Performance Audit (Score 67/100):** Phát hiện 3 "nút thắt cổ chai" (bottleneck) cấu trúc nghiêm trọng: (1) Chạy vòng lặp đồng bộ `subprocess` cực kỳ tốn RAM & CPU khởi tạo Python interpreter. (2) Schema `golden_schema.json` ~1MB quá cồng kềnh chứa nhiều text rác. (3) Dùng file Parquet làm trung gian thừa thãi khi daily sync làm chậm I/O ổ cứng.
+- **Technical Debt remediation plan (Phase 5.5 - Performance Tuning):**
+  - [ ] **Data Structure:** Trích xuất file `lite_schema.json` siêu nhẹ chỉ chứa mapping dùng cho bots ETL.
+  - [ ] **Asynchronous Processing:** Chuyển `v5_full_resync.py` sang kiến trúc ThreadPoolExecutor hoặc Asyncio chạy nhiều mã VN30 đồng thời mà không đẻ thêm Subprocess. Import chung function chạy Pipeline và Sync.
+  - [ ] **Stream-to-Database:** Load dữ liệu trực tiếp vào Pandas RAM và upsert lên Supabase. Tách bước sinh file Parquet cứng thành một chức năng Backup định kỳ tách biệt thay vì đưa vào đường găng (critical path).
+
