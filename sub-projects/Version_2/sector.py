@@ -75,15 +75,24 @@ def _load_cache():
         return
 
     try:
-        from supabase import create_client
-        sb = create_client(url, key)
+        from sb_client import get_sb
+        sb = get_sb()
         response = sb.table("companies").select("*").execute()
         for row in response.data:
             _CACHE[row["ticker"]] = row
         _CACHE_LOADED = True
     except Exception as e:
-        print(f"  ⚠️ sector.py: Supabase fetch failed ({e}) — using fallback")
-        _load_fallback()
+        print(f"  ⚠️ sector.py: Supabase shared client failed ({e}) — trying local create")
+        try:
+             from supabase import create_client
+             sb = create_client(url, key)
+             response = sb.table("companies").select("*").execute()
+             for row in response.data:
+                 _CACHE[row["ticker"]] = row
+             _CACHE_LOADED = True
+        except Exception as e2:
+             print(f"  ⚠️ sector.py: Local create also failed ({e2}) — using fallback")
+             _load_fallback()
 
 
 def _load_fallback():

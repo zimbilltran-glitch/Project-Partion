@@ -15,6 +15,23 @@ Mọi thay đổi liên quan đến cấu trúc source code, dữ liệu, hoặc
 - `V5_improdata/batch_pipeline_vn30.py` — Script tự động chạy pipeline cho danh sách mã VN30.
 - `_validation_full_report.txt` — Báo cáo chi tiết kết quả validation.
 
+### 2026-03-04 — Phase 5 Data Enrichment & Audit
+#### Added
+- `sub-projects/V5_improdata/phase5_1_enrich.py` — Script bổ sung EPS TTM, Week52 High/Low vào `company_overview`.
+- `sub-projects/V5_improdata/run_metrics_batch.py` — Script batch chạy lại engine `metrics.py` cho 30 mã VN30 (Fix regression).
+
+#### Fixed (UI)
+- **FinancialPositionChart.jsx**: Thêm logic fallback chart cho Securities sector (SEC).
+- **DebtEquityHistoryChart.jsx**: Sửa biểu đồ lịch sử nợ cho Bank và SEC.
+- **chartMappings.js**: Cập nhật mapping item_id chuẩn cho 3 sector (Normal, Bank, SEC).
+
+#### Changed
+- **calc_snowflake.py**: Cập nhật env loading (frontend/.env) và prefix VITE_. Tính lại điểm cho 31 mã.
+
+#### Discovered (BUG)
+- **P5.2 Regression**: Phát hiện `calculate_cstc.py` lỗi đơn vị (ROE=0) và làm hỏng tab Chỉ số tài chính cho VN30. Quyết định rollback/replace bằng `metrics.py` batch.
+
+
 ## [Unreleased]
 
 ### 2026-03-04 — Phase 2+3 Execution

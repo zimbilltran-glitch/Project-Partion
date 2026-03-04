@@ -106,3 +106,22 @@ Vietcap API sử dụng **multi-prefix key system**. Mỗi section có nhiều p
 - Các sheet ngành **có `vietcap_key` đúng 100%** (đã được populate trước V5).
 - Bank schema được dùng làm **Ground Truth** để xác nhận anchor points cho normal company.
 - Các bsa key xuất hiện trong cả Bank và Normal schema đều dùng CÙNG key number.
+
+## 6. ⚠️ Phase 5 Regression (Critical)
+
+Phát hiện các bug nghiêm trọng sau khi chạy `calculate_cstc.py` cho 30 mã VN30:
+
+### Bug 1: Tỷ suất LNST (ROE, ROA) = 0
+- Giải thích: Tại FPT (2024), lợi nhuận công ty mẹ = 4,944 (Tỷ VND) nhưng vốn chủ sở hữu = 35.7 nghìn tỷ (VND đồng).
+- Hệ quả: Phép chia tỷ lệ ra 0.0000, khiến frontend hiện dấu `–`.
+
+### Bug 2: Missing Growth for VN30
+- Giải thích: Các item `g7_1` (Doanh thu YoY) và `g7_2` (Lãi ròng YoY) chỉ tồn tại cho 6 mã cũ (VHC, KDH...). 30 mã VN30 chưa bao giờ được chạy script `metrics.py` để tính các tỷ lệ này.
+- Hệ quả: Chart Tăng trưởng trên tab Overview hiện 0% phẳng lỳ.
+
+### Bug 3: Tab "Chỉ số tài chính" bị rút gọn
+- Giải thích: `calculate_cstc.py` xóa sạch dữ liệu cũ và chỉ chèn 7 dòng chỉ số cơ bản.
+- Hệ quả: FPT chỉ có 7 dòng (Current Ratio, D/E, Gross Margin...), mất hoàn toàn 40+ dòng phân tích chi tiết (Cấu trúc tài sản, Nguồn vốn, LCTT) như VHC.
+
+### Bug 4: Bank Efficiency metrics missing
+- Giải thích: Các mã Bank (MBB, VCB...) thiếu NIM, CASA, NPL... do các item `bank_4_*` chưa được tính/sync cho nhóm VN30.

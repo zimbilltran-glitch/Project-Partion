@@ -2,7 +2,7 @@
 # B.L.A.S.T. Implementation Plan
 
 > **Blueprint → Layer → Assemble → Style → Test**  
-> **Date**: 2026-03-03 → 2026-03-04 | **Version**: 2.0 (Updated after Phase 3)  
+> **Date**: 2026-03-03 → 2026-03-04 | **Version**: 3.0 (Phase 5 Regression Fix)  
 > **Mục tiêu**: Sửa lỗi mapping dữ liệu tài chính giữa Vietcap API → Supabase, đảm bảo **100% đúng** giá trị từng đầu mục BCTC.
 > **Scope**: Toàn bộ 3 bảng tài chính (CĐKT, KQKD, LCTT) × 3 sector (Phi tài chính, Ngân hàng, Chứng khoán).
 
@@ -72,7 +72,7 @@ Schema field  [121]     → bsa96         (TỔNG NGUỒN VỐN)
 
 ---
 
-## 🔄 PHASE 3: ASSEMBLE (Re-sync & Verify) — ĐANG THỰC HIỆN
+## ✅ PHASE 3: ASSEMBLE (Re-sync & Verify) — HOÀN TẤT
 
 > **Thời gian**: 2026-03-04 | **Scripts**: `validate_spotcheck.py`
 
@@ -146,9 +146,9 @@ NOTE: 6280 rows | Mapped: 0% (expected — API không hỗ trợ)
 1. ✅ **Agent Setup**: Đọc file này + `v5_findings.md` → nắm bối cảnh.
 2. ✅ **Schema Fix**: Chạy `rebuild_schema_keys.py` → cập nhật `golden_schema.json`.
 3. ✅ **Provider Fix**: Sửa `providers/vietcap.py` → xóa fallback logic.
-4. ⬜ **Pipeline Run**: Chạy `pipeline.py` + `sync_supabase.py` cho VN30.
-5. ⬜ **Validation**: Chạy `validate_vs_web.py` → xác nhận pass.
-6. ⬜ **Release**: Cập nhật `v5_changelog.md` → commit + push.
+4. ✅ **Pipeline Run**: Chạy `pipeline.py` + `sync_supabase.py` cho VN30.
+5. ✅ **Validation**: Chạy `validate_full.py` → xác nhận pass (30/30).
+6. ✅ **Release**: Cập nhật changelog → commit + push.
 
 ---
 
@@ -160,35 +160,46 @@ NOTE: 6280 rows | Mapped: 0% (expected — API không hỗ trợ)
 | Vietcap Provider | `Version_2/providers/vietcap.py` | Logic đọc API value (**ĐÃ SỬA** — xóa fallback) |
 | Pipeline | `Version_2/pipeline.py` | Orchestrate fetch → normalize → parquet |
 | Sync | `Version_2/sync_supabase.py` | Parquet → Supabase upsert |
+| Metrics Engine | `Version_2/metrics.py` | Tính 40+ chỉ số tài chính (CSTC) cho 3 sector |
+| Batch Sync | `Version_2/re_sync_ratios.py` | Batch chạy metrics.py cho VN30 |
+| CSTC Basic | `Version_2/calculate_cstc.py` | ⚠️ Script cũ (7 ratios, có bug đơn vị) — ĐÃ THAY THẾ |
 | Spot Check | `V5_improdata/validate_spotcheck.py` | 12-field validation + accounting identity |
 | Rebuild Script | `V5_improdata/rebuild_schema_keys.py` | Segmented mapping builder |
-| Phase 1 Report | `V5_improdata/v5_phase1_report.json` | Raw audit results |
 | CFO Skill | `.agent/skills/professional-cfo-analyst/` | Audit rules & checksum |
 
 ---
 
-## 🚀 PHASE 5: DATA ENRICHMENT & SNOWFLAKE CALIBRATION (NEW)
+## 🚀 PHASE 5: DATA ENRICHMENT & FRONTEND FIX
 
-> **Mục tiêu**: Lấp đầy các khoảng trống dữ liệu (`null`, `0`) trên biểu đồ Frontend sau khi hoàn thiện cấu trúc dữ liệu cơ bản (Phase 1-4). Đặc biệt chú trọng các chỉ số phân tích chuyên sâu cho từng Sector.
+> **Mục tiêu**: Lấp đầy các khoảng trống dữ liệu (`null`, `0`) trên biểu đồ Frontend sau khi hoàn thiện cấu trúc dữ liệu cơ bản (Phase 1-4).
 
-### P5.1: Market Data Enrichment & Định giá CFO
-- Lấy và điền dữ liệu `eps_ttm`, `week52_high`, `week52_low` vào `company_overview`. 
-- Định giá lại P/E, P/B trực tiếp bằng dữ liệu Supabase sạch thay vì phụ thuộc API. Cập nhật vào DB.
+### ✅ P5.1: Market Data Enrichment & Định giá CFO
+- Đã bổ sung `eps_ttm`, `week52_high`, `week52_low` vào `company_overview` (script: `phase5_1_enrich.py`).
+- Đã tính lại P/E, P/B từ dữ liệu Supabase sạch.
 
-### P5.2: Tính toán lại Chỉ số tài chính (CSTC) chuyên sâu
-Chạy lại script tính toán các chỉ số sức mạnh tài chính (`metrics.py` hoặc `calculate_cstc.py`) dựa trên Base data:
-- **Ngành Phi tài chính**: Bổ sung tính toán Biên lãi ròng (Gross/Net Margin), Vay ngắn hạn, Phải trả người bán, Người mua trả tiền trước, Vốn góp.
-- **Ngành Ngân hàng**: Bổ sung tính toán CASA, YOEA, Chất lượng nợ xấu (Non-Performing Loan), ROA, ROE, Vốn chủ sở hữu.
-- Lưu kết quả vào `financial_ratios_wide` hoặc bảng tương ứng để hiển thị Frontend.
+### ⚠️ P5.2: Tính toán lại CSTC — REGRESSION
 
-### P5.3: Sửa lỗi hiển thị UI cho Sector Chứng Khoán (SEC)
-- Tab 360 overview hiện tại thiếu dữ liệu Cấu trúc tài sản & Lịch sử nợ cho công ty Chứng khoán.
-- Frontend Fix: Cần thêm logic đọc map đúng `item_id` (vd: `cdkt_sec_tong_tai_san` thay vì `cdkt_tai_san_ngan_han`) vào React components.
+> **BÀI HỌC QUAN TRỌNG**: Cần dùng `metrics.py` (40+ chỉ số, đọc từ Supabase), KHÔNG dùng `calculate_cstc.py` (7 chỉ số, đọc từ parquet, có bug đơn vị).
 
-### P5.4: Snowflake Score Recalibration
-- Review và nâng cấp thuật toán `calc_snowflake.py`.
-- Tính toán điểm 5 trục (Value, Future, Past, Health, Dividend) từ 0 đến 5.
-- Đổ dữ liệu vào các cột `score_*` trên `company_overview`.
+#### Chẩn đoán Bug (Đã xong)
+| Bug | Nguyên nhân | Ảnh hưởng |
+|-----|------------|----------|
+| ROE/ROA/Net Margin = 0 | Unit mismatch: net_income (Tỷ) vs equity (VND đồng) | Dấu `–` trên tab Chỉ số TC |
+| Growth (g7_1, g7_2) = 0% | Chưa tính cho VN30 | Biểu đồ tăng trưởng phẳng |
+| Bank metrics trống | bank_4_* chưa tính cho VN30 banks | Tab bank trống |
+| Tab CSTC bị strip | `calculate_cstc.py` xóa 40+ rows, chèn lại 7 | FPT: 7 rows vs VHC: 40+ rows |
 
-### P5.5: Frontend UI QA Audit
-- Kiểm tra chéo (Spot check) trên frontend tại tất cả tab (Overview, Analysis, etc.). Các biểu đồ phải có dữ liệu đầy đủ, loại bỏ hoàn toàn số `0` và giá trị `null` ở cả 3 nhóm Normal, Bank, Sec.
+#### Fix cần thực hiện
+- [ ] Sửa hang khi chạy `re_sync_ratios.py` (import chain `security.py` blocking)
+- [ ] Chạy `metrics.py` batch cho 30 mã VN30 × 2 periods
+- [ ] Verify FPT có 40+ item_ids trong `financial_ratios_wide`
+
+### ✅ P5.3: Frontend Chart Fallbacks cho SEC
+- Đã cập nhật `FinancialPositionChart.jsx` và `DebtEquityHistoryChart.jsx` — thêm sec sector fallback.
+- Đã cập nhật `chartMappings.js` với đúng item_ids cho 3 sector.
+
+### ✅ P5.4: Snowflake Score Recalibration
+- Đã chạy `calc_snowflake.py` cho 31 mã — kết quả lưu vào `company_overview.score_*`.
+
+### ⏳ P5.5: Frontend UI QA Audit
+- Chờ P5.2 fix xong mới audit được.
