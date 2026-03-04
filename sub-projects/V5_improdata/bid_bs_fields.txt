@@ -1,0 +1,6 @@
+cdkt_bank_tien_gui_cua_cac_to_chuc_tin_dung_khac | Tiền gửi của các tổ chức tín dụng khác
+cdkt_bank_tien_gui_cua_khach_hang | Tiền gửi của khách hàng
+cdkt_bank_tien_gui_tai_cac_tctd_khac | Tiền gửi tại các TCTD khác
+cdkt_bank_tien_gui_tai_cac_tctd_khac_va_cho_vay_cac_tctd_khac | Tiền gửi tại các TCTD khác và cho vay các TCTD khác
+cdkt_bank_tien_gui_tai_ngan_hang_nha_nuoc_viet_nam | Tiền gửi tại Ngân hàng nhà nước Việt Nam
+cdkt_bank_tien_gui_va_vay_cac_to_chuc_tin_dung_khac | Tiền gửi và vay các Tổ chức tín dụng khác

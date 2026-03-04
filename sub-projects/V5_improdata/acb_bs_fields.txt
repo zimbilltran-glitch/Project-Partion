@@ -1,0 +1,87 @@
+cdkt_bank_bao_lanh_khac | Bảo lãnh khác
+cdkt_bank_bao_lanh_vay_von | Bảo lãnh vay vốn
+cdkt_bank_bat_dong_san_dau_tu | Bất động sản đầu tư
+cdkt_bank_cac_cong_cu_tai_chinh_phai_sinh_va_cac_khoan_no_tai_chi | Các công cụ tài chính phái sinh và các khoản nợ tài chính khác
+cdkt_bank_cac_cong_cu_tai_chinh_phai_sinh_va_cac_tai_san_tai_chin | Các công cụ tài chính phái sinh và các tài sản tài chính khác
+cdkt_bank_cac_khoan_du_phong_rui_ro_cho_cac_tai_san_co_noi_bang_k | Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác
+cdkt_bank_cac_khoan_lai_phi_phai_tra | Các khoản lãi, phí phải trả
+cdkt_bank_cac_khoan_lai_va_phi_phai_thu | Các khoản lãi và phí phải thu
+cdkt_bank_cac_khoan_no_chinh_phu_va_nhnn_viet_nam | Các khoản nợ chính phủ và NHNN Việt Nam
+cdkt_bank_cac_khoan_no_khac | Các khoản nợ khác
+cdkt_bank_cac_khoan_phai_thu | Các khoản phải thu
+cdkt_bank_cac_khoan_phai_tra_va_cong_no_khac | Các khoản phải trả và công nợ khác
+cdkt_bank_cam_ket_ban_ngoai_te | Cam kết bán ngoại tệ
+cdkt_bank_cam_ket_cho_vay_khong_huy_ngang | Cam kết cho vay không hủy ngang
+cdkt_bank_cam_ket_giao_dich_hoan_doi | Cam kết giao dịch hoán đổi
+cdkt_bank_cam_ket_giao_dich_hoi_doai | Cam kết giao dịch hối đoái
+cdkt_bank_cam_ket_giao_dich_tuong_lai | Cam kết giao dịch tương lai
+cdkt_bank_cam_ket_khac | Cam kết khác
+cdkt_bank_cam_ket_mua_ngoai_te | Cam kết mua ngoại tệ
+cdkt_bank_cam_ket_trong_nghiep_vu_lc | Cam kết trong nghiệp vụ L/C
+cdkt_bank_chenh_lech_danh_gia_lai_tai_san | Chênh lệch đánh giá lại tài sản
+cdkt_bank_chenh_lech_ty_gia_hoi_doai | Chênh lệch tỷ giá hối đoái
+cdkt_bank_cho_vay_cac_tctd_khac | Cho vay các TCTD khác
+cdkt_bank_cho_vay_khach_hang | Cho vay khách hàng
+cdkt_bank_cho_vay_khach_hang_1 | Cho vay khách hàng
+cdkt_bank_chung_khoan_dau_tu | Chứng khoán đầu tư
+cdkt_bank_chung_khoan_dau_tu_giu_den_ngay_dao_han | Chứng khoán đầu tư giữ đến ngày đáo hạn
+cdkt_bank_chung_khoan_dau_tu_san_sang_de_ban | Chứng khoán đầu tư sẵn sàng để bán
+cdkt_bank_chung_khoan_kinh_doanh | Chứng khoán kinh doanh
+cdkt_bank_chung_khoan_kinh_doanh_1 | Chứng khoán kinh doanh
+cdkt_bank_co_phieu_quy | Cổ phiếu Quỹ
+cdkt_bank_co_phieu_uu_dai | Cổ phiếu ưu đãi
+cdkt_bank_dau_tu_dai_han_khac | Đầu tư dài hạn khác
+cdkt_bank_dau_tu_vao_cong_ty_con | Đầu tư vào công ty con
+cdkt_bank_dau_tu_vao_cong_ty_lien_doanh | Đầu tư vào công ty liên doanh
+cdkt_bank_dau_tu_vao_cong_ty_lien_ket | Đầu tư vào công ty liên kết
+cdkt_bank_du_phong_giam_gia_chung_khoan_dau_tu | Dự phòng giảm giá chứng khoán đầu tư
+cdkt_bank_du_phong_giam_gia_chung_khoan_kinh_doanh | Dự phòng giảm giá chứng khoán kinh doanh
+cdkt_bank_du_phong_giam_gia_dau_tu_dai_han | Dự phòng giảm giá đầu tư dài hạn
+cdkt_bank_du_phong_rui_ro | Dự phòng rủi ro
+cdkt_bank_du_phong_rui_ro_cho_vay_khach_hang | Dự phòng rủi ro cho vay khách hàng
+cdkt_bank_du_phong_rui_ro_hoat_dong_mua_no | Dự phòng rủi ro hoạt động mua nợ
+cdkt_bank_du_phong_rui_ro_khac | Dự phòng rủi ro khác
+cdkt_bank_gop_von_dau_tu_dai_han | Góp vốn, đầu tư dài hạn
+cdkt_bank_hao_mon_bat_dong_san_dau_tu | Hao mòn bất động sản đầu tư
+cdkt_bank_hao_mon_tscd_huu_hinh | Hao mòn TSCĐ hữu hình
+cdkt_bank_hao_mon_tscd_thue_tai_chinh | Hao mòn TSCĐ thuê tài chính
+cdkt_bank_hao_mon_tscd_vo_hinh | Hao mòn TSCĐ vô hình
+cdkt_bank_hoat_dong_mua_no | Hoạt động mua nợ
+cdkt_bank_loi_ich_cua_co_dong_thieu_so | Lợi ích của cổ đông thiểu số
+cdkt_bank_loi_ich_cua_co_dong_thieu_so_1 | Lợi ích của cổ đông thiểu số (trước 2015)
+cdkt_bank_loi_nhuan_chua_phan_phoi | Lợi nhuận chưa phân phối
+cdkt_bank_mua_no | Mua nợ
+cdkt_bank_nguyen_gia_bat_dong_san_dau_tu | Nguyên giá bất động sản đầu tư
+cdkt_bank_nguyen_gia_tscd_huu_hinh | Nguyên giá TSCĐ hữu hình
+cdkt_bank_nguyen_gia_tscd_thue_tai_chinh | Nguyên giá TSCĐ thuê tài chính
+cdkt_bank_nguyen_gia_tscd_vo_hinh | Nguyên giá TSCĐ vô hình
+cdkt_bank_no_phai_tra_va_von_chu_so_huu | NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU
+cdkt_bank_phat_hanh_giay_to_co_gia | Phát hành giấy tờ có giá
+cdkt_bank_quy_cua_to_chuc_tin_dung | Quỹ của tổ chức tín dụng
+cdkt_bank_tai_san_co_dinh | Tài sản cố định
+cdkt_bank_tai_san_co_dinh_huu_hinh | Tài sản cố định hữu hình
+cdkt_bank_tai_san_co_dinh_thue_tai_chinh | Tài sản cố định thuê tài chính
+cdkt_bank_tai_san_co_dinh_vo_hinh | Tài sản cố định vô hình
+cdkt_bank_tai_san_co_khac | Tài sản Có khác
+cdkt_bank_tai_san_co_khac_1 | Tài sản Có khác
+cdkt_bank_tai_san_thue_tndn_hoan_lai | Tài sản thuế TNDN hoãn lại
+cdkt_bank_thang_du_von_co_phan | Thặng dư vốn cổ phần
+cdkt_bank_thue_tndn_hoan_lai_phai_tra | Thuế TNDN hoãn lại phải trả
+cdkt_bank_tien_gui_cua_cac_to_chuc_tin_dung_khac | Tiền gửi của các tổ chức tín dụng khác
+cdkt_bank_tien_gui_cua_khach_hang | Tiền gửi của khách hàng
+cdkt_bank_tien_gui_tai_cac_tctd_khac | Tiền gửi tại các TCTD khác
+cdkt_bank_tien_gui_tai_cac_tctd_khac_va_cho_vay_cac_tctd_khac | Tiền gửi tại các TCTD khác và cho vay các TCTD khác
+cdkt_bank_tien_gui_tai_ngan_hang_nha_nuoc_viet_nam | Tiền gửi tại Ngân hàng nhà nước Việt Nam
+cdkt_bank_tien_gui_va_vay_cac_to_chuc_tin_dung_khac | Tiền gửi và vay các Tổ chức tín dụng khác
+cdkt_bank_tien_mat_vang_bac_da_quy | Tiền mặt, vàng bạc, đá quý
+cdkt_bank_tong_no_phai_tra | TỔNG NỢ PHẢI TRẢ
+cdkt_bank_tong_tai_san | TỔNG TÀI SẢN
+cdkt_bank_trong_do_loi_the_thuong_mai | Trong đó: Lợi thế thương mại
+cdkt_bank_vay_cac_to_chuc_tin_dung_khac | Vay các tổ chức tín dụng khác
+cdkt_bank_von_chu_so_huu | VỐN CHỦ SỞ HỮU
+cdkt_bank_von_cua_to_chuc_tin_dung | Vốn của tổ chức tín dụng
+cdkt_bank_von_dau_tu_xdcb | Vốn đầu tư XDCB
+cdkt_bank_von_dieu_le | Vốn điều lệ
+cdkt_bank_von_gop_lien_doanh | Vốn Góp liên doanh
+cdkt_bank_von_khac | Vốn khác
+cdkt_bank_von_tai_tro_uy_thac_dau_tu_cua_chinh_phu_va_cac_to_chuc | Vốn tài trợ, uỷ thác đầu tư của Chính phủ và các tổ chức tín dụng khác

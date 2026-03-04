@@ -1,0 +1,26 @@
+kqkd_bank_chi_phi_dich_vu | Chi phí dịch vụ
+kqkd_bank_chi_phi_khac | Chi phí khác
+kqkd_bank_chi_phi_lai_va_cac_chi_phi_tuong_tu | Chi phí lãi và các chi phí tương tự
+kqkd_bank_chi_phi_quan_ly_doanh_nghiep | Chi phí quản lý doanh nghiệp
+kqkd_bank_chi_phi_thue_thu_nhap_doanh_nghiep | Chi phí thuế thu nhập doanh nghiệp
+kqkd_bank_chi_phi_thue_tndn_hien_hanh | Chi phí thuế TNDN hiện hành
+kqkd_bank_chi_phi_thue_tndn_hoan_lai | Chi phí thuế TNDN hoãn lại
+kqkd_bank_co_dong_cua_cong_ty_me | Cổ đông của Công ty mẹ
+kqkd_bank_lai_co_ban_tren_co_phieu | Lãi cơ bản trên cổ phiếu (VND)
+kqkd_bank_lai_thuan_tu_hoat_dong_khac | Lãi/(lỗ) thuần từ hoạt động khác
+kqkd_bank_lai_thuan_tu_hoat_dong_kinh_doanh_ngoai_hoi_va_vang | Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối và vàng
+kqkd_bank_lai_thuan_tu_mua_ban_chung_khoan_dau_tu | Lãi/(lỗ) thuần từ mua bán chứng khoán đầu tư
+kqkd_bank_lai_thuan_tu_mua_ban_chung_khoan_kinh_doanh | Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh
+kqkd_bank_lai_tren_co_phieu_pha_loang | Lãi trên cổ phiếu pha loãng (VND)
+kqkd_bank_lailo_thuan_tu_hoat_dong_dich_vu | Lãi/Lỗ thuần từ hoạt động dịch vụ
+kqkd_bank_loi_ich_cua_co_dong_thieu_so | Lợi ích của cổ đông thiểu số
+kqkd_bank_loi_nhuan_sau_thue | Lợi nhuận sau thuế
+kqkd_bank_loi_nhuan_thuan_hoat_dong_truoc_khi_trich_lap_du_phong_ | Lợi nhuận thuần hoạt động trước khi trích lập dự phòng tổn thất tín dụng
+kqkd_bank_thu_nhap_khac | Thu nhập khác
+kqkd_bank_thu_nhap_lai_thuan | Thu nhập lãi thuần
+kqkd_bank_thu_nhap_lai_va_cac_khoan_thu_nhap_tuong_tu | Thu nhập lãi và các khoản thu nhập tương tự
+kqkd_bank_thu_nhap_tu_co_tuc | Thu nhập từ cổ tức
+kqkd_bank_thu_nhap_tu_dich_vu | Thu nhập từ dịch vụ
+kqkd_bank_tong_loi_nhuanlo_truoc_thue | Tổng lợi nhuận/lỗ trước thuế
+kqkd_bank_tong_thu_nhap_hoat_dong | Tổng thu nhập hoạt động
+kqkd_bank_trich_lap_du_phong_ton_that_tin_dung | Trích lập dự phòng tổn thất tín dụng
