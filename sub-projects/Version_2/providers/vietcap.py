@@ -41,37 +41,13 @@ class VietcapProvider(BaseProvider):
         return float(val) if val is not None else None
 
     def get_api_value(self, row: dict, section: str, sheet_row_idx: int, field_id: str = "") -> Optional[float]:
-        # Override specific essential metric fields for accurate mapping
-        field_mapping = {
-            "cdkt_tai_san_ngan_han": "bsa1",
-            "cdkt_tai_san_dai_han": "bsa23",
-            "cdkt_tong_cong_tai_san": "bsa96",
-            "cdkt_no_phai_tra": "bsa54",
-            "cdkt_no_ngan_han": "bsa55",
-            "cdkt_no_dai_han": "bsa67",
-            "cdkt_von_chu_so_huu": "bsa79",
-            "kqkd_doanh_thu_thuan": "isa3",
-            "kqkd_loi_nhuan_gop": "isa5",
-            "kqkd_loi_nhuan_cua_co_dong_cua_cong_ty_me": "isa22"
-        }
-        
-        if field_id in field_mapping:
-            key = field_mapping[field_id]
-        else:
-            # Vietcap uses dynamic keys based on row indices
-            if section == "BALANCE_SHEET":
-                key = f"bsa{sheet_row_idx}"
-            elif section == "INCOME_STATEMENT":
-                key = f"isa{sheet_row_idx}"
-            elif section == "CASH_FLOW":
-                key = f"cfa{sheet_row_idx}"
-            else:
-                key = f"b_sa{sheet_row_idx}"
-            
-        val = row.get(key)
-        
-        # Additional nested check just in case
-        if val is None and isinstance(row.get("values"), dict):
-            val = row["values"].get(key)
-            
-        return float(val) if val is not None else None
+        """
+        Fallback when vietcap_key is empty (e.g. NOTE section).
+        V5: Removed hardcoded field_mapping and positional bsa{N} fallback
+            which caused data misalignment for normal company sheets.
+            All CDKT/KQKD/LCTT fields now have explicit vietcap_key in
+            golden_schema.json (populated by V5 rebuild_schema_keys.py).
+        """
+        # V5: No more guessing. Return None for unmapped fields.
+        return None
+

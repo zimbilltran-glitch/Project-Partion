@@ -13,10 +13,10 @@
 - [x] **P1.3**: Xác nhận tất cả `vietcap_key` trong `golden_schema.json` — đánh dấu trống vs có giá trị.
 
 ## 🔧 Phase 2: Layer (Sửa lỗi mapping — Golden Schema)
-- [ ] **P2.1**: Viết script `rebuild_schema_keys.py` — auto-discover đúng key cho mỗi field từ raw API.
-- [ ] **P2.2**: Chạy script → cập nhật toàn bộ `vietcap_key` trong `golden_schema.json`.
-- [ ] **P2.3**: Xóa hardcoded `field_mapping` trong `providers/vietcap.py` (10 override cũ).
-- [ ] **P2.4**: Xóa logic fallback positional `f"bsa{sheet_row_idx}"`.
+- [x] **P2.1**: Viết script `rebuild_schema_keys.py` — auto-discover đúng key cho mỗi field từ raw API.
+- [x] **P2.2**: Chạy script → cập nhật toàn bộ `vietcap_key` trong `golden_schema.json`.
+- [x] **P2.3**: Xóa hardcoded `field_mapping` trong `providers/vietcap.py` (10 override cũ).
+- [x] **P2.4**: Xóa logic fallback positional `f"bsa{sheet_row_idx}"`.
 
 ## 🔄 Phase 3: Assemble (Re-sync & Verify)
 - [ ] **P3.1**: Chạy `pipeline.py` cho FPT (ticker pilot) với schema mới.

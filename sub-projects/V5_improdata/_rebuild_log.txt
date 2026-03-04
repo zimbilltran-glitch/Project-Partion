@@ -1,0 +1,49 @@
+
+============================================================
+[CDKT] Schema fields: 122 | API bsa keys: 123
+  field[0] 'cdkt_tai_san_ngan_han': '' → 'bsa1'
+  field[1] 'cdkt_tien_va_tuong_duong_tien': '' → 'bsa2'
+  field[2] 'cdkt_tien': '' → 'bsa3'
+  field[3] 'cdkt_cac_khoan_tuong_duong_tien': '' → 'bsa4'
+  field[4] 'cdkt_dau_tu_ngan_han': '' → 'bsa5'
+  ✅ Mapped 122/122 fields
+
+============================================================
+[KQKD] Schema fields: 25 | API isa keys: 25
+  field[0] 'kqkd_doanh_thu_ban_hang_va_cung_cap_dich_vu': '' → 'isa1'
+  field[1] 'kqkd_cac_khoan_giam_tru_doanh_thu': '' → 'isa2'
+  field[2] 'kqkd_doanh_thu_thuan': '' → 'isa3'
+  field[3] 'kqkd_gia_von_hang_ban': '' → 'isa4'
+  field[4] 'kqkd_loi_nhuan_gop': '' → 'isa5'
+  ✅ Mapped 25/25 fields
+
+============================================================
+[LCTT] Schema fields: 41 | API cfa keys: 48
+  field[0] 'lctt_loi_nhuan_truoc_thue': '' → 'cfa1'
+  field[1] 'lctt_khau_hao_tscd_va_bdsdt': '' → 'cfa2'
+  field[2] 'lctt_phan_bo_loi_the_thuong_mai': '' → 'cfa3'
+  field[3] 'lctt_chi_phi_du_phong': '' → 'cfa4'
+  field[4] 'lctt_lailo_chenh_lech_ty_gia_hoi_doai_do_danh_gia_lai_cac_kh': '' → 'cfa5'
+  ✅ Mapped 41/41 fields
+[SKIP] NOTE: no raw data file for FPT_NOTE
+
+============================================================
+[NOTE] Schema fields: 157 | noa keys: 0 | nob keys: 0 | total: 0
+  ✅ Mapped 0/157 fields
+
+============================================================
+TOTAL updated fields: 188
+Saved to: d:\Project_partial\Finsang\sub-projects\Version_2\golden_schema.json
+
+============================================================
+POST-REBUILD AUDIT:
+  ✅ CDKT        : 122/122 mapped (100.0%), 0 empty
+  ✅ CDKT_BANK   : 87/87 mapped (100.0%), 0 empty
+  ✅ CDKT_SEC    : 208/208 mapped (100.0%), 0 empty
+  ✅ KQKD        : 25/25 mapped (100.0%), 0 empty
+  ✅ KQKD_BANK   : 26/26 mapped (100.0%), 0 empty
+  ✅ KQKD_SEC    : 80/80 mapped (100.0%), 0 empty
+  ✅ LCTT        : 41/41 mapped (100.0%), 0 empty
+  ✅ LCTT_BANK   : 52/52 mapped (100.0%), 0 empty
+  ✅ LCTT_SEC    : 148/148 mapped (100.0%), 0 empty
+  ⚠️ NOTE        : 0/157 mapped (0.0%), 157 empty

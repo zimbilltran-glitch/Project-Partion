@@ -450,7 +450,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 11,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 4140347276090.0,
         "year:2019": 4611361279524.0,
@@ -493,7 +493,8 @@
         "quý:Q3 2025": 9495012256535.0,
         "quý:Q4 2025": 9331712781517.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa1"
     },
     {
       "field_id": "cdkt_tien_va_tuong_duong_tien",
@@ -506,7 +507,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 12,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 43241847762.0,
         "year:2019": 86421954986.0,
@@ -549,7 +550,8 @@
         "quý:Q3 2025": 1678417812091.0,
         "quý:Q4 2025": 2008261260343.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa2"
     },
     {
       "field_id": "cdkt_tien",
@@ -562,7 +564,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 13,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 43241847762.0,
         "year:2019": 86421954986.0,
@@ -605,7 +607,8 @@
         "quý:Q3 2025": 1573095072365.0,
         "quý:Q4 2025": 2008261260343.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa3"
     },
     {
       "field_id": "cdkt_cac_khoan_tuong_duong_tien",
@@ -618,7 +621,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 14,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -661,7 +664,8 @@
         "quý:Q3 2025": 105322739726.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa4"
     },
     {
       "field_id": "cdkt_dau_tu_ngan_han",
@@ -674,7 +678,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 15,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 607749887456.0,
         "year:2019": 1491779322456.0,
@@ -717,7 +721,8 @@
         "quý:Q3 2025": 2699749641625.0,
         "quý:Q4 2025": 2357483974663.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa5"
     },
     {
       "field_id": "cdkt_dau_tu_ngan_han_1",
@@ -730,7 +735,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 16,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -773,7 +778,8 @@
         "quý:Q3 2025": 24029181119.0,
         "quý:Q4 2025": 24471156119.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa6"
     },
     {
       "field_id": "cdkt_du_phong_giam_gia",
@@ -786,7 +792,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 17,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -829,7 +835,8 @@
         "quý:Q3 2025": -1202359367.0,
         "quý:Q4 2025": -6985045157.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa7"
     },
     {
       "field_id": "cdkt_dau_tu_nam_giu_den_ngay_dao_han",
@@ -842,7 +849,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 18,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 607749887456.0,
         "year:2019": 1491779322456.0,
@@ -885,7 +892,8 @@
         "quý:Q3 2025": 2676922819873.0,
         "quý:Q4 2025": 2339997863701.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa8"
     },
     {
       "field_id": "cdkt_cac_khoan_phai_thu",
@@ -898,7 +906,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 19,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 2001762641975.0,
         "year:2019": 1516143620145.0,
@@ -941,7 +949,8 @@
         "quý:Q3 2025": 2213317710161.0,
         "quý:Q4 2025": 2030000545912.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa9"
     },
     {
       "field_id": "cdkt_phai_thu_khach_hang",
@@ -954,7 +963,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 20,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1923825653716.0,
         "year:2019": 1421607853952.0,
@@ -997,7 +1006,8 @@
         "quý:Q3 2025": 1887361968659.0,
         "quý:Q4 2025": 1643698003901.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa10"
     },
     {
       "field_id": "cdkt_tra_truoc_nguoi_ban",
@@ -1010,7 +1020,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 21,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 57710280128.0,
         "year:2019": 66241022579.0,
@@ -1053,7 +1063,8 @@
         "quý:Q3 2025": 122439329702.0,
         "quý:Q4 2025": 125257427804.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa11"
     },
     {
       "field_id": "cdkt_phai_thu_noi_bo",
@@ -1066,7 +1077,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 22,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -1109,7 +1120,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa12"
     },
     {
       "field_id": "cdkt_phai_thu_hop_dong_xay_dung_dang_thuc_hien",
@@ -1122,7 +1134,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 23,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -1165,7 +1177,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa13"
     },
     {
       "field_id": "cdkt_phai_thu_cho_vay_ngan_han",
@@ -1178,7 +1191,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 24,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -1221,7 +1234,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa14"
     },
     {
       "field_id": "cdkt_phai_thu_khac",
@@ -1234,7 +1248,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 25,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 24064216893.0,
         "year:2019": 31363947940.0,
@@ -1277,7 +1291,8 @@
         "quý:Q3 2025": 211020708544.0,
         "quý:Q4 2025": 268558598033.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa15"
     },
     {
       "field_id": "cdkt_du_phong_no_kho_doi",
@@ -1290,7 +1305,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 26,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -3837508762.0,
         "year:2019": -3069204326.0,
@@ -1333,7 +1348,8 @@
         "quý:Q3 2025": -7504296744.0,
         "quý:Q4 2025": -7513483826.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa16"
     },
     {
       "field_id": "cdkt_tai_san_thieu_can_xu_ly",
@@ -1346,7 +1362,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 27,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -1389,7 +1405,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa17"
     },
     {
       "field_id": "cdkt_hang_ton_kho_rong",
@@ -1402,7 +1419,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 28,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1385654133209.0,
         "year:2019": 1413752203473.0,
@@ -1445,7 +1462,8 @@
         "quý:Q3 2025": 2728134706368.0,
         "quý:Q4 2025": 2771091481289.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa18"
     },
     {
       "field_id": "cdkt_hang_ton_kho",
@@ -1458,7 +1476,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 29,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1501722872955.0,
         "year:2019": 1492289086177.0,
@@ -1501,7 +1519,8 @@
         "quý:Q3 2025": 2835181617925.0,
         "quý:Q4 2025": 2976450635108.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa19"
     },
     {
       "field_id": "cdkt_du_phong_giam_gia_hang_ton_kho",
@@ -1514,7 +1533,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 30,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -116068739746.0,
         "year:2019": -78536882704.0,
@@ -1557,7 +1576,8 @@
         "quý:Q3 2025": -107046911557.0,
         "quý:Q4 2025": -205359153819.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa20"
     },
     {
       "field_id": "cdkt_tai_san_luu_dong_khac",
@@ -1570,7 +1590,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 31,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 101938765688.0,
         "year:2019": 103264178464.0,
@@ -1613,7 +1633,8 @@
         "quý:Q3 2025": 175392386290.0,
         "quý:Q4 2025": 164875519310.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa21"
     },
     {
       "field_id": "cdkt_chi_phi_tra_truoc_ngan_han",
@@ -1626,7 +1647,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 32,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 12309483720.0,
         "year:2019": 6536514481.0,
@@ -1669,7 +1690,8 @@
         "quý:Q3 2025": 20305390939.0,
         "quý:Q4 2025": 23386247902.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa22"
     },
     {
       "field_id": "cdkt_thue_gtgt_duoc_khau_tru",
@@ -1682,7 +1704,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 33,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 89629281968.0,
         "year:2019": 96727663983.0,
@@ -1725,7 +1747,8 @@
         "quý:Q3 2025": 155086995351.0,
         "quý:Q4 2025": 141489271408.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa23"
     },
     {
       "field_id": "cdkt_phai_thu_thue_khac",
@@ -1738,7 +1761,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 34,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -1781,7 +1804,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa24"
     },
     {
       "field_id": "cdkt_giao_dich_mua_ban_lai_trai_phieu_chinh_phu",
@@ -1794,7 +1818,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 35,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -1837,7 +1861,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa25"
     },
     {
       "field_id": "cdkt_tai_san_luu_dong_khac_1",
@@ -1850,7 +1875,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 36,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -1893,7 +1918,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa26"
     },
     {
       "field_id": "cdkt_tai_san_dai_han",
@@ -1906,7 +1932,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 37,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 2158165179189.0,
         "year:2019": 2001053018640.0,
@@ -1949,7 +1975,8 @@
         "quý:Q3 2025": 4006775803156.0,
         "quý:Q4 2025": 4089901843328.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa27"
     },
     {
       "field_id": "cdkt_phai_thu_dai_han",
@@ -1962,7 +1989,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 38,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1563796625.0,
         "year:2019": 5884206875.0,
@@ -2005,7 +2032,8 @@
         "quý:Q3 2025": 2547456090.0,
         "quý:Q4 2025": 2547456090.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa28"
     },
     {
       "field_id": "cdkt_phai_thu_khach_hang_dai_han",
@@ -2018,7 +2046,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 39,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -2061,7 +2089,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa29"
     },
     {
       "field_id": "cdkt_tra_truoc_nguoi_ban_dai_han",
@@ -2074,7 +2103,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 40,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -2117,7 +2146,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa30"
     },
     {
       "field_id": "cdkt_von_kinh_doanh_o_cac_don_vi_truc_thuoc",
@@ -2130,7 +2160,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 41,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -2173,7 +2203,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa31"
     },
     {
       "field_id": "cdkt_phai_thu_noi_bo_dai_han",
@@ -2186,7 +2217,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 42,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -2229,7 +2260,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa32"
     },
     {
       "field_id": "cdkt_phai_thu_cho_vay_dai_han",
@@ -2242,7 +2274,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 43,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -2285,7 +2317,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa33"
     },
     {
       "field_id": "cdkt_phai_thu_dai_han_khac",
@@ -2298,7 +2331,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 44,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1563796625.0,
         "year:2019": 5884206875.0,
@@ -2341,7 +2374,8 @@
         "quý:Q3 2025": 2547456090.0,
         "quý:Q4 2025": 2547456090.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa34"
     },
     {
       "field_id": "cdkt_du_phong_phai_thu_dai_han",
@@ -2354,7 +2388,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 45,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -2397,7 +2431,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa35"
     },
     {
       "field_id": "cdkt_tai_san_co_dinh",
@@ -2410,7 +2445,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 46,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1397238799687.0,
         "year:2019": 1504402862517.0,
@@ -2453,7 +2488,8 @@
         "quý:Q3 2025": 3238694084777.0,
         "quý:Q4 2025": 3310448156856.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa36"
     },
     {
       "field_id": "cdkt_gtcl_tscd_huu_hinh",
@@ -2466,7 +2502,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 47,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1110184998800.0,
         "year:2019": 1215525158155.0,
@@ -2509,7 +2545,8 @@
         "quý:Q3 2025": 2786790981662.0,
         "quý:Q4 2025": 2718892855513.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa37"
     },
     {
       "field_id": "cdkt_nguyen_gia_tscd_huu_hinh",
@@ -2522,7 +2559,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 48,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1958910920456.0,
         "year:2019": 2180298582377.0,
@@ -2565,7 +2602,8 @@
         "quý:Q3 2025": 5508492143311.0,
         "quý:Q4 2025": 5544695185904.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa38"
     },
     {
       "field_id": "cdkt_khau_hao_luy_ke_tscd_huu_hinh",
@@ -2578,7 +2616,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 49,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -848725921656.0,
         "year:2019": -964773424222.0,
@@ -2621,7 +2659,8 @@
         "quý:Q3 2025": -2721701161649.0,
         "quý:Q4 2025": -2825802330391.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa39"
     },
     {
       "field_id": "cdkt_gtcl_tai_san_thue_tai_chinh",
@@ -2634,7 +2673,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 50,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -2677,7 +2716,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa40"
     },
     {
       "field_id": "cdkt_nguyen_gia_tai_san_thue_tai_chinh",
@@ -2690,7 +2730,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 51,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -2733,7 +2773,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa41"
     },
     {
       "field_id": "cdkt_khau_hao_luy_ke_tai_san_thue_tai_chinh",
@@ -2746,7 +2787,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 52,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -2789,7 +2830,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa42"
     },
     {
       "field_id": "cdkt_gtcl_tai_san_co_dinh_vo_hinh",
@@ -2802,7 +2844,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 53,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 287053800887.0,
         "year:2019": 288877704362.0,
@@ -2845,7 +2887,8 @@
         "quý:Q3 2025": 451903103115.0,
         "quý:Q4 2025": 591555301343.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa43"
     },
     {
       "field_id": "cdkt_nguyen_gia_tscd_vo_hinh",
@@ -2858,7 +2901,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 54,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 294120452518.0,
         "year:2019": 304346297214.0,
@@ -2901,7 +2944,8 @@
         "quý:Q3 2025": 554813098744.0,
         "quý:Q4 2025": 700621098744.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa44"
     },
     {
       "field_id": "cdkt_khau_hao_luy_ke_tscd_vo_hinh",
@@ -2914,7 +2958,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 55,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -7066651631.0,
         "year:2019": -15468592852.0,
@@ -2957,7 +3001,8 @@
         "quý:Q3 2025": -102909995629.0,
         "quý:Q4 2025": -109065797401.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa45"
     },
     {
       "field_id": "cdkt_xay_dung_co_ban_dang_dang_do",
@@ -2970,7 +3015,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 56,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -3013,7 +3058,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa46"
     },
     {
       "field_id": "cdkt_gia_tri_rong_tai_san_dau_tu",
@@ -3026,7 +3072,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 57,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -3069,7 +3115,8 @@
         "quý:Q3 2025": 239435000003.0,
         "quý:Q4 2025": 239080000004.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa47"
     },
     {
       "field_id": "cdkt_nguyen_gia_tai_san_dau_tu",
@@ -3082,7 +3129,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 58,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -3125,7 +3172,8 @@
         "quý:Q3 2025": 240500000000.0,
         "quý:Q4 2025": 240500000000.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa48"
     },
     {
       "field_id": "cdkt_khau_hao_luy_ke_tai_san_dau_tu",
@@ -3138,7 +3186,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 59,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -3181,7 +3229,8 @@
         "quý:Q3 2025": -1064999997.0,
         "quý:Q4 2025": -1419999996.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa49"
     },
     {
       "field_id": "cdkt_tai_san_do_dang_dai_han",
@@ -3194,7 +3243,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 60,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 258754816482.0,
         "year:2019": 335185361275.0,
@@ -3237,7 +3286,8 @@
         "quý:Q3 2025": 92784624054.0,
         "quý:Q4 2025": 102130890914.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa50"
     },
     {
       "field_id": "cdkt_chi_phi_san_xuat_kinh_doanh_do_dang_dai_han",
@@ -3250,7 +3300,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 61,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -3293,7 +3343,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa51"
     },
     {
       "field_id": "cdkt_xay_dung_co_ban_dang_do_dang",
@@ -3306,7 +3357,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 62,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 258754816482.0,
         "year:2019": 335185361275.0,
@@ -3349,7 +3400,8 @@
         "quý:Q3 2025": 92784624054.0,
         "quý:Q4 2025": 102130890914.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa52"
     },
     {
       "field_id": "cdkt_dau_tu_dai_han",
@@ -3362,7 +3414,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 63,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 389355091933.0,
         "year:2019": 1414429978.0,
@@ -3405,7 +3457,8 @@
         "quý:Q3 2025": 73139006074.0,
         "quý:Q4 2025": 55942429978.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa53"
     },
     {
       "field_id": "cdkt_dau_tu_vao_cac_cong_ty_con",
@@ -3418,7 +3471,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 64,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -3461,7 +3514,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa54"
     },
     {
       "field_id": "cdkt_dau_tu_vao_cac_cong_ty_lien_ket",
@@ -3474,7 +3528,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 65,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 387940661955.0,
         "year:2019": 0.0,
@@ -3517,7 +3571,8 @@
         "quý:Q3 2025": 17196576096.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa55"
     },
     {
       "field_id": "cdkt_dau_tu_dai_han_khac",
@@ -3530,7 +3585,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 66,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1414429978.0,
         "year:2019": 1414429978.0,
@@ -3573,7 +3628,8 @@
         "quý:Q3 2025": 5942429978.0,
         "quý:Q4 2025": 5942429978.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa56"
     },
     {
       "field_id": "cdkt_du_phong_giam_gia_dau_tu_dai_han",
@@ -3586,7 +3642,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 67,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -3629,7 +3685,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa57"
     },
     {
       "field_id": "cdkt_dau_tu_nam_giu_den_ngay_dao_han_1",
@@ -3642,7 +3699,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 68,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -3685,7 +3742,8 @@
         "quý:Q3 2025": 50000000000.0,
         "quý:Q4 2025": 50000000000.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa58"
     },
     {
       "field_id": "cdkt_loi_the_thuong_mai",
@@ -3698,7 +3756,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 69,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -3741,7 +3799,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa59"
     },
     {
       "field_id": "cdkt_tai_san_dai_han_khac",
@@ -3754,7 +3813,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 70,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 111252674462.0,
         "year:2019": 154166157995.0,
@@ -3797,7 +3856,8 @@
         "quý:Q3 2025": 360175632158.0,
         "quý:Q4 2025": 379752909486.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa60"
     },
     {
       "field_id": "cdkt_tra_truoc_dai_han",
@@ -3810,7 +3870,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 71,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 60973104588.0,
         "year:2019": 111684450815.0,
@@ -3853,7 +3913,8 @@
         "quý:Q3 2025": 191177029068.0,
         "quý:Q4 2025": 218250251971.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa61"
     },
     {
       "field_id": "cdkt_thue_thu_nhap_hoan_lai",
@@ -3866,7 +3927,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 72,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 4689035714.0,
         "year:2019": 2589989790.0,
@@ -3909,7 +3970,8 @@
         "quý:Q3 2025": 4979813341.0,
         "quý:Q4 2025": 6263037682.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa62"
     },
     {
       "field_id": "cdkt_thiet_bi_vat_tu_phu_tung_thay_the_dai_han",
@@ -3922,7 +3984,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 73,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -3965,7 +4027,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa63"
     },
     {
       "field_id": "cdkt_cac_tai_san_dai_han_khac",
@@ -3978,7 +4041,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 74,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -4021,7 +4084,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa64"
     },
     {
       "field_id": "cdkt_loi_the_thuong_mai_1",
@@ -4034,7 +4098,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 75,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 45590534160.0,
         "year:2019": 39891717390.0,
@@ -4077,7 +4141,8 @@
         "quý:Q3 2025": 164018789749.0,
         "quý:Q4 2025": 155239619833.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa65"
     },
     {
       "field_id": "cdkt_tong_cong_tai_san",
@@ -4090,7 +4155,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 76,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 6298512455279.0,
         "year:2019": 6612414298164.0,
@@ -4133,7 +4198,8 @@
         "quý:Q3 2025": 13501788059691.0,
         "quý:Q4 2025": 13421614624845.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa66"
     },
     {
       "field_id": "cdkt_no_phai_tra",
@@ -4146,7 +4212,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 77,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 2283330774315.0,
         "year:2019": 1735133858202.0,
@@ -4189,7 +4255,8 @@
         "quý:Q3 2025": 3336272965338.0,
         "quý:Q4 2025": 3434638919097.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa67"
     },
     {
       "field_id": "cdkt_no_ngan_han",
@@ -4202,7 +4269,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 78,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 2250750376315.0,
         "year:2019": 1715663613251.0,
@@ -4245,7 +4312,8 @@
         "quý:Q3 2025": 3293549535643.0,
         "quý:Q4 2025": 3382318690117.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa68"
     },
     {
       "field_id": "cdkt_phai_tra_nguoi_ban",
@@ -4258,7 +4326,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 79,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 274386646870.0,
         "year:2019": 282494891430.0,
@@ -4301,7 +4369,8 @@
         "quý:Q3 2025": 357180661014.0,
         "quý:Q4 2025": 336500319603.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa69"
     },
     {
       "field_id": "cdkt_nguoi_mua_tra_tien_truoc",
@@ -4314,7 +4383,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 80,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 11434807754.0,
         "year:2019": 20030330991.0,
@@ -4357,7 +4426,8 @@
         "quý:Q3 2025": 114704492786.0,
         "quý:Q4 2025": 190433658036.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa70"
     },
     {
       "field_id": "cdkt_thue_va_cac_khoan_phai_tra_nha_nuoc",
@@ -4370,7 +4440,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 81,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 257436065576.0,
         "year:2019": 146942597476.0,
@@ -4413,7 +4483,8 @@
         "quý:Q3 2025": 220550155551.0,
         "quý:Q4 2025": 228913691808.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa71"
     },
     {
       "field_id": "cdkt_phai_tra_nguoi_lao_dong",
@@ -4426,7 +4497,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 82,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 137477117757.0,
         "year:2019": 138818558545.0,
@@ -4469,7 +4540,8 @@
         "quý:Q3 2025": 321486018171.0,
         "quý:Q4 2025": 345282501796.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa72"
     },
     {
       "field_id": "cdkt_chi_phi_phai_tra",
@@ -4482,7 +4554,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 83,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 5834139125.0,
         "year:2019": 10436534524.0,
@@ -4525,7 +4597,8 @@
         "quý:Q3 2025": 70283540176.0,
         "quý:Q4 2025": 32230785311.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa73"
     },
     {
       "field_id": "cdkt_phai_tra_noi_bo",
@@ -4538,7 +4611,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 84,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -4581,7 +4654,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa74"
     },
     {
       "field_id": "cdkt_phai_tra_ve_xay_dung_co_ban",
@@ -4594,7 +4668,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 85,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -4637,7 +4711,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa75"
     },
     {
       "field_id": "cdkt_doanh_thu_chua_thuc_hien_ngan_han",
@@ -4650,7 +4725,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 86,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -4693,7 +4768,8 @@
         "quý:Q3 2025": 31662581.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa76"
     },
     {
       "field_id": "cdkt_phai_tra_khac",
@@ -4706,7 +4782,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 87,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 258562649346.0,
         "year:2019": 217941357768.0,
@@ -4749,7 +4825,8 @@
         "quý:Q3 2025": 96205782388.0,
         "quý:Q4 2025": 80242543444.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa77"
     },
     {
       "field_id": "cdkt_vay_ngan_han",
@@ -4762,7 +4839,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 88,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1269447095123.0,
         "year:2019": 866025048602.0,
@@ -4805,7 +4882,8 @@
         "quý:Q3 2025": 1989315755804.0,
         "quý:Q4 2025": 2046146063429.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa78"
     },
     {
       "field_id": "cdkt_du_phong_cac_khoan_phai_tra_ngan_han",
@@ -4818,7 +4896,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 89,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -4861,7 +4939,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa79"
     },
     {
       "field_id": "cdkt_quy_khen_thuong_phuc_loi",
@@ -4874,7 +4953,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 90,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 36171854764.0,
         "year:2019": 32974293915.0,
@@ -4917,7 +4996,8 @@
         "quý:Q3 2025": 123791467172.0,
         "quý:Q4 2025": 122569126690.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa80"
     },
     {
       "field_id": "cdkt_quy_binh_on_gia",
@@ -4930,7 +5010,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 91,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -4973,7 +5053,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa81"
     },
     {
       "field_id": "cdkt_giao_dich_mua_ban_lai_trai_phieu_chinh_phu_1",
@@ -4986,7 +5067,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 92,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -5029,7 +5110,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa82"
     },
     {
       "field_id": "cdkt_no_dai_han",
@@ -5042,7 +5124,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 93,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 32580398000.0,
         "year:2019": 19470244951.0,
@@ -5085,7 +5167,8 @@
         "quý:Q3 2025": 42723429695.0,
         "quý:Q4 2025": 52320228980.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa83"
     },
     {
       "field_id": "cdkt_phai_tra_nha_cung_cap_dai_han",
@@ -5098,7 +5181,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 94,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -5141,7 +5224,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa84"
     },
     {
       "field_id": "cdkt_nguoi_mua_tra_tien_truoc_dai_han",
@@ -5154,7 +5238,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 95,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -5197,7 +5281,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa85"
     },
     {
       "field_id": "cdkt_chi_phi_phai_tra_dai_han",
@@ -5210,7 +5295,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 96,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -5253,7 +5338,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa86"
     },
     {
       "field_id": "cdkt_phai_tra_noi_bo_ve_von_kinh_doanh",
@@ -5266,7 +5352,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 97,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -5309,7 +5395,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa87"
     },
     {
       "field_id": "cdkt_phai_tra_noi_bo_dai_han",
@@ -5322,7 +5409,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 98,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -5365,7 +5452,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa88"
     },
     {
       "field_id": "cdkt_doanh_thu_chua_thuc_hien",
@@ -5378,7 +5466,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 99,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -5421,7 +5509,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa89"
     },
     {
       "field_id": "cdkt_phai_tra_dai_han_khac",
@@ -5434,7 +5523,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 100,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -5477,7 +5566,8 @@
         "quý:Q3 2025": 506846500.0,
         "quý:Q4 2025": 549896500.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa90"
     },
     {
       "field_id": "cdkt_vay_dai_han",
@@ -5490,7 +5580,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 101,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -5533,7 +5623,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa91"
     },
     {
       "field_id": "cdkt_trai_phieu_chuyen_doi",
@@ -5546,7 +5637,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 102,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -5589,7 +5680,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa92"
     },
     {
       "field_id": "cdkt_co_phieu_uu_dai",
@@ -5602,7 +5694,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 103,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": null,
         "year:2019": null,
@@ -5645,7 +5737,8 @@
         "quý:Q3 2025": null,
         "quý:Q4 2025": null
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa93"
     },
     {
       "field_id": "cdkt_thue_thu_nhap_hoan_lai_1",
@@ -5658,7 +5751,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 104,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 14895000000.0,
         "year:2019": 3066844176.0,
@@ -5701,7 +5794,8 @@
         "quý:Q3 2025": 2208512902.0,
         "quý:Q4 2025": 2309104310.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa94"
     },
     {
       "field_id": "cdkt_du_phong_tro_cap_thoi_viec",
@@ -5714,7 +5808,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 105,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -5757,7 +5851,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa95"
     },
     {
       "field_id": "cdkt_du_phong_cac_khoan_no_dai_han",
@@ -5770,7 +5865,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 106,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 7951048000.0,
         "year:2019": 7208887000.0,
@@ -5813,7 +5908,8 @@
         "quý:Q3 2025": 18773737620.0,
         "quý:Q4 2025": 24173737620.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa96"
     },
     {
       "field_id": "cdkt_quy_phat_trien_khoa_hoc_cong_nghe",
@@ -5826,7 +5922,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 107,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 9734350000.0,
         "year:2019": 9194513775.0,
@@ -5869,7 +5965,8 @@
         "quý:Q3 2025": 21234332673.0,
         "quý:Q4 2025": 25287490550.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa159"
     },
     {
       "field_id": "cdkt_von_chu_so_huu",
@@ -5882,7 +5979,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 108,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 4015181680964.0,
         "year:2019": 4877280439962.0,
@@ -5925,7 +6022,8 @@
         "quý:Q3 2025": 10165515094353.0,
         "quý:Q4 2025": 9986975705748.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa160"
     },
     {
       "field_id": "cdkt_von_va_cac_quy",
@@ -5938,7 +6036,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 109,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 4015181680964.0,
         "year:2019": 4877280439962.0,
@@ -5981,7 +6079,8 @@
         "quý:Q3 2025": 10165515094353.0,
         "quý:Q4 2025": 9986975705748.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa161"
     },
     {
       "field_id": "cdkt_von_gop",
@@ -5994,7 +6093,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 110,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 924039430000.0,
         "year:2019": 1833769560000.0,
@@ -6037,7 +6136,8 @@
         "quý:Q3 2025": 2244531590000.0,
         "quý:Q4 2025": 2244531590000.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa162"
     },
     {
       "field_id": "cdkt_co_phieu_pho_thong",
@@ -6050,7 +6150,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 111,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 924039430000.0,
         "year:2019": 1833769560000.0,
@@ -6093,7 +6193,8 @@
         "quý:Q3 2025": 2244531590000.0,
         "quý:Q4 2025": 2244531590000.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa163"
     },
     {
       "field_id": "cdkt_co_phieu_uu_dai_1",
@@ -6106,7 +6207,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 112,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -6149,7 +6250,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa164"
     },
     {
       "field_id": "cdkt_thang_du_von_co_phan",
@@ -6162,7 +6264,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 113,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 223774789900.0,
         "year:2019": 223774789900.0,
@@ -6205,7 +6307,8 @@
         "quý:Q3 2025": 263561289678.0,
         "quý:Q4 2025": 263561289678.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa165"
     },
     {
       "field_id": "cdkt_quyen_chon_chuyen_doi_trai_phieu",
@@ -6218,7 +6321,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 114,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -6261,7 +6364,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa166"
     },
     {
       "field_id": "cdkt_von_khac",
@@ -6274,7 +6378,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 115,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -6317,7 +6421,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa167"
     },
     {
       "field_id": "cdkt_co_phieu_quy",
@@ -6330,7 +6435,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 116,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": -114215880222.0,
@@ -6373,7 +6478,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa168"
     },
     {
       "field_id": "cdkt_chenh_lech_danh_gia_lai_tai_san",
@@ -6386,7 +6492,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 117,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -6429,7 +6535,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa169"
     },
     {
       "field_id": "cdkt_chenh_lech_ty_gia",
@@ -6442,7 +6549,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 118,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -6485,7 +6592,8 @@
         "quý:Q3 2025": 106835089.0,
         "quý:Q4 2025": -235366111.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa170"
     },
     {
       "field_id": "cdkt_quy_dau_tu_va_phat_trien",
@@ -6498,7 +6606,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 119,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -6541,7 +6649,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa171"
     },
     {
       "field_id": "cdkt_quy_ho_tro_sap_xep_doanh_nghiep",
@@ -6554,7 +6663,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 120,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -6597,7 +6706,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa172"
     },
     {
       "field_id": "cdkt_quy_du_phong_tai_chinh",
@@ -6610,7 +6720,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 121,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -6653,7 +6763,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa173"
     },
     {
       "field_id": "cdkt_quy_khac",
@@ -6666,7 +6777,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 122,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -6709,7 +6820,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa174"
     },
     {
       "field_id": "cdkt_lai_chua_phan_phoi",
@@ -6722,7 +6834,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 123,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 2867367461064.0,
         "year:2019": 2931951970284.0,
@@ -6765,7 +6877,8 @@
         "quý:Q3 2025": 7274587884356.0,
         "quý:Q4 2025": 7047898097246.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa175"
     },
     {
       "field_id": "cdkt_lnst_chua_phan_phoi_luy_ke_den_cuoi_ky_truoc",
@@ -6778,7 +6891,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 124,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1609911936752.0,
         "year:2019": 1752829445064.0,
@@ -6821,7 +6934,8 @@
         "quý:Q3 2025": 6133769660225.0,
         "quý:Q4 2025": 5684863342225.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa176"
     },
     {
       "field_id": "cdkt_lnst_chua_phan_phoi_ky_nay",
@@ -6834,7 +6948,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 125,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1257455524312.0,
         "year:2019": 1179122525220.0,
@@ -6877,7 +6991,8 @@
         "quý:Q3 2025": 1140818224131.0,
         "quý:Q4 2025": 1363034755021.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa177"
     },
     {
       "field_id": "cdkt_loi_ich_co_dong_khong_kiem_soat",
@@ -6890,7 +7005,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 126,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 2000000000.0,
@@ -6933,7 +7048,8 @@
         "quý:Q3 2025": 382727495230.0,
         "quý:Q4 2025": 431220094935.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa178"
     },
     {
       "field_id": "cdkt_von_ngan_sach_nha_nuoc_va_quy_khac",
@@ -6946,7 +7062,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 127,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -6989,7 +7105,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa188"
     },
     {
       "field_id": "cdkt_quy_khen_thuong_phuc_loi_1",
@@ -7002,7 +7119,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 128,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -7045,7 +7162,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa209"
     },
     {
       "field_id": "cdkt_von_ngan_sach_nha_nuoc_va_quy_khac_1",
@@ -7058,7 +7176,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 129,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -7101,7 +7219,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa210"
     },
     {
       "field_id": "cdkt_nguon_kinh_phi_da_hinh_thanh_tscd",
@@ -7114,7 +7233,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 130,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -7157,7 +7276,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa211"
     },
     {
       "field_id": "cdkt_loi_ich_cua_co_dong_thieu_so",
@@ -7170,7 +7290,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 131,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -7213,7 +7333,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa276"
     },
     {
       "field_id": "cdkt_tong_cong_nguon_von",
@@ -7226,7 +7347,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 132,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 6298512455279.0,
         "year:2019": 6612414298164.0,
@@ -7269,7 +7390,8 @@
         "quý:Q3 2025": 13501788059691.0,
         "quý:Q4 2025": 13421614624845.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "bsa277"
     },
     {
       "field_id": "kqkd_doanh_thu_ban_hang_va_cung_cap_dich_vu",
@@ -7282,7 +7404,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 11,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 9406877067192.0,
         "year:2019": 7894986105874.0,
@@ -7325,7 +7447,8 @@
         "quý:Q3 2025": 3478477223313.0,
         "quý:Q4 2025": 2731687345813.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa1"
     },
     {
       "field_id": "kqkd_cac_khoan_giam_tru_doanh_thu",
@@ -7338,7 +7461,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 12,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -135547982698.0,
         "year:2019": -27841769961.0,
@@ -7381,7 +7504,8 @@
         "quý:Q3 2025": -7439813690.0,
         "quý:Q4 2025": -16734265322.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa2"
     },
     {
       "field_id": "kqkd_doanh_thu_thuan",
@@ -7394,7 +7518,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 13,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 9271329084494.0,
         "year:2019": 7867144335913.0,
@@ -7437,7 +7561,8 @@
         "quý:Q3 2025": 3471037409623.0,
         "quý:Q4 2025": 2714953080491.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa3"
     },
     {
       "field_id": "kqkd_gia_von_hang_ban",
@@ -7450,7 +7575,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 14,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -7231966110890.0,
         "year:2019": -6334061978625.0,
@@ -7493,7 +7618,8 @@
         "quý:Q3 2025": -2887174726540.0,
         "quý:Q4 2025": -2286088130098.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa4"
     },
     {
       "field_id": "kqkd_loi_nhuan_gop",
@@ -7506,7 +7632,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 15,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 2039362973604.0,
         "year:2019": 1533082357288.0,
@@ -7549,7 +7675,8 @@
         "quý:Q3 2025": 583862683083.0,
         "quý:Q4 2025": 428864950393.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa5"
     },
     {
       "field_id": "kqkd_doanh_thu_hoat_dong_tai_chinh",
@@ -7562,7 +7689,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 16,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 137003001788.0,
         "year:2019": 251192603804.0,
@@ -7605,7 +7732,8 @@
         "quý:Q3 2025": 116159290732.0,
         "quý:Q4 2025": 46230038901.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa6"
     },
     {
       "field_id": "kqkd_chi_phi_tai_chinh",
@@ -7618,7 +7746,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 17,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -167116436972.0,
         "year:2019": -89669571442.0,
@@ -7661,7 +7789,8 @@
         "quý:Q3 2025": -22037728055.0,
         "quý:Q4 2025": -23692265207.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa7"
     },
     {
       "field_id": "kqkd_chi_phi_lai_vay",
@@ -7674,7 +7803,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 18,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -55985954528.0,
         "year:2019": -59533476528.0,
@@ -7717,7 +7846,8 @@
         "quý:Q3 2025": -10942217584.0,
         "quý:Q4 2025": -11734740081.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa8"
     },
     {
       "field_id": "kqkd_lai_tu_cong_ty_lien_doanh",
@@ -7730,7 +7860,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 19,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 78751826955.0,
         "year:2019": 14106613236.0,
@@ -7773,7 +7903,8 @@
         "quý:Q3 2025": 1545987592.0,
         "quý:Q4 2025": -3656654379.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa9"
     },
     {
       "field_id": "kqkd_chi_phi_ban_hang",
@@ -7786,7 +7917,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 20,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -210445968727.0,
         "year:2019": -251818635593.0,
@@ -7829,7 +7960,8 @@
         "quý:Q3 2025": -70593598798.0,
         "quý:Q4 2025": -65944110995.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa10"
     },
     {
       "field_id": "kqkd_chi_phi_quan_ly_doanh_nghiep",
@@ -7842,7 +7974,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 21,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -143565499402.0,
         "year:2019": -148800093568.0,
@@ -7885,7 +8017,8 @@
         "quý:Q3 2025": -75693957042.0,
         "quý:Q4 2025": -88512477263.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa11"
     },
     {
       "field_id": "kqkd_lai_tu_hoat_dong_kinh_doanh",
@@ -7898,7 +8031,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 22,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1733989897246.0,
         "year:2019": 1308093273725.0,
@@ -7941,7 +8074,8 @@
         "quý:Q3 2025": 533242677512.0,
         "quý:Q4 2025": 293289481450.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa12"
     },
     {
       "field_id": "kqkd_thu_nhap_khac_rong",
@@ -7954,7 +8088,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 23,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -46427772362.0,
         "year:2019": 1278046300.0,
@@ -7997,7 +8131,8 @@
         "quý:Q3 2025": 1470901677.0,
         "quý:Q4 2025": -6818006717.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa13"
     },
     {
       "field_id": "kqkd_thu_nhap_khac",
@@ -8010,7 +8145,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 24,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 3162655021.0,
         "year:2019": 11848078947.0,
@@ -8053,7 +8188,8 @@
         "quý:Q3 2025": 12539200587.0,
         "quý:Q4 2025": 9590162008.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa14"
     },
     {
       "field_id": "kqkd_chi_phi_khac",
@@ -8066,7 +8202,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 25,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -49590427383.0,
         "year:2019": -10570032647.0,
@@ -8109,7 +8245,8 @@
         "quý:Q3 2025": -11068298910.0,
         "quý:Q4 2025": -16408168725.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa15"
     },
     {
       "field_id": "kqkd_lai_tu_cong_ty_lien_doanh_1",
@@ -8122,7 +8259,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 26,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -8165,7 +8302,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa16"
     },
     {
       "field_id": "kqkd_lai_truoc_thue",
@@ -8178,7 +8316,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 27,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1687562124884.0,
         "year:2019": 1309371320025.0,
@@ -8221,7 +8359,8 @@
         "quý:Q3 2025": 534713579189.0,
         "quý:Q4 2025": 286471474733.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa17"
     },
     {
       "field_id": "kqkd_chi_phi_thue_thu_nhap_doanh_nghiep",
@@ -8234,7 +8373,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 28,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -245463648521.0,
         "year:2019": -130248794805.0,
@@ -8277,7 +8416,8 @@
         "quý:Q3 2025": -79298394032.0,
         "quý:Q4 2025": -41513091138.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa18"
     },
     {
       "field_id": "kqkd_thue_thu_nhap_doanh_nghiep_hien_thoi",
@@ -8290,7 +8430,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 29,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -252063378043.0,
         "year:2019": -139977904705.0,
@@ -8333,7 +8473,8 @@
         "quý:Q3 2025": -82054189884.0,
         "quý:Q4 2025": -42695724071.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa19"
     },
     {
       "field_id": "kqkd_thue_thu_nhap_doanh_nghiep_hoan_lai",
@@ -8346,7 +8487,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 30,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 6599729522.0,
         "year:2019": 9729109900.0,
@@ -8389,7 +8530,8 @@
         "quý:Q3 2025": 2755795852.0,
         "quý:Q4 2025": 1182632933.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa20"
     },
     {
       "field_id": "kqkd_lai_thuan_sau_thue",
@@ -8402,7 +8544,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 31,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1442098476363.0,
         "year:2019": 1179122525220.0,
@@ -8445,7 +8587,8 @@
         "quý:Q3 2025": 455415185157.0,
         "quý:Q4 2025": 244958383595.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa21"
     },
     {
       "field_id": "kqkd_loi_ich_cua_co_dong_thieu_so",
@@ -8458,7 +8601,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 32,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -83213949.0,
         "year:2019": 0.0,
@@ -8501,7 +8644,8 @@
         "quý:Q3 2025": 22417379204.0,
         "quý:Q4 2025": 22741852705.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa22"
     },
     {
       "field_id": "kqkd_loi_nhuan_cua_co_dong_cua_cong_ty_me",
@@ -8514,7 +8658,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 33,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1442181690312.0,
         "year:2019": 1179122525220.0,
@@ -8557,7 +8701,8 @@
         "quý:Q3 2025": 432997805953.0,
         "quý:Q4 2025": 222216530890.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa23"
     },
     {
       "field_id": "kqkd_lai_co_ban_tren_co_phieu",
@@ -8570,7 +8715,7 @@
       "data_type": "DECIMAL(14,2)",
       "level": 0,
       "row_number": 34,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 15489.0,
         "year:2019": 12559.0,
@@ -8613,7 +8758,8 @@
         "quý:Q3 2025": 1933.0,
         "quý:Q4 2025": 992.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa24"
     },
     {
       "field_id": "kqkd_lai_tren_co_phieu_pha_loang",
@@ -8626,7 +8772,7 @@
       "data_type": "DECIMAL(14,2)",
       "level": 0,
       "row_number": 35,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 15489.0,
         "year:2019": 12559.0,
@@ -8669,7 +8815,8 @@
         "quý:Q3 2025": 1933.0,
         "quý:Q4 2025": 992.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "isa102"
     },
     {
       "field_id": "lctt_loi_nhuan_truoc_thue",
@@ -8682,7 +8829,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 11,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1687562124884.0,
         "year:2019": 1309371320025.0,
@@ -8725,7 +8872,8 @@
         "quý:Q3 2025": 534713579189.0,
         "quý:Q4 2025": 286471474733.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa1"
     },
     {
       "field_id": "lctt_khau_hao_tscd_va_bdsdt",
@@ -8738,7 +8886,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 12,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 156301707548.0,
         "year:2019": 165204005292.0,
@@ -8781,7 +8929,8 @@
         "quý:Q3 2025": 120764973198.0,
         "quý:Q4 2025": 123725485922.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa2"
     },
     {
       "field_id": "lctt_phan_bo_loi_the_thuong_mai",
@@ -8794,7 +8943,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 13,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -8837,7 +8986,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa3"
     },
     {
       "field_id": "lctt_chi_phi_du_phong",
@@ -8850,7 +9000,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 14,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 96329303996.0,
         "year:2019": -39042322478.0,
@@ -8893,7 +9043,8 @@
         "quý:Q3 2025": -26330875410.0,
         "quý:Q4 2025": 109504115134.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa4"
     },
     {
       "field_id": "lctt_lailo_chenh_lech_ty_gia_hoi_doai_do_danh_gia_lai_cac_kh",
@@ -8906,7 +9057,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 15,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 7887799279.0,
         "year:2019": -555705304.0,
@@ -8949,7 +9100,8 @@
         "quý:Q3 2025": 6823067317.0,
         "quý:Q4 2025": 13549526915.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa5"
     },
     {
       "field_id": "lctt_lai_tu_thanh_ly_tai_san_co_dinh",
@@ -8962,7 +9114,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 16,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -9005,7 +9157,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa6"
     },
     {
       "field_id": "lctt_lo_tu_hoat_dong_dau_tu",
@@ -9018,7 +9171,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 17,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -42374234602.0,
         "year:2019": -220657895270.0,
@@ -9061,7 +9214,8 @@
         "quý:Q3 2025": -34251183942.0,
         "quý:Q4 2025": -38812264856.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa7"
     },
     {
       "field_id": "lctt_chi_phi_lai_vay",
@@ -9074,7 +9228,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 18,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 55985954528.0,
         "year:2019": 59533476528.0,
@@ -9117,7 +9271,8 @@
         "quý:Q3 2025": 10942217584.0,
         "quý:Q4 2025": 11734740081.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa8"
     },
     {
       "field_id": "lctt_thu_lai_va_co_tuc",
@@ -9130,7 +9285,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 19,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -9173,7 +9328,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa9"
     },
     {
       "field_id": "lctt_cac_khoan_dieu_chinh_khac",
@@ -9186,7 +9342,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 20,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -9229,7 +9385,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa10"
     },
     {
       "field_id": "lctt_luu_chuyen_tien_te_rong_tu_cac_hoat_dong_san_xuat_kinh_",
@@ -9242,7 +9399,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 21,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 680227230337.0,
         "year:2019": 1489238425247.0,
@@ -9285,7 +9442,8 @@
         "quý:Q3 2025": 1255425793422.0,
         "quý:Q4 2025": 96563794189.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa11"
     },
     {
       "field_id": "lctt_loi_nhuan_tu_hoat_dong_kinh_doanh_truoc_nhung_thay_doi_",
@@ -9298,7 +9456,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 22,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1961692655633.0,
         "year:2019": 1273852878793.0,
@@ -9341,7 +9499,8 @@
         "quý:Q3 2025": 612661777936.0,
         "quý:Q4 2025": 506173077929.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa12"
     },
     {
       "field_id": "lctt_giam_cac_khoan_phai_thu",
@@ -9354,7 +9513,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 23,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -1293522710875.0,
         "year:2019": 648229469821.0,
@@ -9397,7 +9556,8 @@
         "quý:Q3 2025": 49462590707.0,
         "quý:Q4 2025": 163983835538.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa13"
     },
     {
       "field_id": "lctt_giam_hang_ton_kho",
@@ -9410,7 +9570,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 24,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -652644352130.0,
         "year:2019": 9433786778.0,
@@ -9453,7 +9613,8 @@
         "quý:Q3 2025": 357308900507.0,
         "quý:Q4 2025": -139647227586.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa14"
     },
     {
       "field_id": "lctt_tang_cac_khoan_phai_tra",
@@ -9466,7 +9627,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 25,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 843749914400.0,
         "year:2019": -66864541568.0,
@@ -9509,7 +9670,8 @@
         "quý:Q3 2025": 73211826375.0,
         "quý:Q4 2025": -378711257155.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa15"
     },
     {
       "field_id": "lctt_giam_chi_phi_tra_truoc",
@@ -9522,7 +9684,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 26,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -12220952695.0,
         "year:2019": -44938376988.0,
@@ -9565,7 +9727,8 @@
         "quý:Q3 2025": 43539817613.0,
         "quý:Q4 2025": -28781652348.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa16"
     },
     {
       "field_id": "lctt_giam_chung_khoan_kinh_doanh",
@@ -9578,7 +9741,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 27,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -9621,7 +9784,8 @@
         "quý:Q3 2025": 134785685663.0,
         "quý:Q4 2025": -441975000.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa17"
     },
     {
       "field_id": "lctt_tien_lai_vay_da_tra",
@@ -9634,7 +9798,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 28,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -54708108455.0,
         "year:2019": -58961146349.0,
@@ -9677,7 +9841,8 @@
         "quý:Q3 2025": -10744648571.0,
         "quý:Q4 2025": -12025128244.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa18"
     },
     {
       "field_id": "lctt_thue_thu_nhap_doanh_nghiep_da_nop",
@@ -9690,7 +9855,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 29,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -97800115214.0,
         "year:2019": -247486607966.0,
@@ -9733,7 +9898,8 @@
         "quý:Q3 2025": -2841382628.0,
         "quý:Q4 2025": -12763538463.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa19"
     },
     {
       "field_id": "lctt_tien_thu_khac_tu_hoat_dong_kinh_doanh",
@@ -9746,7 +9912,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 30,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -9789,7 +9955,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa20"
     },
     {
       "field_id": "lctt_tien_chi_khac_cho_hoat_dong_kinh_doanh",
@@ -9802,7 +9969,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 31,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -14319100327.0,
         "year:2019": -24027037274.0,
@@ -9845,7 +10012,8 @@
         "quý:Q3 2025": -1958774180.0,
         "quý:Q4 2025": -1222340482.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa21"
     },
     {
       "field_id": "lctt_luu_chuyen_tien_thuan_tu_hoat_dong_dau_tu",
@@ -9858,7 +10026,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 32,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -702079443662.0,
         "year:2019": -743417679331.0,
@@ -9901,7 +10069,8 @@
         "quý:Q3 2025": -841275063239.0,
         "quý:Q4 2025": 182992332794.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa22"
     },
     {
       "field_id": "lctt_tien_chi_de_mua_sam_xay_dung_tscd_va_cac_tai_san_dai_ha",
@@ -9914,7 +10083,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 33,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -714768152175.0,
         "year:2019": -377607282176.0,
@@ -9957,7 +10126,8 @@
         "quý:Q3 2025": -114720154071.0,
         "quý:Q4 2025": -206566287294.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa23"
     },
     {
       "field_id": "lctt_tien_thu_tu_thanh_ly_nhuong_ban_tscd_va_cac_tai_san_dai",
@@ -9970,7 +10140,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 34,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 169488131314.0,
         "year:2019": 16989455686.0,
@@ -10013,7 +10183,8 @@
         "quý:Q3 2025": 3133410353.0,
         "quý:Q4 2025": 1933758169.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa24"
     },
     {
       "field_id": "lctt_tien_chi_cho_vay_mua_cac_cong_cu_no_cua_don_vi_khac",
@@ -10026,7 +10197,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 35,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -1777720000000.0,
         "year:2019": -1971459435000.0,
@@ -10069,7 +10240,8 @@
         "quý:Q3 2025": -1146822739726.0,
         "quý:Q4 2025": -1005281909692.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa25"
     },
     {
       "field_id": "lctt_tien_thu_hoi_cho_vay_ban_lai_cac_cong_cu_no_cua_don_vi_",
@@ -10082,7 +10254,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 36,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 1542792362468.0,
         "year:2019": 1087430000000.0,
@@ -10125,7 +10297,8 @@
         "quý:Q3 2025": 410822739726.0,
         "quý:Q4 2025": 1342206865864.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa26"
     },
     {
       "field_id": "lctt_tien_chi_dau_tu_gop_von_vao_don_vi_khac",
@@ -10138,7 +10311,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 37,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -116700000.0,
         "year:2019": 0.0,
@@ -10181,7 +10354,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa27"
     },
     {
       "field_id": "lctt_tien_thu_hoi_dau_tu_gop_von_vao_don_vi_khac",
@@ -10194,7 +10368,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 38,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 6085194315.0,
         "year:2019": 430453567064.0,
@@ -10237,7 +10411,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa28"
     },
     {
       "field_id": "lctt_tien_thu_lai_cho_vay_co_tuc_va_loi_nhuan_duoc_chia",
@@ -10250,7 +10425,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 39,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 72159720416.0,
         "year:2019": 70776015095.0,
@@ -10293,7 +10468,8 @@
         "quý:Q3 2025": 6311680479.0,
         "quý:Q4 2025": 50699905747.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa29"
     },
     {
       "field_id": "lctt_luu_chuyen_tien_thuan_tu_hoat_dong_tai_chinh",
@@ -10306,7 +10482,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 40,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 19940168218.0,
         "year:2019": -702625279618.0,
@@ -10349,7 +10525,8 @@
         "quý:Q3 2025": 119073920955.0,
         "quý:Q4 2025": 56830307625.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa30"
     },
     {
       "field_id": "lctt_tien_thu_tu_phat_hanh_co_phieu_nhan_von_gop_cua_chu_so_",
@@ -10362,7 +10539,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 41,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 10380718000.0,
         "year:2019": 0.0,
@@ -10405,7 +10582,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa31"
     },
     {
       "field_id": "lctt_tien_chi_tra_von_gop_cho_cac_chu_so_huu_mua_lai_co_phie",
@@ -10418,7 +10596,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 42,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": -114215880222.0,
@@ -10461,7 +10639,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa32"
     },
     {
       "field_id": "lctt_tien_thu_duoc_cac_khoan_di_vay",
@@ -10474,7 +10653,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 43,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 4932839245502.0,
         "year:2019": 4677272193820.0,
@@ -10517,7 +10696,8 @@
         "quý:Q3 2025": 2351465460936.0,
         "quý:Q4 2025": 2425196458519.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa33"
     },
     {
       "field_id": "lctt_tien_tra_no_goc_vay",
@@ -10530,7 +10710,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 44,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -4559898419884.0,
         "year:2019": -5080694240341.0,
@@ -10573,7 +10753,8 @@
         "quý:Q3 2025": -2232391539981.0,
         "quý:Q4 2025": -2368366150894.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa34"
     },
     {
       "field_id": "lctt_tien_tra_no_goc_thue_tai_chinh",
@@ -10586,7 +10767,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 45,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -10629,7 +10810,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa35"
     },
     {
       "field_id": "lctt_co_tuc_loi_nhuan_da_tra_cho_chu_so_huu",
@@ -10642,7 +10824,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 46,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -363381375400.0,
         "year:2019": -184987352875.0,
@@ -10685,7 +10867,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa36"
     },
     {
       "field_id": "lctt_tien_lai_da_nhan",
@@ -10698,7 +10881,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 47,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 0.0,
         "year:2019": 0.0,
@@ -10741,7 +10924,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa37"
     },
     {
       "field_id": "lctt_luu_chuyen_tien_thuan_trong_ky",
@@ -10754,7 +10938,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 48,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -1912045107.0,
         "year:2019": 43195466298.0,
@@ -10797,7 +10981,8 @@
         "quý:Q3 2025": 533224651138.0,
         "quý:Q4 2025": 336386434608.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa38"
     },
     {
       "field_id": "lctt_tien_va_tuong_duong_tien_dau_ky",
@@ -10810,7 +10995,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 49,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 45344991423.0,
         "year:2019": 43241847762.0,
@@ -10853,7 +11038,8 @@
         "quý:Q3 2025": 1147531700332.0,
         "quý:Q4 2025": 1678417812091.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa39"
     },
     {
       "field_id": "lctt_anh_huong_cua_thay_doi_ty_gia_hoi_doai_quy_doi_ngoai_te",
@@ -10866,7 +11052,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 50,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": -191098554.0,
         "year:2019": -15359074.0,
@@ -10909,7 +11095,8 @@
         "quý:Q3 2025": -2338539379.0,
         "quý:Q4 2025": -6542986356.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa40"
     },
     {
       "field_id": "lctt_tien_va_tuong_duong_tien_cuoi_ky",
@@ -10922,7 +11109,7 @@
       "data_type": "DECIMAL(22,2)",
       "level": 0,
       "row_number": 51,
-      "vietcap_mapped": false,
+      "vietcap_mapped": true,
       "sample_values": {
         "year:2018": 43241847762.0,
         "year:2019": 86421954986.0,
@@ -10965,7 +11152,8 @@
         "quý:Q3 2025": 1678417812091.0,
         "quý:Q4 2025": 2008261260343.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": "cfa41"
     },
     {
       "field_id": "note_tien_va_tuong_duong_tien",
@@ -11021,7 +11209,8 @@
         "quý:Q3 2025": 1678417812091.0,
         "quý:Q4 2025": 2008261260343.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tien_mat",
@@ -11077,7 +11266,8 @@
         "quý:Q3 2025": 1824265784.0,
         "quý:Q4 2025": 864743840.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tien_gui_ngan_hang",
@@ -11133,7 +11323,8 @@
         "quý:Q3 2025": 1571270806581.0,
         "quý:Q4 2025": 2007396516503.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tien_dang_chuyen",
@@ -11189,7 +11380,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tien_va_tuong_duong_tien_1",
@@ -11245,7 +11437,8 @@
         "quý:Q3 2025": 105322739726.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_tu_tai_chinh_nh",
@@ -11301,7 +11494,8 @@
         "quý:Q3 2025": 2699749641625.0,
         "quý:Q4 2025": 2357483974663.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chung_khoan_dau_tu_ngan_han",
@@ -11357,7 +11551,8 @@
         "quý:Q3 2025": 24029181119.0,
         "quý:Q4 2025": 24471156119.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_tu_nam_giu_den_ngay_dao_han",
@@ -11413,7 +11608,8 @@
         "quý:Q3 2025": 2676922819873.0,
         "quý:Q4 2025": 2339997863701.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_tu_ngan_han",
@@ -11469,7 +11665,8 @@
         "quý:Q3 2025": 2676922819873.0,
         "quý:Q4 2025": 2339997863701.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_tu_dai_han",
@@ -11525,7 +11722,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_tu_nh_khac",
@@ -11581,7 +11779,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_du_phong_giam_gia_dtnh",
@@ -11637,7 +11836,8 @@
         "quý:Q3 2025": -1202359367.0,
         "quý:Q4 2025": -6985045157.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_phai_thu_ngan_han_khac",
@@ -11693,7 +11893,8 @@
         "quý:Q3 2025": 211020708544.0,
         "quý:Q4 2025": 268558598033.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_phai_thu_ve_co_phan_hoa",
@@ -11749,7 +11950,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_phai_thu_ve_co_tuc_va_loi_nhuan_duoc_chia",
@@ -11805,7 +12007,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_phai_thu_nguoi_lao_dong",
@@ -11861,7 +12064,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_phai_thu_khac",
@@ -11917,7 +12121,8 @@
         "quý:Q3 2025": 211020708544.0,
         "quý:Q4 2025": 268558598033.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_hang_ton_kho",
@@ -11973,7 +12178,8 @@
         "quý:Q3 2025": 2835181617925.0,
         "quý:Q4 2025": 2976450635108.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_hang_mua_dang_di_duong",
@@ -12029,7 +12235,8 @@
         "quý:Q3 2025": 201979687132.0,
         "quý:Q4 2025": 129133659827.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_nguyen_lieu_vat_lieu",
@@ -12085,7 +12292,8 @@
         "quý:Q3 2025": 588065667852.0,
         "quý:Q4 2025": 557611410679.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_cong_cu_dung_cu",
@@ -12141,7 +12349,8 @@
         "quý:Q3 2025": 32268212170.0,
         "quý:Q4 2025": 32370986476.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_sx_kd_do_dang",
@@ -12197,7 +12406,8 @@
         "quý:Q3 2025": 818851434439.0,
         "quý:Q4 2025": 830924243522.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_thanh_pham",
@@ -12253,7 +12463,8 @@
         "quý:Q3 2025": 969104571024.0,
         "quý:Q4 2025": 1191371771737.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_hang_hoa",
@@ -12309,7 +12520,8 @@
         "quý:Q3 2025": 975154521.0,
         "quý:Q4 2025": 6026657321.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_hang_gui_di_ban",
@@ -12365,7 +12577,8 @@
         "quý:Q3 2025": 6623430476.0,
         "quý:Q4 2025": 10076655638.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_hang_hoa_kho_bao_thue",
@@ -12421,7 +12634,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_hang_hoa_bat_dong_san",
@@ -12477,7 +12691,8 @@
         "quý:Q3 2025": 217313460311.0,
         "quý:Q4 2025": 218935249908.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tai_san_ngan_han_khac",
@@ -12533,7 +12748,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tam_ung",
@@ -12589,7 +12805,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tai_san_thieu_cho_xu_ly",
@@ -12645,7 +12862,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_cam_co_ky_quy_ky_cuoc_nh",
@@ -12701,7 +12919,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_khac",
@@ -12757,7 +12976,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_phai_thu_dai_han_khac",
@@ -12813,7 +13033,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_ky_quy_ky_cuoc_dai_han",
@@ -12869,7 +13090,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_cac_khoan_tien_nhan_uy_thac",
@@ -12925,7 +13147,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_cho_vay_khong_co_lai",
@@ -12981,7 +13204,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_phai_thu_dai_han_khac_1",
@@ -13037,7 +13261,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_nguyen_gia_tscdhh",
@@ -13093,7 +13318,8 @@
         "quý:Q3 2025": 5508492143311.0,
         "quý:Q4 2025": 5544695185904.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_nguyen_gia_dau_ky",
@@ -13149,7 +13375,8 @@
         "quý:Q3 2025": 5359639698567.0,
         "quý:Q4 2025": 5359639698567.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tang_trong_ky",
@@ -13205,7 +13432,8 @@
         "quý:Q3 2025": 159769992307.0,
         "quý:Q4 2025": 201272992068.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_giam_trong_ky",
@@ -13261,7 +13489,8 @@
         "quý:Q3 2025": -10917547563.0,
         "quý:Q4 2025": -16217504731.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_hao_mon_tscdhh",
@@ -13317,7 +13546,8 @@
         "quý:Q3 2025": 2721701161649.0,
         "quý:Q4 2025": 2825802330391.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_ky",
@@ -13373,7 +13603,8 @@
         "quý:Q3 2025": 2415639601303.0,
         "quý:Q4 2025": 2415639601303.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tang_trong_ky_1",
@@ -13429,7 +13660,8 @@
         "quý:Q3 2025": 313153583323.0,
         "quý:Q4 2025": 421589097558.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_giam_trong_ky_1",
@@ -13485,7 +13717,8 @@
         "quý:Q3 2025": -7092022977.0,
         "quý:Q4 2025": -11426368470.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_nguyen_gia_tscd_ttc",
@@ -13541,7 +13774,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_nguyen_gia_dau_ky_1",
@@ -13597,7 +13831,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tang_trong_ky_2",
@@ -13653,7 +13888,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_giam_trong_ky_2",
@@ -13709,7 +13945,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_hao_mon_tscd_ttc",
@@ -13765,7 +14002,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_ky_1",
@@ -13821,7 +14059,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tang_trong_ky_3",
@@ -13877,7 +14116,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_giam_trong_ky_3",
@@ -13933,7 +14173,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_nguyen_gia_tscdvh",
@@ -13989,7 +14230,8 @@
         "quý:Q3 2025": 554813098744.0,
         "quý:Q4 2025": 700621098744.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_nguyen_gia_dau_ky_2",
@@ -14045,7 +14287,8 @@
         "quý:Q3 2025": 555595802285.0,
         "quý:Q4 2025": 555595802285.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tang_trong_ky_4",
@@ -14101,7 +14344,8 @@
         "quý:Q3 2025": 1966148850.0,
         "quý:Q4 2025": 147775148850.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_giam_trong_ky_4",
@@ -14157,7 +14401,8 @@
         "quý:Q3 2025": -2748852391.0,
         "quý:Q4 2025": -2749852391.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_hao_mon_tscdvh",
@@ -14213,7 +14458,8 @@
         "quý:Q3 2025": 102909995629.0,
         "quý:Q4 2025": 109065797401.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_ky_2",
@@ -14269,7 +14515,8 @@
         "quý:Q3 2025": 84481749712.0,
         "quý:Q4 2025": 84481749712.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tang_trong_ky_5",
@@ -14325,7 +14572,8 @@
         "quý:Q3 2025": 18490505195.0,
         "quý:Q4 2025": 24646306967.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_giam_trong_ky_5",
@@ -14381,7 +14629,8 @@
         "quý:Q3 2025": -62259278.0,
         "quý:Q4 2025": -62259278.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_tu_dai_han_khac",
@@ -14437,7 +14686,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_tu_co_phieu",
@@ -14493,7 +14743,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_tu_trai_phieu",
@@ -14549,7 +14800,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_tu_tin_phieu_ky_phieu",
@@ -14605,7 +14857,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_cho_vay_dai_han",
@@ -14661,7 +14914,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_dau_tu_dai_han_khac_1",
@@ -14717,7 +14971,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_vay_va_no_ngan_han",
@@ -14773,7 +15028,8 @@
         "quý:Q3 2025": 1989315755804.0,
         "quý:Q4 2025": 2046146063429.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_vay_ngan_han",
@@ -14829,7 +15085,8 @@
         "quý:Q3 2025": 1989315755804.0,
         "quý:Q4 2025": 2046146063429.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_vay_dai_han_den_han_tra",
@@ -14885,7 +15142,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_gia_goc_loi_the_thuong_mai",
@@ -14941,7 +15199,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_so_du_dau_ky",
@@ -14997,7 +15256,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tang_trong_ky_6",
@@ -15053,7 +15313,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_giam_trong_ky_6",
@@ -15109,7 +15370,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_phan_bo_luy_ke",
@@ -15165,7 +15427,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_so_du_dau_ky_1",
@@ -15221,7 +15484,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tang_trong_ky_7",
@@ -15277,7 +15541,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_giam_trong_ky_7",
@@ -15333,7 +15598,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_cac_khoan_phai_tra_ve_thue",
@@ -15389,7 +15655,8 @@
         "quý:Q3 2025": 220550155551.0,
         "quý:Q4 2025": 228913691808.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_thue_gtgt",
@@ -15445,7 +15712,8 @@
         "quý:Q3 2025": 25377360431.0,
         "quý:Q4 2025": 4709271885.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_thue_ttdb",
@@ -15501,7 +15769,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_thue_xnk",
@@ -15557,7 +15826,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_thue_tndn",
@@ -15613,7 +15883,8 @@
         "quý:Q3 2025": 193084687871.0,
         "quý:Q4 2025": 223016873479.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_thue_tncn",
@@ -15669,7 +15940,8 @@
         "quý:Q3 2025": 1989549998.0,
         "quý:Q4 2025": 1156566261.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_thue_tai_nguyen",
@@ -15725,7 +15997,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_thue_nha_dat_va_tien_thue_dat",
@@ -15781,7 +16054,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_cac_loai_thue_khac",
@@ -15837,7 +16111,8 @@
         "quý:Q3 2025": 98557251.0,
         "quý:Q4 2025": 30980183.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_cac_khoan_phi_le_phi_khac",
@@ -15893,7 +16168,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_phai_tra",
@@ -15949,7 +16225,8 @@
         "quý:Q3 2025": 70283540176.0,
         "quý:Q4 2025": 32230785311.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_trich_truoc_cp_luong_nghi_phep",
@@ -16005,7 +16282,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_scl_tscd",
@@ -16061,7 +16339,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_trong_thoi_gian_ngung_kd",
@@ -16117,7 +16396,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_khac_1",
@@ -16173,7 +16453,8 @@
         "quý:Q3 2025": 70283540176.0,
         "quý:Q4 2025": 32230785311.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_phai_tra_phai_nop_khac",
@@ -16229,7 +16510,8 @@
         "quý:Q3 2025": 96205782388.0,
         "quý:Q4 2025": 80242543444.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_tai_san_thua_cho_xl",
@@ -16285,7 +16567,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_kinh_phi_cong_doan",
@@ -16341,7 +16624,8 @@
         "quý:Q3 2025": 50642523602.0,
         "quý:Q4 2025": 40612558130.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_bao_hiem_xa_hoi",
@@ -16397,7 +16681,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_bao_hiem_y_te",
@@ -16453,7 +16738,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_bao_hiem_that_nghiep",
@@ -16509,7 +16795,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_phai_tra_ve_cph",
@@ -16565,7 +16852,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_nhan_ky_quy_ky_cuoc_nh",
@@ -16621,7 +16909,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_doanh_thu_chua_thuc_hien",
@@ -16677,7 +16966,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_khac_2",
@@ -16733,7 +17023,8 @@
         "quý:Q3 2025": 45563258786.0,
         "quý:Q4 2025": 39629985314.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_vay_dai_han",
@@ -16789,7 +17080,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_vay_ngan_hang",
@@ -16845,7 +17137,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_vay_doi_tuong_khac",
@@ -16901,7 +17194,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_trai_phieu_phat_hanh",
@@ -16957,7 +17251,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_thue_tai_chinh",
@@ -17013,7 +17308,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_no_dai_han_khac",
@@ -17069,7 +17365,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_von_chu_so_huu",
@@ -17125,7 +17422,8 @@
         "quý:Q3 2025": 2244531590000.0,
         "quý:Q4 2025": 2244531590000.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_von_gop_cua_nha_nuoc",
@@ -17181,7 +17479,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_von_dau_tu_cua_doi_tuong_khac",
@@ -17237,7 +17536,8 @@
         "quý:Q3 2025": 2244531590000.0,
         "quý:Q4 2025": 2244531590000.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_doanh_thu",
@@ -17293,7 +17593,8 @@
         "quý:Q3 2025": 3478477223313.0,
         "quý:Q4 2025": 2731687345813.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_doanh_thu_ban_hang",
@@ -17349,7 +17650,8 @@
         "quý:Q3 2025": 3404221307153.0,
         "quý:Q4 2025": 2694881390744.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_doanh_thu_cung_cap_dich_vu",
@@ -17405,7 +17707,8 @@
         "quý:Q3 2025": 74255916160.0,
         "quý:Q4 2025": 36805955069.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_doanh_thu_hop_dong_xay_dung",
@@ -17461,7 +17764,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_giam_tru_doanh_thu",
@@ -17517,7 +17821,8 @@
         "quý:Q3 2025": 7439813690.0,
         "quý:Q4 2025": 16734265322.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chiet_khau_thuong_mai",
@@ -17573,7 +17878,8 @@
         "quý:Q3 2025": 6827155629.0,
         "quý:Q4 2025": 12389191028.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_giam_gia_hang_ban",
@@ -17629,7 +17935,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_hang_ban_bi_tra_lai",
@@ -17685,7 +17992,8 @@
         "quý:Q3 2025": 612658061.0,
         "quý:Q4 2025": 4345074294.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_thue_gtgt_phai_nop",
@@ -17741,7 +18049,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_thue_tieu_thu_dac_biet",
@@ -17797,7 +18106,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_thue_xuat_khau",
@@ -17853,7 +18163,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_gia_von",
@@ -17909,7 +18220,8 @@
         "quý:Q3 2025": 2887174726540.0,
         "quý:Q4 2025": 2286088130098.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_gia_von_hang_hoa_da_ban",
@@ -17965,7 +18277,8 @@
         "quý:Q3 2025": 2835014509776.0,
         "quý:Q4 2025": 2170066375054.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_gia_von_thanh_pham_da_ban",
@@ -18021,7 +18334,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_gia_von_cua_dich_vu_cung_cap",
@@ -18077,7 +18391,8 @@
         "quý:Q3 2025": 51847716604.0,
         "quý:Q4 2025": 17709512782.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_gia_tri_con_lai_chi_phi_nhuong_ban_thanh_ly_bds_dau_tu_",
@@ -18133,7 +18448,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_kinh_doanh_bds_dau_tu",
@@ -18189,7 +18505,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_hao_hut_mat_mat_hang_ton_kho",
@@ -18245,7 +18562,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_cac_khoan_chi_phi_vuot_muc_binh_thuong",
@@ -18301,7 +18619,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_du_phong",
@@ -18357,7 +18676,8 @@
         "quý:Q3 2025": 312500160.0,
         "quý:Q4 2025": 98312242262.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_doanh_thu_tai_chinh",
@@ -18413,7 +18733,8 @@
         "quý:Q3 2025": 116159290732.0,
         "quý:Q4 2025": 46230038901.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_lai_tien_gui_tien_cho_vay",
@@ -18469,7 +18790,8 @@
         "quý:Q3 2025": 34142903322.0,
         "quý:Q4 2025": 37713613696.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_lai_dau_tu_trai_phieu_ky_phieu_tin_phieu",
@@ -18525,7 +18847,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_co_tuc_loi_nhuan_duoc_chia",
@@ -18581,7 +18904,8 @@
         "quý:Q3 2025": 120000000.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_lai_tu_ban_thanh_ly_cac_khoan_dau_tu",
@@ -18637,7 +18961,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_lai_ban_ngoai_te",
@@ -18693,7 +19018,8 @@
         "quý:Q3 2025": 15714330422.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_lai_chenh_lech_ty_gia_da_thuc_hien",
@@ -18749,7 +19075,8 @@
         "quý:Q3 2025": 80801023639.0,
         "quý:Q4 2025": 20250519838.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_lai_chenh_lech_ty_gia_chua_thuc_hien",
@@ -18805,7 +19132,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_lai_ban_hang_tra_cham",
@@ -18861,7 +19189,8 @@
         "quý:Q3 2025": 2820761141.0,
         "quý:Q4 2025": 1689529026.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_doanh_thu_hoat_dong_tai_chinh_khac",
@@ -18917,7 +19246,8 @@
         "quý:Q3 2025": -17439727792.0,
         "quý:Q4 2025": -13423623659.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_tai_chinh",
@@ -18973,7 +19303,8 @@
         "quý:Q3 2025": 22037728055.0,
         "quý:Q4 2025": 23692265207.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_lai_tien_vay",
@@ -19029,7 +19360,8 @@
         "quý:Q3 2025": 10942217584.0,
         "quý:Q4 2025": 11734740081.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chiet_khau_thanh_toan_lai_ban_hang_tra_cham",
@@ -19085,7 +19417,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_lo_do_thanh_ly_cac_khoan_dau_tu_ngan_han_dai_han",
@@ -19141,7 +19474,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 8135154471.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_lo_ban_ngoai_te",
@@ -19197,7 +19531,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_lo_chenh_lech_ty_gia_da_thuc_hien",
@@ -19253,7 +19588,8 @@
         "quý:Q3 2025": 30427584135.0,
         "quý:Q4 2025": 1795623973.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_lo_chenh_lech_ty_gia_chua_thuc_hien",
@@ -19309,7 +19645,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_du_phong_giam_gia_cac_khoan_dau_tu_ngan_han_dai_han",
@@ -19365,7 +19702,8 @@
         "quý:Q3 2025": -26635460570.0,
         "quý:Q4 2025": 10161901153.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_tai_chinh_khac",
@@ -19421,7 +19759,8 @@
         "quý:Q3 2025": 7303386906.0,
         "quý:Q4 2025": -8135154471.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_san_xuat_theo_yeu_to",
@@ -19477,7 +19816,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_nguyen_lieu_vat_lieu",
@@ -19533,7 +19873,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_nhan_cong",
@@ -19589,7 +19930,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_khau_hao_tai_san_co_dinh",
@@ -19645,7 +19987,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_dich_vu_mua_ngoai",
@@ -19701,7 +20044,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "note_chi_phi_khac_bang_tien",
@@ -19757,7 +20101,8 @@
         "quý:Q3 2025": 0.0,
         "quý:Q4 2025": 0.0
       },
-      "notes": ""
+      "notes": "",
+      "vietcap_key": ""
     },
     {
       "field_id": "cdkt_bank_tong_tai_san",

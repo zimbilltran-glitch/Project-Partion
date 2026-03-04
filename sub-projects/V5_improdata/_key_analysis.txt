@@ -1,0 +1,242 @@
+=== CDKT_BANK pattern (first 30 fields) ===
+row   1 | key=bsa53      | TỔNG TÀI SẢN
+row   2 | key=bsa2       | Tiền mặt, vàng bạc, đá quý
+row   3 | key=bsb97      | Tiền gửi tại Ngân hàng nhà nước Việt Nam
+row   4 | key=bsb98      | Tiền gửi tại các TCTD khác và cho vay các TCTD khác
+row   5 | key=bsb258     | Tiền gửi tại các TCTD khác
+row   6 | key=bsb259     | Cho vay các TCTD khác
+row   7 | key=bsb260     | Dự phòng rủi ro
+row   8 | key=bsb99      | Chứng khoán kinh doanh
+row   9 | key=bsb100     | Chứng khoán kinh doanh
+row  10 | key=bsb101     | Dự phòng giảm giá chứng khoán kinh doanh
+row  11 | key=bsb102     | Các công cụ tài chính phái sinh và các tài sản tài chính khác
+row  12 | key=bsb103     | Cho vay khách hàng
+row  13 | key=bsb104     | Cho vay khách hàng
+row  14 | key=bsb105     | Dự phòng rủi ro cho vay khách hàng
+row  15 | key=bsb261     | Hoạt động mua nợ
+row  16 | key=bsb262     | Mua nợ
+row  17 | key=bsb263     | Dự phòng rủi ro hoạt động mua nợ
+row  18 | key=bsb106     | Chứng khoán đầu tư
+row  19 | key=bsb107     | Chứng khoán đầu tư sẵn sàng để bán
+row  20 | key=bsb108     | Chứng khoán đầu tư giữ đến ngày đáo hạn
+row  21 | key=bsb109     | Dự phòng giảm giá chứng khoán đầu tư
+row  22 | key=bsa43      | Góp vốn, đầu tư dài hạn
+row  23 | key=bsa44      | Đầu tư vào công ty con
+row  24 | key=bsa45      | Đầu tư vào công ty liên doanh
+row  25 | key=bsa276     | Vốn Góp liên doanh
+row  26 | key=bsa277     | Đầu tư vào công ty liên kết
+row  27 | key=bsa46      | Đầu tư dài hạn khác
+row  28 | key=bsa47      | Dự phòng giảm giá đầu tư dài hạn
+row  29 | key=bsa29      | Tài sản cố định
+row  30 | key=bsa30      | Tài sản cố định hữu hình
+
+Bank key number sequence (first 20): [53, 2, 97, 98, 258, 259, 260, 99, 100, 101, 102, 103, 104, 105, 261, 262, 263, 106, 107, 108]
+Bank key number diffs: [-51, 95, 1, 160, 1, 1, -161, 1, 1, 1, 1, 1, 1, 156, 1, 1, -157, 1, 1, 1]
+
+=== FPT bsa keys ===
+Total non-null bsa keys: 123
+Key numbers (first 30): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+Key numbers (all): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 188, 209, 210, 211, 276, 277, 278]
+
+CDKT schema fields count: 122
+bsa non-null keys count: 123
+
+=== Sequential mapping attempt (field → bsa key) ===
+  field[  0] row= 11 → bsa1       val=45535942846453.0  | TÀI SẢN NGẮN HẠN ✅ ANCHOR MATCH
+  field[  1] row= 12 → bsa2       val=9315440438884.0  | Tiền và tương đương tiền
+  field[  2] row= 13 → bsa3       val=6725619929289.0  | Tiền
+  field[  3] row= 14 → bsa4       val=2589820509595.0  | Các khoản tương đương tiền
+  field[  4] row= 15 → bsa5       val=21785213686808.0  | Đầu tư ngắn hạn
+  field[  5] row= 16 → bsa6       val=0.0  | Đầu tư ngắn hạn
+  field[  6] row= 17 → bsa7       val=0.0  | Dự phòng giảm giá
+  field[  7] row= 18 → bsa8       val=11381523992803.0  | Đầu tư nắm giữ đến ngày đáo hạn
+  field[  8] row= 19 → bsa9       val=10537019113380.0  | Các khoản phải thu
+  field[  9] row= 20 → bsa10      val=610379845664.0  | Phải thu khách hàng
+  field[ 10] row= 21 → bsa11      val=0.0  | Trả trước người bán
+  field[ 11] row= 22 → bsa12      val=136097256629.0  | Phải thu nội bộ
+  field[ 12] row= 23 → bsa13      val=707751585399.0  | Phải thu hợp đồng xây dựng đang thực hiện
+  field[ 13] row= 24 → bsa14      val=-619531925859.0  | Phải thu cho vay ngắn hạn
+  field[ 14] row= 25 → bsa15      val=1856756949030.0  | Phải thu khác
+  field[ 15] row= 26 → bsa16      val=1990224486513.0  | Dự phòng nợ khó đòi
+  field[ 16] row= 27 → bsa17      val=-133467537483.0  | Tài sản thiếu cần xử lý
+  field[ 17] row= 28 → bsa18      val=1197007778928.0  | Hàng tồn kho, ròng
+  field[ 18] row= 29 → bsa19      val=479707218558.0  | Hàng tồn kho
+  field[ 19] row= 30 → bsa20      val=648697117785.0  | Dự phòng giảm giá hàng tồn kho
+  field[ 20] row= 31 → bsa21      val=68603442585.0  | Tài sản lưu động khác
+  field[ 21] row= 32 → bsa22      val=0.0  | Chi phí trả trước ngắn hạn
+  field[ 22] row= 33 → bsa23      val=26464052832167.0  | Thuế GTGT được khấu trừ
+  field[ 23] row= 34 → bsa24      val=331646166008.0  | Phải thu thuế khác
+  field[ 24] row= 35 → bsa25      val=0.0  | Giao dịch mua bán lại trái phiếu Chính phủ
+  field[ 25] row= 36 → bsa26      val=0.0  | Tài sản lưu động khác
+  field[ 26] row= 37 → bsa27      val=381508926294.0  | TÀI SẢN DÀI HẠN ❌ ANCHOR MISMATCH (expected bsa23, got bsa27)
+  field[ 27] row= 38 → bsa28      val=-52372482637.0  | Phải thu dài hạn
+  field[ 28] row= 39 → bsa29      val=14816131186204.0  | Phải thu khách hàng dài hạn
+  field[ 29] row= 40 → bsa30      val=12774567961718.0  | Trả trước người bán dài hạn
+  field[ 30] row= 41 → bsa31      val=24457733666511.0  | Vốn kinh doanh ở các đơn vị trực thuộc
+  field[ 31] row= 42 → bsa32      val=-11683165704793.0  | Phải thu nội bộ dài hạn
+  field[ 32] row= 43 → bsa33      val=2042708364.0  | Phải thu cho vay dài hạn
+  field[ 33] row= 44 → bsa34      val=5716034788.0  | Phải thu dài hạn khác
+  field[ 34] row= 45 → bsa35      val=-3673326424.0  | Dự phòng phải thu dài hạn
+  field[ 35] row= 46 → bsa36      val=2039520516122.0  | Tài sản cố định
+  field[ 36] row= 47 → bsa37      val=3656302027788.0  | GTCL TSCĐ hữu hình
+  field[ 37] row= 48 → bsa38      val=-1616781511666.0  | Nguyên giá TSCĐ hữu hình
+  field[ 38] row= 49 → bsa39      val=0.0  | Khấu hao lũy kế TSCĐ hữu hình
+  field[ 39] row= 50 → bsa40      val=0.0  | GTCL tài sản thuê tài chính
+  field[ 40] row= 51 → bsa41      val=0.0  | Nguyên giá tài sản thuê tài chính
+  field[ 41] row= 52 → bsa42      val=0.0  | Khấu hao lũy kế tài sản thuê tài chính
+  field[ 42] row= 53 → bsa43      val=3318095237260.0  | GTCL tài sản cố định vô hình
+  field[ 43] row= 54 → bsa44      val=0.0  | Nguyên giá TSCĐ vô hình
+  field[ 44] row= 55 → bsa45      val=2281222436752.0  | Khấu hao lũy kế TSCĐ vô hình
+  field[ 45] row= 56 → bsa46      val=3393737969842.0  | Xây dựng cơ bản đang dang dở (trước 2015)
+  field[ 46] row= 57 → bsa47      val=-2357065169334.0  | Giá trị ròng tài sản đầu tư
+  field[ 47] row= 58 → bsa48      val=0.0  | Nguyên giá tài sản đầu tư
+  field[ 48] row= 59 → bsa49      val=5438413518284.0  | Khấu hao lũy kế tài sản đầu tư
+  field[ 49] row= 60 → bsa50      val=3765187625417.0  | Tài sản dở dang dài hạn
+  field[ 50] row= 61 → bsa51      val=575767686189.0  | Chi phí sản xuất, kinh doanh dở dang dài hạn
+  field[ 51] row= 62 → bsa52      val=0.0  | Xây dựng cơ bản đang dở dang
+  field[ 52] row= 63 → bsa53      val=71999995678620.0  | Đầu tư dài hạn
+  field[ 53] row= 64 → bsa54      val=36272455573820.0  | Đầu tư vào các công ty con
+  field[ 54] row= 65 → bsa55      val=34836184067740.0  | Đầu tư vào các công ty liên kết
+  field[ 55] row= 66 → bsa56      val=14446238451323.0  | Đầu tư dài hạn khác
+  field[ 56] row= 67 → bsa57      val=4423912840298.0  | Dự phòng giảm giá đầu tư dài hạn
+  field[ 57] row= 68 → bsa58      val=562066755666.0  | Đầu tư nắm giữ đến ngày đáo hạn
+  field[ 58] row= 69 → bsa59      val=2298821801748.0  | Lợi thế thương mại (trước 2015)
+  field[ 59] row= 70 → bsa60      val=4341013546853.0  | Tài sản dài hạn khác
+  field[ 60] row= 71 → bsa61      val=1241089122260.0  | Trả trước dài hạn
+  field[ 61] row= 72 → bsa62      val=0.0  | Thuế thu nhập hoãn lại
+  field[ 62] row= 73 → bsa63      val=92738882375.0  | Thiết bị, vật tư, phụ tùng thay thế dài hạn
+  field[ 63] row= 74 → bsa64      val=874015837328.0  | Các tài sản dài hạn khác
+  field[ 64] row= 75 → bsa65      val=496600145127.0  | Lợi thế thương mại
+  field[ 65] row= 76 → bsa66      val=1835037318363.0  | TỔNG CỘNG TÀI SẢN ❌ ANCHOR MISMATCH (expected bsa96, got bsa66)
+  field[ 66] row= 77 → bsa67      val=1436271506080.0  | NỢ PHẢI TRẢ ❌ ANCHOR MISMATCH (expected bsa54, got bsa67)
+  field[ 67] row= 78 → bsa68      val=0.0  | Nợ ngắn hạn ❌ ANCHOR MISMATCH (expected bsa55, got bsa68)
+  field[ 68] row= 79 → bsa69      val=0.0  | Phải trả người bán
+  field[ 69] row= 80 → bsa70      val=183788442785.0  | Người mua trả tiền trước
+  field[ 70] row= 81 → bsa71      val=501115537075.0  | Thuế và các khoản phải trả Nhà nước
+  field[ 71] row= 82 → bsa72      val=356966680614.0  | Phải trả người lao động
+  field[ 72] row= 83 → bsa73      val=0.0  | Chi phí phải trả
+  field[ 73] row= 84 → bsa74      val=262864215119.0  | Phải trả nội bộ
+  field[ 74] row= 85 → bsa75      val=0.0  | Phải trả về xây dựng cơ bản
+  field[ 75] row= 86 → bsa76      val=131344534204.0  | Doanh thu chưa thực hiện ngắn hạn
+  field[ 76] row= 87 → bsa77      val=192096283.0  | Phải trả khác
+  field[ 77] row= 88 → bsa78      val=35727540104800.0  | Vay ngắn hạn
+  field[ 78] row= 89 → bsa79      val=35724790104800.0  | Dự phòng các khoản phải trả ngắn hạn
+  field[ 79] row= 90 → bsa80      val=14710691830000.0  | Quỹ khen thưởng, phúc lợi
+  field[ 80] row= 91 → bsa81      val=49713213411.0  | Quỹ bình ổn giá
+  field[ 81] row= 92 → bsa82      val=1929012703454.0  | Giao dịch mua bán lại trái phiếu chính phủ
+  field[ 82] row= 93 → bsa83      val=0.0  | Nợ dài hạn ❌ ANCHOR MISMATCH (expected bsa67, got bsa83)
+  field[ 83] row= 94 → bsa84      val=0.0  | Phải trả nhà cung cấp dài hạn
+  field[ 84] row= 95 → bsa85      val=-49485560860.0  | Người mua trả tiền trước dài hạn
+  field[ 85] row= 96 → bsa86      val=2033289141535.0  | Chi phí phải trả dài hạn
+  field[ 86] row= 97 → bsa87      val=0.0  | Phải trả nội bộ về vốn kinh doanh
+  field[ 87] row= 98 → bsa88      val=0.0  | Phải trả nội bộ dài hạn
+  field[ 88] row= 99 → bsa89      val=87730484825.0  | Doanh thu chưa thực hiện
+  field[ 89] row=100 → bsa90      val=11030528671431.0  | Phải trả dài hạn khác
+  field[ 90] row=101 → bsa91      val=0.0  | Vay dài hạn
+  field[ 91] row=102 → bsa92      val=2750000000.0  | Trái phiếu chuyển đổi
+  field[ 92] row=103 → bsa93      val=0.0  | Cổ phiếu ưu đãi
+  field[ 93] row=104 → bsa94      val=2750000000.0  | Thuế thu nhập hoãn lại
+  field[ 94] row=105 → bsa95      val=0.0  | Dự phòng trợ cấp thôi việc
+  field[ 95] row=106 → bsa96      val=71999995678620.0  | Dự phòng các khoản nợ dài hạn
+  field[ 96] row=107 → bsa159     val=9808117590.0  | Quỹ phát triển khoa học công nghệ
+  field[ 97] row=108 → bsa160     val=0.0  | Vốn chủ sở hữu ❌ ANCHOR MISMATCH (expected bsa79, got bsa160)
+  field[ 98] row=109 → bsa161     val=0.0  | Vốn và các quỹ
+  field[ 99] row=110 → bsa162     val=2509722351.0  | Vốn góp
+  field[100] row=111 → bsa163     val=2559766724411.0  | Cổ phiếu phổ thông
+  field[101] row=112 → bsa164     val=0.0  | Cổ phiếu ưu đãi
+  field[102] row=113 → bsa165     val=200000000.0  | Thặng dư vốn cổ phần
+  field[103] row=114 → bsa166     val=0.0  | Quyền chọn chuyển đổi trái phiếu
+  field[104] row=115 → bsa167     val=4224649366399.0  | Vốn khác
+  field[105] row=116 → bsa168     val=0.0  | Cổ phiếu quỹ
+  field[106] row=117 → bsa169     val=0.0  | Chênh lệch đánh giá lại tài sản
+  field[107] row=118 → bsa170     val=0.0  | Chênh lệch tỷ giá
+  field[108] row=119 → bsa171     val=0.0  | Quỹ đầu tư và phát triển
+  field[109] row=120 → bsa172     val=0.0  | Quỹ hỗ trợ sắp xếp doanh nghiệp
+  field[110] row=121 → bsa173     val=0.0  | Quỹ dự phòng tài chính
+  field[111] row=122 → bsa174     val=0.0  | Quỹ khác
+  field[112] row=123 → bsa175     val=14710691830000.0  | Lãi chưa phân phối
+  field[113] row=124 → bsa176     val=0.0  | LNST chưa phân phối lũy kế đến cuối kỳ trước
+  field[114] row=125 → bsa177     val=5458228109134.0  | LNST chưa phân phối kỳ này
+  field[115] row=126 → bsa178     val=5572300562297.0  | Lợi ích cổ đông không kiểm soát
+  field[116] row=127 → bsa188     val=2559766724411.0  | Vốn Ngân sách nhà nước và quỹ khác
+  field[117] row=128 → bsa209     val=1097458206678.0  | Quỹ khen thưởng, phúc lợi (trước 2010)
+  field[118] row=129 → bsa210     val=5933309621004.0  | Vốn ngân sách nhà nước và quỹ khác
+  field[119] row=130 → bsa211     val=0.0  | Nguồn kinh phí đã hình thành TSCĐ
+  field[120] row=131 → bsa276     val=0.0  | Lợi ích của cổ đông thiểu số
+  field[121] row=132 → bsa277     val=0.0  | Tổng cộng nguồn vốn
+
+================================================================================
+=== KQKD (Income Statement) ===
+KQKD fields: 25, isa keys: 25
+isa key numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 102]
+  field[  0] → isa1       val=62962652134635.0  | Doanh thu bán hàng và cung cấp dịch vụ
+  field[  1] → isa2       val=-113857783268.0  | Các khoản giảm trừ doanh thu
+  field[  2] → isa3       val=62848794351367.0  | Doanh thu thuần ✅
+  field[  3] → isa4       val=-39150445981451.0  | Giá vốn hàng bán
+  field[  4] → isa5       val=23698348369916.0  | Lợi nhuận gộp ✅
+  field[  5] → isa6       val=1935749115305.0  | Doanh thu hoạt động tài chính
+  field[  6] → isa7       val=-1811547381981.0  | Chi phí tài chính
+  field[  7] → isa8       val=-551639361786.0  | Chi phí lãi vay
+  field[  8] → isa9       val=-6115961971783.0  | Lãi/(lỗ) từ công ty liên doanh (từ năm 2015)
+  field[  9] → isa10      val=-7074038614774.0  | Chi phí bán hàng
+  field[ 10] → isa11      val=11025080772955.0  | Chi phí quản lý doanh nghiệp
+  field[ 11] → isa12      val=175450599740.0  | Lãi/(lỗ) từ hoạt động kinh doanh
+  field[ 12] → isa13      val=-130864954876.0  | Thu nhập khác, ròng
+  field[ 13] → isa14      val=44585644864.0  | Thu nhập khác
+  field[ 14] → isa15      val=0.0  | Chi phí khác
+  field[ 15] → isa16      val=11069666417819.0  | Lãi/(lỗ) từ công ty liên doanh
+  field[ 16] → isa17      val=-1922927614658.0  | Lãi/(lỗ) trước thuế
+  field[ 17] → isa18      val=280683727283.0  | Chi phí thuế thu nhập doanh nghiệp
+  field[ 18] → isa19      val=-1642243887375.0  | Thuế thu nhập doanh nghiệp - hiện thời
+  field[ 19] → isa20      val=9427422530444.0  | Thuế thu nhập doanh nghiệp - hoãn lại
+  field[ 20] → isa21      val=1570654718266.0  | Lãi/(lỗ) thuần sau thuế
+  field[ 21] → isa22      val=7856767812178.0  | Lợi ích của cổ đông thiểu số
+  field[ 22] → isa23      val=4944.0  | Lợi nhuận của Cổ đông của Công ty mẹ ❌ (expected isa22, got isa23)
+  field[ 23] → isa24      val=4944.0  | Lãi cơ bản trên cổ phiếu (VND)
+  field[ 24] → isa102     val=392531256272.0  | Lãi trên cổ phiếu pha loãng (VND)
+
+================================================================================
+=== LCTT (Cash Flow) ===
+LCTT fields: 41, cfa keys: 48
+cfa key numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 103, 104, 105]
+  field[  0] → cfa1       val=11069666417819.0  | Lợi nhuận/(lỗ) trước thuế
+  field[  1] → cfa2       val=2535298475665.0  | Khấu hao TSCĐ và BĐSĐT
+  field[  2] → cfa3       val=1148951390915.0  | Phân bổ lợi thế thương mại
+  field[  3] → cfa4       val=46311803197.0  | Chi phí dự phòng
+  field[  4] → cfa5       val=0.0  | Lãi/lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ
+  field[  5] → cfa6       val=-1725022480893.0  | Lãi/(lỗ) từ thanh lý tài sản cố định
+  field[  6] → cfa7       val=551639361786.0  | (Lãi)/lỗ từ hoạt động đầu tư
+  field[  7] → cfa8       val=0.0  | Chi phí lãi vay
+  field[  8] → cfa9       val=13626844968489.0  | Thu lãi và cổ tức
+  field[  9] → cfa10      val=-1913663012505.0  | Các khoản điều chỉnh khác
+  field[ 10] → cfa11      val=-265267561842.0  | Lưu chuyển tiền tệ ròng từ các hoạt động sản xuất kinh doanh
+  field[ 11] → cfa12      val=2875571263689.0  | Lợi nhuận/(lỗ) từ hoạt động kinh doanh trước những thay đổi vốn lưu động
+  field[ 12] → cfa13      val=-393964502357.0  | (Tăng)/giảm các khoản phải thu
+  field[ 13] → cfa14      val=-607154747076.0  | (Tăng)/giảm hàng tồn kho
+  field[ 14] → cfa15      val=-1209921507569.0  | Tăng/(giảm) các khoản phải trả
+  field[ 15] → cfa16      val=0.0  | (Tăng)/giảm chi phí trả trước
+  field[ 16] → cfa17      val=-408667711961.0  | (Tăng)/giảm chứng khoán kinh doanh
+  field[ 17] → cfa18      val=11703777188868.0  | Tiền lãi vay đã trả
+  field[ 18] → cfa19      val=-3275312325702.0  | Thuế thu nhập doanh nghiệp đã nộp
+  field[ 19] → cfa20      val=14227383215.0  | Tiền thu khác từ hoạt động kinh doanh
+  field[ 20] → cfa21      val=-41956569113369.0  | Tiền chi khác cho hoạt động kinh doanh
+  field[ 21] → cfa22      val=36283758374630.0  | Lưu chuyển tiền thuần từ hoạt động đầu tư
+  field[ 22] → cfa23      val=-1106193484800.0  | Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác
+  field[ 23] → cfa24      val=48102486048.0  | Tiền thu từ thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác
+  field[ 24] → cfa25      val=1530174506877.0  | Tiền chi cho vay, mua các công cụ nợ của đơn vị khác
+  field[ 25] → cfa26      val=-8461812173101.0  | Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác
+  field[ 26] → cfa27      val=163342989874.0  | Tiền chi đầu tư góp vốn vào đơn vị khác
+  field[ 27] → cfa28      val=0.0  | Tiền thu hồi đầu tư góp vốn vào đơn vị khác
+  field[ 28] → cfa29      val=30946282706201.0  | Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia
+  field[ 29] → cfa30      val=-30013226682923.0  | Lưu chuyển tiền thuần từ hoạt động tài chính
+  field[ 30] → cfa31      val=-2305346865.0  | Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu
+  field[ 31] → cfa32      val=-3291859792121.0  | Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành
+  field[ 32] → cfa33      val=0.0  | Tiền thu được các khoản đi vay
+  field[ 33] → cfa34      val=-2197766125834.0  | Tiền trả nợ gốc vay
+  field[ 34] → cfa35      val=1044198889933.0  | Tiền trả nợ gốc thuê tài chính
+  field[ 35] → cfa36      val=8279156683221.0  | Cổ tức, lợi nhuận đã trả cho chủ sở hữu
+  field[ 36] → cfa37      val=-7915134270.0  | Tiền lãi đã nhận
+  field[ 37] → cfa38      val=9315440438884.0  | Lưu chuyển tiền thuần trong kỳ
+  field[ 38] → cfa39      val=0.0  | Tiền và tương đương tiền đầu kỳ
+  field[ 39] → cfa40      val=0.0  | Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ
+  field[ 40] → cfa41      val=0.0  | Tiền và tương đương tiền cuối kỳ
