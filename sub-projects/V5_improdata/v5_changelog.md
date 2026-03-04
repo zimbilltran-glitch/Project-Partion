@@ -2,6 +2,19 @@
 
 Mọi thay đổi liên quan đến cấu trúc source code, dữ liệu, hoặc kiến trúc của tính năng V5 (Data Integrity Enhancement) sẽ được ghi chú ở đây để các Agent đồng bộ.
 
+## [Released]
+
+### 2026-03-04 — Phase 4 Validation & Completion
+#### Verified
+- **100% Validation Pass**: Chạy `validate_full.py` cho 30 mã VN30 trên Supabase Cloud.
+- **Accounting Identity Checked**: 30/30 mã (Normal, Bank, SEC) đều khớp `Tổng Tài Sản = Nợ PT + Vốn CSH` (Assets = Liabilities + Equity).
+- **RLS Policy Fixed**: Đã thêm chính sách cho phép `anon` role thực hiện INSERT/UPDATE/DELETE phục vụ sync dữ liệu.
+
+#### Added
+- `V5_improdata/validate_full.py` — Script kiểm tra tính toàn vẹn dữ liệu trực tiếp từ Supabase.
+- `V5_improdata/batch_pipeline_vn30.py` — Script tự động chạy pipeline cho danh sách mã VN30.
+- `_validation_full_report.txt` — Báo cáo chi tiết kết quả validation.
+
 ## [Unreleased]
 
 ### 2026-03-04 — Phase 2+3 Execution

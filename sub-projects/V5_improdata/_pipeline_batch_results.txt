@@ -1,0 +1,33 @@
+Pipeline batch run: 30 tickers
+OK: 30 | FAIL: 0
+
+FPT: OK
+VNM: OK
+VCB: OK
+VHM: OK
+HPG: OK
+MBB: OK
+TCB: OK
+VPB: OK
+BID: OK
+CTG: OK
+SSI: OK
+HCM: OK
+VCI: OK
+VND: OK
+SHS: OK
+MSN: OK
+MWG: OK
+VRE: OK
+PLX: OK
+GAS: OK
+SAB: OK
+ACB: OK
+STB: OK
+TPB: OK
+SHB: OK
+POW: OK
+BCM: OK
+GVR: OK
+PDR: OK
+KDH: OK

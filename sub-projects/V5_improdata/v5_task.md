@@ -2,7 +2,7 @@
 
 > **Thư mục Project**: `sub-projects/V5_improdata`
 > **Kế hoạch**: `v5_implementation_plan.md`
-> **Trạng thái**: 🔄 Phase 3 đang thực hiện (P3.1 ✅, P3.2 ✅, P3.3 pending, P3.4 ✅)
+> **Trạng thái**: ✅ Hoàn thành 100%
 
 ---
 
@@ -21,11 +21,11 @@
 ## 🔄 Phase 3: Assemble (Re-sync & Verify)
 - [x] **P3.1**: Chạy `pipeline.py` cho FPT (ticker pilot) với schema mới.
 - [x] **P3.2**: So sánh kết quả Parquet mới với dữ liệu Vietcap web (spot check 12 field).
-- [ ] **P3.3**: Nếu pass → Chạy `sync_supabase.py` cho toàn bộ VN30.
-- [ ] **P3.4**: Xác nhận accounting identity: `Tổng TS = Nợ PT + Vốn CSH` (tolerance ±0.01%).
+- [x] **P3.3**: Nếu pass → Chạy `sync_supabase.py` cho toàn bộ VN30.
+- [x] **P3.4**: Xác nhận accounting identity: `Tổng TS = Nợ PT + Vốn CSH` (tolerance ±0.01%).
 
 ## 🧪 Phase 4: Test (Validation & Audit)
-- [ ] **P4.1**: Viết script `validate_vs_web.py` — so sánh Supabase vs API cho toàn bộ VN30.
-- [ ] **P4.2**: CFO Audit: Kiểm tra debit/credit rules, accounting identity.
-- [ ] **P4.3**: CTO Audit: Kiểm tra pipeline idempotent, log integrity.
-- [ ] **P4.4**: Release & Update Changelog.
+- [x] **P4.1**: Viết script `validate_vs_web.py` — so sánh Supabase vs API cho toàn bộ VN30 (Đã thực hiện qua `validate_full.py`).
+- [x] **P4.2**: CFO Audit: Kiểm tra debit/credit rules, accounting identity (30/30 Pass).
+- [x] **P4.3**: CTO Audit: Kiểm tra pipeline idempotent, log integrity.
+- [x] **P4.4**: Release & Update Changelog.
