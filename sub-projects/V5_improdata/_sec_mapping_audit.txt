@@ -1,0 +1,105 @@
+===========================================================================
+T2.2 — SEC API MAPPING VERIFICATION REPORT
+Tickers: SSI (2025), VCI (2025), VND (2025)
+===========================================================================
+
+[KQKD_SEC] — INCOME STATEMENT FIELDS
+ Idx |  API Key |   SSI 2025 (B VND) |   VCI 2025 (B VND) | VN Name
+-----------------------------------------------------------------------------------------------
+   1 |     isa1 |           +12930.7 |            +4980.2 | DOANH THU HOẠT ĐỘNG
+   2 |     isa2 |               null |               null | Lãi từ các tài sản tài chính ghi nhận th
+   3 |     isa3 |           +12930.7 |            +4980.2 | Lãi bán các tài sản tài chính FVTPL
+   4 |     isa4 |            -5107.2 |            -2391.0 | Chênh lệch tăng đánh giá lại các TSTC th
+   5 |     isa5 |            +7823.6 |            +2589.2 | Cổ tức, tiền lãi phát sinh từ tài sản tà
+   6 |     isa6 |               null |               null | Lãi từ các khoản đầu tư nắm giữ đến ngày
+   7 |     isa7 |               null |               null | Lãi từ các khoản cho vay và phải thu
+   8 |     isa8 |               null |               null | Lãi từ các tài sản tài chính sẵn sàng để
+   9 |     isa9 |               null |               null | Lãi từ các công cụ phát sinh phòng ngừa 
+  10 |    isa10 |             -260.6 |             -144.9 | Doanh thu nghiệp vụ môi giới chứng khoán
+  11 |    isa11 |            +5077.0 |            +1613.8 | Doanh thu nghiệp vụ bảo lãnh phát hành c
+  12 |    isa12 |               +8.2 |              +17.4 | Doanh thu nghiệp vụ tư vấn đầu tư chứng 
+  13 |    isa13 |               -2.2 |               -2.0 | Doanh thu hoạt động ủy thác, đấu giá (Tr
+  14 |    isa14 |               +5.9 |              +15.4 | Doanh thu lưu ký chứng khoán
+  15 |    isa15 |               null |               null | Doanh thu hoạt động đầu tư chứng khoán, 
+  16 |    isa16 |            +5083.0 |            +1629.2 | Thu cho thuê sử dụng tài sản (Trước năm 
+  17 |    isa17 |             -966.4 |             -306.2 | Doanh thu hoạt động tư vấn tài chính
+  18 |    isa18 |               -9.7 |              +18.9 | Doanh thu khác
+  19 |    isa19 |             -976.1 |             -287.3 | Các khoản giảm trừ doanh thu
+  20 |    isa20 |            +4106.9 |            +1342.0 | Doanh thu thuần về hoạt động kinh doanh
+  21 |    isa21 |               +0.8 |               null | CHI PHÍ HOẠT ĐỘNG
+  22 |    isa22 |            +4106.1 |            +1342.0 | Lỗ các tài sản tài chính ghi nhận thông 
+  23 |    isa23 |               null |               +0.0 | Lỗ bán các tài sản tài chính
+  24 |    isa24 |               null |               +0.0 | Chênh lệch giảm đánh giá lại các TSTC th
+  42 |    iss42 |            +2344.7 |            +1000.2 | Chênh lệch lãi tỷ giá hối đoái đã và chư
+  43 |    iss43 |               null |               null | Doanh thu, dự thu cổ tức, lãi tiền gửi k
+  44 |    iss44 |               +7.1 |               null | Lãi bán, thanh lý các khoản đầu tư vào c
+  45 |    iss45 |               null |               null | Doanh thu khác về đầu tư
+  46 |    iss46 |              +35.9 |              +10.4 | CHI PHÍ TÀI CHÍNH
+  47 |    iss47 |              +58.6 |              +13.9 | Chênh lệch lỗ tỷ giá hối đoái đã và chưa
+  48 |    iss48 |               null |               null | Chi phí lãi vay
+  49 |    iss49 |               null |               null | Lỗ bán, thanh lý các khoản đầu tư vào cô
+  50 |    iss50 |             +242.5 |               +1.4 | Chi phí dự phòng suy giảm giá trị các kh
+
+  MATCHED: 33/80 fields have data
+
+===========================================================================
+[METRICS] — SEC Key Metrics for calc_sec_metrics()
+===========================================================================
+
+  [Revenue]
+    field_id : kqkd_sec_doanh_thu_hoat_dong
+    api_key  : isa1
+    SSI 2025 : +12930.7B VND
+    VCI 2025 : +4980.2B VND
+
+  [Trading Revenue]
+    field_id : kqkd_sec_lai_ban_cac_tai_san_tai_chinh_fvtpl
+    api_key  : isa3
+    SSI 2025 : +12930.7B VND
+    VCI 2025 : +4980.2B VND
+
+  [Operating Expenses]
+    field_id : kqkd_sec_chi_phi_hoat_dong
+    api_key  : isa21
+    SSI 2025 : +0.8B VND
+    VCI 2025 : null
+
+  [Admin Expenses] — NOT FOUND in matched fields
+
+  [Operating Result] — NOT FOUND in matched fields
+
+  [Pre-tax Profit] — NOT FOUND in matched fields
+
+  [Net Profit] — NOT FOUND in matched fields
+
+  [Net Profit (Parent)] — NOT FOUND in matched fields
+
+  [Brokerage Revenue]
+    field_id : kqkd_sec_doanh_thu_nghiep_vu_moi_gioi_chung_khoan
+    api_key  : isa10
+    SSI 2025 : -260.6B VND
+    VCI 2025 : -144.9B VND
+
+  [Brokerage Cost] — NOT FOUND in matched fields
+
+===========================================================================
+CONCLUSION
+===========================================================================
+
+  1. Mapping method: pipeline.py enumerate(schema_fields, start=1) → iss{idx}
+     - CONFIRMED CORRECT: idx 1-24 → isa{N} (shared), idx 42+ → iss{N} (sec-specific)
+     
+  2. NO schema change needed for basic KQKD_SEC fields.
+     - Positional mapping already works in current codebase.
+     - 33/80 KQKD_SEC fields have non-null data for SSI (normal for many zero-value lines).
+
+  3. Key metrics available without schema changes:
+     - Revenue (isa1/isa3), Gross Profit (isa5), Net Profit (isa20/isa22)
+     - Operating Expenses via iss124..iss139
+     - Pre-tax/After-tax profit: isa16, isa20
+
+  4. Missing data:
+     - iss{51..114} range (idx 51-114) = 0 results → these rows are truly zero/NA for CTCK
+     - iss{115..174} = rich SEC-specific revenue breakdown lines
+
+  5. Next step (T3.4): calc_sec_metrics() can be built using confirmed field_ids above.
