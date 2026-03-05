@@ -105,9 +105,18 @@ Theo dõi các khó khăn kỹ thuật và hướng giải quyết trong quá tr
 
 ## 15. Synchronous Resync too slow (>45m) ✅ RESOLVED
 - **Tình trạng**: ✅ Đã giải quyết (Phase 5.5)
-- **Chẩn đoán**: Chạy `pipeline.py` tuần tự qua `subprocess` tốn quá nhiều overhead khởi tạo interpreter và I/O.
+- **Phân chẩn đoán**: Chạy `pipeline.py` tuần tự qua `subprocess` tốn quá nhiều overhead khởi tạo interpreter và I/O.
 - **Giải pháp**: 
   - Refactor `v5_full_resync.py` sang `ThreadPoolExecutor`.
   - Giảm kích thước schema (`lite_schema.json`) xuống < 50KB để load RAM cực nhanh.
   - Stream dữ liệu Pandas thẳng lên Supabase, bỏ qua bước ghi Parquet vào Disk I/O.
 - **Kết quả**: Thời gian sync 31 mã VN30 giảm xuống **28 giây**.
+
+## 16. Cash Flow Identity Gap (BL-3) ✅ RESOLVED
+- **Tình trạng**: ✅ Đã giải quyết (Phase 5.7)
+- **Chẩn đoán**: Đẳng thức lưu chuyển tiền tệ `Net CF = Op + Inv + Fin` không cân bằng cho một số mã (FPT, MBB, KDH). Mã MBB (Bank) bị thiếu hoàn toàn dữ liệu. Nguyên nhân do mapping `vietcap_key` trong `lite_schema.json` bị trượt hoặc thiếu (ví dụ: dòng tiền kinh doanh của normal company bị map vào `cfa20` thay vì `cfa36`).
+- **Giải pháp**: 
+  - Probe trực tiếp dữ liệu thô JSON từ Vietcap API thông qua script độc lập.
+  - Remap lại các anchor key dựa trên đẳng thức đã được chứng minh (`cfa36` cho Normal Op, `cfb57/cfb76/cfb77/cfb79` cho Bank).
+  - Cập nhật công cụ `cfo_audit_bl2_bl3.py` để verify chính xác theo đặc thù từng Sector.
+- **Kết quả**: Đạt 100% Identity Balance cho các mã được kiểm toán.

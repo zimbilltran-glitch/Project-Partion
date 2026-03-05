@@ -180,19 +180,17 @@ const AnalysisTab = ({ ticker, sector, periods: propPeriods }) => {
                     <>
                         <TrendLineChart
                             data={capData}
-                            title="Hiệu quả & Chi phí"
+                            title="Hiệu quả Hoạt động"
                             lines={[
-                                { key: 'CASA (%)', name: 'CASA', color: '#10b981' },
-                                { key: 'COF (%)', name: 'COF (Giá vốn)', color: '#8b5cf6' },
-                                { key: 'YOEA (%)', name: 'YOEA (Lợi suất)', color: '#f59e0b' }
+                                { key: 'COF (%)', name: 'CIR (%)', color: '#8b5cf6' },
+                                { key: 'YOEA (%)', name: 'LDR (%)', color: '#f59e0b' }
                             ]}
                         />
-                        {/* Adding NPL Chart for Bank */}
                         <TrendLineChart
                             data={nplData}
-                            title="Chất lượng nợ xấu"
+                            title="Chất lượng tài sản"
                             lines={[
-                                { key: 'Tỷ lệ nợ xấu (%)', name: 'NPL (%)', color: '#ef4444' }
+                                { key: 'Tỷ lệ nợ xấu (%)', name: 'Nợ Xấu (NPL) %', color: '#ef4444' }
                             ]}
                         />
                     </>

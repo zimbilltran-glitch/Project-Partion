@@ -30,8 +30,8 @@ ASSET_CHECKS = {
         "eq": "cdkt_von_chu_so_huu"
     },
     "bank": {
-        "asset": "cdkt_bank_tong_cong_tai_san",
-        "liab": "cdkt_bank_no_phai_tra",
+        "asset": "cdkt_bank_tong_tai_san",
+        "liab": "cdkt_bank_tong_no_phai_tra",
         "eq": "cdkt_bank_von_chu_so_huu"
     },
     "sec": {
@@ -53,7 +53,7 @@ CF_CHECKS = {
         "net": "lctt_bank_luu_chuyen_tien_thuan_trong_ky",
         "op": "lctt_bank_luu_chuyen_tien_thuan_tu_cac_hoat_dong_san_xuat_kinh_do",
         "inv": "lctt_bank_luu_chuyen_tien_thuan_tu_hoat_dong_dau_tu",
-        "fin": None # Banks don't have Fin CF in Vietcap structure
+        "fin": "lctt_bank_luu_chuyen_tien_thuan_tu_hoat_dong_tai_chinh"
     },
     "sec": {
         "net": "lctt_sec_luu_chuyen_tien_thuan_trong_ky",
@@ -77,7 +77,7 @@ def do_audit(sb, ticker, period="2024"):
     # Detect sector
     sector = None
     if "cdkt_tong_cong_tai_san" in bs_dict: sector = "normal"
-    elif "cdkt_bank_tong_cong_tai_san" in bs_dict: sector = "bank"
+    elif "cdkt_bank_tong_tai_san" in bs_dict: sector = "bank"
     elif "cdkt_sec_tong_cong_tai_san" in bs_dict: sector = "sec"
     else: return "Fail (Unknown sector)"
 

@@ -1,0 +1,18 @@
+
+--- CDKT ---
+cdkt_tien_va_tuong_duong_tien: Tiền và tương đương tiền ({'normal': 'bsa2', 'sec': 'bsa2', 'bank': 'bsb94'})
+cdkt_tong_cong_tai_san: TỔNG CỘNG TÀI SẢN ({'normal': 'bsa53', 'sec': 'bsa53', 'bank': 'bsa53'})
+cdkt_no_phai_tra: NỢ PHẢI TRẢ ({'normal': 'bsa54', 'sec': 'bsa54', 'bank': 'bsa54'})
+cdkt_von_chu_so_huu: Vốn chủ sở hữu ({'normal': 'bsa78', 'sec': 'bsa78', 'bank': 'bsa78'})
+cdkt_tong_cong_nguon_von: Tổng cộng nguồn vốn ({'normal': 'bsa96', 'sec': 'bsa96', 'bank': 'bsa96'})
+
+--- CDKT_BANK ---
+cdkt_bank_tong_tai_san: TỔNG TÀI SẢN ({'bank': 'bsa53'})
+cdkt_bank_cho_vay_khach_hang: Cho vay khách hàng ({'bank': 'bsb104'})
+cdkt_bank_no_phai_tra_va_von_chu_so_huu: NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU ({'bank': 'bsa96'})
+cdkt_bank_tong_no_phai_tra: TỔNG NỢ PHẢI TRẢ ({'bank': 'bsa54'})
+cdkt_bank_tien_gui_cua_khach_hang: Tiền gửi của khách hàng ({'bank': 'bsb113'})
+cdkt_bank_von_chu_so_huu: VỐN CHỦ SỞ HỮU ({'bank': 'bsa78'})
+
+--- CDKT_SEC ---
+cdkt_sec_tong_cong_tai_san: TỔNG CỘNG TÀI SẢN ({'sec': 'bsa53'})

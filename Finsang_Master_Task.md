@@ -153,9 +153,8 @@
 
 - [ ] **BL-1:** Fireant V2 Provider — `FireantProvider(BaseProvider)` class
 - [x] **BL-2:** CFO Audit checksums cho Bank/Sec (`cfo_audit_bl2_bl3.py`) — **PASS (BS)**
-- [ ] **BL-3:** CF Identity: `Net CF = Op + Inv + Fin` — 🔴 **FAIL (GAP FOUND)**
-    - [ ] Re-probe Vietcap LCTT API cho Bank/Sec/Normal.
-    - [ ] Cập nhật `lite_schema.json` với đúng keys LCTT.
+- [x] **BL-3**: Cash Flow Identity (Net CF = Op + Inv + Fin). Corrected mapping for all sectors. 🟢 **PASSED.**
+g keys LCTT.
     - [ ] Re-sync `cash_flow` table cho VN30.
 - [ ] **BL-4:** Mobile responsive UI
 

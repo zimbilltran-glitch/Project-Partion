@@ -1,0 +1,66 @@
+
+--- CDKT ---
+cdkt_tien_va_tuong_duong_tien | Tiền và tương đương tiền | {'normal': 'bsa2', 'sec': 'bsa2', 'bank': 'bsb94'}
+cdkt_dau_tu_ngan_han | Đầu tư ngắn hạn | None
+cdkt_dau_tu_ngan_han_1 | Đầu tư ngắn hạn | None
+cdkt_dau_tu_nam_giu_den_ngay_dao_han | Đầu tư nắm giữ đến ngày đáo hạn | None
+cdkt_phai_thu_cho_vay_ngan_han | Phải thu cho vay ngắn hạn | None
+cdkt_hang_ton_kho_rong | Hàng tồn kho, ròng | None
+cdkt_hang_ton_kho | Hàng tồn kho | None
+cdkt_du_phong_giam_gia_hang_ton_kho | Dự phòng giảm giá hàng tồn kho | None
+cdkt_phai_thu_cho_vay_dai_han | Phải thu cho vay dài hạn | None
+cdkt_tai_san_co_dinh | Tài sản cố định | None
+cdkt_gtcl_tai_san_co_dinh_vo_hinh | GTCL tài sản cố định vô hình | None
+cdkt_gia_tri_rong_tai_san_dau_tu | Giá trị ròng tài sản đầu tư | None
+cdkt_nguyen_gia_tai_san_dau_tu | Nguyên giá tài sản đầu tư | None
+cdkt_khau_hao_luy_ke_tai_san_dau_tu | Khấu hao lũy kế tài sản đầu tư | None
+cdkt_tai_san_do_dang_dai_han | Tài sản dở dang dài hạn | None
+cdkt_dau_tu_dai_han | Đầu tư dài hạn | None
+cdkt_dau_tu_vao_cac_cong_ty_con | Đầu tư vào các công ty con | None
+cdkt_dau_tu_vao_cac_cong_ty_lien_ket | Đầu tư vào các công ty liên kết | None
+cdkt_dau_tu_dai_han_khac | Đầu tư dài hạn khác | None
+cdkt_du_phong_giam_gia_dau_tu_dai_han | Dự phòng giảm giá đầu tư dài hạn | None
+cdkt_dau_tu_nam_giu_den_ngay_dao_han_1 | Đầu tư nắm giữ đến ngày đáo hạn | None
+cdkt_phai_tra_nguoi_ban | Phải trả người bán | None
+cdkt_nguoi_mua_tra_tien_truoc | Người mua trả tiền trước | None
+cdkt_vay_ngan_han | Vay ngắn hạn | None
+cdkt_nguoi_mua_tra_tien_truoc_dai_han | Người mua trả tiền trước dài hạn | None
+cdkt_vay_dai_han | Vay dài hạn | None
+cdkt_von_gop | Vốn góp | None
+cdkt_co_phieu_quy | Cổ phiếu quỹ | None
+cdkt_quy_dau_tu_va_phat_trien | Quỹ đầu tư và phát triển | None
+
+--- CDKT_BANK ---
+cdkt_bank_tien_mat_vang_bac_da_quy | Tiền mặt, vàng bạc, đá quý | None
+cdkt_bank_chung_khoan_dau_tu | Chứng khoán đầu tư | None
+cdkt_bank_chung_khoan_dau_tu_san_sang_de_ban | Chứng khoán đầu tư sẵn sàng để bán | None
+cdkt_bank_chung_khoan_dau_tu_giu_den_ngay_dao_han | Chứng khoán đầu tư giữ đến ngày đáo hạn | None
+cdkt_bank_du_phong_giam_gia_chung_khoan_dau_tu | Dự phòng giảm giá chứng khoán đầu tư | None
+cdkt_bank_tai_san_co_dinh | Tài sản cố định | None
+cdkt_bank_tai_san_co_dinh_huu_hinh | Tài sản cố định hữu hình | None
+cdkt_bank_tai_san_co_dinh_thue_tai_chinh | Tài sản cố định thuê tài chính | None
+cdkt_bank_tai_san_co_dinh_vo_hinh | Tài sản cố định vô hình | None
+cdkt_bank_tai_san_co_khac | Tài sản Có khác | None
+cdkt_bank_tai_san_co_khac_1 | Tài sản Có khác | None
+cdkt_bank_tien_gui_cua_khach_hang | Tiền gửi của khách hàng | {'bank': 'bsb113'}
+
+--- CDKT_SEC ---
+cdkt_sec_tien_va_tuong_duong_tien | Tiền và tương đương tiền | None
+cdkt_sec_cac_tai_san_tai_chinh_ghi_nhan_thong_qua_lai_lo | Các tài sản tài chính ghi nhận thông qua lãi lỗ (FVTPL) | None
+cdkt_sec_cac_khoan_cho_vay | Các khoản cho vay | None
+cdkt_sec_phai_thu_ve_cho_vay_ngan_han | Phải thu về cho vay ngắn hạn (Trước năm 2016) | None
+cdkt_sec_phai_thu_ve_cho_vay_dai_han | Phải thu về cho vay dài hạn (Trước năm 2016) | None
+cdkt_sec_vay_va_no_thue_tai_san_tai_chinh_ngan_han | Vay và nợ thuê tài sản tài chính ngắn hạn | None
+cdkt_sec_vay_ngan_han | Vay ngắn hạn | None
+cdkt_sec_vay_tai_san_tai_chinh_ngan_han | Vay tài sản tài chính ngắn hạn | None
+cdkt_sec_vay_quy_ho_tro_thanh_toan | Vay Quỹ Hỗ trợ thanh toán | None
+cdkt_sec_vay_va_no_thue_tai_san_tai_chinh_dai_han | Vay và nợ thuê tài sản tài chính dài hạn | None
+cdkt_sec_vay_dai_han | Vay dài hạn | None
+cdkt_sec_vay_tai_san_tai_chinh_dai_han | Vay tài sản tài chính dài hạn | None
+cdkt_sec_von_chu_so_huu | Vốn chủ sở hữu | None
+cdkt_sec_quy_khac_thuoc_von_chu_so_huu | Quỹ khác thuộc vốn chủ sỡ hữu | None
+cdkt_sec_loi_nhuan_chua_phan_phoi | Lợi nhuận chưa phân phối | None
+cdkt_sec_loi_nhuan_da_thuc_hien | Lợi nhuận đã thực hiện | None
+cdkt_sec_loi_nhuan_chua_thuc_hien | Lợi nhuận chưa thực hiện | None
+cdkt_sec_tai_san_tai_chinh_cho_cho_vay | Tài sản tài chính chờ cho vay | None
+cdkt_sec_phai_tra_vay_ctck | Phải trả vay CTCK | None

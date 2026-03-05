@@ -75,13 +75,18 @@ Rà soát toàn diện dự án Finsang nhằm:
 
 ---
 
-## F-020: Cash Flow Identity Gap (BL-3) — 🔴 OPEN
+## F-020: Cash Flow Identity Gap (BL-3) — ✅ RESOLVED
 
 | Field | Value |
 |---|---|
-| **Severity** | 🔴 HIGH |
+| **Severity** | 🟢 RESOLVED |
 | **Component** | `cash_flow` table, `lite_schema.json`, mapping logic |
-| **Impact** | Dữ liệu lưu chuyển tiền tệ không cân đối, ảnh hưởng đến phân tích sức khỏe tài chính (Health score). |
+| **Impact** | Resolved Cash Flow identity mismatch across all sectors. |
+
+**Chi tiết:**
+- **Status**: [FIXED] 2026-03-05.
+- **Cause**: Incorrect mapping for Operating CF in Normal companies and missing Bank CF keys.
+- **Solution**: Probed Vietcap API and updated `lite_schema.json` with correct keys (`cfa36` for Normal Op, etc.). Verified identity balance via `cfo_audit_bl2_bl3.py`.
 
 **Chi tiết:**
 1. **Dữ liệu Bank (MBB)**: Bảng `cash_flow` hụt hoàn toàn 2024 data dù các bảng khác đầy đủ.

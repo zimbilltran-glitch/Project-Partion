@@ -72,6 +72,17 @@ Centralized log of critical technical hurdles encountered during the development
 
 ---
 
+### 10. Cash Flow Identity Gap (BL-3) ✅ RESOLVED
+- **Symptom**: Cash flow equations `Net CF = Op + Inv + Fin` were not balancing across all sectors (FPT, MBB, KDH). MBB had completely missing data.
+- **Root Cause**: Incorrect mapping of `vietcap_key` in `lite_schema.json`. Normal sector operating cash flow was mapped to a sub-field (`cfa20` instead of `cfa36`), and Bank sector mappings were absent or incorrect.
+- **Solution**: 
+  - Probed the raw API JSON output directly via python scripts.
+  - Remapped keys based on empirically verified identity equations (`cfa36` for Normal Op, `cfb57/cfb76/cfb77/cfb79` for Banks).
+  - Ensured correct sector logic (`cdkt_bank_tong_tai_san`) in `cfo_audit_bl2_bl3.py`.
+- **Level**: HIGH.
+
+---
+
 ## 🛠️ Best Practices for Engineering Team
 1. **Never Trust Relative Positions:** Always use a unique ID or absolute row index from `golden_schema.json`.
 2. **Handle Errors Gracefully:** Cloud logging should be non-blocking. Use `try-except` for dependencies.
