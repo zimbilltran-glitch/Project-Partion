@@ -45,7 +45,11 @@ from security import get_cipher
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
 ROOT       = Path(__file__).parent.parent.parent
-SCHEMA_F   = Path(__file__).parent / "golden_schema.json"
+# T1.3 Phase 5.5: Dùng lite_schema.json (~173KB) thay golden_schema.json (~940KB)
+# lite_schema giữ đủ: field_id, sheet, vietcap_key, vietcap_mapped, vn_name, row_number
+_LITE_SCHEMA_F   = Path(__file__).parent / "lite_schema.json"
+_GOLDEN_SCHEMA_F = Path(__file__).parent / "golden_schema.json"
+SCHEMA_F   = _LITE_SCHEMA_F if _LITE_SCHEMA_F.exists() else _GOLDEN_SCHEMA_F
 DATA_DIR   = ROOT / "data" / "financial"
 TMP_DIR    = ROOT / ".tmp" / "raw"
 LOG_FILE   = Path(__file__).parent / "pipeline.log"
@@ -64,13 +68,13 @@ def _build_logger() -> logging.Logger:
 
 _pipeline_logger = _build_logger()
 
-# ─── Module-level Golden Schema Cache ────────────────────────────────────────
-# Đọc golden_schema.json (954KB) đúng MỘT LẦN khi module được import.
-# Tránh parse JSON mỗi lần user đổi tab trên UI.
+# ─── Module-level Schema Cache (lite or golden) ───────────────────────────────
+# Phase 5.5: Đọc lite_schema.json (~173KB vs 940KB) đúng MỘT LẦN khi module import.
+# Tránh parse JSON mỗi lần gọi hàm load_tab / load_schema.
 _SCHEMA_CACHE: dict | None = None
 
 def _get_schema_raw() -> dict:
-    """Return cached golden_schema.json. Reads from disk only once per process."""
+    """Return cached schema (lite preferred). Reads from disk only once per process."""
     global _SCHEMA_CACHE
     if _SCHEMA_CACHE is None:
         _SCHEMA_CACHE = json.loads(SCHEMA_F.read_text(encoding="utf-8"))
