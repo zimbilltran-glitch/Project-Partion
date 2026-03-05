@@ -141,6 +141,12 @@
   - Test 3 tickers: VHC (normal), MBB (bank), SSI (sec)
   - **Verified:** Local production build verified 100% on 30 VN30 tickers. All tabs/charts show data.
 
+- [x] **T5.4 — Massive Codebase Cleanup (Clean State)**
+  - Di chuyển code khảo sát vào `archive_legacy/explorations`.
+  - Di chuyển rác (logs, temp data) vào `archive_legacy/clutter_cleanup`.
+  - Untrack thư mục `data/` khỏi Git index.
+  - **Result:** Dự án tinh gọn, chỉ còn core operational scripts.
+
 ---
 
 ## 🗃️ BACKLOG (Không khẩn cấp)

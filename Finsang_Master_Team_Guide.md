@@ -11,14 +11,14 @@ The project is strictly organized into functional groups to ensure long-term mai
 - **`/frontend`**: The production React + Vite visualization layer (Phase 2.0-7.0).
     - Uses OLED Dark aesthetics.
     - Connects to Supabase for near real-time financial data.
-- **`/sub-projects`**: High-level feature integrations and core engines.
-    - `Version_2/`: Core "Finsang Engine" (`pipeline.py`, `security.py`, `metrics.py`). Now updated with **Phase 5.6 Sector Metrics**.
-    - `V3_SimplyWallSt/`: 360 Overview feature integration.
-    - `V4_Chart_Improve/`: Analysis Charts feature using Recharts library.
-    - `V5_improdata/`: **Performance Engine**. Contains `v5_full_resync.py` (ThreadPool) and `lite_schema.json` builder.
-- **`/internal-skills`**: Agent-specific capabilities (e.g., `cto-mentor-supervisor`).
-- **`/design-themes`**: UI/UX reference systems.
-- **`data/`**: (Gitignored) AES-128 Encrypted financial store.
+- **`/sub-projects`**: High-level feature integrations and core engines (CORE ONLY).
+    - `Version_2/`: Core "Finsang Engine" (`pipeline.py`, `security.py`, `metrics.py`). Cleaned of explorations.
+    - `V5_improdata/`: **Performance Engine**. Contains ops scripts (`run_metrics_batch.py`) and schema builders.
+- **`/archive_legacy`**: **CRITICAL FOR AGENTS.** This directory contains 60+ archived scripts and audit data moved during the v5.1.5 cleanup. If a script is missing from `/sub-projects`, check here.
+    - `explorations/`: Deprecated research, debug, and probe scripts.
+    - `clutter_cleanup/`: Raw logs, Excel pilot files, and temporary audit reports.
+- **`data/`**: (Gitignored/Untracked) Local encrypted Parquet backups.
+- **`internal-skills/`** & **`design-themes/`**: Supporting resources.
 
 ---
 

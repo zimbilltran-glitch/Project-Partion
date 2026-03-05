@@ -18,26 +18,29 @@ To ensure engineering consistency and rapid onboarding, use the following master
 
 ---
 
-## 🏗️ Directory Hierarchy
+## 🏗️ Directory Hierarchy (Clean State v5.1.0)
 
 ```text
 Finsang/
 ├── frontend/             # Primary React + Vite visualization (OLED Dark)
-├── sub-projects/         # High-level engine components
-│   ├── Version_2/        # Core ETL Pipeline (Vietcap API -> Supabase)
-│   ├── Version_1/        # [DEPRECATED] Legacy / Baseline code
+├── sub-projects/         # High-level engine components (CORE ONLY)
+│   ├── Version_2/        # Core ETL Pipeline (Cleaned - only operational scripts)
+│   ├── Version_1/        # [ARCHIVED] Legacy / Baseline code
 │   ├── PDF_TRANS_Pipeline/ # Financial PDF extraction suite (Phase 6)
-│   ├── V3_SimplyWallSt/  # Simply Wall St 360 Overview Integration (Done)
-│   ├── V4_Chart_Improve/ # Analysis Charts (Recharts Integration - Done)
-│   └── V5_improdata/     # Performance Tuning & Data Integrity (Done)
+│   ├── V3_SimplyWallSt/  # SWS Overview Integration (Done - Production Ready)
+│   ├── V4_Chart_Improve/ # Analysis Charts (Done - Production Ready)
+│   └── V5_improdata/     # Performance & Integrity (Cleaned - Ops scripts only)
 ├── internal-skills/      # Agent capabilities & Automated test suites
-├── design-themes/        # UI/UX reference systems (Simply Wall St, Fireant)
-└── data/                 # (Gitignored) Encrypted financial store
+├── design-themes/        # UI/UX reference systems
+├── archive_legacy/       # [STORAGE] Rot bin for explorations & clutter cleanup
+│   ├── explorations/     # 40+ deprecated research & debug scripts
+│   └── clutter_cleanup/  # Raw Excel files, logs, and temporary audit data
+└── data/                 # (Gitignored/Untracked) Encrypted financial store
 ```
 
 ---
 
-## 🚦 Status: Phase 7.0 Production Readiness (ACTIVE)
-Dự án đã hoàn tất các giai đoạn tối ưu hóa hiệu năng (Phase 5.5) và bổ sung Metrics chuyên ngành Ngân hàng/Chứng khoán (Phase 5.6). Toàn bộ 30 mã VN30 đã được resync với độ chính xác tuyệt đối (Ground Truth Mapping). Hệ thống đã được rà soát bảo mật (RLS Hardening) và fix lỗi requests timeout. Frontend đã sẵn sàng cho Production Deploy.
+## 🚦 Status: Phase 7.0 Production Readiness (RELEASE READY)
+Dự án đã được dọn dẹp quy mô lớn (Massive Cleanup). Toàn bộ code rác, log, và dữ liệu thô đã được chuyển vào `archive_legacy`. Cấu trúc hiện tại cực kỳ tinh gọn, chỉ chứa các script vận hành (Production scripts). Hệ thống resync VN30 (<30s) và bộ metrics 3 sector đã được kiểm chứng 100%. Toàn bộ tiến độ được quản lý tập trung tại `Finsang_Master_Task.md`.
 
 *— Developed by the Finsang Engineering Team under CTO Supervision.*

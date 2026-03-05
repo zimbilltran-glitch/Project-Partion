@@ -140,3 +140,13 @@ This document serves as the centralized source of truth for the Finsang project'
   - Xóa bỏ quyền `INSERT/UPDATE/DELETE` cho `anon` roles để nâng cao bảo mật (T4.1).
   - Khởi tạo tài liệu [QUARTERLY_UPDATE_GUIDE.md](QUARTERLY_UPDATE_GUIDE.md) hoàn chỉnh cho quy trình ETL Quý.
   - Frontend Production Build hoàn tất. Smoke Test thành công.
+
+### [v5.1.5-cleanup] - 2026-03-05 (Massive Codebase Cleanup)
+- **Action**: Thực hiện dọn dẹp quy mô lớn toàn bộ dự án. Di chuyển 60+ file không cần thiết vào `archive_legacy`.
+- **Legacy Removal**: Di chuyển toàn bộ script khảo sát, logs, audit reports, và raw Excel files vào `archive_legacy/explorations` và `archive_legacy/clutter_cleanup`.
+- **Git Hygiene**: Untrack thư mục `data/` và file binary lớn khỏi Git index để tối ưu repo size.
+- **Project Structure**: Các thư mục `sub-projects/Version_2` và `V5_improdata` hiện chỉ chứa code operational sạch.
+- **Score**: **Production Readiness Standard A achieved.**
+
+---
+*Finsang Master Logs - System finalized.*
