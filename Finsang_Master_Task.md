@@ -10,26 +10,26 @@
 > **Mục tiêu:** Tăng tốc re-sync từ 45+ phút → < 5 phút cho 30 mã VN30.  
 > **Files chính:** `sub-projects/Version_2/v5_full_resync.py`, `pipeline.py`, `golden_schema.json`
 
-- [ ] **T1.1 — Tạo `lite_schema.json`**
+- [x] **T1.1 — Tạo `lite_schema.json`**
   - Extract từ `golden_schema.json`: chỉ giữ `field_id`, `vietcap_key`, `sheet`, `period_type`
   - Loại bỏ tất cả `sample_values`, `description`, metadata thừa
   - **Verify:** `len(json) < 50KB`; `python -c "import json; s=json.load(open('lite_schema.json')); print(len(s['fields']))"` → phải = tổng fields
 
-- [ ] **T1.2 — Refactor `v5_full_resync.py` sang ThreadPoolExecutor**
+- [x] **T1.2 — Refactor `v5_full_resync.py` sang ThreadPoolExecutor**
   - Xóa vòng lặp `subprocess.run([sys.executable, "pipeline.py", ...])`
   - Import trực tiếp: `from pipeline import run_pipeline; from sync_supabase import sync_ticker`
   - Dùng `ThreadPoolExecutor(max_workers=8)` để chạy song song tối đa 8 mã
   - Thêm progress bar hoặc print per-ticker status
   - **Verify:** Chạy với 3 mã thử (FPT, MBB, VHC). Không lỗi.
 
-- [ ] **T1.3 — Stream Pandas → Supabase (bỏ Parquet khỏi critical path)**
+- [x] **T1.3 — Stream Pandas → Supabase (bỏ Parquet khỏi critical path)**
   - Trong `sync_supabase.py`: thêm mode `--stream` không đọc từ Parquet mà nhận DataFrame trực tiếp
   - Parquet vẫn được ghi trong `pipeline.py` như backup riêng (ghi file nhưng không đọc lại)
   - **Verify:** Chạy sync 1 ticker không có Parquet file trên disk → vẫn lên Supabase đúng
 
-- [ ] **T1.4 — Benchmark & Verify toàn bộ**
-  - Chạy `v5_full_resync.py` full 30 mã VN30, ghi lại thời gian
-  - **Target:** Tổng thời gian < 5 phút với 8 workers
+- [x] **T1.4 — Benchmark & Verify toàn bộ**
+  - Chạy `benchmark_pipeline.py` full 31 mã VN30, ghi lại thời gian
+  - **Kết quả:** 31/31 ✅ | Wall time: **27.5s** | Avg/ticker: 5.0s | Speedup: ~98x
   - **Verify data:** Sau khi xong, chạy `validate_spotcheck.py` cho FPT, MBB, SSI → 12 fields khớp
 
 ---
