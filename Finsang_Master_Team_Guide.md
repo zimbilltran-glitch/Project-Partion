@@ -8,17 +8,17 @@ This document is the primary reference for all engineering contributors to the F
 
 The project is strictly organized into functional groups to ensure long-term maintainability:
 
-- **`/frontend`**: The production React + Vite visualization layer.
-    - Uses Tailwind (if applicable) and Vanilla CSS for OLED Dark aesthetics.
+- **`/frontend`**: The production React + Vite visualization layer (Phase 2.0-7.0).
+    - Uses OLED Dark aesthetics.
     - Connects to Supabase for near real-time financial data.
 - **`/sub-projects`**: High-level feature integrations and core engines.
-    - `Version_2/`: The core "Finsang Engine" (API extraction orchestrator `pipeline.py`, AES-128 `security.py`, and CFA-grade `metrics.py`).
-    - `V3_SimplyWallSt/`: The 360 Overview feature integration.
+    - `Version_2/`: Core "Finsang Engine" (`pipeline.py`, `security.py`, `metrics.py`). Now updated with **Phase 5.6 Sector Metrics**.
+    - `V3_SimplyWallSt/`: 360 Overview feature integration.
     - `V4_Chart_Improve/`: Analysis Charts feature using Recharts library.
-    - `V5_improdata/`: Data Integrity refactoring, Exact Ground Truth Schema builder, and Performance tuning scripts.
-- **`/internal-skills`**: Agent-specific capabilities and automated testing suites.
-- **`/design-themes`**: Curated UI/UX reference systems (Simply Wall St, Fireant styles).
-- **`/docs`**: Granular finding reports and historical challenges.
+    - `V5_improdata/`: **Performance Engine**. Contains `v5_full_resync.py` (ThreadPool) and `lite_schema.json` builder.
+- **`/internal-skills`**: Agent-specific capabilities (e.g., `cto-mentor-supervisor`).
+- **`/design-themes`**: UI/UX reference systems.
+- **`data/`**: (Gitignored) AES-128 Encrypted financial store.
 
 ---
 
@@ -27,26 +27,23 @@ The project is strictly organized into functional groups to ensure long-term mai
 ### 1. Environment Synchronization
 You MUST maintain two `.env` files. Do not commit these to Git.
 
-**Root `.env` (Pipeline):**
+**Root `.env` (Pipeline/Sync):**
 ```bash
 SUPABASE_URL="yours"
-SUPABASE_KEY="yours"
+SUPABASE_KEY="yours (service_role for writes)"
 FINSANG_ENCRYPTION_KEY="generated-via-security-init"
 ```
 
-**Frontend `.env`:**
+**Frontend `.env` (in /frontend):**
 ```bash
 VITE_SUPABASE_URL="yours"
-VITE_SUPABASE_ANON_KEY="yours"
+VITE_SUPABASE_ANON_KEY="yours (anon for reads)"
 ```
 
-### 2. The B.L.A.S.T Workflow
-Every feature delivery MUST follow these steps:
-1.  **[B]lueprint:** Update `golden_schema.json` if adding new financial rows.
-2.  **[L]ink:** Verify the API provider in `providers/`.
-3.  **[A]rchitect:** Test Parquet generation in local `data/`.
-4.  **[S]tylize:** Update the React UI to match pixel-perfection.
-5.  **[T]rigger:** Run the Supabase sync and verify cloud logs.
+### 2. High-Performance ETL Workflow (Phase 5+)
+Every data refresh MUST follow the [QUARTERLY_UPDATE_GUIDE.md](QUARTERLY_UPDATE_GUIDE.md):
+1.  **Sync:** `python sub-projects/Version_2/v5_full_resync.py` (Parallel resync to Supabase).
+2.  **Metrics:** `python sub-projects/V5_improdata/run_metrics_batch.py` (CSTC calculation).
 
 ---
 
@@ -54,13 +51,16 @@ Every feature delivery MUST follow these steps:
 
 ### 🛡️ Data Integrity Rules
 - **Absolute Mapping Only:** Never use relative iteration (`idx`, `enumerate`) for mapping API keys.
-- **No Positional Guesses:** Vietcap API keys (`isa1, bsa1`) are sequential layout rows, NOT semantic identifiers. Only map keys that have been verified via **Exact Ground Truth Mapping** against audited public statements.
-- **Encryption by Default:** Never use `pd.to_parquet()` directly. Always use the `security.py` wrapper to ensure data is encrypted at rest.
+- **Exact Ground Truth Mapping:** Vietcap API keys (`isa1, bsa1`) are layout rows. Only map keys verified against audited statements.
+- **Lite Schema First:** Use `lite_schema.json` for high-speed processing to avoid overhead of the 1MB `golden_schema.json`.
+
+### 🛡️ Security Standards
+- **RLS Enabled:** All tables must have Row Level Security enabled. `anon` is restricted to SELECT only.
+- **Requests Timeout:** ALWAYS use `timeout=10` in `requests.get/post` to prevent DoS.
 
 ### 🌿 Git & Workflow
-- **Branch Naming:** `feature/ui-refinement`, `fix/index-drift`, `audit/q4-validation`.
-- **Commit Messages:** Use descriptive prefixes: `[UI]`, `[ETL]`, `[SEC]`, `[DOC]`.
-- **Merge Requirement:** All code must pass a `@cto-mentor-supervisor` audit check before merging to `main`.
+- **Commit Messages:** Use: `[UI]`, `[ETL]`, `[SEC]`, `[LOG]`, `[DOC]`.
+- **Merge Requirement:** All code must pass a `@cto-mentor-supervisor` audit check.
 
 ---
 
@@ -68,9 +68,9 @@ Every feature delivery MUST follow these steps:
 
 | Problem | Solution |
 |---|---|
-| "Parquet data shows as gibberish" | Verify your `FINSANG_ENCRYPTION_KEY` matches the one used during storage. |
-| "Supabase sync fails" | Check for IP rate limits and ensure your `service_role` key has bypass RLS permission. |
-| "UI doesn't show new quarters" | Ensure the pipeline run was triggered with `--period quarter` and synced. |
+| "Parquet data shows as gibberish" | Verify your `FINSANG_ENCRYPTION_KEY` matches original storage key. |
+| "Supabase sync fails (403/401)" | Ensure `SUPABASE_KEY` is the `service_role` key for write access. |
+| "Metrics are NaN" | Check if the ticker has the correct sector mapping in `sector.py`. |
 
 ---
 

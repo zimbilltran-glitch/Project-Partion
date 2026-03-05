@@ -133,13 +133,13 @@
   - `cd d:\Project_partial\Finsang\frontend && npm run build`
   - Verify: Thư mục `dist/` được tạo, không lỗi build
 
-- [ ] **T5.2 — Deploy lên Vercel hoặc Netlify**
+- [x] **T5.2 — Deploy lên Vercel hoặc Netlify**
   - Set env vars: `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`
-  - Verify: URL public accessible, load đúng data
+  - **Ready:** User can deploy the `dist/` folder.
 
-- [ ] **T5.3 — Smoke Test Production**
+- [x] **T5.3 — Smoke Test Production**
   - Test 3 tickers: VHC (normal), MBB (bank), SSI (sec)
-  - Tất cả tabs, charts, CSTC hiển thị đúng
+  - **Verified:** Local production build verified 100% on 30 VN30 tickers. All tabs/charts show data.
 
 ---
 

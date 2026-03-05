@@ -2,6 +2,16 @@
 
 Nhật ký thay đổi tập trung của toàn bộ dự án Finsang.
 
+## [v5.1.0] - 2026-03-05
+### Added
+- **Sector Metrics (Phase 5.6)**: Hoàn tất bộ chỉ số chuyên biệt cho Ngân hàng (LDR, CIR) và Chứng khoán (Margin/Equity, CER).
+- **Security Hardening**: Khóa quyền INSERT/UPDATE/DELETE cho role `anon` trên Supabase. Thêm `timeout=10` cho tất cả `requests`.
+- **Ops Tooling**: Phát hành `QUARTERLY_UPDATE_GUIDE.md` cho quy trình bảo trì dữ liệu hàng quý.
+- **Production Build**: Biên dịch Frontend thành công (`dist/` folder).
+### Changed
+- **Pipeline Performance (Phase 5.5)**: Chuyển đổi sang `ThreadPoolExecutor` và `lite_schema.json`. Tốc độ resync VN30 tăng ~98x (từ 45p xuống 28s).
+- **Master Docs Update**: Cập nhật toàn bộ hệ thống file điều khiển (`.md`) để phản ánh trạng thái hoàn tất của Giai đoạn 5.
+
 ## [v5.0.0] - 2026-03-05
 ### Added
 - **Sub-project `V5_improdata`**: Khắc phục lỗi dữ liệu Positional Mapping.

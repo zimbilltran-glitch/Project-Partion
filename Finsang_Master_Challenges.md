@@ -36,24 +36,33 @@ Centralized log of critical technical hurdles encountered during the development
 - **Solution:** Switched to **Exact Ground Truth Mapping**. Hardcoded canonical keys based on direct visual confirmation from audited statements.
 - **Level:** CATASTROPHIC.
 
-### 6. Synchronous Pipeline & Huge Schema Bottlenecks (V5)
-- **Symptom:** `v5_full_resync.py` taking 45+ minutes to run 30 tickers, terminal hanging, massive RAM usage.
-- **Root Cause:** `subprocess.run` forcing OS to spin up 31 Python interpreters. `golden_schema.json` bloat (1MB) loaded on every cycle. Parquet disk I/O in the critical path.
-- **Solution (Pending Tech Debt):** Needs an Async/ThreadPool refactor, stripping schema to a `lite_schema.json`, and direct `pandas-to-supabase` streaming without Parquet intermediation for daily syncs.
+### 6. Synchronous Pipeline & Huge Schema Bottlenecks (V5) - ✅ SOLVED
+- **Symptom:** `v5_full_resync.py` taking 45+ minutes to run 30 tickers. RAM/CPU spike.
+- **Root Cause:** `subprocess.run` overhead. Huge 1MB schema files loaded repeatedly.
+- **Solution:** 
+  1. Created **`lite_schema.json`** (<200KB) for bot processing.
+  2. Refactored resync script to use **`ThreadPoolExecutor`** (parallel threads).
+  3. Optimized **Stream-to-DB** flow (skip redundant disk I/O).
+- **Impact:** VN30 resync reduced from **45 mins** to **~28 seconds**.
 - **Level:** CRITICAL (Performance).
+
+### 7. Bank Note API 403 Forbidden (CASA Limitation)
+- **Symptom:** Cannot calculate CASA (Demand Deposits) for Banks.
+- **Root Cause:** Vietcap API for `section=NOTE` returns `HTTP 403 Forbidden` for most bank tickers on the web integration endpoint.
+- **Solution:** Documented as a **Limitation**. CASA is currently bypassed. User must manually verify this through official PDF reports via `PDF_TRANS_Pipeline`.
+- **Level:** MEDIUM.
 
 ---
 
 ## 🛠️ Best Practices for Engineering Team
 1. **Never Trust Relative Positions:** Always use a unique ID or absolute row index from `golden_schema.json`.
-2. **Handle Errors Gracefully:** Cloud logging (Supabase) should be non-blocking. Use `try-except` for dependencies.
+2. **Handle Errors Gracefully:** Cloud logging should be non-blocking. Use `try-except` for dependencies.
 3. **Encryption First:** Never store raw financial data in plain text Parquet. Use the `security.py` module.
 4. **Pure Logic in Provider:** Keep API quirks inside `providers/vietcap.py`, maintain a clean generic interface in `pipeline.py`.
 
 ---
 
-*Refer to sub-project challenges for local issues:*
-- [V2_CHALLENGES.md](file:///c:/Users/Admin/OneDrive/Learn%20Anything/Antigravity/1.Project%20Source/Version_2/V2_CHALLENGES.md)
-- [V1_CHALLENGES.md](file:///c:/Users/Admin/OneDrive/Learn%20Anything/Antigravity/1.Project%20Source/Version_1/V1_CHALLENGES.md)
-- [v4_challenges.md](file:///d:/Project_partial/Finsang/sub-projects/V4_Chart_Improve/v4_challenges.md)
-- [v5_challenges.md](file:///c:/Users/Admin/OneDrive/Learn%20Anything/Antigravity/2.Project%20v2/sub-projects/V5_improdata/v5_challenges.md)
+## 🔗 Project Footnotes
+- [Finsang Master Team Guide](Finsang_Master_Team_Guide.md)
+- [Finsang Master Active Roadmap](Finsang_Master_Active_Roadmap.md)
+- [v5_challenges.md](sub-projects/V5_improdata/v5_challenges.md)
