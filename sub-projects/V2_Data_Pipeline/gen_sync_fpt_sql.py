@@ -1,4 +1,4 @@
-from pipeline import DATA_DIR, load_tab
+from pipeline import DATA_DIR
 import pandas as pd
 import json
 
@@ -17,14 +17,6 @@ fixes_normal = [
     'cdkt_co_phieu_quy'
 ]
 
-# Write SQL
-with open("sync_fpt_bs.sql", "w", encoding="utf-8") as out:
-    out.write("DELETE FROM public.balance_sheet WHERE stock_name = 'FPT' AND item_id IN (\n")
-    out.write(",\n".join([f"'{f}'" for f in fixes_normal]))
-    out.write("\n);\n\n")
-
-    
-
 from security import get_cipher
 import io
 import pyarrow.parquet as pq
@@ -42,17 +34,24 @@ def load_pq(path):
     return pd.read_parquet(path)
 
 inserts = []
+seen = set()
 for pt in ['quarter', 'year']:
     df = load_pq(DATA_DIR / "FPT" / f"period_type={pt}" / "sheet=cdkt" / "FPT.parquet")
     sub = df[df['field_id'].isin(fixes_normal)]
     for _, row in sub.iterrows():
         if pd.isna(row['value']):
              continue
+        key = (row['period_label'], row['field_id'])
+        if key in seen:
+            continue
+        seen.add(key)
         name_esc = str(row['vn_name']).replace("'", "''")
-        inserts.append(f"('FPT', '{row['period_label']}', '{row['field_id']}', '{name_esc}', {row['value']}, '{row['unit']}', {row['level']}, {row['sheet_row_idx']})")
+        inserts.append(f"('FPT', '{row['period_label']}', '{row['field_id']}', '{name_esc}', {row['value']}, '{row['unit']}', {row['level']}, {row['sheet_row_idx']}, 'vietcap')")
 
-with open("sync_fpt_bs.sql", "a", encoding="utf-8") as out:
+with open("sync_fpt_bs.sql", "w", encoding="utf-8") as out:
     if inserts:
-        out.write("INSERT INTO public.balance_sheet (stock_name, period, item_id, item, value, unit, levels, row_number) VALUES\n")
+        out.write("INSERT INTO public.balance_sheet (stock_name, period, item_id, item, value, unit, levels, row_number, source) VALUES\n")
         out.write(",\n".join(inserts))
-        out.write(";\n")
+        out.write("\nON CONFLICT (stock_name, period, item_id, source) DO UPDATE SET value = EXCLUDED.value;\n")
+
+print(f"Generated {len(inserts)} inserts")

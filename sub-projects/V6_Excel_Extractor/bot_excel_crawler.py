@@ -7,14 +7,14 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent.parent
 DOWNLOAD_DIR = ROOT / "data" / "excel_imports"
 
-async def download_excel(ticker: str):
+async def download_excel(ticker: str, headless: bool = True):
     print(f"[{ticker}] Khởi động trình duyệt tải Excel...")
     
     # Tạo thư mục tải nếu chưa có
     os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
+        browser = await p.chromium.launch(headless=headless)
         # Thiết lập mô phỏng người dùng thực
         context = await browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -66,4 +66,9 @@ async def download_excel(ticker: str):
             await browser.close()
 
 if __name__ == "__main__":
-    asyncio.run(download_excel("MBB"))
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--ticker", default="MBB")
+    ap.add_argument("--headless", action="store_true", default=True)
+    args = ap.parse_args()
+    asyncio.run(download_excel(args.ticker, headless=args.headless))

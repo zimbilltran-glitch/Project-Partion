@@ -32,6 +32,7 @@ const REPORT_TABS = [
   { id: 'CDKT', label: 'Cân đối kế toán', table: 'balance_sheet_wide' },
   { id: 'KQKD', label: 'Kết quả kinh doanh', table: 'income_statement_wide' },
   { id: 'LCTT', label: 'Lưu chuyển tiền tệ', table: 'cash_flow_wide' },
+  { id: 'NOTE', label: 'Thuyết minh', table: 'note_wide' },
   { id: 'CSTC', label: 'Chỉ số tài chính', table: 'financial_ratios_wide' },
   { id: 'ANALYSIS_CHARTS', label: '📊 Biểu đồ phân tích', table: null },
 ]

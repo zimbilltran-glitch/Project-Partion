@@ -83,12 +83,38 @@ Centralized log of critical technical hurdles encountered during the development
 
 ---
 
+### 11. RLS Silent Misconfiguration (Supabase) — ✅ FIXED 2026-03-07
+- **Symptom:** Supabase Security Advisor báo lỗi `rls_disabled_in_public` trên bảng `financial_ratios` dù policies đã có sẵn.
+- **Root Cause:** `CREATE POLICY` và `ENABLE ROW LEVEL SECURITY` là **2 bước riêng biệt**. Chỉ `CREATE POLICY` không tự bật RLS. Nếu quên bước `ENABLE`, policies hàn hết bị bỏ qua hoàn toàn.
+- **Solution:** `ALTER TABLE public.financial_ratios ENABLE ROW LEVEL SECURITY;` + xóa policy trùng lặp, xóa anon write policies truy cập quá rộng.
+- **Rule Added:** Mọi bảng mới PHẢI chạy `ENABLE ROW LEVEL SECURITY` ngay sau `CREATE TABLE`.
+- **Level:** CRITICAL (Security).
+
+### 12. pandas.read_excel() Hàm bị treo vô hạn (Process Hang) — ✅ FIXED 2026-03-07
+- **Symptom:** 2 process Python treo >90 phút, không có output, ăn RAM mãi mãi.
+- **Root Cause:** `pd.read_excel()` không có built-in timeout. Khi file Excel bị khóa bởi Antivirus hoặc bị hỏng → openpyxl block mãi trong thread.
+- **Solution:** Wrap bằng `concurrent.futures.ThreadPoolExecutor(max_workers=1)` với `future.result(timeout=90)`. Thiết kế thành helper `read_excel_with_timeout()` tái sử dụng toàn codebase V6.
+- **Rule Added:** **Không bao giờ gọi trực tiếp `pd.read_excel()` trong production script**. Luôn dùng wrapper timeout.
+- **Level:** HIGH (Reliability).
+
+---
+
+### 13. Sector Key Overlap & API Shadow Keys — ✅ RESOLVED 2026-03-08
+- **Symptom:** Specific fields (like Total Assets) were correct for Banks but "Investment Assets" were 0 or swapped with other sectors.
+- **Root Cause:** Vietcap Web UI uses `bsa` keys for shared assets and `bsb/bss` for sector-specific ones. Standard pipeline scripts assumed a linear mapping.
+- **Solution:** **JSON Pipeline Interception**. Used Playwright to capture raw API responses and built a validator (`fix_keys.py`) to semantically match Excel values back to API keys.
+- **Level:** CRITICAL.
+
+---
+
 ## 🛠️ Best Practices for Engineering Team
 1. **Never Trust Relative Positions:** Always use a unique ID or absolute row index from `golden_schema.json`.
 2. **Handle Errors Gracefully:** Cloud logging should be non-blocking. Use `try-except` for dependencies.
 3. **Encryption First:** Never store raw financial data in plain text Parquet. Use the `security.py` module.
 4. **Pure Logic in Provider:** Keep API quirks inside `providers/vietcap.py`, maintain a clean generic interface in `pipeline.py`.
 5. **Singleton for External Services:** Always use a shared client (like `sb_client.py`) for DB connections to prevent pooling exhaustion.
+6. **RLS = 2 Steps:** `CREATE POLICY` + `ENABLE ROW LEVEL SECURITY` are always BOTH required.
+7. **Always Add Timeout to I/O:** Never call `pd.read_excel()`, `requests.*()`, or any I/O directly — always wrap with a timeout mechanism.
 
 ---
 

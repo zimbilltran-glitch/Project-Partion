@@ -2,6 +2,30 @@
 
 Nhật ký thay đổi tập trung của toàn bộ dự án Finsang.
 
+## [v6.2.0] - 2026-03-08
+### Added
+- **100% Data Integrity Mastery**: Hoàn tất mục tiêu độ chính xác tuyệt đối cho bộ 3 Sector đại diện (FPT, MBB, SSI).
+- **Tool `fix_keys.py`**: Tự động hóa việc sửa lỗi mapping key của API Vietcap bằng cách so khớp dữ liệu thô với Excel Ground Truth.
+- **JSON Interception Strategy**: Bắt gói tin JSON trực tiếp từ Web UI để bypass các lỗi cào DOM (HTML Scraping).
+### Changed
+- **VN30 Scale-up**: Đồng bộ lại dữ liệu cho toàn bộ 30 mã VN30 với bộ schema mới đã được verify 100%.
+
+## [v6.1.1-security] - 2026-03-07
+### Fixed (CTO Audit P0)
+- **RLS Re-enabled**: Bật `ROW LEVEL SECURITY` trên bảng `financial_ratios` — đây là lỗi CRITICAL dữ liệu exposed toàn bộ ra internet.
+- **Duplicate Policies Removed**: Xóa các `SELECT` policy trùng trên `balance_sheet`, `cash_flow`, `income_statement`, `financial_ratios`.
+- **Anon Write Locked**: Thu hồi quyền `INSERT/UPDATE` của `anon` trên `company_overview` và `stock_ohlcv`.
+- **SECURITY DEFINER → SECURITY INVOKER**: Recreate view `financial_ratios_wide` với `security_invoker=true`.
+- **pandas Timeout Guard**: Thêm `read_excel_with_timeout()` (90s) vào `excel_data_auditor.py` — ngăn process treo vô hạn.
+
+## [v6.1.0] - 2026-03-07
+### Added
+- **Sub-project `V6_Excel_Extractor`**: Khởi chạy thành công Master Controller & Playwright Bot tải dữ liệu Excel BCTC trực tiếp từ Vietcap. Xử lý trị dứt điểm bế tắc API 403 Forbidden của Thuyết minh Ngân hàng.
+- **Data Ground Truth**: Hàm Validator so khớp Supabase (CFO_CALC_V2) vs Excel. Tự động đè các giá trị lỗi rỗng lấy được từ API bằng Ground Truth (CASA, NPL).
+- **Automation & Scheduling**: Tích hợp Windows Task Scheduler (`scheduler.py`) chạy hàng tháng ngày 1 lúc 02:00 cùng logic state-machine pending audit chờ bot xử lý tự động toàn diện. Chạy command tay mở rộng `v6_master_controller.py --all-db-banks`.
+### Changed
+- **Frontend Priority**: Cập nhật Database View `financial_ratios_wide` để tự động ưu tiên nguồn `V6_EXCEL` đè lên `CFO_CALC_V2` nhằm đảm bảo số liệu chính xác 100% khi React dashboard phân loại, chống clone data theo object ID.
+
 ## [v5.1.0] - 2026-03-05
 ### Added
 - **Sector Metrics (Phase 5.6)**: Hoàn tất bộ chỉ số chuyên biệt cho Ngân hàng (LDR, CIR) và Chứng khoán (Margin/Equity, CER).

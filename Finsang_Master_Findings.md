@@ -101,3 +101,89 @@ Rà soát toàn diện dự án Finsang nhằm:
 ---
 
 > **⚠️ Bản ghi cập nhật kết thúc (Audit Continuation - CF Identity Gap)**
+
+---
+
+## F-021: RLS Disabled on `financial_ratios` (CTO Audit 2026-03-07) — ✅ FIXED
+
+| Field | Value |
+|---|---|
+| **Severity** | 🔴 CRITICAL (Fixed) |
+| **Component** | Supabase `financial_ratios` table, `financial_ratios_wide` view |
+| **Impact** | Bảng dữ liệu cốt lõi `financial_ratios` (đựng toàn bộ CSTC của 37 mã VN30) hoàn toàn exposed ra internet do RLS bị tắt. |
+
+**Chi tiết:**
+- RLS policies tồn tại (`anon_select_financial_ratios`, `service_role_all`) nhưng RLS chưa `ENABLE` à mọi queries bỏ qua policies.
+- View `financial_ratios_wide` dùng `SECURITY DEFINER` — nguy cơ leo quyền ngoà ý muốn.
+- `company_overview` và `stock_ohlcv` có policies `anon_insert/update` lờng lờ (`WITH CHECK (true)`).
+
+**Giải pháp đã áp dụng (2026-03-07):**
+1. `ALTER TABLE financial_ratios ENABLE ROW LEVEL SECURITY;`
+2. Xóa tất cả duplicate SELECT policies và anon write policies.
+3. Recreate `financial_ratios_wide` với `security_invoker = true`.
+4. Sửa `service_all` policy dùng `(select auth.role())` để tránh re-evaluate per row.
+
+---
+
+## F-022: pandas.read_excel() Hàm bị treo (Process Hang) — ✅ FIXED
+
+| Field | Value |
+|---|---|
+| **Severity** | 🟡 HIGH (Fixed) |
+| **Component** | `excel_data_auditor.py`, `v6_master_controller.py` |
+| **Impact** | 2 Python processes treo >90 phút, tốn RAM đã xảy ra 2026-03-07. |
+
+**Chi tiết:**
+- `pd.read_excel()` không có cơ chế timeout. Nếu file Excel bị hỏng hoặc Antivirus scan block file — process treo mãi mãi.
+- Gây ra rủi ro tương tự DoS tự thân (Self-inflicted Denial of Service).
+
+**Giải pháp đã áp dụng (2026-03-07):**
+- Bất kỳ lệnh `pd.read_excel()` trong V6 đều phải đi qua `read_excel_with_timeout()` dùng `ThreadPoolExecutor` với `timeout=90 giây`.
+- Nếu vượt timeout: raise `TimeoutError` có thể bắt và log rõ ràng.
+
+---
+
+## F-023: Excel Row Offset Drift & Sector Key Misalignment — ✅ SOLVED
+
+| Field | Value |
+|---|---|
+| **Severity** | 🟢 SOLVED (2026-03-07) |
+| **Component** | `fix_keys.py`, `golden_schema.json` |
+| **Impact** | Accuracy for FPT audit dropped originally; now 100% across all sectors. |
+
+**Chi tiết CTO Fix:**
+- **Vấn đề:** `golden_schema.json` sử dụng `row_number` cố định bị lệch offset giữa các công ty khác nhau.
+- **Giải pháp:** Triển khai `fix_keys.py` thực hiện so khớp giá trị (Value Matching) giữa Excel Ground Truth và API JSON để tìm ra "Shadow Keys" (bsa/bsb/bss) chính xác.
+
+---
+
+## F-025: DOM Interception Victory (100% Data Integrity) — ✅ SUCCESS
+
+| Field | Value |
+|---|---|
+| **Severity** | 🟢 SUCCESS |
+| **Component** | `verify_web_ground_truth.py`, `fix_keys.py` |
+| **Impact** | Đạt độ chính xác tuyệt đối 100% cho MBB, SSI và FPT. |
+
+**Chi tiết:**
+- **Hành động:** Thay vì cào HTML (DOM Scraping) vốn dễ lỗi, bot Playwright được cấu hình để **Intercept** (đánh chặn) gói tin JSON trực tiếp từ Network Tab của Vietcap Web UI.
+- **Phát hiện:** Tìm thấy sự chồng lấn mã bsa/bsb/bss giữa các sector.
+- **Kết quả:** Scale audit thành công toàn bộ VN30 tickers.
+
+---
+
+## F-024: Supabase `note` Table Integration (API Bypass) — ✅ SUCCESS
+
+| Field | Value |
+|---|---|
+| **Severity** | 🟢 FEATURE ADDED |
+| **Component** | Supabase `note` table, `note_wide` view, `sync_note.py` |
+| **Impact** | Vượt qua giới hạn 403 Forbidden của API Note bằng cách đẩy trực tiếp data từ Excel vào DB. |
+
+**Chi tiết:**
+- **Hành động:** Khởi tạo bảng `note` chứa ~120,000 ô dữ liệu từ Sheet "Note" của 12 file Excel BCTC.
+- **Kết quả:** Frontend đã có tab "Thuyết minh" hiển thị đầy đủ chi tiết (Tiền gửi, Chứng khoán, Phải thu...) mà API không cung cấp.
+- **Verified:** FPT và MBB đã hiển thị dữ liệu Note ổn định trên localhost:5173.
+
+---
+

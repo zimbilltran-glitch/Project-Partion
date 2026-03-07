@@ -29,7 +29,9 @@ from datetime import datetime
 ROOT        = Path(__file__).parent.parent
 VENV_PY     = ROOT / ".venv" / "Scripts" / "python.exe"
 RUN_ALL     = ROOT / "V2_Data_Pipeline" / "run_all.py"
+V6_CTRL     = ROOT / "V6_Excel_Extractor" / "v6_master_controller.py"
 TASK_NAME   = "Finsang_DailyPipeline"
+TASK_V6     = "Finsang_V6_MonthlyAudit"
 LOG_FILE    = ROOT / "V2_Data_Pipeline" / "scheduler.log"
 
 def _log(msg: str):
@@ -71,6 +73,55 @@ def install(run_time: str = "06:00"):
             _log(f"INSTALL | Task '{TASK_NAME}' registration FAILED | {result.stderr.strip()}")
             print(f"  ❌ schtasks error:\n{result.stderr}")
             print("  💡 Tip: Run as Administrator for schtasks /Create")
+    except FileNotFoundError:
+        print("  ❌ schtasks.exe not found — only works on Windows")
+
+
+# ─── V6 Monthly Audit ─────────────────────────────────────────────────────────
+def install_v6(run_day: int = 1, run_time: str = "02:00"):
+    """Register V6 Master Controller as a monthly Windows scheduled task."""
+    if not VENV_PY.exists():
+        print(f"  ❌ Virtual env not found: {VENV_PY}")
+        sys.exit(1)
+
+    cmd = [
+        "schtasks", "/Create",
+        "/F",
+        "/TN", TASK_V6,
+        "/TR", f'"{VENV_PY}" "{V6_CTRL}"',
+        "/SC", "MONTHLY",
+        "/D",  str(run_day),      # Day of month (1 = 1st)
+        "/ST", run_time,
+        "/RL", "HIGHEST",
+        "/RU", "SYSTEM",
+    ]
+
+    print(f"\n  📅 Installing V6 Monthly Audit task: {TASK_V6}")
+    print(f"  ⏰ Runs on day {run_day} of each month at {run_time}")
+    print(f"  📂 Script: {V6_CTRL}\n")
+
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode == 0:
+            _log(f"V6_INSTALL | Task '{TASK_V6}' registered | Monthly day-{run_day} @{run_time} | SUCCESS")
+            print(f"  ✅ V6 Monthly task registered!")
+        else:
+            _log(f"V6_INSTALL | Task '{TASK_V6}' FAILED | {result.stderr.strip()}")
+            print(f"  ❌ schtasks error:\n{result.stderr}")
+    except FileNotFoundError:
+        print("  ❌ schtasks.exe not found — only works on Windows")
+
+
+def remove_v6():
+    """Unregister the V6 monthly task."""
+    cmd = ["schtasks", "/Delete", "/TN", TASK_V6, "/F"]
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode == 0:
+            _log(f"V6_REMOVE | Task '{TASK_V6}' deleted | SUCCESS")
+            print(f"  ✅ Task '{TASK_V6}' removed.")
+        else:
+            print(f"  ❌ {result.stderr.strip()}")
     except FileNotFoundError:
         print("  ❌ schtasks.exe not found — only works on Windows")
 
@@ -131,6 +182,11 @@ def parse_args():
     sub.add_parser("remove",  help="Unregister scheduled task")
     sub.add_parser("status",  help="Show task registration status")
     sub.add_parser("run-now", help="Trigger task immediately")
+
+    p_v6 = sub.add_parser("v6-install", help="Register V6 Monthly Audit task")
+    p_v6.add_argument("--day",  type=int, default=1,     help="Day of month (default: 1)")
+    p_v6.add_argument("--time", default="02:00",          help="Run time HH:MM (default: 02:00)")
+    sub.add_parser("v6-remove", help="Unregister V6 Monthly Audit task")
     return parser.parse_args()
 
 def main():
@@ -148,6 +204,10 @@ def main():
         status()
     elif args.command == "run-now":
         run_now()
+    elif args.command == "v6-install":
+        install_v6(run_day=args.day, run_time=args.time)
+    elif args.command == "v6-remove":
+        remove_v6()
 
 if __name__ == "__main__":
     main()

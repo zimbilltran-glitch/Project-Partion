@@ -225,3 +225,17 @@ NOTE: 6280 rows | Mapped: 0% (expected — API không hỗ trợ)
 - 🟡 **CASA (Demand Deposits)**: **Limitation**. Vietcap NOTE API returns 403 Forbidden for Bank tickers. Calculation is bypassed for V2 production release.
 - ✅ **Security Audit**: RLS Locked, Timeout added (Phase 5.7).
 - ✅ **Ops Ready**: QUARTERLY_UPDATE_GUIDE.md issued.
+---
+
+## ✅ PHASE 5.8: EXCEL GROUND TRUTH EXPANSION (PHASE 6 INTEGRATION)
+
+> **Mục tiêu**: Mở rộng coverage mapping lên 257 keys và tích hợp dữ liệu Note từ Excel để vượt qua giới hạn API 403.
+
+### 📋 Kết quả (2026-03-07):
+- ✅ **Mapping Expansion**: Mapped **257 field_ids** trong `golden_schema.json` (Bank, Sec, Normal) bằng hybrid logic.
+- ✅ **Bypass 403 Note**: Khởi tạo bảng `note` và view `note_wide` trên Supabase. Đồng bộ ~120,000 ô dữ liệu Note từ Excel Ground Truth.
+- ✅ **Frontend Verification**: Tab "Thuyết minh" đã xuất hiện trên UI và hiển thị dữ liệu Note ổn định cho FPT/MBB.
+- 🟡 **Finding F-023 (Row Shift Drift)**: Audit MBB đạt 77%, SSI đạt 68% nhưng FPT chỉ đạt 10.7% accuracy do trượt dòng mapping. Cơ chế extraction trong `sync_supabase.py` cần nâng cấp từ positional -> semantic (vietcap_key).
+- ✅ **Safety Hardening**: Tích hợp `read_excel_with_timeout` (90s) để ngăn chặn process treo terminal.
+
+---

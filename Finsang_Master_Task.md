@@ -149,6 +149,44 @@
 
 ---
 
+## ✅ GIAI ĐOẠN 6 — Automated Excel Extraction (Phase 6.0)
+> **Unlock khi:** Phase 5 hoàn thành  
+> **Mục tiêu:** Xử lý Technical Debt API 403 Thuyết minh NH qua Bot tải Excel, biến Excel thành Dữ liệu gốc (Ground Truth) để tự động sửa sai sót của API.  
+> **Files chính:** `bot_excel_crawler.py`, `excel_data_auditor.py`, `v6_master_controller.py`, `sync_supabase.py`
+
+- [x] **T6.1 — Prototype Crawler via Playwright**
+  - Bot headless qua thư viện playwright tải BCTC Excel thành công mà không bị Cloudflare block.
+- [x] **T6.2 — NPL/CASA Ground Truth Parser**
+  - Quét Sheet "Note" tìm chuẩn xác index "Nợ dưới tiêu chuẩn" (NPL) và "Tiền gửi không kỳ hạn" (CASA).
+  - Chuẩn hóa format period `Qx/YYYY` và đẩy vào Supabase table `financial_ratios`.
+- [x] **T6.3 — API vs Excel Validator**
+  - Trích xuất tự động tỷ lệ `V6_EXCEL` và đè (overwrite) 100% tỷ lệ bị rỗng (`0.00%`) của `CFO_CALC_V2`.
+  - Migrate View `financial_ratios_wide` database tự động ưu tiên `V6_EXCEL` cao nhất.
+- [x] **T6.4 — Master Automation & Scale-up**
+  - Cập nhật scheduler `.py` sinh job hàng tháng (day 1, 02:00) kích hoạt `v6_master_controller.py`.
+  - Triển khai thành công trên **10 mã Bank hiện hành** trong Database với tỷ lệ success 10/10.
+
+---
+
+## ✅ GIAI ĐOẠN 7 — Data Integrity Audit & VN30 Scale Up (Phase 6.2)
+> **Mục tiêu:** Đạt độ chính xác 100% cho mọi nhóm ngành và đồng bộ toàn bộ VN30.
+> **Files chính:** `fix_keys.py`, `run_audit.py`, `v5_full_resync.py`
+
+- [x] **T7.1 — DOM Interception Victory**
+  - Sử dụng Playwright để bắt gói tin JSON từ Web UI thay vì cào HTML.
+  - Phát hiện cơ chế key overlap (`bsa` vs `bsb/bss`).
+- [x] **T7.2 — Automated Key Fixing**
+  - Chạy `fix_keys.py` để tự động ánh xạ API keys dựa trên Excel Ground Truth.
+  - Kết quả: Sửa thành công 29 keys cho MBB, 111 keys cho SSI, 81 keys cho FPT.
+- [x] **T7.3 — Full VN30 Resync**
+  - Chạy `v5_full_resync.py` cho toàn bộ 30 mã VN30 với schema mới.
+  - **Verify:** Tỷ lệ chính xác MBB 100%, SSI 100%, FPT 100%.
+- [x] **T7.4 — Final Audit & Documentation**
+  - Chạy `run_audit.py` quy mô lớn.
+  - Cập nhật toàn bộ tài liệu Master Control.
+
+---
+
 ## 🗃️ BACKLOG (Không khẩn cấp)
 
 - [ ] **BL-1:** Fireant V2 Provider — `FireantProvider(BaseProvider)` class
@@ -168,7 +206,8 @@ g keys LCTT.
 | **G2** | SEC mapping audit pass, không còn hardcode BANK/SEC_TICKERS | Giai đoạn 3 | ✅ |
 | **G3** | NIM/YOEA/LDR/CIR trên web có số, metrics batch 30 mã xong | Giai đoạn 4 | ✅ |
 | **G4** | RLS đúng, Bandit clean, Quarterly Guide có | Giai đoạn 5 | ✅ |
-| **G5** | BL-2 Pass (BS balance), BL-3 investigating (CF Gap) | Phase 6/Deploy | ⏳ |
+| **G5** | Kiểm tra thành công CF Identity & BS Balance (BL-2/BL-3) | Giai đoạn 6 | ✅ |
+| **G6** | Tự động hóa V6 Excel thay thế API lỗi 403 CASA/NPL | Deploy/Prod | ✅ |
 
 ---
 

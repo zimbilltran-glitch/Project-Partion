@@ -24,7 +24,11 @@ Usage:
 import argparse, os, sys, json, warnings, pandas as pd
 warnings.filterwarnings("ignore")
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
+
+# V6 integration
+V6_PENDING_FILE = Path(__file__).parent.parent / "V6_Excel_Extractor" / "v6_pending_audits.json"
+BANK_SECTORS    = {"bank"}   # sectors that require Excel audit for NPL/CASA
 
 # ── allow running from project root ───────────────────────────────────────────
 sys.path.insert(0, str(Path(__file__).parent))
@@ -64,16 +68,30 @@ SECTOR_SHEETS = {
 
 SOURCE_TAG = "vietcap"
 
+# ─── Load Environment ──────────────────────────────────────────────────────────
+from dotenv import load_dotenv
+
+env_path = Path(__file__).parent.parent.parent / ".env"
+load_dotenv(dotenv_path=env_path)
+url = os.getenv("SUPABASE_URL")
+# Use the backend service role key to bypass RLS for writes
+key = os.getenv("SUPABASE_SERVICE_ROLE_KEY") or os.getenv("SUPABASE_KEY")
+
+if not url or not key:
+    print(f"❌ Error: SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY not valid from {env_path}")
+    print("Cannot write to DB without service_role key.")
+    sys.exit(1)
+else:
+    # Ensure these are set in the environment for subsequent calls
+    os.environ["SUPABASE_URL"] = url
+    os.environ["SUPABASE_SERVICE_ROLE_KEY"] = key
+
 # ─── Supabase Client ──────────────────────────────────────────────────────────
 def get_supabase():
-    url = os.getenv("SUPABASE_URL")
-    key = os.getenv("SUPABASE_KEY")
-    if not url or not key:
-        print("  ❌ SUPABASE_URL / SUPABASE_KEY not set in .env")
-        sys.exit(1)
+    # URL and KEY are already loaded into os.environ and checked
     try:
         from supabase import create_client
-        return create_client(url, key)
+        return create_client(os.environ["SUPABASE_URL"], os.environ["SUPABASE_SERVICE_ROLE_KEY"])
     except ImportError:
         print("  ❌ supabase-py not installed: pip install supabase")
         sys.exit(1)
@@ -90,12 +108,15 @@ def build_rows_for_sheet(df, ticker: str, sheet_id: str, period_type: str) -> li
     rows = []
     period_cols = [c for c in df.columns if c not in ("field_id", "vn_name", "unit", "level")]
 
-    # Map sheet_id to row_number via row order in DataFrame (V2 preserves schema order)
-    for row_idx, (_, row) in enumerate(df.iterrows(), start=1):
+    # Map sheet_id to row_number via schema-defined row_number (V2 stores this in sheet_row_idx)
+    for _, row in df.iterrows():
         field_id = str(row.get("field_id", ""))
         item     = str(row.get("vn_name", ""))
         unit_val = str(row.get("unit", "tỷ đồng"))
         level    = int(row.get("level", 0))
+        
+        # Use schema's row_number if available, fallback to 999 (custom additions)
+        row_num  = int(row.get("sheet_row_idx", 999))
 
         for period_col in period_cols:
             val = row.get(period_col)
@@ -117,7 +138,7 @@ def build_rows_for_sheet(df, ticker: str, sheet_id: str, period_type: str) -> li
                 "item_id":    field_id,
                 "item":       item,
                 "levels":     level,
-                "row_number": row_idx,
+                "row_number": row_num,
                 "period":     period_col,
                 "unit":       unit_val,
                 "value":      numeric_val,
@@ -250,6 +271,75 @@ def sync_ticker(ticker: str, period_types: list[str] = ("year", "quarter")):
         print(f"    ✅ Uploaded {count:>5} rows → financial_ratios ({period_type})")
 
     print(f"\n  🎯 Sync complete for {ticker.upper()}\n")
+
+    # ── V6 Trigger: detect new quarters → flag for Excel audit ──────────────
+    if sector in BANK_SECTORS:
+        _v6_trigger_check(sb, ticker, ratio_rows if 'ratio_rows' in dir() else [])
+
+
+def _v6_trigger_check(sb, ticker: str, synced_period_rows: list) -> None:
+    """
+    V6 Trigger (Phase 6.4):
+    After syncing a bank ticker, check if any quarter periods are NEW
+    (not yet audited via V6_EXCEL). If so, add them to v6_pending_audits.json.
+    """
+    # Collect periods just synced
+    synced_quarters = set()
+    for row in synced_period_rows:
+        p = row.get("period", "")
+        if p.startswith("Q"):   # e.g. Q4/2024
+            synced_quarters.add(p)
+
+    if not synced_quarters:
+        return
+
+    # Fetch periods already audited by V6_EXCEL for this ticker
+    try:
+        existing = sb.table("financial_ratios")\
+            .select("period")\
+            .eq("stock_name", ticker.upper())\
+            .eq("source", "V6_EXCEL")\
+            .execute()
+        audited_periods = {r["period"] for r in existing.data} if existing.data else set()
+    except Exception as e:
+        print(f"  ⚠️  V6 Trigger: could not fetch audited periods: {e}")
+        return
+
+    new_periods = synced_quarters - audited_periods
+    if not new_periods:
+        print(f"  ✅ V6 Trigger: {ticker} — all periods already audited.")
+        return
+
+    print(f"  🔔 V6 Trigger: {ticker} has {len(new_periods)} new periods needing Excel audit: {sorted(new_periods)}")
+
+    # Load current pending file
+    pending_data = {"pending": []}
+    if V6_PENDING_FILE.exists():
+        try:
+            with open(V6_PENDING_FILE, "r", encoding="utf-8") as f:
+                pending_data = json.load(f)
+        except Exception:
+            pass
+
+    existing_keys = {(e["ticker"], e["period"]) for e in pending_data.get("pending", [])}
+
+    added = 0
+    for period in sorted(new_periods):
+        if (ticker.upper(), period) not in existing_keys:
+            pending_data["pending"].append({
+                "ticker": ticker.upper(),
+                "period": period,
+                "requires_excel_audit": True,
+                "status": "pending",
+                "flagged_at": datetime.now(timezone.utc).isoformat()
+            })
+            added += 1
+
+    if added:
+        pending_data["_last_updated"] = datetime.now(timezone.utc).isoformat()
+        with open(V6_PENDING_FILE, "w", encoding="utf-8") as f:
+            json.dump(pending_data, f, ensure_ascii=False, indent=2)
+        print(f"  📝 V6 Trigger: Added {added} new pending entry/entries to {V6_PENDING_FILE.name}")
 
 
 # ─── Entry point ──────────────────────────────────────────────────────────────

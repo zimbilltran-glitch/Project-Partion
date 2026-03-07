@@ -14,6 +14,7 @@ The project is strictly organized into functional groups to ensure long-term mai
 - **`/sub-projects`**: High-level feature integrations and core engines (CORE ONLY).
     - `V2_Data_Pipeline/`: Core "Finsang Engine" (`pipeline.py`, `security.py`, `metrics.py`). Cleaned of explorations.
     - `V5_improdata/`: **Performance Engine**. Contains ops scripts (`run_metrics_batch.py`) and schema builders.
+    - `V6_Excel_Extractor/`: **Excel Ground Truth Engine**. Playwright bot + Pandas auditor for CASA/NPL. Run monthly via scheduler.
 - **`/archive_legacy`**: **CRITICAL FOR AGENTS.** This directory contains 60+ archived scripts and audit data moved during the v5.1.5 cleanup. If a script is missing from `/sub-projects`, check here.
     - `explorations/`: Deprecated research, debug, and probe scripts.
     - `clutter_cleanup/`: Raw logs, Excel pilot files, and temporary audit reports.
@@ -44,6 +45,7 @@ VITE_SUPABASE_ANON_KEY="yours (anon for reads)"
 Every data refresh MUST follow the [QUARTERLY_UPDATE_GUIDE.md](QUARTERLY_UPDATE_GUIDE.md):
 1.  **Sync:** `python sub-projects/V2_Data_Pipeline/v5_full_resync.py` (Parallel resync to Supabase).
 2.  **Metrics:** `python sub-projects/V5_improdata/run_metrics_batch.py` (CSTC calculation).
+3.  **Excel Audit (Monthly):** `python sub-projects/V6_Excel_Extractor/v6_master_controller.py --all-db-banks` (NPL/CASA Ground Truth)
 
 ---
 
@@ -55,8 +57,10 @@ Every data refresh MUST follow the [QUARTERLY_UPDATE_GUIDE.md](QUARTERLY_UPDATE_
 - **Lite Schema First:** Use `lite_schema.json` for high-speed processing to avoid overhead of the 1MB `golden_schema.json`.
 
 ### 🛡️ Security Standards
-- **RLS Enabled:** All tables must have Row Level Security enabled. `anon` is restricted to SELECT only.
+- **RLS Enabled (2 Steps Required):** All tables must `ENABLE ROW LEVEL SECURITY` separately from `CREATE POLICY`. Running only `CREATE POLICY` does NOT enforce RLS.
+- **anon Role = SELECT Only:** `anon` is restricted to SELECT only. Write operations must use `service_role` key from pipeline.
 - **Requests Timeout:** ALWAYS use `timeout=10` in `requests.get/post` to prevent DoS.
+- **No pd.read_excel() Direct Calls:** Always use `read_excel_with_timeout()` (wrapper with 90s timeout) to prevent process hanging.
 
 ### 🌿 Git & Workflow
 - **Commit Messages:** Use: `[UI]`, `[ETL]`, `[SEC]`, `[LOG]`, `[DOC]`.
@@ -71,6 +75,8 @@ Every data refresh MUST follow the [QUARTERLY_UPDATE_GUIDE.md](QUARTERLY_UPDATE_
 | "Parquet data shows as gibberish" | Verify your `FINSANG_ENCRYPTION_KEY` matches original storage key. |
 | "Supabase sync fails (403/401)" | Ensure `SUPABASE_KEY` is the `service_role` key for write access. |
 | "Metrics are NaN" | Check if the ticker has the correct sector mapping in `sector.py`. |
+| "Python process hangs on Excel" | Use `read_excel_with_timeout()` wrapper. Kill stuck processes: `Get-Process python \| Stop-Process -Force`. |
+| "financial_ratios data bypasses policies" | Ensure `ALTER TABLE financial_ratios ENABLE ROW LEVEL SECURITY` was run. |
 
 ---
 
